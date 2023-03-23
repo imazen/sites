@@ -10,9 +10,12 @@
     }
   },
 
+  "workspaceFolder": "/workspaces/sites/",
+
+
   "forwardPorts": [3000],
 
-  "postCreateCommand": "pnpm install && cd /workspaces/astro && pnpm run build",
+  "postCreateCommand": "pnpm install && cd /workspaces/sites && pnpm run build",
 
   "waitFor": "postCreateCommand",
 
