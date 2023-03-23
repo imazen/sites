@@ -3,7 +3,7 @@ title: "Introduction"
 description: "Docs intro"
 ---
 
-**Welcome to Astro!**
+**Welcome to Astro 2!**
 
 This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
 
