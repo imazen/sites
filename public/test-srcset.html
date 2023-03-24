@@ -1,0 +1,24 @@
+<!-- Create an HTML page that tests which img is selected from srcset list using the x descriptor, and displays the devicePixelRatio -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test srcset</title>
+</head>
+<body>
+<script>
+var dpr = window.devicePixelRatio;
+document.write("devicePixelRatio = " + dpr + "<br>");
+</script>
+<img srcset="https://i.zr.io/ri/11.jpg?w=10&zoom=1 1x, https://i.zr.io/ri/11.jpg?w=10&zoom=2 2x, https://i.zr.io/ri/11.jpg?w=10&zoom=3 3x" src="https://i.zr.io/ri/11.jpg?w=10&zoom=4" alt="Test srcset">
+<!-- Now, when the img tag loads, update the html to list which image was picked -->
+<script>
+var img = document.getElementsByTagName("img")[0];
+var src = img.currentSrc;
+// Get the number after the last slash
+var n = src.lastIndexOf("=");
+var imgNum = src.substring(n+1, n+2);
+document.write("Image " + imgNum + "x was selected");
+</script>
+</body>
+</html>
