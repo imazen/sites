@@ -13,9 +13,7 @@ Here are a few examples of using the `<picture>` element and their explanations:
 ```html
 <picture>
   <source srcset="image-large.jpg" media="(min-width: 768px)" />
-
   <source srcset="image-medium.jpg" media="(min-width: 480px)" />
-
   <img src="image-small.jpg" alt="An image" />
 </picture>
 ```
