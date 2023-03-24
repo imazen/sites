@@ -7,7 +7,7 @@ description: Docs intro
 
 This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
 
-test this
+test this 2
 
 *   ✅ **Full Markdown support**
     
