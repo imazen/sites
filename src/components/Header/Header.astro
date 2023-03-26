@@ -6,6 +6,7 @@ import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Search from './Search';
+import  i18next from "i18next";
 
 type Props = {
 	currentPage: string;
@@ -13,6 +14,9 @@ type Props = {
 
 const { currentPage } = Astro.props;
 const lang = getLanguageFromURL(currentPage);
+i18next.changeLanguage(lang);
+const translatedSiteName = i18next.t('siteTitleName', SITE.title ?? 'Documentation');
+
 ---
 
 <header>
@@ -24,13 +28,13 @@ const lang = getLanguageFromURL(currentPage);
 		<div class="logo flex">
 			<a href="/">
 				<AstroLogo size={40} />
-				<h1>{SITE.title ?? 'Documentation'}</h1>
+				<h1>{translatedSiteName}</h1>
 			</a>
 		</div>
 		<div style="flex-grow: 1;"></div>
 		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
 		<div class="search-item">
-			<Search client:idle />
+			<Search lang={lang} client:idle />
 		</div>
 	</nav>
 </header>
