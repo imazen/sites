@@ -21,7 +21,10 @@ const allDocsPosts = await getCollection('docs', ({ data }) => {
   return true;
 });
 
-
+// Sort allDocsPosts based on child.data.sidebar-sort-priority, but use a default value of 100 if it's not set
+allDocsPosts.sort((a, b) => {
+  return (b.data['sidebar_sort_priority'] || 0) - (a.data['sidebar_sort_priority'] || 0);
+});
 ---
 
 
