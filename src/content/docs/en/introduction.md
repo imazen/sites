@@ -1,6 +1,7 @@
 ---
 title: srcset & <img> sizes  
-description: Docs intro
+description: An Efficient and Opinionated Guide to Responsive Images for 2023
+sidebar_sort_priority: 1000
 ---
 
 **An Efficient and Opinionated Guide to Images for 2023**
