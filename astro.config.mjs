@@ -28,7 +28,7 @@ export default defineConfig({
 			},
 		},
 	}),
-	//astroI18next()
+	astroI18next()
 	],
   site: `https://www.srcset.tips`
 });
