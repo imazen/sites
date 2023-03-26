@@ -3,7 +3,7 @@ import { useState, useCallback, useRef } from 'react';
 import { ALGOLIA } from '../../consts';
 import '@docsearch/css';
 import './Search.css';
-import  {t} from "i18next";
+//import  {t} from "i18next";
 
 import { createPortal } from 'react-dom';
 import * as docSearchReact from '@docsearch/react';
@@ -48,7 +48,8 @@ export default function Search(){
 
 	//i18next.changeLanguage("en"); //TODO, the parameter lang isn't being loaded properly
 
-	const searchPrompt = t("searchButton", "Search");
+	// TODO: translate
+	const searchPrompt ="Search";// t("searchButton", "Search");
 
 	//<!--<span>{interpolate("searchButton", "Search")}</span> -->
 

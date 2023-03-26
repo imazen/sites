@@ -2,7 +2,7 @@ import type { MarkdownHeading } from 'astro';
 import type { FunctionalComponent } from 'preact';
 import { unescape } from 'html-escaper';
 import { useState, useEffect, useRef } from 'preact/hooks';
-import  i18next from "i18next";
+//import  i18next from "i18next";
 
 type ItemOffsets = {
 	id: string;
@@ -67,10 +67,13 @@ const TableOfContents: FunctionalComponent<{ headings: MarkdownHeading[] }> = ({
 		setCurrentID(e.target.getAttribute('href').replace('#', ''));
 	};
 
+	//TODO: translate!
+	const onThisPageText = "On this page"; //i18next.t("onThisPage", "On this page");
+
 	return (
 		<>
 			<h2 id={onThisPageID} className="heading">
-				{i18next.t("onThisPage", "On this page")}
+				{onThisPageText}
 			</h2>
 			<ul ref={toc}>
 				{headings
