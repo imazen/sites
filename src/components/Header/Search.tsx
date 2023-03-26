@@ -3,6 +3,7 @@ import { useState, useCallback, useRef } from 'react';
 import { ALGOLIA } from '../../consts';
 import '@docsearch/css';
 import './Search.css';
+import  {t} from "i18next";
 
 import { createPortal } from 'react-dom';
 import * as docSearchReact from '@docsearch/react';
@@ -14,7 +15,8 @@ const useDocSearchKeyboardEvents =
 	docSearchReact.useDocSearchKeyboardEvents ||
 	(docSearchReact as any).default.useDocSearchKeyboardEvents;
 
-export default function Search() {
+	
+export default function Search(){
 	const [isOpen, setIsOpen] = useState(false);
 	const searchButtonRef = useRef<HTMLButtonElement>(null);
 	const [initialQuery, setInitialQuery] = useState('');
@@ -35,6 +37,7 @@ export default function Search() {
 		[setIsOpen, setInitialQuery]
 	);
 
+	
 	useDocSearchKeyboardEvents({
 		isOpen,
 		onOpen,
@@ -43,6 +46,59 @@ export default function Search() {
 		searchButtonRef,
 	});
 
+	//i18next.changeLanguage("en"); //TODO, the parameter lang isn't being loaded properly
+
+	const searchPrompt = t("searchButton", "Search");
+
+	//<!--<span>{interpolate("searchButton", "Search")}</span> -->
+
+
+	//const translations  = {}//;i18next.t("search", {returnObjects: true});
+	
+	// {
+	// 	search: {
+	// 		button: {
+	// 			buttonText: 'Search',
+	// 			buttonAriaLabel: 'Search',
+	// 		},
+	// 		modal: {
+	// 		searchBox: {
+	// 			resetButtonTitle: 'Clear the query',
+	// 			resetButtonAriaLabel: 'Clear the query',
+	// 			cancelButtonText: 'Cancel',
+	// 			cancelButtonAriaLabel: 'Cancel',
+	// 		},
+	// 		startScreen: {
+	// 			recentSearchesTitle: 'Recent',
+	// 			noRecentSearchesText: 'No recent searches',
+	// 			saveRecentSearchButtonTitle: 'Save this search',
+	// 			removeRecentSearchButtonTitle: 'Remove this search from history',
+	// 			favoriteSearchesTitle: 'Favorite',
+	// 			removeFavoriteSearchButtonTitle: 'Remove this search from favorites',
+	// 		},
+	// 		errorScreen: {
+	// 			titleText: 'Unable to fetch results',
+	// 			helpText: 'You might want to check your network connection.',
+	// 		},
+	// 		footer: {
+	// 			selectText: 'to select',
+	// 			selectKeyAriaLabel: 'Enter key',
+	// 			navigateText: 'to navigate',
+	// 			navigateUpKeyAriaLabel: 'Arrow up',
+	// 			navigateDownKeyAriaLabel: 'Arrow down',
+	// 			closeText: 'to close',
+	// 			closeKeyAriaLabel: 'Escape key',
+	// 			searchByText: 'Search by',
+	// 		},
+	// 		noResultsScreen: {
+	// 			noResultsText: 'No results for',
+	// 			suggestedQueryText: 'Try searching for',
+	// 			reportMissingResultsText: 'Believe this query should return results?',
+	// 			reportMissingResultsLinkText: 'Let us know.',
+	// 		}
+	// 	}
+	// }
+	
 	return (
 		<>
 			<button type="button" ref={searchButtonRef} onClick={onOpen} className="search-input">
@@ -56,8 +112,8 @@ export default function Search() {
 					/>
 				</svg>
 
-				<span>Search</span>
-
+				<span>{searchPrompt}</span>
+				
 				<span className="search-hint">
 					<span className="sr-only">Press </span>
 
@@ -75,6 +131,7 @@ export default function Search() {
 						onClose={onClose}
 						indexName={ALGOLIA.indexName}
 						appId={ALGOLIA.appId}
+						//translations={translations}
 						apiKey={ALGOLIA.apiKey}
 						transformItems={(items) => {
 							return items.map((item) => {
