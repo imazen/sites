@@ -1,0 +1,2 @@
+Translate the following to Spanish, preserving all markdown formatting. Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses. 
+Don't change "---" or front-matter key names like "title:" and "description:" 
