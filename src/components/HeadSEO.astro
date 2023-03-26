@@ -1,16 +1,16 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { SITE, OPEN_GRAPH } from '../consts';
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../languages';
 
 import  i18next from "i18next";
 
-type Props = { canonicalUrl: URL } & CollectionEntry<'docs'>['data'];
+type Props = { 
+  canonicalUrl: URL; 
+  lang: string; 
+} & CollectionEntry<'docs'>['data'];
 
-const { ogLocale, image, title, description, canonicalUrl } = Astro.props;
+const { ogLocale, image, title, description, canonicalUrl, lang} = Astro.props;
 
-const lang = getLanguageFromURL(canonicalUrl.pathname);
-//console.log("current language", lang);
 i18next.changeLanguage(lang);
 
 const translatedContentTitle =`${title} - ${i18next.t('siteTitleSuffix',SITE.titleSuffix)}`;

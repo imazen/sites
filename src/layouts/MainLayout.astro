@@ -24,7 +24,7 @@ const currentFile = `src/content/docs${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 
-const lang = getLanguageFromURL(currentPage);
+const lang = getLanguageFromURL(currentPage) || "en";
 i18next.changeLanguage(lang);
 const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SITE.titleSuffix)}`;
 ---
@@ -32,7 +32,7 @@ const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SIT
 <html dir={data.dir} lang={data.lang} class="initial">
 	<head>
 		<HeadCommon />
-		<HeadSEO {...data} canonicalUrl={canonicalURL} />
+		<HeadSEO {...data} canonicalUrl={canonicalURL} lang={lang} />
 		<title>
 			{translatedContentTitle}
 		</title>
@@ -128,20 +128,20 @@ const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SIT
 	</head>
 
 	<body>
-		<Header currentPage={currentPage} />
+		<Header lang={lang} currentPage={currentPage} />
 		<main class="layout">
 			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-				<LeftSidebar currentPage={currentPage} />
+				<LeftSidebar lang={lang} currentPage={currentPage} />
 			</aside>
 			<div id="grid-main">
-				<PageContent title={data.title} headings={headings} githubEditUrl={githubEditUrl}>
+				<PageContent lang={lang} title={data.title} headings={headings} githubEditUrl={githubEditUrl}>
 					<slot />
 				</PageContent>
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
+				<RightSidebar lang={lang} currentPage={currentPage} headings={headings} githubEditUrl={githubEditUrl} />
 			</aside>
 		</main>
-		<Footer path={currentFile} />
+		<Footer lang={lang} path={currentFile} />
 	</body>
 </html>

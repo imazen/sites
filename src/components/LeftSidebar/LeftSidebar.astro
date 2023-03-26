@@ -5,15 +5,13 @@ import {  KNOWN_LANGUAGES } from '../../consts';
 import { interpolate } from "astro-i18next";
 type Props = {
 	currentPage: string;
+	lang: string;
 };
 
-const { currentPage } = Astro.props;
+const { currentPage, lang} = Astro.props;
 const currentPageMatch = currentPage.endsWith('/')
 	? currentPage.slice(1, -1)
 	: currentPage.slice(1);
-const langCode = getLanguageFromURL(currentPage);
-//const sidebar = SIDEBAR[langCode];
-
 
 import { getCollection } from 'astro:content';
 
@@ -27,13 +25,13 @@ allDocsPosts.sort((a, b) => {
   return (b.data['sidebar_sort_priority'] || 0) - (a.data['sidebar_sort_priority'] || 0);
 });
 
-// find the matching key in the KNOWN_LANGUAGES map for value langCode
+// find the matching key in the KNOWN_LANGUAGES map for value lang
 const langName = Object.keys(KNOWN_LANGUAGES).find(key => 
-KNOWN_LANGUAGES[key] === langCode);
+KNOWN_LANGUAGES[key] === lang);
 
 const sidebarTitle = interpolate("sidebarTitle",`Topics (${langName})`);
 
-const langSubset = [[sidebarTitle, langCode]]; // Object.entries(KNOWN_LANGUAGES)
+const langSubset = [[sidebarTitle, lang]]; // Object.entries(KNOWN_LANGUAGES)
 
 ---
 <nav aria-labelledby="grid-left">

@@ -1,8 +1,14 @@
 ---
-type Props = {};
+import i18next from 'i18next';
+type Props = {
+	lang: string;
+};
+const { lang } = Astro.props;
+i18next.changeLanguage(lang);
+const skipToContentText = i18next.t('skipToContentText', 'Skip to Content');
 ---
 
-<a href="#article" class="sr-only focus:not-sr-only skiplink"><span>Skip to Content</span></a>
+<a href="#article" class="sr-only focus:not-sr-only skiplink"><span>{skipToContentText}</span></a>
 
 <style>
 	.skiplink,
