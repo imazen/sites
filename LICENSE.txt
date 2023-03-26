@@ -1,0 +1,5 @@
+Redistributed code and software may be included under various OSS licenses, please reference specific files for details. 
+
+Original content created by @lilith or @imazen is released under Creative Commons Attribution-NonCommercial 4.0 International License.
+
+https://creativecommons.org/licenses/by-nc/4.0/
