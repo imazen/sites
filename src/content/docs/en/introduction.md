@@ -1,35 +1,28 @@
 ---
-title: Introduction
+title: srcset & <img> sizes  
 description: Docs intro
 ---
 
-**Welcome to Jukebox!**
+**An Efficient and Opinionated Guide to Images for 2023**
 
-This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
+Check the sidebar for the deep dive. This is the quick reference for upgrading those `<img>` tags to handle modern devices in all their various sizes and pixel densities. You should [know that pixels != pixels](/en/pixels-not-pixels) and `devicePixelRatio` is more likely to around 3.875 than 1:1. Modern phones pretend to be 320-428px wide for readability.
 
-test this 2
+> If your image never changes size, no matter how narrow you make the browser window, you should use a [density descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
 
-*   ✅ **Full Markdown support**
-    
-*   ✅ **Responsive mobile-friendly design**
-    
-*   ✅ **Sidebar navigation**
-    
-*   ✅ **Search (powered by Algolia)**
-    
-*   ✅ **Multi-language i18n**
-    
-*   ✅ **Automatic table of contents**
-    
-*   ✅ **Automatic list of contributors**
-    
-*   ✅ (and, best of all) **dark mode**
-    
+Do you know what your [breakpoints](/en/breakpoints) are? You'll need those numbers to fine-tune the solution below - and at minimum the viewport width breakpoint where the main content area stops growing.
 
-## Getting Started
 
-To get started with this theme, check out the `README.md` in your new project directory. It provides documentation on how to use and customize this template for your own project. Keep the README around so that you can always refer back to it as you build.
+### The easy method
 
-Found a missing feature that you can't live without? Please suggest it [on our Discord](https://astro.build/chat) and even consider adding it yourself on GitHub! Astro is an open source project and contributions from developers like you are how we grow!
+```html
 
-Good luck out there, Astronaut. 🧑‍🚀
+<img src = "img.jpg" 
+        srcset="img.jpg?format=webp&w=480 480w, 
+                img.jpg?format=webp&w=800 800w, 
+                img.jpg?format=webp&w=1200 1200w, 
+                img.jpg?format=webp&w=1600 1600w, 
+                img.jpg?format=webp&w=2000 2000w"
+
+        sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
+
+```
