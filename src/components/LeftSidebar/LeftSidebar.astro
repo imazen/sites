@@ -2,6 +2,7 @@
 import { getLanguageFromURL } from '../../languages';
 import {  KNOWN_LANGUAGES } from '../../consts';
 
+import { interpolate } from "astro-i18next";
 type Props = {
 	currentPage: string;
 };
@@ -25,19 +26,26 @@ const allDocsPosts = await getCollection('docs', ({ data }) => {
 allDocsPosts.sort((a, b) => {
   return (b.data['sidebar_sort_priority'] || 0) - (a.data['sidebar_sort_priority'] || 0);
 });
+
+// find the matching key in the KNOWN_LANGUAGES map for value langCode
+const langName = Object.keys(KNOWN_LANGUAGES).find(key => 
+KNOWN_LANGUAGES[key] === langCode);
+
+const sidebarTitle = interpolate("sidebarTitle",`Topics (${langName})`);
+
+const langSubset = [[sidebarTitle, langCode]]; // Object.entries(KNOWN_LANGUAGES)
+
 ---
-
-
 <nav aria-labelledby="grid-left">
 	<ul class="nav-groups">
 
 		{
-			Object.entries(KNOWN_LANGUAGES).map(([name, value]) => (
+			langSubset.map(([sidebarTitle, langCode]) => (
 				<li>
 					<div class="nav-group">
-						<h2 class="nav-group-title">{name}</h2>
+						<h2 class="nav-group-title">{sidebarTitle}</h2>
 						<ul>
-							{allDocsPosts.filter((p) => { return p.slug.startsWith(value); }).map((child) => {
+							{allDocsPosts.filter((p) => { return p.slug.startsWith(langCode); }).map((child) => {
 							const url = Astro.site?.pathname + child.slug;
 							return (
 								<li class="nav-link">
