@@ -1,9 +1,9 @@
 export const SITE = {
-	title: 'srcset reference and tips',
+	title: 'srcset reference and tips', // Used for logo text and og:sitename
+	titleSuffix: ' - srcset.tips', // Appended to page content title
 	description: 'Templates, guides, examples, and tools for correct and efficient responsive images',
 	defaultLanguage: 'en-us',
 } as const;
-
 export const OPEN_GRAPH = {
 	image: {
 		src: 'https://---github.com/withastro/astro/blob/main/.github/assets/banner.png?raw=true',
@@ -30,6 +30,8 @@ export const ALGOLIA = {
 	appId: 'XXXXXXXXXX',
 	apiKey: 'XXXXXXXXXX',
 };
+
+
 
 export type Sidebar = Record<
 	(typeof KNOWN_LANGUAGE_CODES)[number],
