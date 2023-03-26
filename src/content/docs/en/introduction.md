@@ -17,7 +17,7 @@ Do you know what your [breakpoints](/en/breakpoints) are? You'll need those numb
 
 ```html
 
-<img src = "img.jpg" 
+<img src = "img.jpg?w=480" 
         srcset="img.jpg?format=webp&w=480 480w, 
                 img.jpg?format=webp&w=800 800w, 
                 img.jpg?format=webp&w=1200 1200w, 
@@ -26,4 +26,10 @@ Do you know what your [breakpoints](/en/breakpoints) are? You'll need those numb
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
 
+<!-- We've assumed that you have a breakpoint at 700px. 
+      And that under that viewport width, this image takes 100% of the width, but
+      when the viewport is larger, the image is limited to 800 CSS pixels -->
+
+<!-- This also assumes you have are using an RIAPI-compliant image server such as Imageflow. 
+     On-the-fly image variant production is essential for developer sanity. -->
 ```
