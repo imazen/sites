@@ -20,7 +20,7 @@ export default defineConfig({
           es: 'es',
           de: 'de',
 		  sv: 'sv',
-		  zh: 'zh-CN',
+		  zh: 'zh-Hans',
 		  it: 'it',
 		  fr: 'fr',
 		  ja: 'ja',
