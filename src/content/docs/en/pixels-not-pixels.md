@@ -1,6 +1,7 @@
 ---
 title: px ≠ pixels
 description: Device px ≠ browser px ≠ image px
+sidebar_sort_priority: 900
 ---
 
 ### Device pixels ≠ browser px ≠ image px
