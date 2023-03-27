@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "translate": "tsx tasks/translate.ts"
+    "translate": "tsx tasks/translate.ts",
+    "localize": "tsx tasks/localize.ts"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
