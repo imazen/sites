@@ -5,7 +5,7 @@ description: Why some (but not all) breakpoints matter for your images
 
 ### Background
 
-Tiny screens and big monitors need different layouts. For the purpose of `srcset` and `sizes`, we need to desc
+Tiny screens and big monitors need different layouts. For the purpose of `srcset` and `sizes`, we need to know at what point the layout changes.
 
 Web developers must decide what to shrink, hide, or relocate on smaller screens - or more commonly, what to expand, reveal, or add on larger screens. They also have very little information to go on. Is the user on a tablet or a phone in landscape mode - or a small browser window?
 
