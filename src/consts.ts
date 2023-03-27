@@ -27,8 +27,8 @@ export const KNOWN_LANGUAGES = {
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const GITHUB_EDIT_URL = `https://github.com/imazen/sites/tree/main`;
-
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const REPORT_ISSUE_URL = "https://github.com/imazen/sites/issues/new";
+export const COMMUNITY_INVITE_URL = null; //`https://astro.build/chat`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
