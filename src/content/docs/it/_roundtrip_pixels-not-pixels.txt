@@ -1,0 +1,34 @@
+---
+title: px ≠ pixels
+description: >-
+  Devices pixels ≠ browser px ≠ image px
+
+  (Nota: La traduzione del titolo si basa sull'assunzione che la parola "pixels" sia intesa come "pixel". Se la parola "pixels" dovrebbe essere tradotta con un'altra parola in base al contesto, per favore fatemelo sapere.)
+taskInputHash: 4ab884e82e2f9b69
+lang: it
+sidebar_sort_priority: 900
+---
+### Devices pixels ≠ browser px ≠ image px
+
+Grazie ad Apple, i pixel di CSS e HTML (`px`) **vengono quasi sempre mappati su molti dispositivi/stampe**. Il devicePixelRatio del mio telefono è 3,875; [qual è il tuo?](https://www.mydevice.io/)
+
+Il mio devicePixelRatio sul desktop cambia in base allo zoom del browser, ma di default è 1,5 (il mio `Sistema > Display > Scalabilità` è al 150%, dopotutto).
+
+I file delle immagini (esclusi quelli SVG) si decodificano in una griglia di pixel. **È fastidiosamente difficile ottenere che i pixel dell'immagine vengano visualizzati perfettamente a una proporzione di 1:1 con i dispositivi pixels - ma con `srcset` puoi arrivare *quasi* vicino**, e un po' di Javascript può regolare le dimensioni dell'elemento html dopo il caricamento se hai motivazioni davvero giustificate per aver bisogno di questa mappatura perfetta; anche se tali arti proibite non verranno qui rivelate.
+
+> Altre unità assolute [(in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/it/docs/Web/CSS/length) sono definite in funzione del numero di pixel CSS e fanno finta che tutto abbia una risoluzione di 96dpi. Gli sviluppatori evitano le unità assolute perché di solito è meglio usare unità derivate dalle dimensioni del carattere o delle dimensioni viewport/contenitore. Unità non corrispondenti possono compromettere un layout se l'utente regola il moltiplicatore del testo in `Accessibilità > Dimensioni testo`, effettua lo zoom del browser o fa ruotare il dispositivo. Inutile dire che dovresti fare tutte queste cose prima di pubblicare il tuo sito.
+=====================
+
+Content prompt used: 
+Translate the following to Italian, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'it' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. px ≠ pixels
+ 2. Device px ≠ browser px ≠ image px 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

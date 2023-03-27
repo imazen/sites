@@ -1,0 +1,31 @@
+---
+title: px ≠ Pixels
+description: Device px ≠ Browser px ≠ Image px
+taskInputHash: cf073d26df7b1c88
+lang: en
+sidebar_sort_priority: 900
+---
+### Device Pixels ≠ Browser Pixels ≠ Image Pixels
+
+Thanks to Apple, CSS and HTML pixels (`px`) are almost always mapped to multiple device/printer pixels. My phone's devicePixelRatio is 3.875. [What's yours?](https://www.mydevice.io/)
+
+My desktop's devicePixelRatio varies with browser zoom, but the default is 1.5 (my `System > Display > Scale` is set to 150%).
+
+Image files (excluding SVG) are decoded onto a pixel grid. **Displaying image pixels accurately in a 1:1 ratio with device pixels is very difficult, but with `srcset`, it can come pretty close**. If the need for perfect mapping is truly justified, a little JavaScript can be used to adjust the element size after it has been loaded. But such forbidden techniques will not be revealed here.
+
+> Other absolute units (`in`, `pc`, `pt`, `mm`, `cm`, `Q`) are defined in terms of the number of CSS pixels and are pretending to be all 96dpi. Developers avoid absolute units because it is generally better to use units derived from font size or viewport/container dimensions. Mismatched units must be planned for in advance, as they can break layouts when users adjust Accessibility> Text Size multipliers, browser zoom, and device rotation. Needless to say, all of these must be done before shipping a site. {{Note that the term "forbidden techniques" may not be the best choice of words here, as there are no actual "forbidden" techniques in web development.}}
+=====================
+
+Content prompt used: 
+Translate the following to Japanese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'ja' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. px ≠ pixels
+ 2. Device px ≠ browser px ≠ image px 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

@@ -1,0 +1,28 @@
+---
+title: Using width and height attributes
+description: Advantages of using width and height attributes in HTML code
+taskInputHash: 1f84f5b125c88c72
+lang: en
+---
+Why should you add width and height in HTML?
+
+> It is recommended to add width and height attributes in HTML code for images because it helps the browser to know the size of the image before it is fully downloaded. This allows the browser to reserve the right amount of space on the webpage for the image, preventing content from jumping around when the image loads.
+> 
+> Specifying width and height attributes for images can also contribute to improving webpage performance. When the browser knows the size of an image in advance, it can more accurately calculate the amount of space needed to display the image and avoid unnecessary content reformatting when it loads.
+> 
+> In summary, the use of width and height attributes in HTML code for images can improve the user experience by making content load faster and reducing visual gaps.
+=====================
+
+Content prompt used: 
+Translate the following to Swedish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'sv' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Use width and height
+ 2. Benefits of using width and height attributes in HTML code 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

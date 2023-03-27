@@ -1,0 +1,74 @@
+---
+title: How Browsers Choose Between Images Listed in the `srcset` Attribute
+description: >-
+  How the browser chooses between images listed in the `srcset` attribute
+  based on device and viewport width and pixel density specifications. 
+taskInputHash: f4a1a08929f238ac
+lang: en
+---
+How does the browser choose between images listed in the `srcset` attribute? Here is a step-by-step guide with examples for width and density specifications and how the browser decides based on device and viewport.
+
+- When the `srcset` attribute is used in HTML, the browser uses a set of rules to select the most appropriate image from a list of sources. These rules depend on both the display properties of the device (resolution, pixel density) and the size of the viewport. The `srcset` attribute allows you to specify different images according to width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's go over each case with examples.
+
+1\. Width Descriptor (`w`):
+
+Assume we have the following `srcset` attribute:
+
+```html
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="example image">
+```
+
+Here are the following steps the browser will follow:
+
+a. Determine the device's DPR (Device Pixel Ratio). A standard display, for example, has a DPR of 1 while a high-resolution (retina) display has a DPR of 2 or higher. 
+
+b. Calculate the effective width for each image included in `srcset`. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
+
+- example-small.jpg: 400 * 1 = 400px
+- example-medium.jpg: 800 * 1 = 800px
+- example-large.jpg: 1600 * 1 = 1600px
+
+c. Compare the effective widths with the viewport width. Assume the viewport is 420px. The browser will select the smallest image with an effective width greater than or equal to the viewport width. In this case, `example-medium.jpg` will be selected.
+
+2\. Pixel Density Descriptor (`x`):
+
+Assume we have the following `srcset` attribute:
+
+```html
+<img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="example image">
+```
+
+Here are the following steps the browser will follow:
+
+a. Determine the device's DPR (Device Pixel Ratio). A standard display, for example, has a DPR of 1 while a high-resolution (retina) display has a DPR of 2 or higher.
+
+b. Compare the DPR of the device with the `x` descriptors in `srcset`. In this case, we have three images with the following descriptors:
+
+- example-1x.jpg: 1x
+- example-2x.jpg: 2x
+- example-3x.jpg: 3x
+ 
+c. Select the image with the `x` descriptor that is closest to the device's DPR. For a device with a DPR of 1, the browser will select `example-1x.jpg`. For a device with a DPR of 2, it will select `example-2x.jpg`, and so on.
+
+It is important to note that you can also use the `sizes` attribute in combination with the `srcset` attribute to provide further information about how the image will be displayed at different viewport widths. This is particularly useful when using the width descriptor (`w`). Here is an example:
+
+```html
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw, ...
+```
+
+{{Note that the term used here is not the technical term "viewport width" but rather "effective width".}}
+=====================
+
+Content prompt used: 
+Translate the following to German, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'de' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. How the browser chooses
+ 2. How the browser chooses between images listed in the srcset attribute 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

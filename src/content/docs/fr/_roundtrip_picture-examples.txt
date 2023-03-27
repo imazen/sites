@@ -1,0 +1,61 @@
+---
+title: Examples of using the <picture> element
+description: >-
+  Provides examples of using the <picture> element for responsive images,
+  art direction, and different image formats.
+taskInputHash: 921ac1b97585a0fe
+lang: en
+---
+Provide multiple examples of using the `<picture>` element and briefly explain each one.
+
+Here are a few examples of using the `<picture>` element and their explanations:
+
+1. Example for responsive images:
+
+```html
+<picture>
+  <source srcset="image-large.jpg" media="(min-width: 768px)" />
+  <source srcset="image-medium.jpg" media="(min-width: 480px)" />
+  <img src="image-small.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element is used to provide different image sources for different screen sizes. The `<source>` elements specify the different image sources using the "srcset" attribute, and the "media" attribute to specify the conditions under which each source should be used. The `<img>` element is used as a fallback for older browsers or when the conditions specified in the `<source>` elements are not met.
+
+2. Example for art direction:
+
+```html
+<picture>
+  <source srcset="image-wide.jpg" media="(orientation: landscape)" />
+  <img src="image-portrait.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element is used to provide different image sources based on the device orientation. The `<source>` element with the "media" attribute set to "(orientation: landscape)" specifies an image source for wide screens, while the `<img>` element specifies an image source for portrait screens.
+
+3. Example for different image formats:
+
+```html
+<picture>
+  <source srcset="image.webp" type="image/webp" />
+  <source srcset="image.png" type="image/png" />
+  <img src="image.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element is used to provide different image sources for different image formats. The `<source>` elements specify different image sources using the "srcset" attribute and the "type" attribute to specify the image format. The `<img>` element is used as a fallback for older browsers that do not support the `<picture>` element.
+=====================
+
+Content prompt used: 
+Translate the following to French, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'fr' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Examples using <picture> element
+ 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

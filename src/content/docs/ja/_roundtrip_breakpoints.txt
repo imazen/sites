@@ -1,0 +1,50 @@
+---
+title: Breakpoints and Images
+description: Why (but not always all) breakpoints matter for images
+taskInputHash: 3f41c3db145e73bc
+lang: en
+---
+### Background
+
+Different layouts are needed for small screens and large monitors. To achieve the purposes of `srcset` and `sizes`, we need to change the layout at designated breakpoints.
+
+Web developers need to decide what contents to shrink, hide, or move on small screens, or to enlarge, display, or add on large screens. However, there is very little information about what device the user is viewing from, whether it is a tablet, a landscape mobile phone, or a small browser window.
+
+A breakpoint needs to be selected for any viewport width where the layout changes occur. This is called a **breakpoint**, which is an arbitrary number of CSS pixels and not [device pixels](/pixels-not-pixels). There is a great article on the general use of breakpoints in Polypane ([https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023)).
+
+Some images such as logos, icons, and buttons may be immune to layout changes caused by these breakpoints (and display fine with [density descriptors](/density-descriptors)).
+
+The main content image is limited by the size of the container. Typically, the main content area of a page is limited by a `max-width`, which is a specific width on the largest screen, and on a small screen, the main content area fills the entire viewport.
+
+If there are multiple columns at breakpoints, it becomes more difficult to calculate effective sizing rules because the proportion of the viewport width occupied by the image changes.
+
+### Quick Method
+
+That being said, do not overthink it. Likely, the following approximations are good enough.
+
+1. At what size does the main column (or image container) stop growing? Until that viewport width, use `100vw` in the `sizes` attribute of the image to indicate that the image should occupy 100% of the viewport width.
+2. What is the maximum width the container can achieve? Set it as a fixed `width` for all images.
+
+If the answer to 1 is 700px and the answer to 2 is 800px, we can use the following `sizes` attribute:
+
+```html
+<!-- These are CSS pixels, not device pixels or image pixels. -->
+<img [...] sizes="(max-width: 700px) 100vw, 800px" />
+```
+
+> You might think that the browser can handle all calculations properly based on CSS, but the browser selects the image URL *before* downloading the style sheet. Therefore, we need to calculate by ourselves. It doesn't have to be perfect.
+=====================
+
+Content prompt used: 
+Translate the following to Japanese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'ja' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Breakpoints & images
+ 2. Why some (but not all) breakpoints matter for your images 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

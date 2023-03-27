@@ -1,0 +1,31 @@
+---
+title: Testing Website Performance with Lighthouse
+description: Steps for testing website performance with Lighthouse
+taskInputHash: 2b6e1670bd34c617
+lang: en
+---
+How to Use Lighthouse to Test Your Website Performance?
+> Lighthouse is a tool that can be used to measure website performance, accessibility, and more. Follow the steps below to use Lighthouse to test your website performance:
+
+1. Open Google Chrome web browser and navigate to the page you want to test.
+2. Click the three dots in the top right corner of the browser window, then select "More tools" and "Developer tools" or simply use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
+3. In the "Developer tools" panel, click the Lighthouse icon on the left-hand panel or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the command menu and type in "Lighthouse" and select "Generate Report".
+4. In the Lighthouse dialog box, select the performance and other relevant options to test, then click "Generate Report".
+5. After Lighthouse analysis is complete, you will see a report with scores and suggestions for improving your website performance, accessibility, and more.
+
+By following these steps, you can test and optimize your website performance with Lighthouse, which can help improve user experience and search engine rankings.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Test performance with Lighthouse
+ 2. Steps on how to test a website's performance using Lighthouse 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

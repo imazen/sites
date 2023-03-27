@@ -1,0 +1,50 @@
+---
+title: srcset & image dimensions <img>
+description: An efficient and detailed guide for responsive images in 2023.
+taskInputHash: 163252199483aa34
+lang: en
+sidebar_sort_priority: 1000
+---
+**An efficient and detailed guide for images in 2023**
+
+Check the sidebar for further insights. This is your quick reference for updating `<img>` tags to handle modern devices with all their different dimensions and pixel densities. You need to [know that pixels are not equal](/en/pixels-not-pixels) and that `devicePixelRatio` is more likely to be 3.875 than 1:1. Modern phones pretend to have a width of 320-428px for greater readability.
+
+>If your image never changes size no matter how narrow the browser window is, you should use a [density descriptor](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
+
+Do you know [breakpoints](/en/breakpoints)? You will need those numbers to perfect the solution below - at least the viewport width breakpoint where the main content area stops growing.
+
+### The easy method
+
+```html
+<img src="img.jpg?w=480" 
+     srcset="img.jpg?format=webp&w=480 480w, 
+             img.jpg?format=webp&w=800 800w, 
+             img.jpg?format=webp&w=1200 1200w, 
+             img.jpg?format=webp&w=1600 1600w, 
+             img.jpg?format=webp&w=2000 2000w"
+     sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
+
+<!--We assume you have a breakpoint at 700px. 
+    And that below that viewport width, the image takes up 100% of the width, but 
+    when the viewport is larger, the image is capped at 800 CSS pixels. -->
+
+<!-- This also assumes you're using an RIAPI-compatible image server like Imageflow.
+     Producing on-the-fly image variants is essential for a developer's sanity. -->
+```
+
+{{Note that in the Italian version, the text assumes images are usually served by compatible image servers, whereas in the English version, it specifies using an RIAPI-compatible image server like Imageflow.}}
+=====================
+
+Content prompt used: 
+Translate the following to Italian, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'it' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. srcset & <img> sizes
+ 2. An Efficient and Opinionated Guide to Responsive Images for 2023 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

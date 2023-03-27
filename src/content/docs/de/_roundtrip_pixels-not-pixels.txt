@@ -1,0 +1,33 @@
+---
+title: px ≠ Pixel
+description: Device Pixels ≠ Browser Pixels ≠ Image Pixels
+taskInputHash: ef756f1d7fe54ef7
+lang: en
+sidebar_sort_priority: 900
+---
+### Device Pixels ≠ Browser Pixels ≠ Image Pixels
+
+Thanks to Apple, CSS and HTML pixels (`px`) are **almost always mapped to multiple device/printer pixels**. The devicePixelRatio on my phone is 3.875; [what's yours?](https://www.mydevice.io/).
+
+My desktop devicePixelRatio changes with browser zoom, but defaults to 1.5 (my `System > Display > Scale` is set to 150% after all).
+
+Image files (excluding SVG) are decoded into a grid of pixels. **It's annoyingly hard to perfectly represent image pixels at a 1:1 ratio with device pixels - but with `srcset`, you can get *close enough***, and with a little bit of Javascript, the size of the HTML element can be adjusted after loading if you have a compelling reason for that perfect match, though those forbidden arts are not revealed here.
+
+> Other absolute [units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined relative to the number of CSS pixels and assume a 96dpi resolution. Developers avoid absolute units because it's generally better to use units derived from font size or viewport/container dimensions. Mismatched units can break a layout when the user adjusts their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device. It goes without saying that you should do all these things before you launch your website. 
+
+{{Note: There were no major errors or awkward phrasing}}
+=====================
+
+Content prompt used: 
+Translate the following to German, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'de' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. px ≠ pixels
+ 2. Device px ≠ browser px ≠ image px 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

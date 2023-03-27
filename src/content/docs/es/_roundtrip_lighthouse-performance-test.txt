@@ -1,0 +1,38 @@
+---
+title: Testing Performance with Lighthouse
+description: Steps on how to evaluate a website's performance using Lighthouse
+taskInputHash: c8c7cb4dbfde9182
+lang: en
+---
+How do you test the performance of a site in Lighthouse?
+
+> Lighthouse is a tool that can be used to measure a website's performance, accessibility, and other aspects. To test the performance of your website with Lighthouse, follow these steps:
+> 
+> 1. Open the Google Chrome web browser and navigate to the page you wish to test.
+> 
+> 2. Click on the three dots located in the top right corner of the browser window, then select "More tools" and then "Developer tools" or simply use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
+> 
+> 3. In the Developer Tools panel, click on the Lighthouse icon located on the left side of the panel or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the Command Menu, then type "Lighthouse" and select "Generate Report".
+> 
+> 4. In the Lighthouse dialog box, select the performance and other relevant options you wish to test, then click "Generate report".
+> 
+> 5. Once Lighthouse has completed its analysis, you will see a report with scores and recommendations for improving the performance, accessibility, and other areas of your website.
+> 
+> By following these steps, you can use Lighthouse to test and optimize your website's performance, which can help improve its user experience and search engine rankings.
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting. 
+Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses. 
+Inside code blocks, only translate comments
+
+
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Test performance with Lighthouse
+ 2. Steps on how to test a website's performance using Lighthouse 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

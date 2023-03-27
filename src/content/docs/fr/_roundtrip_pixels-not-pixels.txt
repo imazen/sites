@@ -1,0 +1,33 @@
+---
+title: px ≠ pixels
+description: Device pixels ≠ browser pixels ≠ image pixels
+taskInputHash: 4c09170abf1da027
+lang: en
+sidebar_sort_priority: 900
+---
+### Device pixels ≠ browser pixels ≠ image pixels
+
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always correspond to multiple device/printer pixels**. The devicePixelRatio on my phone is 3.875; [what's yours?](https://www.mydevice.io/)
+ 
+My desktop computer's devicePixelRatio changes with browser zooming, but falls back to 1.5 by default (my `System > Display > Scale` is 150%, after all).
+
+Image files (excluding SVGs) decode to a grid of pixels. **Getting image pixels to display perfectly at a 1:1 ratio with device pixels is frankly difficult, but `srcset` can get you close enough**, and some JavaScript can adjust the size of the HTML element post-load if you have valid reasons for such a perfect mapping, though such dark arts will not be revealed here.
+
+> Other absolute units [(in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined based on the number of CSS pixels and claim everything is at 96dpi. Developers avoid absolute units as it's generally better to use units derived from font size or display/container dimension. Incompatible units can break a layout if the user adjusts their `Accessibility > Text size` multiplier, resizes the browser, or rotates their device. Needless to say, you should do all of this before publishing your site.
+
+{{Note that the term used here is not the technical term...}}.
+=====================
+
+Content prompt used: 
+Translate the following to French, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'fr' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. px ≠ pixels
+ 2. Device px ≠ browser px ≠ image px 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

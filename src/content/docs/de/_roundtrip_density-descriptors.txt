@@ -1,0 +1,64 @@
+---
+title: Density Descriptions & Srcset
+description: Examples of using density descriptions in `srcset`
+taskInputHash: 057b2de51328cf48
+lang: en
+---
+Srcset with density descriptions offers a simple and effective method to deliver the most appropriate image for each of the user's devices, thereby improving performance and user experience. This guide will take you through the basics of using srcset with density descriptions and provide example markup for your convenience.
+
+## What is Srcset with Density Descriptions?
+
+Srcset is an HTML attribute that allows for specifying multiple image sources for a single `<img>` element. Density descriptions (`x`) are used in conjunction with srcset to provide differently sized images based on the pixel density of the user's display.
+
+## When should you use Srcset with Density Descriptions?
+
+Srcset with density descriptions is particularly useful when:
+
+1. Providing high-resolution images for displays with high pixel density (such as Retina displays) while simultaneously providing lower resolution images for standard displays.
+
+2. Improving page performance by delivering the most appropriate image for each of the user's devices.
+
+## Implementing Srcset with Density Descriptions
+
+To use srcset with density descriptions, follow these steps:
+
+1. Prepare your images at different resolutions.
+
+2. Add the `srcset` attribute to your `<img>` element, including the image sources and their corresponding density descriptions.
+
+3. Add the `sizes` attribute (optional) to specify the size of the image as it will be displayed on the screen.
+
+### Example Markup
+
+Here is an example of how to integrate srcset with density descriptions into your markup:
+
+```html
+<img src="example-image-1x.jpg"
+     srcset="example-image-1x.jpg 1x, example-image-2x.jpg 2x, example-image-3x.jpg 3x"
+     alt="An example image">
+```
+
+This example markup includes:
+
+- **src**: The default image source to display if the browser does not support srcset.
+
+- **srcset**: The list of image sources and their density descriptions (1x, 2x, 3x). The browser will choose the most appropriate image based on the pixel density of the user's display.
+
+- **alt**: A description of the image for accessibility purposes.
+
+And that's it! You have successfully implemented srcset with density descriptions and improved the performance and user experience of your website.
+=====================
+
+Content prompt used: 
+Translate the following to German, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'de' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Density descriptors & srcset
+ 2. Examples of using density descriptors in `srcset` 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

@@ -1,0 +1,58 @@
+---
+title: Width and Density Descriptors
+description: Example usage of width and density descriptors in `srcset`
+taskInputHash: ac2cf702b6a1af7b
+lang: en
+---
+Learn about the `w` and `x` descriptors in `srcset`. Use examples and Markdown.
+
+>`srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and lets the browser select the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of URLs and `w` or `x` descriptors to specify the images.
+
+## Width (`w`) Descriptors
+
+>The `w` descriptor is used to specify the pixel width of an image. It is used when we want to provide the browser with the size of the image so that it can choose an image that fits the available screen space.
+
+>The syntax for using `w` descriptors in `srcset` is as follows:
+
+```html
+<img src="small.jpg"
+  srcset="small.jpg 500w,
+          medium.jpg 1000w,
+          large.jpg 2000w"
+  alt="Example Image">
+```
+
+>In the above example, we have provided three images and their corresponding pixel widths. The browser will choose the image that is closest to the available screen space.
+
+## Density (`x`) Descriptors
+
+>The `x` descriptor is used to specify the pixel density of an image, i.e., the ratio of physical pixels to CSS pixels. It is used when we want to provide different versions of the same image for different pixel densities.
+
+>The syntax for using `x` descriptors in `srcset` is as follows:
+
+```html
+<img src="small.jpg"
+  srcset="small.jpg 1x,
+          medium.jpg 2x,
+          large.jpg 3x"
+  alt="Example Image">
+```
+
+>In the above example, we have provided three images and their corresponding pixel densities. The browser will choose the image that is closest to the pixel density of the device.
+
+>Note that `w` and `x` descriptors can be used together in the same `srcset` attribute to provide more choices for the browser.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Width and density descriptors
+ 2. Examples of using width and density descriptors in `srcset` 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

@@ -1,0 +1,56 @@
+---
+title: Density Descriptors and Srcset
+description: Example of using density descriptors in `srcset`
+taskInputHash: 1e78ae21fde0486b
+lang: en
+---
+Srcset and density descriptors provide a simple yet effective way to deliver the most appropriate image to each user's device, thereby improving performance and user experience. This guide will show you the basics of using Srcset and density descriptors and provide you with markup examples.
+
+## What are Srcset and density descriptors?
+
+Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used with Srcset to provide images of different resolutions based on the pixel density of the user's display.
+
+## When to use Srcset and density descriptors?
+
+Srcset and density descriptors are particularly useful in the following scenarios:
+1. Providing high-resolution images for high DPI displays, such as Retina displays, while providing lower resolution images for standard displays.
+2. Improving page performance by delivering the most appropriate image size to each user's device.
+
+## Implementing Srcset and density descriptors
+
+To use Srcset and density descriptors, follow these steps:
+1. Prepare your images with different resolutions.
+2. Add the `srcset` attribute to your `<img>` element, including the image sources and their corresponding density descriptors.
+3. Add the `sizes` attribute (optional) to specify the size at which the image will be displayed on the screen.
+
+### Markup Example
+
+Here's an example of implementing Srcset and density descriptors in markup:
+
+```html
+<img src="example-image-1x.jpg"
+     srcset="example-image-1x.jpg 1x, example-image-2x.jpg 2x, example-image-3x.jpg 3x"
+     alt="An example image">
+```
+
+This markup example includes:
+- **src**: Default image source displayed when the browser does not support Srcset.
+- **srcset**: A list of image sources and their density descriptors (1x, 2x, 3x). The browser selects the most appropriate image based on the user's display.
+- **alt**: A description of the image for accessibility purposes.
+
+That's it! You have successfully implemented Srcset and density descriptors to improve your website's performance and user experience.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Density descriptors & srcset
+ 2. Examples of using density descriptors in `srcset` 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

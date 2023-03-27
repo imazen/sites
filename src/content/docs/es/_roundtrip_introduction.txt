@@ -1,0 +1,54 @@
+---
+title: srcset and sizes attributes for <img>
+description: An efficient and thoughtful guide to responsive images for 2023
+taskInputHash: 54aca67ab19c478f
+lang: en
+sidebar_sort_priority: 1000
+---
+
+**An Efficient and Thoughtful Guide to Responsive Images for 2023**
+
+Check the sidebar for a deep dive. This is the quick reference for updating those `<img>` tags and handling modern devices in all their different sizes and pixel densities. You should [know that not all pixels are created equal](/en/pixels-not-pixels) and that `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones pretend to be between 320-428px wide for better reading.
+
+> If your image is never going to change size, no matter how narrow the browser window gets, you should use a [pixel density descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
+
+Do you know your [breakpoints](/en/breakpoints)? You'll need those numbers to adjust the solution below, and at minimum, the breakpoint of the main content area width where it stops growing.
+
+
+### The Easy Way
+
+```html
+
+<img src="img.jpg?w=480"
+     srcset="img.jpg?format=webp&amp;w=480 480w,
+             img.jpg?format=webp&amp;w=800 800w,
+             img.jpg?format=webp&amp;w=1200 1200w,
+             img.jpg?format=webp&amp;w=1600 1600w,
+             img.jpg?format=webp&amp;w=2000 2000w"
+     sizes="(max-width: 700px) 100vw, 800px"
+     alt="Dog riding a bicycle">
+
+<!-- We have assumed that you have a breakpoint at 700px.
+      And that below that viewport width, this image takes up 100% of the width, while
+      when the viewport is larger, the image is capped at 800 CSS pixels wide -->
+
+<!-- This also assumes that you are using a RIAP-compatible image server like Imageflow.
+     On-demand image variant production is essential to developer sanity. -->
+```
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting. 
+Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses. 
+Inside code blocks, only translate comments
+
+
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. srcset & <img> sizes
+ 2. An Efficient and Opinionated Guide to Responsive Images for 2023 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

@@ -1,0 +1,57 @@
+---
+title: Examples of using the <picture> element
+description: Provides examples of using the <picture> element for responsive images, art direction and different image formats.
+taskInputHash: c60c3f87fb6a6721
+lang: en
+---
+Provides several examples of using the `<picture>` element and explains each example briefly:
+
+1. Example of responsive images:
+
+```html
+<picture>
+  <source srcset="image-large.jpg" media="(min-width: 768px)" />
+  <source srcset="image-medium.jpg" media="(min-width: 480px)" />
+  <img src="image-small.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element is used to provide different image sources based on screen size. The `<source>` element uses the `srcset` and `media` attributes to specify which source should be used under which conditions. The `<img>` element serves as a fallback option for older browsers or when none of the conditions specified in the `<source>` element are met.
+
+2. Example of art direction:
+
+```html
+<picture>
+  <source srcset="image-wide.jpg" media="(orientation: landscape)" />
+  <img src="image-portrait.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element provides different image sources based on the device's orientation. The `media` attribute in the `<source>` element is set to "(orientation: landscape)", specifying a wide image resource, while the `<img>` element specifies a portrait image resource.
+
+3. Example of different image formats:
+
+```html
+<picture>
+  <source srcset="image.webp" type="image/webp" />
+  <source srcset="image.png" type="image/png" />
+  <img src="image.jpg" alt="An image" />
+</picture>
+```
+
+Explanation: In this example, the `<picture>` element provides different image sources based on different image formats. The `<source>` elements use the `srcset` and `type` attributes to specify different image sources with different formats. The `<img>` element serves as a fallback option for older browsers that do not support the `<picture>` element.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. Examples using <picture> element
+ 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.

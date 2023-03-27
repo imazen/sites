@@ -1,0 +1,31 @@
+---
+title: px ≠ Pixels
+description: Device Pixels ≠ Browser Pixels ≠ Image Pixels
+taskInputHash: 75742aca9ccfa689
+lang: en
+sidebar_sort_priority: 900
+---
+### Device Pixels ≠ Browser Pixels ≠ Image Pixels
+
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/printer pixels**. My phone has a devicePixelRatio of 3.875; [what's yours?](https://www.mydevice.io/)
+
+My desktop's devicePixelRatio changes with browser zoom, but has a default value of 1.5 (since my `System > Display > Scale` is 150%).
+
+Image files (not including SVGs) decode to pixel grids. **To get image pixels to display 1:1 with device pixels is frustratingly difficult - but it can be approximated sufficiently with `srcset`**, and if you really need precise mapping, some JavaScript can adjust HTML element sizes after loading, though that black magic won't be divulged here.
+
+> Other absolute units (like `in`, `pc`, `pt`, `mm`, `cm`, `Q`) are defined based on the number of CSS pixels and assume everything is 96dpi. Developers should avoid absolute units because it's often better to use units derived from font sizes, viewport/container sizes. If a user doubles their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device, it can cause unit mismatch and break the layout. Without a doubt, you should perform all of these actions before publishing your website.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article:
+1. px ≠ pixels
+ 2. Device px ≠ browser px ≠ image px 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
