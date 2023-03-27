@@ -35,5 +35,6 @@ export const ALGOLIA = {
 	indexName: 'srcset',
 	appId: 'H4NCQEU4H9',
 	apiKey: '21c91faada5939dbb3cb23265cbd2e8f',
+	dataDomain: "srcset.tips"
 };
 
