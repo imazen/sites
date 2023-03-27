@@ -4,8 +4,6 @@ description: Provides examples using the <picture> element, for responsive image
   art direction and different image formats
 ---
 
-Provide several examples for using the `<picture>` element and concisely explain each
-
 Here are a few examples of using the `<picture>` element and their explanations:
 
 1\. Example for responsive images:
