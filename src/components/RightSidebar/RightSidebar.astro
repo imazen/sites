@@ -15,7 +15,11 @@ const { headings, githubEditUrl, lang} = Astro.props;
 
 <nav class="sidebar-nav" aria-labelledby="grid-right">
 	<div class="sidebar-nav-inner">
-		<TableOfContents lang={lang} client:media="(min-width: 50em)" headings={headings}  />
+		{
+			lang == "en" && (
+				<TableOfContents lang={lang} client:media="(min-width: 50em)" headings={headings}  />
+			)
+		}
 		<MoreMenu lang={lang}  editHref={githubEditUrl} />
 	</div>
 </nav>
