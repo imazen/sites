@@ -29,6 +29,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "gray-matter": "^4.0.3",
     "html-escaper": "^3.0.3",
     "openai": "^3.2.1",
     "prettier": "^2.8.7",
