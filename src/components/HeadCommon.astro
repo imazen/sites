@@ -1,6 +1,7 @@
 ---
 import '../styles/theme.css';
 import '../styles/index.css';
+import {ALGOLIA} from "../consts";
 ---
 
 <!-- Global Metadata -->
@@ -11,15 +12,6 @@ import '../styles/index.css';
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 <link rel="sitemap" href="/sitemap.xml" />
-
-<!-- Preload Fonts -->
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap"
-	rel="stylesheet"
-/> -->
-
 <!-- Scrollable a11y code helper -->
 <script src="/make-scrollable-code-focusable.js" is:inline></script>
 
@@ -27,21 +19,12 @@ import '../styles/index.css';
 <script is:inline>
 	const root = document.documentElement;
 	const theme = localStorage.getItem('theme');
-	if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+	// We're not going to use the OS setting, because people don't change it often
+	if (theme === 'dark' || (!theme)) { // && !window.matchMedia('(prefers-color-scheme: light)').matches
 		root.classList.add('theme-dark');
 	} else {
 		root.classList.remove('theme-dark');
 	}
 </script>
 
-<!-- Plausible -->
-<script defer data-domain="srcset.tips" src="https://plausible.io/js/script.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TEL60V1WM9');
-</script> -->
+<script defer data-domain={ALGOLIA.dataDomain} src="https://plausible.io/js/script.js"></script>

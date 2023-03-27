@@ -29,7 +29,7 @@ i18next.changeLanguage(lang);
 const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SITE.titleSuffix)}`;
 ---
 
-<html dir={data.dir} lang={data.lang} class="initial">
+<html dir={data.dir} lang={data.lang} class="initial" class="themeDark">
 	<head>
 		<HeadCommon />
 		<HeadSEO {...data} canonicalUrl={canonicalURL} lang={lang} />
