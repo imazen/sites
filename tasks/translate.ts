@@ -210,6 +210,9 @@ async function createNeededTasks(targetLangCode: string): Promise<TranslationTas
 
 	const nullableTasks = await Promise.all(
 		allPossibleTasks.map(async (task) => {
+            if (task.targetLangCode === task.referenceLang) {
+                return null;
+            }
 			const isUpToDate = await isTaskUpToDate(task);
 			if (!isUpToDate) {
 				return task;
