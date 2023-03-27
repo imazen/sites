@@ -232,7 +232,7 @@ const openai = new OpenAIApi(configuration);
 
 async function translateTask(task: TranslationTask) {
 
-    let metadataPrompt = "Also carefully translate the title and description for the article:\n1. " + task.referenceFile.data.title + "\n 2. " + task.referenceFile.data.description;
+    let metadataPrompt = "Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;\n1. " + task.referenceFile.data.title + "\n 2. " + task.referenceFile.data.description;
 
     const roundTripPrompt = "Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.\n";
     let conversation : openai.ChatCompletionRequestMessage[] = [
@@ -270,8 +270,11 @@ async function translateTask(task: TranslationTask) {
         messages: conversation,
     });
 
-    const translatedMetaRaw = completion2.data.choices[0].message?.content;
 
+    const translatedMetaRaw = he.decode(completion2.data.choices[0].message?.content);
+    //html entity decode translatedMetaRaw
+    
+    
     var newTitle = translatedMetaRaw?.split("2.")[0].replace("1.", "")?.trim();
     var newDescription = translatedMetaRaw?.split("2.")[1]?.trim();
 
@@ -313,8 +316,9 @@ async function translateTask(task: TranslationTask) {
     const roundTripped = roundTripCompletion.data.choices[0].message?.content || "failed";
 
     const appendLog = "\n=====================\n\nContent prompt used: \n" + task.combinedPrompt + 
-                "\n\nMetadata prompt used: \n" + metadataPrompt +
-                " \n\n\nRoundtrip (isolated) prompt used: \n" + roundTripPrompt;
+                "\n\nMetadata prompt used: \n" + metadataPrompt + 
+                "\n\nMetadata returned" + translatedMetaRaw +
+                " \n\n\nRoundtrip (isolated) prompt used: \n" + roundTripPrompt.replace("{{", "").replace("}}", "");
 
     await fs.promises.writeFile(task.targetRoundtripFilePath, roundTripped + appendLog, 'utf-8');
     console.log("Wrote " + task.targetRoundtripFilePath);
