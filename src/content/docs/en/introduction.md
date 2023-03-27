@@ -30,6 +30,6 @@ Do you know what your [breakpoints](/en/breakpoints) are? You'll need those numb
       And that under that viewport width, this image takes 100% of the width, but
       when the viewport is larger, the image is limited to 800 CSS pixels -->
 
-<!-- This also assumes you have are using an RIAPI-compliant image server such as Imageflow. 
+<!-- This assumes you are using an RIAPI-compliant image server such as Imageflow. 
      On-the-fly image variant production is essential for developer sanity. -->
 ```
