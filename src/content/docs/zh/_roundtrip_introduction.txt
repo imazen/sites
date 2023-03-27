@@ -1,37 +1,36 @@
 ---
-title: '`srcset` and `<img>` `sizes`'
-description: Efficient and Insightful Guide to Responsive Images in 2023
-taskInputHash: 37440300dc8e2ebe
+title: srcset and <img> sizes
+description: A practical and insightful guide to responsive images in 2023
+taskInputHash: 432ac58bb5112c3c
 lang: en
 sidebar_sort_priority: 1000
 ---
-**Efficient and Insightful Guide to Responsive Images in 2023**
+**A Practical and Insightful Guide to Responsive Images in 2023**
 
-Please see the sidebar for a deeper dive. This is a quick reference intended to upgrade the `<img>` tag to handle various sizes and pixel densities on modern devices. You should [know that a pixel ≠ a pixel](/en-us/pixels-not-pixels), and that the `devicePixelRatio` is more likely to be closer to 3.875 than 1:1. Modern phones pretend to have widths of 320-428px for readability. 
+For an in-depth look, please see the sidebar. This is a quick reference for upgrading `<img>` tags to handle images on modern devices with various sizes and pixel densities. You should [know that a pixel is not a pixel](/en/pixels-not-pixels) and that `devicePixelRatio` is most likely 3.875, not 1:1. Modern phones pretend to have a width of 320-428 pixels for the sake of readability.
 
-> If your images will never change size no matter how narrow you shrink the browser window, you should use [density descriptors](/en-us/density-descriptors). This typically applies to logos, icons, and buttons.
+> If your images will never change size, no matter how narrow the browser window, you should use [density descriptors](/en/density-descriptors). This usually applies to logos, icons, and buttons.
 
-Do you know what your [breakpoints](/en-us/breakpoints) are? You'll need those numbers to fine-tune the solutions below – and at minimum, you need a viewport-width breakpoint, where your main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You'll need those numbers to fine-tune the solutions below—at least the viewport width where the main content area stops growing.
 
-### Simple technique
+
+### A Simple Solution
 
 ```html
-<img src="img.jpg?w=480" 
-     srcset="img.jpg?format=webp&amp;w=480 480w, 
-             img.jpg?format=webp&amp;w=800 800w, 
-             img.jpg?format=webp&amp;w=1200 1200w, 
-             img.jpg?format=webp&amp;w=1600 1600w, 
-             img.jpg?format=webp&amp;w=2000 2000w"
-     sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding bicycle" />
 
-<!-- We're assuming you have a breakpoint at 700px. 
-     If the viewport width is smaller than that width, the image will take up the entire width; when the viewport is wider, the image will be constrained to 800 CSS pixels wide. -->
+<img src="img.jpg?w=480"
+        srcset="img.jpg?format=webp&w=480 480w, 
+                img.jpg?format=webp&w=800 800w, 
+                img.jpg?format=webp&w=1200 1200w, 
+                img.jpg?format=webp&w=1600 1600w, 
+                img.jpg?format=webp&w=2000 2000w"
 
-<!-- This also assumes that you're using an image server that complies with the RIAPI standard, such as Imageflow. 
-      Generating variant images in real-time is crucial for developers' normal workflow. -->
-```
+        sizes="(max-width: 700px) 100vw, 800px" alt="Dog Riding a Bicycle" />
 
-{{Note that the Chinese version uses characters that have been deprecated or are not officially supported in HTML (such as `&amp;` instead of just `&`).}}
+<!-- We assume you have a breakpoint at 700px. And at that viewport width, this image takes up 100% of the width, but is limited to 800 CSS pixels when the viewport is larger. -->
+
+<!-- This also assumes you're using an image server that's compatible with the RIA API, such as Imageflow. Instantly generating image variants is crucial for a developer's well-being. -->
+
 =====================
 
 Content prompt used: 
@@ -41,7 +40,7 @@ Translate the following to Simplified Chinese, preserving all markdown formattin
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article:
-1. srcset & <img> sizes
+1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023 
 
 

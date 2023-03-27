@@ -25,4 +25,4 @@ Also carefully translate the title and description for the article:
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following to English, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Potential issue: ...}}.

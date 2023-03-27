@@ -1,0 +1,1 @@
+Do not translate the following words: "srcset", "sizes", "px", "em", "rem", "vw", "vh", "vmin", "vmax"

@@ -1,18 +1,17 @@
 ---
-title: srcset & dimensioni delle immagini <img>
-description: Una guida efficiente e dettagliata per le immagini responsive del 2023.
-taskInputHash: 163252199483aa34
+title: srcset & <img> sizes
+description: Una Guida Efficientea e Decisa alle Immagini Responsive per il 2023
+taskInputHash: 9fad2f8d356df766
 lang: it
 sidebar_sort_priority: 1000
 ---
-**Una guida efficiente e dettagliata per le immagini del 2023**
+**Una guida efficiente e decisa alle immagini per il 2023**
 
-Controlla la barra laterale per una maggior approfondimento. Questo è il riferimento veloce per aggiornare i tag `<img>` per gestire i moderni dispositivi con tutte le loro diverse dimensioni e densità di pixel. Devi [sapere che i pixel non sono uguali](/it/pixels-non-pixels) e il `devicePixelRatio` è più probabilmente 3,875 che 1:1. I telefoni moderni fingono di avere una larghezza di 320-428px per una maggiore leggibilità.
+Controlla la sidebar per una sprofondamento maggiore. Questa è la rapida guida all'aggiornamento dei tag `<img>` per gestire i dispositivi moderni in tutte le loro varie dimensioni e densità di pixel. Dovresti sapere che i pixel non sono uguali e che `devicePixelRatio` è più probabile che sia intorno a 3,875 che 1:1. I telefoni moderni fingono di avere una larghezza compresa tra 320 e 428px per la leggibilità.
 
-> Se la tua immagine non cambia mai di dimensione, indipendentemente da quanto è stretta la finestra del browser, dovresti usare un [descrittore di densità](/it/density-descriptors). Questo è spesso adatto per loghi, icone e pulsanti.
+> Se la tua immagine non cambia mai dimensione, indipendentemente da quanto riduci la finestra del browser, dovresti invece usare un [descrittore di densità](/it/density-descriptors). Questo è adatto spesso per loghi, icone e pulsanti.
 
-Conosci i [punti di interruzione](/it/breakpoints)? Avrai bisogno di questi numeri per perfezionare la soluzione di seguito - e almeno il punto di interruzione della larghezza del viewport in cui l'area del contenuto principale smette di crescere.
-
+Sai quali sono i tuoi [punti di interruzione](/it/breakpoints)? Avrai bisogno di questi numeri per affinare la soluzione qui sotto, e almeno del punto di interruzione della larghezza di visualizzazione in cui l'area del contenuto principale smette di crescere.
 
 ### Il metodo facile
 
@@ -27,9 +26,10 @@ Conosci i [punti di interruzione](/it/breakpoints)? Avrai bisogno di questi nume
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Cane che guida una bicicletta" />
 
-<!-- Abbiamo ipotizzato che tu abbia un breakpoint a 700px. 
-      E che sotto quella larghezza del viewport, l'immagine occupi il 100% della larghezza, ma
-      quando il viewport è più grande, l'immagine è limitata a 800 pixels CSS -->
+<!-- Abbiamo supposto che tu abbia un punto di interruzione a 700px. 
+      E che sotto quella larghezza di visualizzazione, questa immagine occupi il 100% della larghezza, ma
+      quando la larghezza di visualizzazione è più grande, l'immagine è limitata a 800 pixel CSS -->
 
-<!-- Questo presuppone anche che tu stia usando un server di immagini compatibile con RIAPI come Imageflow.
-     La produzione di varianti di immagini al volo è essenziale per la sanità mentale dello sviluppatore. -->
+<!-- Questo presupposto vale anche se usi un server di immagini compatibile con RIAPI come Imageflow. 
+     La produzione on-the-fly delle varianti delle immagini è essenziale per la sanità dello sviluppatore. -->
+```

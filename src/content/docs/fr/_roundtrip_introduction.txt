@@ -1,39 +1,41 @@
 ---
-title: srcset and sizes attributes of the <img> element
-description: An effective and categorical guide to responsive images in 2023
-taskInputHash: 4c6b1b7d054d9d3e
-lang: fr
+title: srcset and \<img\> Sizes
+description: An Effective and Convincing Guide to Adaptive Images for 2023
+taskInputHash: 9067da6b012a9380
+lang: en
 sidebar_sort_priority: 1000
 ---
-**An effective and categorical guide to images in 2023**
+**An Effective and Convincing Guide to Adaptive Images for 2023**
 
-Check out the sidebar for a deep dive. This is a quick reference to upgrading your `<img>` tags to handle modern devices in all their various sizes and pixel densities. You should [know that pixels are not equal to pixels](/fr/pixels-not-pixels) and that `devicePixelRatio` is more likely to be in the range of 3.875 than 1:1. Modern phones claim to be anywhere from 320 to 428 pixels wide for legibility reasons.
+Check out the sidebar for a deep dive. Here's the quick reference for improving `<img>` tags to handle modern devices in all their varied sizes and pixel densities. You need to [know that pixels != pixels](/en/pixels-not-pixels) and that `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones claim to be 320-428px wide for legibility.
 
-> If your image never changes size no matter the width of your browser window, you should use a [density descriptor instead](/fr/density-descriptors). This often works for logos, icons, and buttons.
+> If your image will never change size, no matter the width of the browser window, you should use a [density descriptor instead](/en/density-descriptors). This is often well-suited for logos, icons, and buttons.
 
-Do you know your [breakpoints](/fr/breakpoints)? You'll need those numbers to fine-tune the solution below - at a minimum, the display-port-width breakpoint where the main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You'll need those numbers to refine the solution below - at minimum, the breakpoint of the width of the main content area where growth stops.
 
-
-### The easy way
+### The Easy Way
 
 ```html
+<img src="img.jpg?w=480"
+     srcset="img.jpg?format=webp&amp;w=480 480w,
+           img.jpg?format=webp&amp;w=800 800w,
+           img.jpg?format=webp&amp;w=1200 1200w,
+           img.jpg?format=webp&amp;w=1600 1600w,
+           img.jpg?format=webp&amp;w=2000 2000w"
+     sizes="(max-width: 700px) 100vw, 800px"
+     alt="Dog riding a bicycle">
 
-<img src="img.jpg?w=480" 
-        srcset="img.jpg?format=webp&w=480 480w, 
-                img.jpg?format=webp&w=800 800w, 
-                img.jpg?format=webp&w=1200 1200w, 
-                img.jpg?format=webp&w=1600 1600w, 
-                img.jpg?format=webp&w=2000 2000w"
+<!-- We assumed you have a breakpoint at 700px.
+      And that below this display width, this image takes 100% of width, but
+      when the display window is bigger, the image is limited to 800 CSS pixels -->
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Dog on a bike" />
-
-<!-- We assumed you have a breakpoint at 700px. 
-      And that under that display-port width, this image takes 100% width, but 
-      above that width, the image is capped at 800 CSS pixels wide -->
-
-<!-- This also assumes you're using an RIAPI-compliant image server such as Imageflow. 
-     Dynamic image variant generation is essential for developer sanity. -->
+<!-- This also assumes you're using an RIAPI-compliant image server, such as Imageflow.
+     The production of image variants on-the-fly is essential for developer sanity. -->
 ```
+
+{{Note to translator: The code block contains some html entities that need to be converted to their corresponding characters (&amp; -> &)}} 
+
+{{No mistakes or clumsy phrasing found}}
 =====================
 
 Content prompt used: 
@@ -43,7 +45,7 @@ Translate the following to French, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article:
-1. srcset & <img> sizes
+1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023 
 
 
