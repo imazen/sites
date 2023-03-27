@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { SITE, OPEN_GRAPH } from '../consts';
+import type { CurrentCollectionEntry } from '../current';
 
 import  i18next from "i18next";
 
 type Props = { 
   canonicalUrl: URL; 
   lang: string; 
-} & CollectionEntry<'docs'>['data'];
+} & CurrentCollectionEntry['data'];
 
 const { ogLocale, image, title, description, canonicalUrl, lang} = Astro.props;
 

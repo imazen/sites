@@ -1,7 +1,8 @@
 ---
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../languages';
 import type { MarkdownHeading } from 'astro';
-import type { CollectionEntry } from 'astro:content';
+import type {CurrentCollectionEntry} from '../current';
+
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
 import Header from '../components/Header/Header.astro';
@@ -12,7 +13,7 @@ import Footer from '../components/Footer/Footer.astro';
 import { GITHUB_EDIT_URL, SITE } from '../consts';
 import i18next from "i18next";
 
-type Props = CollectionEntry<'docs'>['data'] & {
+type Props = CurrentCollectionEntry['data'] & {
 	headings: MarkdownHeading[];
 };
 
@@ -20,7 +21,7 @@ type Props = CollectionEntry<'docs'>['data'] & {
 const { headings, ...data } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
-const currentFile = `src/content/docs${currentPage.replace(/\/$/, '')}.md`;
+const currentFile = `src/content/${SITE.contentCollection}/${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 
@@ -29,7 +30,7 @@ i18next.changeLanguage(lang);
 const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SITE.titleSuffix)}`;
 ---
 
-<html dir={data.dir} lang={data.lang} class="initial" class="themeDark">
+<html dir={data.dir} lang={data.lang} class="initial">
 	<head>
 		<HeadCommon />
 		<HeadSEO {...data} canonicalUrl={canonicalURL} lang={lang} />

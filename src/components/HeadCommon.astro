@@ -20,7 +20,7 @@ import {ALGOLIA} from "../consts";
 	const root = document.documentElement;
 	const theme = localStorage.getItem('theme');
 	// We're not going to use the OS setting, because people don't change it often
-	if (theme === 'dark' || (!theme)) { // && !window.matchMedia('(prefers-color-scheme: light)').matches
+	if (theme === 'dark' || (!theme && !window.matchMedia('(prefers-color-scheme: light)').matches)){
 		root.classList.add('theme-dark');
 	} else {
 		root.classList.remove('theme-dark');

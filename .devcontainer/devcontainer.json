@@ -1,5 +1,5 @@
 {
-  "name": "Docs Site",
+  "name": "Site",
   "build": {
     "dockerfile": "examples.Dockerfile"
   },

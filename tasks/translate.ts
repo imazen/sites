@@ -5,19 +5,11 @@ import path from 'path';
 import crypto from 'crypto';
 import matter from 'gray-matter';
 import { exit } from 'process';
+import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
 
-const langNamesInEnglish = {
-	en: 'English',
-	fr: 'French',
-	es: 'Spanish',
-	de: 'German',
-	sv: 'Swedish',
-	zh: 'Simplified Chinese',
-	it: 'Italian',
-	ja: 'Japanese',
-};
 
-const langFolderCodes = ['en', 'es', 'de', 'sv', 'zh', 'it', 'fr', 'ja'];
+const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
+const langFolderCodes = LANGUAGE_FOLDER_CODES;
 
 // create a function that normalizes line endings and ending whitespace on a string
 function normalize(str: string) {
@@ -44,7 +36,7 @@ async function parseMdFile(filePath: string): Promise<ParsedMd> {
 	const normalizedContent = normalize(content);
 	const fileHash = crypto.createHash('sha256').update(normalizedContent).digest('hex').slice(0, 16);
 	const { content: parsedContent, data } = matter(content);
-	const langCode = getFolderCodeFromPath(filePath, 'en');
+	const langCode = getFolderCodeFromPath(filePath, SITE.defaultLanguage);
 	return {
 		filePath,
 		langCode,
@@ -200,8 +192,8 @@ async function isTaskUpToDate(task: TranslationTask): Promise<boolean> {
 	return true;
 }
 
-async function createNeededTasks(targetLangCode: string): Promise<TranslationTask[]>{
-	const parsedRefFiles = await loadAndParseMdFiles('./src/content/docs/en');
+async function createNeededTasks(referenceFolder: string, targetLangCode: string): Promise<TranslationTask[]>{
+	const parsedRefFiles = await loadAndParseMdFiles(referenceFolder);
 
 	// Create TranslationTasks for each parsedRefFiles, filter to the ones that are not up to date
 	const allPossibleTasks = await Promise.all(
@@ -326,24 +318,33 @@ async function translateTask(task: TranslationTask) {
 
 
 
-async function translateDocs() {
-    // create the folders for each language
+async function translateDocs(contentCollections: string[]) {
+    
+	const allFolders = 
+		contentCollections.flatMap((contentCollection) => {
+			return langFolderCodes.map((langFolderCode) => {
+				return `./src/content/${contentCollection}/${langFolderCode}`;
+			});
+		});
+	
+	// create the folders for each language and coontent collection
     await Promise.all(
-        langFolderCodes.map(async (langFolderCode) => {
-            const langFolder = `./src/content/docs/${langFolderCode}`;
-            if (!fs.existsSync(langFolder)){
-                console.log("Creating folder " + langFolder);
-                await fs.promises.mkdir(langFolder, { recursive: false });
-            }
-        }
-    ));
-
-    // create a list of all the tasks that need to be done and flatten them
+		allFolders.map(async (folder) => {
+			if (!fs.existsSync(folder)){
+				console.log("Creating folder " + folder);
+				await fs.promises.mkdir(folder, { recursive: false });
+			}
+		})
+	);
+	
+    // create a list of all the tasks that need to be done and flatten them (not slow)
     const allTasks = await Promise.all(
-        langFolderCodes.map(async (langFolderCode) => {
-            return await createNeededTasks(langFolderCode);
-        }
-    )).then((tasks) => tasks.flat());
+		contentCollections.map(async (contentCollection) => {
+			return await Promise.all(langFolderCodes.map(async (langFolderCode) => {
+				return await createNeededTasks(`./src/content/${contentCollection}/${SITE.defaultLanguage}`, langFolderCode);
+			}));
+		})
+    ).then((tasks) => tasks.flat(2));
 
     // translate all the tasks
     await Promise.all(
@@ -354,9 +355,9 @@ async function translateDocs() {
 }
 
 async function translateOne() {
-    const tasks = await createNeededTasks('es'); // get first result from createNeededTasks('es')
+    const tasks = await createNeededTasks('./src/content/docs/en', 'es'); // get first result from createNeededTasks('es')
     if (tasks[0] != null) {
         await translateTask(tasks[0]);
     }
 }
-await translateDocs();
+await translateDocs(['docs', 'imgstyle']);

@@ -1,6 +1,6 @@
 ---
 import { getLanguageFromURL } from '../../languages';
-import {  KNOWN_LANGUAGES } from '../../consts';
+import {  KNOWN_LANGUAGES, SITE } from '../../consts';
 
 import  i18next from "i18next";
 
@@ -16,8 +16,8 @@ const currentPageMatch = currentPage.endsWith('/')
 
 import { getCollection } from 'astro:content';
 
-// Get all `src/content/docs/` entries
-const allDocsPosts = await getCollection('docs', ({ data }) => {
+// Get all current content collection entries
+const allDocsPosts = await getCollection(SITE.contentCollection, ({ data }) => {
   return true;
 });
 
