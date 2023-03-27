@@ -2,7 +2,8 @@
 import { getLanguageFromURL } from '../../languages';
 import {  KNOWN_LANGUAGES } from '../../consts';
 
-import { interpolate } from "astro-i18next";
+import  i18next from "i18next";
+
 type Props = {
 	currentPage: string;
 	lang: string;
@@ -29,7 +30,7 @@ allDocsPosts.sort((a, b) => {
 const langName = Object.keys(KNOWN_LANGUAGES).find(key => 
 KNOWN_LANGUAGES[key] === lang);
 
-const sidebarTitle = interpolate("sidebarTitle",`Topics (${langName})`);
+const sidebarTitle = i18next.t("sidebarTitle",`Topics (${langName})`);
 
 const langSubset = [[sidebarTitle, lang]]; // Object.entries(KNOWN_LANGUAGES)
 
