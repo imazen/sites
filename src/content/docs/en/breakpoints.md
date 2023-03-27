@@ -9,7 +9,7 @@ Tiny screens and big monitors need different layouts. For the purpose of `srcset
 
 Web developers must decide what to shrink, hide, or relocate on smaller screens - or more commonly, what to expand, reveal, or add on larger screens. They also have very little information to go on. Is the user on a tablet or a phone in landscape mode - or a small browser window?
 
-We have to pick an arbitrary viewport widths where the layout changes. This is called a **breakpoint**. It's an arbitrary number of CSS pixels ([not device pixels](/en/pixels-not-pixels)). Polypane has a [great article](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) on commonly used breakpoints.
+We have to pick an arbitrary viewport width where the layout changes. This is called a **breakpoint**. It's an arbitrary number of CSS pixels ([not device pixels](/en/pixels-not-pixels)). Polypane has a [great article](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) on commonly used breakpoints.
 
 Some images (like logos or icons or buttons) might be immune to the layout shifts caused by these breakpoints (and be fine with [srcset density descriptors](/en/density-descriptors)). 
 
