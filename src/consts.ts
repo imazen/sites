@@ -15,8 +15,14 @@ export const OPEN_GRAPH = {
 };
 
 export const KNOWN_LANGUAGES = {
-	English: 'en',
-	Español: 'es'
+	"English": "en",
+	"Français": "fr",
+	"Español": "es",
+	"Deutsch": "de",
+	"Svenska": "sv",
+	"简体中文": "zh",
+	"Italiano": "it",
+	"日本語": "ja"
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
@@ -31,27 +37,3 @@ export const ALGOLIA = {
 	apiKey: 'XXXXXXXXXX',
 };
 
-
-
-export type Sidebar = Record<
-	(typeof KNOWN_LANGUAGE_CODES)[number],
-	Record<string, { text: string; link: string }[]>
->;
-// export const SIDEBAR: Sidebar = {
-// 	en: {
-// 		'Section Header': [
-// 			{ text: 'Introduction', link: 'en/introduction' },
-// 			{ text: 'Page 2', link: 'en/page-2' },
-// 			{ text: 'Page 3', link: 'en/page-3' },
-// 		],
-// 		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
-// 	},
-// 	es: {
-// 		'Section Header': [
-// 			{ text: 'Introduction', link: 'en/introduction' },
-// 			{ text: 'Page 2', link: 'en/page-2' },
-// 			{ text: 'Page 3', link: 'en/page-3' },
-// 		],
-// 		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
-// 	}
-// };
