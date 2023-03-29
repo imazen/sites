@@ -16,7 +16,6 @@ examples/docs/**/*.md
 examples/blog/**/*.md
 
 # Directories
-.github
 .changeset
 
 # Files

@@ -1,0 +1,44 @@
+name: Update JSON-LD
+on:
+    push:
+      branches:
+        - disabled
+jobs:
+  update-translations:
+    name: Update Frontmatter Dates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'npm'
+
+           
+      - name: Cache .aicache
+        uses: actions/cache@v3
+        with:
+            path: .aicache  
+            key: openai-cache
+  
+
+      - run: npm ci
+
+
+      - name: npm run jsonld
+        env:
+          VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: npm run jsonld
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: src/content/*.json
+          commit-message: Update json-ld
+          title: Update json-ld files
+          body: Update json-ld content
+          branch: update-json-ld
+          delete-branch: true
+          labels: github-action

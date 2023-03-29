@@ -1,72 +1,22 @@
 // npm run translate
-import { Configuration, OpenAIApi, openai } from 'openai';
+import { Configuration, OpenAIApi} from 'openai';
+import openai from 'openai';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import he from 'he';
 import matter from 'gray-matter';
 import { exit } from 'process';
 import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
-
+import { completeChatCached } from './openai_cache';
+import { ParsedMd, loadAndParseMdFiles, readFrontMatter, tryLoadFileString} from './markdown'
 
 const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
 
-// create a function that normalizes line endings and ending whitespace on a string
-function normalize(str: string) {
-	return str.replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\s+$/, '');
-}
+const GPT_MODEL = 'gpt-3.5-turbo';
 
-interface ParsedMd {
-	filePath: string;
-	fileHash: string;
-	langCode: string;
-	content: string;
-	data: Record<string, unknown>;
-}
-
-function getFolderCodeFromPath(filePath: string, defaultValue: string): string {
-	const segments = filePath.split('/');
-	//return the first segment that matches a langFolderCodes entry
-	const folderCode = segments.find((s) => langFolderCodes.includes(s));
-	return folderCode || defaultValue;
-}
-
-async function parseMdFile(filePath: string): Promise<ParsedMd> {
-	const content = await fs.promises.readFile(filePath, 'utf-8');
-	const normalizedContent = normalize(content);
-	const fileHash = crypto.createHash('sha256').update(normalizedContent).digest('hex').slice(0, 16);
-	const { content: parsedContent, data } = matter(content);
-	const langCode = getFolderCodeFromPath(filePath, SITE.defaultLanguage);
-	return {
-		filePath,
-		langCode,
-		fileHash,
-		content: parsedContent,
-		data,
-	};
-}
-
-async function processDirectory(directory: string): Promise<ParsedMd[]> {
-	const entries = await fs.promises.readdir(directory, { withFileTypes: true });
-	const parsedFiles: ParsedMd[] = [];
-
-	for (const entry of entries) {
-		const fullPath = path.join(directory, entry.name);
-
-		if (entry.isDirectory()) {
-			const subDirectoryFiles = await processDirectory(fullPath);
-			parsedFiles.push(...subDirectoryFiles);
-		} else if (entry.isFile() && path.extname(entry.name) === '.md') {
-			const parsedFile = await parseMdFile(fullPath);
-			parsedFiles.push(parsedFile);
-		}
-	}
-	return parsedFiles;
-}
-
-async function loadAndParseMdFiles(directory: string): Promise<ParsedMd[]> {
-	return processDirectory(directory);
-}
+const AI_CACHE_DIR = './.aicache';
 
 interface TranslationTask {
 	referenceFile: ParsedMd;
@@ -108,7 +58,7 @@ async function createTranslationTaskFromReferenceFile(
 ): Promise<TranslationTask> {
 	const newPath = translatePath(refFile.filePath, refFile.langCode, targetLangCode);
 	const newFolder = path.dirname(`./${newPath}`);
-	const sharedPromptPath = `${newFolder}/__shared.prompt.txt`;
+	const sharedPromptPath = `${newFolder}/__shared.translation_prompt.txt`;
 	const fileSpecificPromptPath = `${newFolder}/_${path.basename(
 		refFile.filePath,
 		'.md'
@@ -123,33 +73,15 @@ async function createTranslationTaskFromReferenceFile(
 		console.warn(`Target language folder ${newFolder} does not exist. Ending process.`);
 		exit(1);
 	}
-
 	// load _shared.prompt.txt from the target language folder, or "" if it doesn't exist
-	let sharedPrompt = '';
-	try {
-		sharedPrompt = await fs.promises.readFile(sharedPromptPath, 'utf-8');
-	} catch (err) {
-		if (err.code !== 'ENOENT') {
-			throw err;
-		}
-	}
+	let sharedPrompt = await tryLoadFileString(sharedPromptPath, '');
 	// load the file specific prompt path/_file.prompt.txt , or "" if it doesn't exist
-	let fileSpecificPrompt = '';
-	try {
-		fileSpecificPrompt = await fs.promises.readFile(fileSpecificPromptPath, 'utf-8');
-	} catch (err) {
-		if (err.code !== 'ENOENT') {
-			throw err;
-		}
-		// ignore errors. fileSpecificPrompt will stay ""
-	}
-
+	let fileSpecificPrompt = await tryLoadFileString(fileSpecificPromptPath, '');
 	const combinedPrompt = createPrompt(targetLangCode, refFile, sharedPrompt, fileSpecificPrompt);
 
 	const taskInputHash = crypto
 		.createHash('sha256')
 		.update(combinedPrompt)
-		.update(targetLangCode)
 		.update(refFile.fileHash)
 		.digest('hex')
 		.slice(0, 16);
@@ -167,13 +99,6 @@ async function createTranslationTaskFromReferenceFile(
 		taskInputHash: taskInputHash,
         targetRoundtripFilePath: targetRoundtripFilePath,
 	};
-}
-
-// read front-matter from target file
-async function readFrontMatter(filePath: string): Promise<Record<string, unknown>> {
-	const content = await fs.promises.readFile(filePath, 'utf-8');
-	const { data } = matter(content);
-	return data;
 }
 
 // create a function to check if the target file for the given TranslationTask exists and has front-matter with taskInputHash matching
@@ -218,15 +143,13 @@ async function createNeededTasks(referenceFolder: string, targetLangCode: string
 const configuration = new Configuration({
 	apiKey: process.env.VITE_OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
-
-
+const openapi = new OpenAIApi(configuration);
 
 async function translateTask(task: TranslationTask) {
 
     let metadataPrompt = "Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;\n1. " + task.referenceFile.data.title + "\n 2. " + task.referenceFile.data.description;
 
-    const roundTripPrompt = "Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.\n";
+    const roundTripPrompt = "Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.\n";
     let conversation : openai.ChatCompletionRequestMessage[] = [
         {
             role: 'system',
@@ -240,30 +163,30 @@ async function translateTask(task: TranslationTask) {
     console.log("Translating " + task.referenceFile.filePath + " to " + task.targetFilePath + " (" + task.targetLanguageNameInEnglish + ")");
 
 
-	const completion = await openai.createChatCompletion({
-		model: 'gpt-3.5-turbo',
+	const completion = await completeChatCached({
+		model: GPT_MODEL,
 		messages: conversation,
-	});
+	}, openai, AI_CACHE_DIR);
 
-	const translatedRaw = completion.data.choices[0].message?.content || "";
+	const translatedRaw = completion.choices[0].message?.content || "";
 
 	console.log(translatedRaw);
 
     conversation.push({
-        role: completion.data.choices[0].message?.role,
+        role: completion.choices[0].message?.role,
         content: translatedRaw,
     });
     conversation.push({
         role: 'user',
         content: metadataPrompt,
     });
-    const completion2 = await openai.createChatCompletion({
-        model: 'gpt-3.5-turbo',
+    const completion2 = await completeChatCached({
+        model: GPT_MODEL,
         messages: conversation,
-    });
+    }, openai, AI_CACHE_DIR);
 
 
-    const translatedMetaRaw = he.decode(completion2.data.choices[0].message?.content);
+    const translatedMetaRaw = he.decode(completion2.choices[0].message?.content);
     //html entity decode translatedMetaRaw
     
     
@@ -292,8 +215,8 @@ async function translateTask(task: TranslationTask) {
     console.log("Wrote " + task.targetFilePath);
     
     console.log("Round-tripping translation...");
-	const roundTripCompletion = await openai.createChatCompletion({
-		model: 'gpt-3.5-turbo',
+	const roundTripCompletion = await completeChatCached({
+		model: GPT_MODEL,
 		messages: [
             {
                 role: 'system',
@@ -304,8 +227,8 @@ async function translateTask(task: TranslationTask) {
                 content: translatedFileContent,
             },
         ],
-	});
-    const roundTripped = roundTripCompletion.data.choices[0].message?.content || "failed";
+	}, openai, AI_CACHE_DIR);
+    const roundTripped = roundTripCompletion.choices[0].message?.content || "failed";
 
     const appendLog = "\n=====================\n\nContent prompt used: \n" + task.combinedPrompt + 
                 "\n\nMetadata prompt used: \n" + metadataPrompt + 
@@ -315,7 +238,6 @@ async function translateTask(task: TranslationTask) {
     await fs.promises.writeFile(task.targetRoundtripFilePath, roundTripped + appendLog, 'utf-8');
     console.log("Wrote " + task.targetRoundtripFilePath);
 }
-
 
 
 async function translateDocs(contentCollections: string[]) {

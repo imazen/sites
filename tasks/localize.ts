@@ -7,7 +7,8 @@ import path from 'path';
 import crypto from 'crypto';
 import matter from 'gray-matter';
 import { exit } from 'process';
-
+import { completeChatCached } from './openai_cache';
+import { LANGUAGES } from '../src/consts';
 
 
 // this is an non-accurate way to estimate token numbers;
@@ -132,7 +133,7 @@ async function translate(inputJson: any, targetLang: string) {
 
     const { requireTranslation, noTranslation } = groupPairs(pairs)
 
-    const completion = await openai.createChatCompletion({
+    const completion = await completeChatCached({
         model: "gpt-3.5-turbo",
         messages: [
             {
@@ -144,8 +145,8 @@ async function translate(inputJson: any, targetLang: string) {
                 content: JSON.stringify(requireTranslation.map(t => t[1]))
             }
         ]
-    });
-    const translatedRaw = matchJSON(`${completion.data.choices[0].message?.content}`);
+    },openai);
+    const translatedRaw = matchJSON(`${completion.choices[0].message?.content}`);
     // const translatedRaw = matchJSON(`${JSON.stringify(requireTranslation)}`);
 
     const translated = JSON.parse(translatedRaw) as string[];
@@ -155,34 +156,72 @@ async function translate(inputJson: any, targetLang: string) {
     return JSON.stringify(result, null, 1);
 }
 
-const langNamesInEnglish = {
-	en: 'English',
-	fr: 'French',
-	es: 'Spanish',
-	de: 'German',
-	sv: 'Swedish',
-	zh: 'Simplified Chinese',
-	it: 'Italian',
-	ja: 'Japanese',
-};
+
+interface LoadedFile{
+    path: string;
+    content: string;
+}
+async function readFiles(dir: string): Promise<LoadedFile[]> {
+    try {
+      const files = await fs.promises.readdir(dir);
+      const promises = files.map(async (file) => {
+        const filePath = `${dir}/${file}`;
+        const inputJson = await fs.promises.readFile(filePath, 'utf-8');
+        return { path: filePath, content: inputJson } as LoadedFile;
+      });
+      const results = await Promise.all(promises);
+      return results;
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  }
+
+interface LocalizeTask{
+    folderLangCode: string;
+    langNameInEnglish: string;
+    targetPath: string;
+    input: LoadedFile;
+}
+
 
 // create a file ./public/locales/{lang}/translation.json from ./public/locales/en/translation.json using the translate function
 // for each language in langNamesInEnglish
 async function localize() {
-    // subtract en from langNamesInEnglish
-    const langs = Object.keys(langNamesInEnglish).filter((lang) => lang !== 'en');
+
+    // for each english file
+    const files = await readFiles('./public/locales/en/');
+
+    // generate tasks
+    const tasks: LocalizeTask[] = [];
+    for (const file of files) {
+        for (const lang of LANGUAGES) {
+            if (lang.folderCode === 'en') {
+                continue;
+            }
+            // get basename of the file without extension
+            const basename = path.basename(file.path);
+            
+            tasks.push({
+                folderLangCode: lang.folderCode,
+                langNameInEnglish: lang.englishName,
+                input: file,
+                targetPath: `./public/locales/${lang.folderCode}/${basename}`,
+            })
+        }
+    }
+
     
-    const inputJson = fs.readFileSync('./public/locales/en/translation.json', 'utf-8');
     // Do translate in parallel for all langs
     await Promise.all(
-        langs.map(async (lang) => {
-            const langNameInEnglish = langNamesInEnglish[lang];
-            console.log(`Translating to ${lang} (${langNameInEnglish})...`);
-            const translated = await translate(inputJson, langNameInEnglish);
+        tasks.map(async (task) => {
+            const { folderLangCode: lang, langNameInEnglish, input } = task;
+            console.log(`Translating ${input.path} to ${lang} (${langNameInEnglish})...`);
+            const translated = await translate(input.content, langNameInEnglish);
             // write the translated file asynchronously to `./public/locales/${lang}/translation.json`
-            fs.writeFile(`./public/locales/${lang}/translation.json`, translated, () => {
-                console.log(`Translated to ${lang} (${langNameInEnglish})`);
-            });
+            await fs.promises.writeFile(task.targetPath, translated);
+            console.log(`Translated to ${lang} (${langNameInEnglish})`);
+            
         }));
     }
 await localize();

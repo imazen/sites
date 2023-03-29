@@ -1,0 +1,45 @@
+name: Update translations
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-translations:
+    name: Update translations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      #checkout the update-translations branch if it exists and rebase it against main
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'npm'
+
+      - name: Cache .aicache
+        uses: actions/cache@v3
+        with:
+          path: .aicache
+          key: openai-cache
+
+      - run: npm ci
+
+      - name: npm run translate
+        env:
+          VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: npm run translate
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: src/content/*.md
+          commit-message: Update translations
+          title: Update translations
+          body: Update all translated content
+          branch: update-translations
+          delete-branch: true
+          labels: github-action
