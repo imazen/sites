@@ -10,9 +10,16 @@
 # Exit on error
 set -e
 
+# go to the root of the repo using the env var if present
+if [ -n "$GITHUB_WORKSPACE" ]; then
+    cd "$GITHUB_WORKSPACE"
+    cd src/content
+else
+    #find the repository root
+    cd "$(git rev-parse --show-toplevel)"
+    cd src/content/
+fi
 
-# Update the dates
-cd ../../src/content/
 echo "Updating dates in frontmatter in $(pwd)"
 
 for file in $(find . -name "*.md"); do
