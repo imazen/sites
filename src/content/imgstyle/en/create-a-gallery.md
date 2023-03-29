@@ -6,8 +6,8 @@ description: How to create a gallery on a website
 Here are the general steps to create an image gallery on a website:
 1. Create a new HTML file for your image gallery. You can name it something like "gallery.html".
 2. Add the HTML structure to your file. This typically includes the head section with a title and any necessary CSS stylesheets, and the body section where you'll add the actual gallery. 
-3. Create a container for your gallery using a <div> tag. Give it an ID or a class so you can style it later. 
-4. Inside the container, add individual image elements using the <img> tag. You can set the source attribute to the image file path or URL, and add any alt text or captions as needed.
+3. Create a container for your gallery using a `<div>` tag. Give it an ID or a class so you can style it later. 
+4. Inside the container, add individual image elements using the `<img>` tag. You can set the source attribute to the image file path or URL, and add any alt text or captions as needed.
 5. Style your gallery with CSS. You can use properties like display, width, height, margin, padding, and border to control the layout and appearance of your gallery.
 
 Here's an example code for creating a simple image gallery:

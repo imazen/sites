@@ -4,7 +4,7 @@ description: How to add CSS effects and borders to an image
 ---
 
 To add CSS effects and borders to an image, you can use the following steps: 
-1. Select the image element in your HTML code. You can do this by using an ID or class selector, or by selecting the `img` element directly. 
+1. Select the image element in your HTML code. You can do this by using an ID or class selector, or by selecting the `<img>` element directly. 
 2. Define a CSS class or ID selector that applies the desired styles to the image. For example, you could use the following code to create a simple border around the image:
 
 ```css
