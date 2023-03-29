@@ -10,6 +10,7 @@ const all = defineCollection({
 		dir: z.union([z.literal('ltr'), z.literal('rtl')]).default('ltr'),
 		date_published: z.date().optional(),
 		date_updated: z.date().optional(),
+		structured_data_type: z.union([z.literal('HowTo'), z.literal('FAQPage'), z.literal('NewsArticle')]).default('NewsArticle'),
 		image: z
 			.object({
 				src: z.string(),
