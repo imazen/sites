@@ -27,8 +27,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: src/content/*.md
           commit-message: Update frontmatter dates
-          title: Update datePuiblish and dateUpdated
-          body: Update all .md files to have the same datePublished and dateUpdated as the git log
+          title: Update date_published and date_updated
+          body: Update all .md files to have the same date_published and date_updated as the git log
           branch: update-frontmatter-dates
           delete-branch: true
           labels: github-action

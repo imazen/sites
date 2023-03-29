@@ -2,7 +2,7 @@
 #this script executes using bash
 
 # This scipt updates every .md file in the repo by changing the 
-# frontmatter datePublished and dateUpdated to match the git history
+# frontmatter date_published and date_updated to match the git history
 # It will only create a PR if there are changes to the .md files
 # It will only run on the main branch
 # it uses the 'yq' command to update each .md file
@@ -21,14 +21,14 @@ for file in $(find . -name "*.md"); do
     # get the first date the file was added to the repo and the last date it was updated
 
     # these are producing the same date even when the file has been edited many times
-    datePublished=$(git log --format=%aI --date=iso-strict --reverse -- "$file" | tail -1)
-    dateUpdated=$(git log --format=%aI --date=iso-strict -- "$file" | tail -1)
+    date_published=$(git log --format=%aI --date=iso-strict --reverse -- "$file" | tail -1)
+    date_updated=$(git log --format=%aI --date=iso-strict -- "$file" | tail -1)
 
     if grep -q "^---\s*\r\?$" "$file"; then
 
 
         # if the dates are idential, write a warning
-        if [ "$datePublished" = "$dateUpdated" ]; then
+        if [ "$date_published" = "$date_updated" ]; then
             echo -n "only one commit found... "
         fi
 
@@ -38,9 +38,9 @@ for file in $(find . -name "*.md"); do
         sed -i '$ d' frontmatter.txt
         sed -i '1d' frontmatter.txt
 
-        # exit this iteration of the loop if datePublished and dateUpdated are already in the frontmatter and match
+        # exit this iteration of the loop if date_published and date_updated are already in the frontmatter and match
         # using yq
-        if [[ $(yq eval '.datePublished' frontmatter.txt) == "$datePublished" ]] && [[ $(yq eval '.dateUpdated' frontmatter.txt) == "$dateUpdated" ]]; then
+        if [[ $(yq eval '.date_published' frontmatter.txt) == "$date_published" ]] && [[ $(yq eval '.date_updated' frontmatter.txt) == "$date_updated" ]]; then
             echo -n "already up-to-date\n"
             continue
         fi
@@ -50,8 +50,8 @@ for file in $(find . -name "*.md"); do
 
         # update the dates in frontmatter if they exist
         if [[ -s "frontmatter.txt" ]]; then
-            yq -i eval ".datePublished |= select(.==null) |=\"$datePublished\"" frontmatter.txt 
-            yq -i eval ".dateUpdated = \"$dateUpdated\"" frontmatter.txt 
+            yq -i eval ".date_published |= select(.==null) |=\"$date_published\"" frontmatter.txt 
+            yq -i eval ".date_updated = \"$date_updated\"" frontmatter.txt 
 
             echo "update frontmatter: \n$(cat frontmatter.txt)\n\n"
 
@@ -68,16 +68,4 @@ for file in $(find . -name "*.md"); do
     else
         echo "no frontmatter found\n"
     fi
-    # #this code is putting the dates in the frontmatter and after the frontmatter
-
-    # # extract the frontmatter from the .md file into a separate file based on ----
-    # sed -n '/^---$/,/^---$/p' $file > frontmatter.txt   
-    # # remove the frontmatter from the .md file
-    # sed -i '/^---$/,/^---$/d' $file
-
-    # yq -i eval ".datePublished = \"$datePublished\"" frontmatter.txt 
-    # yq -i eval ".dateUpdated = \"$dateUpdated\"" frontmatter.txt 
-    # # add the frontmatter back to the .md file with the updated dates
-    # cat frontmatter.txt $file > temp && mv temp $file
-    # rm frontmatter.txt
 done
