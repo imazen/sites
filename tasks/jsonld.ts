@@ -7,7 +7,7 @@ import crypto from 'crypto';
 import he from 'he';
 import matter from 'gray-matter';
 import { exit } from 'process';
-import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
+import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
 const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
 import { completeChatCached } from './openai_cache';
@@ -270,4 +270,4 @@ async function generateOne() {
     }
 }
 await generateOne();
-//await generateFor(['docs', 'imgstyle']);
+//await generateFor(CONTENT_COLLECTIONS);

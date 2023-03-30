@@ -33,7 +33,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          add-paths: src/content/*.json
+          add-paths: public/locales/*.json
           commit-message: Update localizization JSON files
           title: Update localizization JSON files
           body: Update localizization JSON files

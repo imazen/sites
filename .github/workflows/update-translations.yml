@@ -36,7 +36,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          add-paths: src/content/*.md
+          add-paths: src/content/*.md, src/content/*/_roundtrip_*.txt
           commit-message: Update translations
           title: Update translations
           body: Update all translated content

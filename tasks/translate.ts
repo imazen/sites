@@ -7,7 +7,7 @@ import crypto from 'crypto';
 import he from 'he';
 import matter from 'gray-matter';
 import { exit } from 'process';
-import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
+import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
 import { completeChatCached } from './openai_cache';
 import { ParsedMd, loadAndParseMdFiles, readFrontMatter, tryLoadFileString} from './markdown'
 
@@ -282,4 +282,4 @@ async function translateOne() {
         await translateTask(tasks[0]);
     }
 }
-await translateDocs(['docs', 'imgstyle']);
+await translateDocs(CONTENT_COLLECTIONS);
