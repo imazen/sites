@@ -1,7 +1,7 @@
 // npm run localize
 // Borrowed heavily from https://github.com/ObservedObserver/chatgpt-i18n
 
-import { Configuration, OpenAIApi, openai } from 'openai';
+import { Configuration, pApi, openai } from 'openai';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
@@ -122,7 +122,7 @@ function matchJSON (str: string) {
 const configuration = new Configuration({
 	apiKey: process.env.VITE_OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
+const openapi = new OpenAIApi(configuration);
 
 
 
@@ -145,7 +145,7 @@ async function translate(inputJson: any, targetLang: string) {
                 content: JSON.stringify(requireTranslation.map(t => t[1]))
             }
         ]
-    },openai);
+    },openapi);
     const translatedRaw = matchJSON(`${completion.choices[0].message?.content}`);
     // const translatedRaw = matchJSON(`${JSON.stringify(requireTranslation)}`);
 

@@ -21,10 +21,18 @@ interface FeedbackTask {
     alternateVersionPath: string;
 }
 
-
-const  prompt1: string = ` If there is nothing to suggest, just output {{NO_SUGGESTIONS}}, but otherwise please list any bugs, mistakes, and spelling errors in the following technical doc, as well as anything that might be confusing.`;
-const  prompt2: string = "Provide 'before' and 'after' segments to tighten up the content and correct any errors.";
-
+// {{FILE}}, {{BODY}}, {{DATA.title}}, {{DATA.description}} {{responses=1..}} {{temperature=0..2}} {{hide=true|false}}
+const defaultPrompts = [
+    `{{hide=true}}Don't break character. You are a technical editor with a keen eye, who likes to improve confusing phrasing and insert supportive visual aids. You are also a stickler for grammar and spelling.`,
+    `Please list any bugs, mistakes, and spelling errors in the following markdown article: {{FILE}}`,
+    `Should we clarify any concepts?`,
+    `Should we add any images? Please suggest image URLs unless unless those URLs are already present.`,
+    `{{responses=2}}Can you suggest a better description for this article than "{{DATA.description}}"?`,
+    `{{responses=2}}Can you suggest a better - but very concise and short -title for this article than "{{DATA.title}}"?`,
+		`{{responses=2}}Can you suggest 10 top keywords (comma delimited) and 5 top short search queries related to this content?`,
+		`Are there keywords or phrases we should introduce to help more people find this page?"?`,
+    `{{temperature=1.5}}Don't break character. You're an editor who likes to spruce up content and add punch, quips, puns, and personality to technical content while staying safe-for-work. Can you identify some sentences from the article and suggest more engaging replacements?`
+];
 
 async function createTask(
 	refFile: ParsedMd, generateAlternate: boolean = false
@@ -33,8 +41,10 @@ async function createTask(
     const basename = path.basename(refFile.filePath, '.md');
 	const commentaryPath = `${dir}/_f_${basename}.feedback.txt`;
     const newPath = `${dir}/_f_${basename}.alternate.md`;
-    
-    const prompts = [prompt1, prompt2];
+
+ 
+    const prompts = (refFile.data.feedback_prompts ?? defaultPrompts).concat([refFile.data.add_feedback_prompt])
+        .filter(s => s && s.trim() !== '');
 
 	const taskInputHash = crypto
 		.createHash('sha256')
@@ -95,7 +105,7 @@ const configuration = new Configuration({
 });
 const openapi = new OpenAIApi(configuration);
 
-function wrapText(text: string, lineLength: number) {
+function wrapText(text: string, lineLength: number, maxSequentialNewlines: number = 2) {
     const breaker = new LineBreaker(text);
     let last = 0;
     let bk = null;
@@ -116,80 +126,114 @@ function wrapText(text: string, lineLength: number) {
         }
         last = bk.position;
     }
-    return lines.join("\n");
+    let result = lines.join("\n");
+    let newLinesString = "\n".repeat(maxSequentialNewlines + 1);
+    while (result.includes(newLinesString)) {
+        result = result.replace(newLinesString, newLinesString.slice(0, -1));
+    }
+    return result;
 }
 
+function injectVars(promptString: string, task: FeedbackTask, removeNamedVars: string[] = []) {
+    let result = removeVars(promptString, removeNamedVars);
+    result = result.replace('{{FILE}}', task.referenceFile.fileString);
+    result = result.replace('{{BODY}}', task.referenceFile.content);
+    for (let key in task.referenceFile.data) {
+        result = result.replace(`{{DATA.${key}}}`, task.referenceFile.data[key]);
+    }
+    return result.replace('(hide)', '');
+}
+
+interface PromptSettings{
+    temperature?: number;
+    hide?: boolean;
+    top_p?: number;
+    responses?: number;
+    promptWithoutVars: string;
+}
+
+function removeVars(promptString: string, vars: string[]) {
+    let result = promptString;
+    for (let key of vars) {
+        result = result.replace(`{{${key}}}`, '');
+    }
+    return result;
+}
+
+function extractSettings(promptString: string): PromptSettings{
+    // extract a hash of all {{key=value}} pairs, then remove them from the prompt string
+    let settings: PromptSettings = { promptWithoutVars: promptString};
+    let result = promptString.replace(/{{(\w+)=(\w+)}}/g, (match, key, value) => {
+        // convert value to the proper type - parse numbers, and booleans
+        if (value === 'true') {
+            value = true;
+        } else if (value === 'false') {
+            value = false;
+        } else if (!isNaN(Number(value))) {
+            value = Number(value);
+        }
+        settings[key] = value;
+        return '';
+    });
+    settings.promptWithoutVars = result;
+    return settings;
+}
+
+function dividerString(title: string) {
+    return `\n================ ${title} ==================\n`;
+}
 
 async function feedbackTask(task: FeedbackTask) {
+    let conversation : openai.ChatCompletionRequestMessage[] = [];
+    let originalFeedbackFile = await tryLoadFileString(task.commentaryPath, '');
 
-    let listFeedbackPrompt = task.prompts[0];
-    let altVersionPrompt = task.prompts[1];
-    let conversation : openai.ChatCompletionRequestMessage[] = [
-        {
-            role: 'system',
-            content: listFeedbackPrompt,
-        },
-        {
-            role: 'user',
-            content: task.referenceFile.content,
-        },
-    ];
-    console.log("Getting feedback on " + task.referenceFile.filePath)
+    let feedbackFile = `For version [[${task.taskInputHash}]] of prompts and [[${task.referenceFile.filePath}]]\n`;
+    console.log(feedbackFile);
 
+    for (let i = 0; i < task.prompts.length; i++) {
+        let role = i == 0 ? openai.ChatCompletionRequestMessageRoleEnum.System : openai.ChatCompletionRequestMessageRoleEnum.User;
 
-	const completion = await completeChatCached({
-		model: GPT_MODEL,
-		messages: conversation,
-	}, openapi);
+        let promptSettings = extractSettings(task.prompts[i]);
+ 
+        conversation.push({
+            role: role,
+            content: injectVars(promptSettings.promptWithoutVars, task),
+        });
+        
+        // Don't duplicate the file contents into the log or feedback file
+        let messageWithoutFile = injectVars(task.prompts[i], task, ['FILE', 'BODY']);
 
-	const feedbackRaw = completion.choices[0].message?.content || "";
+        let promptLog = dividerString(`PROMPT (${role})`) + wrapText(messageWithoutFile, 120, 2) +"\n";
+        if (promptSettings.hide) promptLog = "(prompt hidden)\n";
+        
+        console.log(promptLog.slice(0,-1));
+        feedbackFile += promptLog;
+        
+        const completion = await completeChatCached({
+            model: GPT_MODEL,
+            messages: conversation,
+            temperature: promptSettings.temperature,
+            n: promptSettings.responses || 1,
+            top_p: promptSettings.top_p,
+        }, openapi);
 
-    // wrap lines to 120 characters in feedbackRaw
-    const feedbackWrapped = wrapText(feedbackRaw, 120);
-
-
-    // if feedbackRaw contains {{NOTHING}} delete the file
-    if (feedbackRaw.includes('{{NO_SUGGESTIONS}}')) {
-        // if it exists
-        if (fs.existsSync(task.commentaryPath)) {
-            console.log("Deleting " + task.commentaryPath);
-            await fs.promises.rm(task.commentaryPath);
-        }
-    }else{
+				for (let choice of completion.choices) {
+					let feedbackRaw = choice.message?.content || "";
+					conversation.push({
+						role: choice.message?.role,
+						content: feedbackRaw,
+					});
+					let choiceNumberString = completion.choices.length > 1 ? ` #${choice.index + 1} of ${completion.choices.length}` : '';
+					let responseLog = dividerString(`RESPONSE ${choiceNumberString}(${choice.message?.role})`) + wrapText(feedbackRaw, 120, 2) + "\n";
+					if (promptSettings.hide) responseLog = "(response hidden)\n";
+					console.log(responseLog.slice(0,-1));
+					feedbackFile += responseLog;
+				}
+				
+    
         // write to task.commentaryPath
-        await fs.promises.writeFile(task.commentaryPath, "[[" + task.taskInputHash + "]]\n\n" +  feedbackWrapped, 'utf-8');
-    }
-	console.log(feedbackWrapped);
-
-    if (task.generateAlternate === false) {
-        console.log("Skipping alternate version generation");
-        return;
-    }
-
-    console.log("Getting revision on " + task.referenceFile.filePath);
-
-    conversation.push({
-        role: completion.choices[0].message?.role,
-        content: feedbackRaw,
-    });
-    conversation.push({
-        role: 'user',
-        content: altVersionPrompt,
-    });
-    const completion2 = await completeChatCached({
-        model: GPT_MODEL,
-        messages: conversation,
-    }, openapi);
-
-
-    const altVersionRaw = completion2.choices[0].message?.content;
-
-    // if altVersionRaw is defined an not an empty string
-    if (altVersionRaw) {
-
-        await fs.promises.writeFile(task.alternateVersionPath, altVersionRaw, 'utf-8');
-        console.log("Wrote alternate version" + task.alternateVersionPath);
-    }
+        await fs.promises.writeFile(task.commentaryPath, feedbackFile + dividerString("PRIOR FEEDBACK") + originalFeedbackFile, 'utf-8');
+    }   
 }
 
 
@@ -219,9 +263,8 @@ async function feedbackOne() {
     }
 }
 
-// await feedbackOne();
+await feedbackOne();
 
-const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
 
-await feedbackAll(CONTENT_COLLECTIONS, ['en']);
+//await feedbackAll(CONTENT_COLLECTIONS, ['en']);

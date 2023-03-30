@@ -166,7 +166,7 @@ async function translateTask(task: TranslationTask) {
 	const completion = await completeChatCached({
 		model: GPT_MODEL,
 		messages: conversation,
-	}, openai, AI_CACHE_DIR);
+	}, openapi, AI_CACHE_DIR);
 
 	const translatedRaw = completion.choices[0].message?.content || "";
 
@@ -183,7 +183,7 @@ async function translateTask(task: TranslationTask) {
     const completion2 = await completeChatCached({
         model: GPT_MODEL,
         messages: conversation,
-    }, openai, AI_CACHE_DIR);
+    }, openapi, AI_CACHE_DIR);
 
 
     const translatedMetaRaw = he.decode(completion2.choices[0].message?.content);
@@ -227,7 +227,7 @@ async function translateTask(task: TranslationTask) {
                 content: translatedFileContent,
             },
         ],
-	}, openai, AI_CACHE_DIR);
+	}, openapi, AI_CACHE_DIR);
     const roundTripped = roundTripCompletion.choices[0].message?.content || "failed";
 
     const appendLog = "\n=====================\n\nContent prompt used: \n" + task.combinedPrompt + 

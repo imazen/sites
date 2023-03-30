@@ -6,6 +6,8 @@ import matter from 'gray-matter';
 import { exit } from 'process';
 import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
 
+import { CurrentCollectionEntry } from '../src/current'
+
 
 const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
@@ -75,13 +77,14 @@ export async function readFrontMatter(filePath: string): Promise<Record<string, 
 	return data;
 }
 
+
 export interface ParsedMd {
 	filePath: string;
 	fileHash: string;
 	langCode: string;
 	content: string;
     fileString: string;
-	data: Record<string, unknown>;
+	data: CurrentCollectionEntry['data'];
     publishToUrl: string; // assumes only one content collection per site
 }
 
