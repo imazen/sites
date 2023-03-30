@@ -263,8 +263,8 @@ async function feedbackOne() {
     }
 }
 
-await feedbackOne();
+//await feedbackOne();
 
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
 
-//await feedbackAll(CONTENT_COLLECTIONS, ['en']);
+await feedbackAll(CONTENT_COLLECTIONS, ['en']);
