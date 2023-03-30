@@ -1,14 +1,11 @@
 ---
-title: Examples of using the <picture> element
+title: Examples for usage of <picture> element
 description: >-
-  Provides examples of using the <picture> element for responsive images, art
-  direction, and different image formats.
-taskInputHash: f315b465512d8908
+  Provides examples for the usage of the <picture> element for responsive images, art direction, and various image formats.
+taskInputHash: aace1b3e0a9751e5
 lang: en
 ---
-Provide multiple examples of using the `<picture>` element and briefly explain them.
-
-Here are some examples of using the `<picture>` element and their explanations:
+Here are a few examples for the usage of the `<picture>` element and their explanations:
 
 1. Example for responsive images:
 
@@ -20,9 +17,9 @@ Here are some examples of using the `<picture>` element and their explanations:
 </picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different screen sizes. The `<source>` elements specify the different image sources using the `srcset` attribute and the `media` attribute to specify the conditions under which each source should be used. The `<img>` element is used as a fallback for older browsers or when the conditions specified in the `<source>` elements are not met.
+Explanation: In this example, the `<picture>` element is used to provide different image sources for different screen sizes. The `<source>` elements specify the different image sources using the `srcset` attribute and the `media` attribute to define the conditions under which each source should be used. The `<img>` element is used as fallback for older browsers or if the conditions specified in the `<source>` elements are not met. 
 
-2. Example for art direction:
+2. Example for Art Direction:
 
 ```html
 <picture>
@@ -31,9 +28,9 @@ Explanation: In this example, the `<picture>` element is used to provide differe
 </picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources depending on the orientation of the device. The `<source>` element with the `media` attribute set to `(orientation: landscape)` specifies an image source for wider screens, while the `<img>` element specifies an image source for portrait-oriented screens.
+Explanation: In this example, the `<picture>` element is used to provide different image sources based on the orientation of the device. The `<source>` element with the `media` attribute set to `(orientation: landscape)` specifies an image source for wide screens while the `<img>` element specifies an image source for portrait screens.
 
-3. Example for different image formats:
+3. Example for various image formats:
 
 ```html
 <picture>
@@ -43,7 +40,15 @@ Explanation: In this example, the `<picture>` element is used to provide differe
 </picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different image formats. The `<source>` elements specify different image sources using the `srcset` attribute and the `type` attribute to specify the image format. The `<img>` element is used as a fallback for older browsers that do not support the `<picture>` element.
+Explanation: In this example, the `<picture>` element is used to provide different image sources for various image formats. The `<source>` elements specify different image sources using the `srcset` attribute and the `type` attribute to define the image format. The `<img>` element is used as fallback for older browsers that do not support the `<picture>` element.
+
+## Breakpoints
+
+In responsive design, breakpoints are used to define when the layout of a website or application should change based on the size of the viewport. Breakpoints are typically defined with media queries in CSS that apply different styles depending on the screen width. These breakpoints can be used in conjunction with the `<picture>` element to provide different image sources for different screen sizes.
+
+In the first example above, we used the `media` attribute to specify the screen width at which each source should be used. If the screen width is greater than or equal to 768 pixels, the `image-large.jpg` source will be used. If the screen width is greater than or equal to 480 pixels but less than 768 pixels, `image-medium.jpg` source will be used. If the screen width is less than 480 pixels, the `image-small.jpg` source will be used. This allows appropriately sized images to be provided for each device, reducing page load times and improving the user experience.
+
+Breakpoints can be defined for any screen size, and multiple breakpoints can be used to create layouts that respond to a wide range of devices. By combining breakpoints with the `<picture>` element, flexible and responsive designs can be created that look great on any device.
 =====================
 
 Content prompt used: 
@@ -52,10 +57,13 @@ Translate the following to German, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Examples using <picture> element
- 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats 
+ 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats
+
+Metadata returned1. Beispiele für die Verwendung des <picture>-Elements
+2. Bietet Beispiele für die Verwendung des <picture>-Elements für responsive Bilder, Art Direction und verschiedene Bildformate. 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

@@ -1,0 +1,30 @@
+---
+title: Styling `<img>` elements and sample layout
+description: Styling `<img>` elements and sample layout
+taskInputHash: bee844b57e8752ed
+lang: en
+sidebar_sort_priority: 1000
+---
+# Styling `<img>` elements and sample layout
+
+## Styling `<img>` elements
+
+TO DO:
+=====================
+
+Content prompt used: 
+Translate the following to Italian, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'it' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. Stilizzare gli elementi `<img>` e layout di esempio
+2. Stilizzare gli elementi `<img>` e layout di esempio 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

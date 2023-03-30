@@ -1,26 +1,28 @@
 ---
-title: How Browsers Choose
-description: How the browser chooses between images listed in the srcset attribute
-taskInputHash: 7e4f4d12ac0fff9b
+title: How the browser chooses
+description: How the browser chooses among the images listed in the srcset attribute
+taskInputHash: 5f305bd3a8d992cf
 lang: en
 ---
-How does the browser choose between images listed in the `srcset` attribute? Here's a step-by-step guide, with examples for both width and density specifications and how the browser decides based on the device and viewport.
+How does the browser choose among the images listed in the `srcset` attribute? Here are the detailed steps, with examples for both width and density specifications and how the browser chooses based on the device and viewport:
 
-- When using the `srcset` attribute in HTML, the browser uses a set of rules to choose the most appropriate image from a set of provided sources. These rules depend on both the characteristics of the device display (resolution, pixel density) and the size of the viewport. The `srcset` attribute allows you to specify different images according to width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's take a look at each case with examples.
+- When using the `srcset` attribute in HTML, the browser uses a set of rules to choose the most appropriate image from a list of provided sources. These rules depend on the display characteristics of the device (resolution, pixel density) and the size of the viewport. The `srcset` attribute allows to specify different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's look at each case with examples.
 
 1\. Width descriptor (`w`):
 
-Assume we have the following `srcset` attribute:
+Suppose we have the following `srcset` attribute:
 
 ```html
-<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example Image">
+
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example image">
+
 ```
 
-The browser will follow these steps:
+The browser follows these steps:
 
 a. Determine the DPR (Device Pixel Ratio) of the device. For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
 
-b. Calculate the effective width for each image in the `srcset` attribute. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
+b. Calculate the effective width for each image in `srcset`. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
 
 - example-small.jpg: 400 * 1 = 400px
 
@@ -28,21 +30,23 @@ b. Calculate the effective width for each image in the `srcset` attribute. Multi
 
 - example-large.jpg: 1600 * 1 = 1600px
 
-c. Compare the effective widths to the viewport width. Let's assume the viewport width is 420px. The browser will choose the smallest image with an effective width greater than or equal to the viewport width. In this case, it will select `example-medium.jpg`.
+c. Compare the effective widths with the viewport width. Suppose the viewport width is 420px. The browser will select the smallest image with an effective width greater than or equal to the viewport width. In this case, it will select `example-medium.jpg`.
 
-2\. Pixel density descriptor (`x`):
+1\. Pixel density descriptor (`x`):
 
-Assume we have the following `srcset` attribute:
+Suppose we have the following `srcset` attribute:
 
 ```html
-<img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example Image">
+
+<img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example image">
+
 ```
 
-The browser will follow these steps:
+The browser follows these steps:
 
 a. Determine the DPR (Device Pixel Ratio) of the device. For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
 
-b. Compare the device DPR with the `x` descriptors in the `srcset` attribute. In this case, we have three images with the following descriptors:
+b. Compare the device's DPR with the `x` descriptors in `srcset`. In this case, we have three images with the following descriptors:
 
 - example-1x.jpg: 1x
 
@@ -50,15 +54,15 @@ b. Compare the device DPR with the `x` descriptors in the `srcset` attribute. In
 
 - example-3x.jpg: 3x
 
-c. Choose the image with the `x` descriptor closest to the device DPR. For a device with a DPR of 1, the browser will select `example-1x.jpg`. For a device with a DPR of 2, it will choose `example-2x.jpg`, and so on.
+c. Choose the image with the `x` descriptor closest to the device's DPR. For a device with a DPR of 1, the browser will select `example-1x.jpg`. For a device with a DPR of 2, it will choose `example-2x.jpg`, and so on.
 
-It's worth noting that you can also use the `sizes` attribute in combination with the `srcset` attribute to provide more information about how the image will be displayed at different viewport widths. This is especially useful when using the width descriptor (`w`). Here's an example:
+It is important to note that it is also possible to use the `sizes` attribute in combination with the `srcset` attribute to provide additional information on how the image will be displayed at different viewport widths. This is particularly useful when using the width descriptor (`w`). Here is an example:
 
 ```html
 
 <img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
+
 ```
-{{Note that in the last example the sizes attribute appears to be incomplete.}}
 =====================
 
 Content prompt used: 
@@ -67,10 +71,13 @@ Translate the following to Italian, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. How the browser chooses
- 2. How the browser chooses between images listed in the srcset attribute 
+ 2. How the browser chooses between images listed in the srcset attribute
+
+Metadata returned1. Come sceglie il browser
+2. Come il browser sceglie tra le immagini elencate nell'attributo srcset 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

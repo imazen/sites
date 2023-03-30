@@ -1,36 +1,35 @@
 ---
 title: Brytpunkter & bilder
 description: Varför vissa (men inte alla) brytpunkter är viktiga för dina bilder
-taskInputHash: 8f3cf4c303246d47
+taskInputHash: 28770a79c61c9c7e
 lang: sv
 ---
 ### Bakgrund
 
-Små skärmar och stora skärmar kräver olika layouter. För att `srcset` och `sizes` ska fungera behöver vi beskriva bilder i olika storlekar.
+Små skärmar och stora skärmar behöver olika layouter. För `srcset` och `sizes` behöver vi veta vid vilken punkt layouten ändras.
 
-Webbutvecklare måste bestämma vad som ska krympas, döljas eller flyttas till mindre skärmar - eller oftare, vad som ska expandera, avslöjas eller läggas till på större skärmar. De har också mycket lite information att gå på. Är användaren på en surfplatta eller en telefon i landskapsläge - eller ett litet webbläsarfönster?
+Webbutvecklare måste besluta vad som ska krympas, döljas eller flyttas på mindre skärmar - eller oftare, vad som ska expandera, avslöjas eller läggas till på större skärmar. De har också väldigt lite information att gå på. Är användaren på en surfplatta, eller en telefon i liggande läge - eller en liten webbläsarfönster?
 
-Vi måste välja en godtycklig bredd där layouten ändras. Detta kallas en **brytpunkt**. Det är ett godtyckligt antal CSS-pixlar ([inte enhetspixlar](/sv/pixels-not-pixels)). Polypane har en [utmärkt artikel](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) om vanligtvis använda brytpunkter.
+Vi måste välja en godtycklig viewport-breddenhet där layouten ändras. Detta kallas en **brytpunkt**. Det är en godtycklig siffra av CSS-pixlar ([inte enhetspixlar](/sv/pixels-not-pixels)). Polypane har en [bra artikel](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) om vanligt använda brytpunkter.
 
-Vissa bilder (som logotyper eller ikoner eller knappar) kanske inte påverkas av layoutskift som orsakas av dessa brytpunkter (och fungerar bra med [srcset density descriptors](/sv/density-descriptors)).
+Några bilder (som logotyper eller ikoner eller knappar) kan vara opåverkade av layoutskift som orsakas av dessa brytpunkter (och fungera bra med [srcset density descriptors](/en/density-descriptors)).
 
-Huvudinnehållsbilder kommer att begränsas av storleken på deras container. Vanligtvis kommer huvudinnehållsytan på en sida att begränsas till en viss bredd på de största skärmarna, en `max-width`, men på små skärmar kommer huvudinnehållsytan att fylla hela bildskärmen.
+Huvudinnehållsbilder kommer att begränsas av storleken på deras behållare. Vanligtvis kommer huvudinnehållsområdet på en sida att begränsas till en viss bredd på de största skärmarna, en `max-width`, men på små skärmar kommer huvudinnehållsområdet att fylla hela viewporten.
 
-Om du har mer än en kolumn vid vissa brytpunkter blir det svårare att beräkna de effektiva dimensioneringsreglerna, eftersom andelen av bildskärmsbredden som bilden tar upp kommer att ändras.
+Om du har mer än en kolumn vid vissa brytpunkter, blir det svårare att beräkna de effektiva dimensioneringsreglerna, eftersom den procentandel av viewportbredden som bilden tar upp kommer att ändras.
 
-### Den enkla metoden
+### Det enkla sättet
 
-Sagt det så här, överväga inte detta för mycket. Du kommer förmodligen mycket bra överens med följande ungefärliga metod:
+Med det sagt, överanalysera inte det här. Du kommer förmodligen att vara mycket OK med följande approximation:
 
-1. Vid vilken storlek slutar huvudkolumnen (eller bildens container) att växa? Upp till den bildskärmsbredden kan vi använda `100vw` för bildens `sizes`-attribut för att säga att bilden tar upp 100% av bildskärmsbredden.
-2. Vad är den maximala bredden som containern någonsin uppnår? Vi kan ställa in det som en fast `width` för allt annat.
+1. Vid vilken storlek slutar huvudkolumnen (eller bildens behållare) att växa? Upp till den viewportbredden, kan vi använda `100vw` för bildens storleksattribut att säga att bilden tar upp 100% av viewportens bredd.
+2. Vad är den maximala bredden som behållaren någonsin uppnår? Vi kan ställa in det som en fast `bredd` för allt annat.
 
-Om ditt svar på 1 var 700 pixlar och ditt svar på 2 var 800 pixlar kan du använda följande `sizes`-attribut:
+Om ditt svar på 1 var 700px och ditt svar på 2 var 800px, kan du använda följande `sizes`-attribut:
 
 ```html
-<!-- Dessa är CSS-pixlar, inte enhetspixlar eller bildpixlar. -->
+<!-- Detta är CSS-pixlar, inte enhetspixlar eller bildpixlar. -->
 <img [...] sizes="(max-width: 700px) 100vw, 800px"  />
 ```
 
-
-> Du skulle kunna tro att webbläsaren kunde hantera alla dessa beräkningar på ett bra sätt åt oss baserat på CSS:en. Tyvärr är webbläsare aggressivt ivriga att välja en bild-URL *innan* stylesheeten har laddats ner. Så vi måste göra beräkningarna själva, och det tjänar dem rätt om vi inte får det perfekt.
+> Du skulle tro att webbläsaren enkelt kan hantera alla dessa beräkningar för oss baserat på CSS:en. Tyvärr är webbläsare aggressivt angelägna om att välja en bild-URL *innan* stylesheetsen laddas ner. Så vi måste göra beräkningarna själva, och det tjänar dem rätt om vi inte får det perfekt.

@@ -1,0 +1,83 @@
+---
+title: How browsers choose
+description: How browsers choose between images listed in the srcset attribute
+taskInputHash: 5d7773a8c6385fd7
+lang: en
+---
+How do browsers choose between images listed in the `srcset` attribute? Here we explain the steps, with examples for both width and density specifications, and how the browser decides according to the device and screen size.
+
+- When using the `srcset` attribute in HTML, the browser follows a set of rules to choose the most appropriate image from a list of provided sources. These rules depend on both the display characteristics of the device (resolution, pixel density) and the size of the display window. The `srcset` attribute allows specifying different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's look at each case with examples.
+
+1\. Width descriptor (`w`):
+
+Suppose we have the following `srcset` attribute:
+
+```html
+
+<img src="small-example.jpg" srcset="small-example.jpg 400w, medium-example.jpg 800w, large-example.jpg 1600w" alt="Example Image">
+
+```
+
+The browser will follow these steps:
+
+a. Determine the DPR (Device Pixel Ratio) of the device. For example, a standard screen has a DPR of 1, while a high-resolution (Retina) screen has a DPR of 2 or higher.
+
+b. Calculate the effective width for each image in the `srcset`. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
+
+- small-example.jpg: 400 * 1 = 400 pixels
+
+- medium-example.jpg: 800 * 1 = 800 pixels
+
+- large-example.jpg: 1600 * 1 = 1600 pixels
+
+c. Compare the effective widths to the width of the display window. Suppose the width of the display window is 420 pixels. The browser will choose the smallest image with an effective width greater than or equal to the width of the display window. In this case, it will select `medium-example.jpg`.
+
+2\. Pixel density descriptor (`x`):
+
+Suppose we have the following `srcset` attribute:
+
+```html
+
+<img src="1x-example.jpg" srcset="1x-example.jpg 1x, 2x-example.jpg 2x, 3x-example.jpg 3x" alt="Example Image">
+
+```
+
+The browser will follow these steps:
+
+a. Determine the DPR (Device Pixel Ratio). For example, a standard screen has a DPR of 1, while a high-resolution (Retina) screen has a DPR of 2 or higher.
+
+b. Compare the device DPR with the `x` descriptors in the `srcset`. In this case, we have three images with the following descriptors:
+
+- 1x-example.jpg: 1x
+
+- 2x-example.jpg: 2x
+
+- 3x-example.jpg: 3x
+
+c. Choose the image with the `x` descriptor closest to the device DPR. For a device with a DPR of 1, the browser will select `1x-example.jpg`. For a device with a DPR of 2, it will choose `2x-example.jpg`, and so on.
+
+It is important to note that the `sizes` attribute can also be used in combination with the `srcset` attribute to provide more information about how the image will be displayed at different window widths. This is especially useful when using the width descriptor (`w`). Here's an example:
+
+```html
+
+<img src="small-example.jpg" srcset="small-example.jpg 400w, medium-example.jpg 800w, large-example.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
+
+```
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. How the browser chooses
+ 2. How the browser chooses between images listed in the srcset attribute
+
+Metadata returned1. Cómo elige el navegador
+2. Cómo elige el navegador entre imágenes listadas en el atributo srcset 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

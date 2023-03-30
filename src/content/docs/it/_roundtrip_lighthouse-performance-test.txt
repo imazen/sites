@@ -1,25 +1,25 @@
 ---
-title: Testing Performance with Lighthouse
+title: Testing website performance with Lighthouse
 description: >-
-  Steps to test the performance of a website using Lighthouse
-taskInputHash: 47835814860a0452
+  Steps on how to test your website performance using Lighthouse
+taskInputHash: 779fccd79a30edfc
 lang: en
 ---
-How to Test Your Website Performance with Lighthouse?
+How do you test your website's performance with Lighthouse?
 
-> Lighthouse is a tool that can be used to measure the performance, accessibility, and other aspects of a website. To test the performance of your website with Lighthouse, follow these steps:
->
+> Lighthouse is a tool that can be used to measure the performance, accessibility, and other aspects of a website. To test your website's performance with Lighthouse, follow these steps:
+> 
 > 1\. Open the Google Chrome web browser and navigate to the page you want to test.
->
-> 2\. Click the three dots in the top right corner of the browser window, then select "More Tools" and then "Developer Tools" or use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
->
-> 3\. In the Developer Tools window, click on the Lighthouse icon located on the left side of the window or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the command menu, then type "Lighthouse" and select "Generate report."
->
-> 4\. In the Lighthouse dialog box, select the performance and other relevant options that you want to test, then click "Generate report."
->
-> 5\. After Lighthouse completes its analysis, you will see a report with scores and recommendations to improve the performance, accessibility, and other areas of your website.
->
-> By following these steps, you can use Lighthouse to test and optimize the performance of your website, which can help improve its user experience and search engine ranking.
+> 
+> 2\. Click on the three dots in the top-right corner of the browser window, then select "More tools" and then "Developer tools" or use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
+> 
+> 3\. In the Developer Tools panel, click on the Lighthouse icon located on the left-hand side of the panel or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the command menu, then type "Lighthouse" and select "Generate report".
+> 
+> 4\. In the Lighthouse dialog box, select the performance and other relevant options you want to test, then click "Generate report".
+> 
+> 5\. After Lighthouse completes its analysis, you will see a report with scores and recommendations for improving the performance, accessibility, and other areas of your website.
+> 
+> By following these steps, you can use Lighthouse to test and optimize your website's performance, which can help improve user experience and search engine rankings.
 =====================
 
 Content prompt used: 
@@ -28,10 +28,13 @@ Translate the following to Italian, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Test performance with Lighthouse
- 2. Steps on how to test a website's performance using Lighthouse 
+ 2. Steps on how to test a website's performance using Lighthouse
+
+Metadata returned1. Testare la performance con Lighthouse
+2. I passaggi su come testare la performance di un sito web utilizzando Lighthouse 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

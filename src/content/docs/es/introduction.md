@@ -1,18 +1,17 @@
 ---
-title: '`srcset` y tamaños de `<img>`'
-description: Una guía eficiente y con opiniones sobre imágenes receptivas para el 2023
-taskInputHash: edb0432e275e0289
+title: srcset y tamaños de etiqueta `<img>`
+description: Una guía eficiente y con opinión para imágenes responsivas en 2023
+taskInputHash: 16daf7ce071c0f0c
 lang: es
 sidebar_sort_priority: 1000
 ---
+**Una Guía Eficiente y Con Opinion para Imágenes para 2023**
 
-**Una guía eficiente y con opiniones sobre imágenes para el 2023**
+Consulta la barra lateral para un análisis detallado. Esta es una referencia rápida para actualizar esas etiquetas `<img>` para manejar dispositivos modernos en todos sus tamaños y densidades de píxeles. Debes [saber que píxeles != píxeles](/es/pixeles-no-pixeles) y que `devicePixelRatio` es más probable que sea alrededor de 3.875 en lugar de 1:1. Los teléfonos modernos pretenden tener un ancho de 320 a 428px para una mejor legibilidad (en píxeles CSS), pero tienen muchos píxeles de dispositivo por píxel CSS.
 
-Revisa la barra lateral para una explicación detallada. Esta es una referencia rápida para mejorar esas etiquetas `<img>` y permitir el manejo de dispositivos modernos con sus variados tamaños y densidades de píxeles. Deberías saber que los píxeles no siempre son iguales entre sí [«pixels != pixels»](/en/pixels-not-pixels) y que un `devicePixelRatio` es más probable que sea 3.875 en lugar de 1:1. Los teléfonos modernos se comportan como si su ancho fuera de 320 a 428 px por legibilidad.
+> Si tu imagen nunca cambia de tamaño, no importa cuán estrecha hagas la ventana del navegador, deberías usar un [descriptor de densidad en su lugar](/es/descriptores-de-densidad). Esto suele ser adecuado para logos, iconos y botones.
 
-> Si tu imagen nunca cambia de tamaño, sin importar cuán estrecha sea la ventana del navegador, deberías usar una [descripción de densidad en su lugar](/en/density-descriptors). Esto suele ser adecuado para logotipos, iconos y botones.
-
-¿Sabes cuáles son tus [puntos de interrupción](/en/breakpoints)? Necesitarás esos números para afinar la solución que se encuentra a continuación —y, como mínimo, el punto de interrupción del ancho de la ventana gráfica donde la zona de contenido principal deja de crecer.
+¿Sabes cuáles son tus [puntos de quiebre](/es/puntos-de-quiebre)? Necesitarás esos números para ajustar la solución que se muestra a continuación, y como mínimo el punto de quiebre del ancho de la ventana gráfica donde el área de contenido principal deja de crecer.
 
 
 ### El método sencillo
@@ -28,9 +27,10 @@ Revisa la barra lateral para una explicación detallada. Esta es una referencia 
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Perro montando bicicleta" />
 
-<!-- Hemos asumido que tienes un punto de interrupción en 700px. 
-      Y que antes de ese ancho de ventana, la imagen ocupa el 100% del ancho, pero
-      cuando la ventana es más grande, la imagen se limita a 800 píxeles CSS -->
+<!-- Se ha asumido que tienes un punto de quiebre en 700px. 
+Y que bajo ese ancho de ventana gráfica, esta imagen ocupa el 100% del ancho, pero
+cuando la ventana gráfica es mayor, la imagen está limitada a 800 píxeles CSS -->
 
-<!-- También asumimos que estás utilizando un servidor de imágenes compatible con RIAPI, como Imageflow. La producción de variantes de imágenes sobre la marcha es esencial para la cordura del desarrollador. -->
+<!-- Esto asume que estás usando un servidor de imágenes compatible con RIAPI, como Imageflow. 
+La producción de variantes de imágenes sobre la marcha es esencial para la cordura del desarrollador. -->
 ```

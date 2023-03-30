@@ -1,18 +1,18 @@
 ---
-title: Bredd och densitet deskriptorer
-description: Exempel på hur man använder bredd och densitet deskriptorer i `srcset`
-taskInputHash: 739378ef9bb54419
+title: Bredd och densitet beskrivare
+description: Exempel på hur man använder bredd och densitet beskrivare i `srcset`
+taskInputHash: 0f5f9ebc2c843512
 lang: sv
 ---
-Förståelse av bredd (w) och densitet (x) deskriptorer i `srcset`. Använd exempel och använd Markdown.
+Förståelse för bredd (`w`) och densitet (`x`) beskrivare i `srcset`. Använd exempel och använd Markdown.
 
->`srcset` är en HTML-attribut som gör det möjligt för utvecklare att tillhandahålla flera bildkällor med olika upplösningar eller pixeldensiteter och lår webbläsaren välja lämplig bild baserat på enhetens displayegenskaper. `srcset`-attributet använder en kombination av `URL` och `w` eller `x` deskriptorer för att specificera bilderna.
+>`srcset` är en HTML-attribut som gör det möjligt för utvecklare att tillhandahålla flera bildkällor med olika upplösningar eller pixeldensiteter och låta webbläsaren välja lämplig bild baserat på enhetens displayegenskaper. `srcset` attributen använder en kombination av `URL` och `w` eller `x` beskrivare för att specificera bilderna.
 
-## Bredd (`w`) Deskriptor
+## Bredd (`w`) beskrivare
 
-> `w` deskriptorn används för att specificera bredden på en bild i pixlar. Den används när vi vill förse webbläsaren med dimensionerna för en bild så att den kan välja lämplig bild för den tillgängliga skärmutrymmet.
+>`w` beskrivaren används för att specificera bildens bredd i pixlar. Den används när vi vill ge webbläsaren bildens dimensioner så att den kan välja rätt bild för den tillgängliga skärmplatsen.
 
-> Syntaxen för att använda deskriptorn `w` i `srcset` är följande:
+>Syntaxen för att använda `w` beskrivaren i `srcset` är enligt följande:
 
 ```html
 <img src="small.jpg"
@@ -22,16 +22,13 @@ Förståelse av bredd (w) och densitet (x) deskriptorer i `srcset`. Använd exem
   alt="Exempelbild">
 ```
 
+>I exemplet ovan har vi gett webbläsaren tre bilder och deras motsvarande bredder i pixlar. Webbläsaren väljer bilden med närmaste bredd till den tillgängliga skärmplatsen.
 
+## Densitet (`x`) beskrivare
 
-> I exemplet ovan har vi gett webbläsaren tre bilder och deras motsvarande bredder i pixlar. Webbläsaren kommer att välja den bild med närmast bredd till det tillgängliga skärmutrymmet.
+>`x` beskrivaren används för att specificera bildens pixeldensitet, vilket är förhållandet mellan fysiska pixlar och CSS-pixlar. Den används när vi vill ge webbläsaren olika versioner av samma bild med olika pixeldensiteter.
 
-
-## Densitet (`x`) Deskriptor
-
-> Deskriptorn `x` används för att specificera bildens pixeldensitet, vilket är förhållandet mellan fysiska pixlar och CSS-pixlar. Den används när vi vill förse webbläsaren med olika versioner av samma bild med olika pixeldensiteter.
-
-> Syntaxen för att använda deskriptorn `x` i `srcset` är följande:
+>Syntaxen för att använda `x` beskrivaren i `srcset` är enligt följande:
 
 ```html
 <img src="small.jpg"
@@ -41,7 +38,6 @@ Förståelse av bredd (w) och densitet (x) deskriptorer i `srcset`. Använd exem
   alt="Exempelbild">
 ```
 
+>I exemplet ovan har vi gett webbläsaren tre bilder och deras motsvarande pixeldensiteter. Webbläsaren väljer bilden med närmaste pixeldensitet till enhetens skärm.
 
-> I exemplet ovan har vi gett webbläsaren tre bilder och deras motsvarande pixeldensiteter. Webbläsaren kommer att välja den bild med närmast pixeldensitet till enhetens skärm.
-
-> Observera att deskriptorerna `w` och `x` kan användas tillsammans i samma `srcset`-attribut för att ge webbläsaren fler alternativ att välja mellan.
+>Märk att både `w` och `x` beskrivarna kan användas tillsammans i samma `srcset` attribut för att ge webbläsaren fler alternativ att välja mellan.

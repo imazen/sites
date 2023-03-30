@@ -1,0 +1,40 @@
+---
+title: TailwindCSS support classes for `<img>`
+description: >-
+  List of commonly used TailwindCSS support classes for `<img>`
+taskInputHash: 9165c82bd1717912
+lang: en
+---
+TailwindCSS provides several support classes for working with the `<img>` tag. Here are some of the most commonly used ones:
+
+- `object-contain`: This class sets the image to fit inside the container while maintaining its aspect ratio. It will shrink or enlarge the image as needed to fit inside the container.
+- `object-cover`: This class sets the image to cover the entire container while maintaining its aspect ratio. The image will be cropped or shrunk as needed to cover the container.
+- `object-fill`: This class sets the image to fill the entire container without maintaining its aspect ratio. This can cause the image to distort or compress to fit inside the container. 
+- `object-none`: This class sets the image to its natural size without resizing or cropping it. 
+- `object-center`: This class horizontally and vertically centers the image inside the container.
+- `object-left`: This class aligns the image to the left inside the container.
+- `object-right`: This class aligns the image to the right inside the container.
+- `object-top`: This class aligns the image at the top of the container.
+- `object-bottom`: This class aligns the image at the bottom of the container.
+
+These classes can be used in conjunction with other TailwindCSS classes to further style the images, such as setting a specific width or height, adding borders or shadows, or adjusting the opacity.
+
+{{Note that the term "container" refers to the parent element of the `<img>` tag.}}
+=====================
+
+Content prompt used: 
+Translate the following to Italian, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'it' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. TailwindCSS helpers for `<img>`
+ 2. List of most commonly used TailwindCSS helpers for `<img>`
+
+Metadata returned1. Classi di supporto TailwindCSS per `<img>`
+2. Elenco delle classi di supporto TailwindCSS più comunemente utilizzate per `<img>` 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

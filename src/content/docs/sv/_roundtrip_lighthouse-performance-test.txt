@@ -1,24 +1,24 @@
 ---
-title: Testing website performance with Lighthouse
-description: Steps for testing a website's performance with Lighthouse
-taskInputHash: 3968cf4e20e42045
+title: Testing performance with Lighthouse
+description: Steps to test a website's performance with Lighthouse
+taskInputHash: af03949da9667eff
 lang: en
 ---
-How do you test your website's performance with Lighthouse?
+How can you test your website's performance with Lighthouse?
 
-> Lighthouse is a tool that can be used to measure performance, accessibility, and other aspects of a website. To test your website's performance with Lighthouse, follow these steps:
+> Lighthouse is a tool that can be used to measure a website's performance, accessibility, and other aspects. To test your website's performance with Lighthouse, follow these steps:
 > 
-> 1. Open the Google Chrome browser and navigate to the page you want to test.
+> 1\. Open the Google Chrome browser and navigate to the page you want to test.
 > 
-> 2. Click the three dots in the upper right corner of the browser window, then select "More Tools" and then "Developer Tools," or just use the shortcut "Ctrl + Shift + I" (Windows, Linux) or "Command + Option + I" (macOS).
+> 2\. Click on the three dots in the upper right corner of the browser window, then select "More tools" and then "Developer tools," or simply use the keyboard shortcut "Ctrl + Shift + I" (Windows, Linux) or "Command + Option + I" (macOS).
 > 
-> 3. In the Developer Tools window, click the Lighthouse icon located on the left side of the panel or press "Ctrl + Shift + P" (Windows, Linux) or "Command + Shift + P" (macOS) to open the command menu, then type "Lighthouse" and select "Generate report."
+> 3\. In the Developer tools panel, click on the Lighthouse icon on the left side of the panel or press "Ctrl + Shift + P" (Windows, Linux) or "Command + Shift + P" (macOS) to open the command menu, then type "Lighthouse" and select "Generate report."
 > 
-> 4. In the Lighthouse dialog box, select performance and other relevant options that you want to test, and then click "Generate report."
+> 4\. In the Lighthouse dialog box, select the performance and other relevant options that you want to test, then click on "Generate report."
 > 
-> 5. Once Lighthouse has completed its analysis, you'll see a report with scores and recommendations to improve your website's performance, accessibility, and other areas.
+> 5\. After Lighthouse has completed its analysis, you will see a report with scores and recommendations for improving your website's performance, accessibility, and other areas.
 > 
-> By following these steps, you can use Lighthouse to test and optimize your website's performance, which can help improve the user experience and search engine ranking.
+> By following these steps, you can use Lighthouse to test and optimize your website's performance, which can help improve its user experience and search engine rankings.
 =====================
 
 Content prompt used: 
@@ -27,10 +27,13 @@ Translate the following to Swedish, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Test performance with Lighthouse
- 2. Steps on how to test a website's performance using Lighthouse 
+ 2. Steps on how to test a website's performance using Lighthouse
+
+Metadata returned1. Testa prestanda med Lighthouse
+2. Steg för att testa en webbplats prestanda med Lighthouse 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

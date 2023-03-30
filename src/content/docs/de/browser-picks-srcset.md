@@ -1,18 +1,16 @@
 ---
 title: Wie der Browser auswählt
-description: >-
-  Wie der Browser zwischen Bildern auswählt, die im srcset-Attribut aufgelistet
-  sind.
-taskInputHash: f4a1a08929f238ac
+description: Wie der Browser zwischen Bildern im "srcset"-Attribut auswählt
+taskInputHash: 21fa78dd27583003
 lang: de
 ---
-Wie wählt der Browser zwischen Bildern aus, die im srcset-Attribut aufgelistet sind? Hier ist eine Schritt-für-Schritt-Anleitung mit Beispielen für Spezifikationen zur Breite und Dichte und wie der Browser anhand von Gerät und Viewport entscheidet.
+Wie wählt der Browser zwischen Bildern, die im "srcset"-Attribut aufgeführt sind? Hier ist eine Schritt-für-Schritt-Anleitung mit Beispielen sowohl für Breiten- als auch Dichteangaben und wie der Browser anhand des Geräts und des Viewports entscheidet.
 
-- Wenn das Attribut `srcset` in HTML verwendet wird, verwendet der Browser eine Reihe von Regeln, um das am besten geeignete Bild aus einer Liste von Quellen auszuwählen. Diese Regeln hängen sowohl von den Anzeigeeigenschaften des Geräts (Auflösung, Pixeldichte) als auch von der Größe des Viewports ab. Das Attribut `srcset` ermöglicht es Ihnen, verschiedene Bilder entsprechend der Breite (mit dem `w`-Deskriptor) oder Pixeldichte (mit dem `x`-Deskriptor) zu spezifizieren. Lassen Sie uns jeden Fall anhand von Beispielen durchgehen.
+- Beim Verwenden des "srcset"-Attributs in HTML verwendet der Browser eine Reihe von Regeln, um das am besten geeignete Bild aus einer Liste bereitgestellter Quellen auszuwählen. Diese Regeln hängen sowohl von den Anzeigeeigenschaften des Geräts (Auflösung, Pixeldichte) als auch von der Größe des Viewports ab. Das "srcset"-Attribut ermöglicht es Ihnen, unterschiedliche Bilder auf der Grundlage von Breite (mit dem "w"-Deskriptor) oder Pixeldichte (mithilfe des "x"-Deskriptors) zu spezifizieren. Lassen Sie uns in beiden Fällen mit Beispielen durchgehen.
 
-1\. Breiten-Deskriptor (`w`):
+1\. Breitendeskriptor ("w"):
 
-Angenommen, wir haben das folgende `srcset`-Attribut:
+Angenommen, wir haben folgendes "srcset"-Attribut:
 
 ```html
 
@@ -20,23 +18,23 @@ Angenommen, wir haben das folgende `srcset`-Attribut:
 
 ```
 
-Der Browser wird die folgenden Schritte ausführen:
+Der Browser wird folgende Schritte ausführen:
 
-a. Bestimmen Sie die DPR (Device Pixel Ratio) des Geräts. Ein Standarddisplay hat z.B. eine DPR von 1, während ein hochauflösendes (Retina-)Display eine DPR von 2 oder höher hat.
+a. Bestimmen Sie die DPR (Device Pixel Ratio) des Geräts. Ein Standarddisplay hat beispielsweise eine DPR von 1, während ein hochauflösendes (Retina-)Display eine DPR von 2 oder höher hat.
 
-b. Berechnen Sie die effektive Breite für jedes in `srcset` enthaltene Bild. Multiplizieren Sie den Breiten-Deskriptor mit der DPR. Für ein Gerät mit einer DPR von 1:
+b. Berechnen Sie die effektive Breite für jedes Bild im "srcset". Multiplizieren Sie den Breitendeskriptor mit dem DPR. Für ein Gerät mit einer DPR von 1:
 
-- example-small.jpg: 400 \* 1 = 400px
+- Beispiel-small.jpg: 400 \* 1 = 400px
 
-- example-medium.jpg: 800 \* 1 = 800px
+- Beispiel-medium.jpg: 800 \* 1 = 800px
 
-- example-large.jpg: 1600 \* 1 = 1600px
+- Beispiel-large.jpg: 1600 \* 1 = 1600px
 
-c. Vergleichen Sie die effektiven Breiten mit der Viewportbreite. Nehmen Sie an, dass die Viewportbreite 420px beträgt. Der Browser wählt das kleinste Bild mit einer effektiven Breite von größer oder gleich der Viewportbreite aus. In diesem Fall wird `example-medium.jpg` ausgewählt.
+c. Vergleichen Sie die effektiven Breiten mit der Viewport-Breite. Angenommen, die Viewport-Breite beträgt 420px. Der Browser wählt das kleinste Bild mit einer effektiven Breite aus, die größer oder gleich der Viewport-Breite ist. In diesem Fall wird "example-medium.jpg" ausgewählt.
 
-2\. Pixeldichte-Deskriptor (`x`):
+1\. Pixeldichtedeskriptor ("x"):
 
-Angenommen, wir haben das folgende `srcset`-Attribut:
+Angenommen, wir haben folgendes "srcset"-Attribut:
 
 ```html
 
@@ -44,24 +42,22 @@ Angenommen, wir haben das folgende `srcset`-Attribut:
 
 ```
 
-Der Browser wird die folgenden Schritte ausführen:
+Der Browser wird folgende Schritte ausführen:
 
-a. Bestimmen Sie die DPR (Device Pixel Ratio) des Geräts. Ein Standarddisplay hat z.B. eine DPR von 1, während ein hochauflösendes (Retina-)Display eine DPR von 2 oder höher hat.
+a. Bestimmen Sie die DPR (Device Pixel Ratio) des Geräts. Ein Standarddisplay hat beispielsweise eine DPR von 1, während ein hochauflösendes (Retina-)Display eine DPR von 2 oder höher hat.
 
-b. Vergleichen Sie die DPR des Geräts mit den `x`-Deskriptoren in `srcset`. In diesem Fall haben wir drei Bilder mit den folgenden Deskriptoren:
+b. Vergleichen Sie die DPR des Geräts mit den "x"-Deskriptoren im "srcset". In diesem Fall haben wir drei Bilder mit den folgenden Deskriptoren:
 
-- example-1x.jpg: 1x
+- Beispiel-1x.jpg: 1x
 
-- example-2x.jpg: 2x
+- Beispiel-2x.jpg: 2x
 
-- example-3x.jpg: 3x
+- Beispiel-3x.jpg: 3x
 
-c. Wählen Sie das Bild mit dem `x`-Deskriptor, der der DPR des Geräts am nächsten kommt. Für ein Gerät mit einer DPR von 1 wird der Browser `example-1x.jpg` auswählen. Für ein Gerät mit einer DPR von 2 wird er `example-2x.jpg` auswählen, usw.
+c. Wählen Sie das Bild mit dem "x"-Deskriptor, der dem DPR des Geräts am nächsten kommt. Für ein Gerät mit einer DPR von 1 wählt der Browser "example-1x.jpg" aus. Für ein Gerät mit einer DPR von 2 wählt er "example-2x.jpg" aus und so weiter.
 
-Wichtig zu beachten ist, dass Sie auch das `sizes`-Attribut in Kombination mit dem `srcset`-Attribut verwenden können, um weitere Informationen darüber zu geben, wie das Bild bei verschiedenen Viewportbreiten dargestellt wird. Dies ist besonders nützlich bei Verwendung des Breiten-Deskriptors (`w`). Hier ist ein Beispiel:
+Es ist wichtig zu beachten, dass Sie auch das "sizes"-Attribut in Kombination mit dem "srcset"-Attribut verwenden können, um weitere Informationen darüber bereitzustellen, wie das Bild bei verschiedenen Viewport-Breiten angezeigt wird. Dies ist besonders nützlich, wenn Sie den Breitendeskriptor ("w") verwenden. Hier ist ein Beispiel:
 
 ```html
 
 <img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
-
-```

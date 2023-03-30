@@ -1,0 +1,63 @@
+---
+title: CSS Effects and Borders
+description: How to add CSS effects and borders to images
+taskInputHash: 54a9c95abb70dcaa
+lang: en
+---
+To add CSS effects and borders to images, follow these steps:
+1. Select the image element in your HTML code. You can do this using an ID or class selector, or by directly selecting the `<img>` element.
+2. Define the CSS class or ID selector that applies the desired styles. For example, you can create a simple image border using the following code:
+
+```css
+.my-image {
+  border: 2px solid black;
+}
+```
+
+3. Apply the CSS class or ID selector to the image element. For instance, if you used the `.my-image` selector in step 2, add the following code to your HTML to apply the style to your image:
+
+```html
+<img src="path/to/image.jpg" class="my-image">
+```
+
+4. Customize the style as needed. In addition to borders, you can apply a variety of CSS effects to your images, such as filters, opacity, transitions, and animations. Here are some examples of CSS code that you can use to add effects to your images:
+
+```css
+/* Add a shadow effect */
+.my-image {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a grayscale filter effect */
+.my-image {
+  filter: grayscale(100%);
+}
+
+/* Add a scale transition effect on hover */
+.my-image {
+  transition: transform 0.3s ease;
+}
+.my-image:hover {
+  transform: scale(1.1);
+}
+```
+
+These are just some examples of the many CSS effects and borders that you can use to enhance your images. Experiment with different styles to find the one that best suits your design.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. CSS effects and borders
+ 2. How to add CSS effects and borders to an image
+
+Metadata returned1. CSS效果和边框
+2. 如何为图像添加CSS效果和边框 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

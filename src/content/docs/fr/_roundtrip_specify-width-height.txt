@@ -1,17 +1,17 @@
 ---
-title: Use Width and Height Attributes
+title: Using width and height
 description: >-
   Benefits of using width and height attributes in HTML code
-taskInputHash: 0c7ad5ed5b965e5c
+taskInputHash: 20fdc2770df3d02b
 lang: en
 ---
-Why should you put width and height in HTML code?
+Why should you use width and height in HTML? 
 
-> It is recommended to add the width and height attributes in the HTML code of images because it helps the web browser to know the size of the image before it is fully loaded. This allows the browser to reserve the appropriate space on the web page for the image, preventing content from jumping around while the image loads.
->
-> Additionally, specifying the width and height attributes for images can also help improve the overall performance of the web page. When a browser knows the size of an image beforehand, it can more accurately calculate the amount of space needed to display the image and avoid unnecessary reflows or repaints of the content during loading.
+> It is recommended to include the `width` and `height` attributes in the HTML code of images as it allows the web browser to know the size of the image before it's fully loaded. This allows the browser to reserve the appropriate space on the web page for the image, preventing content from jumping around the image during loading.
 > 
-> Overall, using width and height attributes in HTML code for images can improve the user experience by speeding up content loading and reducing visual issues.
+> Additionally, specifying `width` and `height` attributes for images can also contribute to overall web page performance. When a browser knows the size of an image in advance, it can more accurately calculate the amount of space required to display the image and avoid unnecessary content reflows or repaints during loading.
+> 
+> In general, the use of `width` and `height` attributes in HTML code for images can improve the user experience by allowing faster loading of content and reducing visual issues.
 =====================
 
 Content prompt used: 
@@ -20,10 +20,13 @@ Translate the following to French, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Use width and height
- 2. Benefits of using width and height attributes in HTML code 
+ 2. Benefits of using width and height attributes in HTML code
+
+Metadata returned1. Utiliser la largeur et la hauteur
+2. Avantages de l'utilisation des attributs de largeur et hauteur dans le code HTML 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

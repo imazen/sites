@@ -1,30 +1,31 @@
 ---
 title: Use width and height
-description: Benefits of using width and height attributes in HTML code
-taskInputHash: 93d3d015bfb86e3a
+description: Benefits of using the width and height attributes in HTML code
+taskInputHash: fc544b6b62f34977
 lang: en
 ---
-Why should you put width and height in HTML?
+Why should you use the width and height attributes in HTML code?
 
-> It is recommended to include the width and height attributes in the HTML code of images because it helps the web browser to know the size of the image before it is fully loaded. This allows the browser to reserve the appropriate amount of space on the web page for the image, which prevents content from jumping around while the image loads.
+> It is recommended to use the width and height attributes in HTML code for images because it helps the web browser to know the size of the image before it is fully loaded. This allows the browser to reserve the appropriate amount of space on the web page for the image, preventing the content from moving while the image is loading.
 >
-> Additionally, specifying the width and height attributes for images can also help improve the overall performance of the web page. When the browser knows the size of an image in advance, it can more accurately calculate the amount of space needed to display the image and avoid unnecessary content reflow or repaints while loading.
+> Additionally, specifying the width and height attributes for images can also help improve the overall performance of the web page. When a browser knows the size of an image beforehand, it can calculate more accurately the amount of space needed to display the image and avoid unnecessary reflow or repaint of the content while it loads.
 >
-> In general, using the width and height attributes in the HTML code of images can improve the user experience by making content load faster and reducing visual glitches.
+> In general, using the width and height attributes in HTML code for images can improve the user experience by making the content load faster and reducing visual glitches.
 =====================
 
 Content prompt used: 
-Translate the following to Spanish, preserving all markdown formatting. 
-Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses. 
-Inside code blocks, only translate comments
-
-
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Use width and height
- 2. Benefits of using width and height attributes in HTML code 
+ 2. Benefits of using width and height attributes in HTML code
+
+Metadata returned1. Usa ancho y alto
+ 2. Beneficios de usar los atributos de ancho y alto en el código HTML 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

@@ -1,36 +1,40 @@
 ---
-title: srcset &amp; &lt;img&gt; sizes
-description: An efficient and confident guide to responsive images by 2023
-taskInputHash: 323967389e7378e6
+title: srcset & <img> sizes
+description: An efficient and thoughtful guide to responsive images for 2023
+taskInputHash: 287f4de1aa9f1f54
 lang: en
 sidebar_sort_priority: 1000
 ---
-**An efficient and confident guide to images by 2023**
+**An efficient and thoughtful guide to images in 2023**
 
-Check the sidebar for the deep dive. This is the quick reference for updating those `<img>` tags to handle modern devices in all their various sizes and pixel densities. You should [know that pixels are not pixels](/en/pixels-not-pixels) and that `devicePixelRatio` is likely to be at 3.875 rather than 1:1. Modern phones claim to be 320-428px wide for readability.
+See the sidebar for a detailed guide. Here is a quick reference for optimizing `<img>` tags for modern devices with their various sizes and pixel densities. You should know that [Pixel != Pixel](/en/pixels-not-pixels) and `devicePixelRatio` is often more like 3.875 than 1:1. Modern phones act as if they are 320-428px wide (in CSS pixels) for legibility, but have many device pixels per CSS pixel.
 
-> If your image never changes size no matter how narrow you make the browser window, you should use a [density descriptor](/en/density-descriptors) instead. This is often suitable for logos, icons, and buttons.
+> If your image does not change size no matter how narrow you make the browser window, consider using [Density Descriptors](/en/density-descriptors) instead. This is often appropriate for logos, icons, and buttons.
 
-Do you know what [breakpoints](/en/breakpoints) you have? You need these numbers to fine-tune the solution below - and at least the viewport breakpoint, where the main content stops growing.
+Do you know what your [Breakpoints](/en/breakpoints) are? You will need these numbers to fine-tune the solution below - at least the breakpoint for when the viewport width stops growing.
 
-### The easy method
+### The Simple Method
 
 ```html
+<img
+  src="img.jpg?w=480"
+  srcset="
+    img.jpg?format=webp&w=480 480w,
+    img.jpg?format=webp&w=800 800w,
+    img.jpg?format=webp&w=1200 1200w,
+    img.jpg?format=webp&w=1600 1600w,
+    img.jpg?format=webp&w=2000 2000w"
+  sizes="(max-width: 700px) 100vw, 800px"
+  alt="Dog riding a bike"
+/>
 
-<img src="img.jpg?w=480" 
-     srcset="img.jpg?format=webp&amp;w=480 480w, 
-             img.jpg?format=webp&amp;w=800 800w, 
-             img.jpg?format=webp&amp;w=1200 1200w, 
-             img.jpg?format=webp&amp;w=1600 1600w, 
-             img.jpg?format=webp&amp;w=2000 2000w"
-     sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bike"/> 
+<!-- We assumed you have a breakpoint at 700px.
+     And that under this viewport width, this image takes the full width but
+     if the viewport is larger, the image is limited to 800 CSS pixels. -->
 
-<!-- We assumed you have a breakpoint at 700px. 
-     And that below that viewport width, this image takes up 100% width, but when 
-     the viewport is larger, the image is capped at 800 CSS pixels -->
-
-<!-- This also assumes you're using an RIAPI-compliant image server like Imageflow. 
-     Producing image variants on the fly is essential for developer sanity. -->
+<!-- This assumes you are using an RIAPI-compliant image server like Imageflow. 
+     On-the-fly image variant creation is essential for developer sanity. -->
+```
 =====================
 
 Content prompt used: 
@@ -43,9 +47,9 @@ Also carefully translate the title and description for the article; do not use &
 1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
-Metadata returned1. srcset &amp; &lt;img&gt; sizes 
-2. Ein effizienter und überzeugter Leitfaden für responsive Bilder bis 2023 
+Metadata returned1. srcset & <img> sizes 
+2. Ein effizienter und besonnener Leitfaden zu responsiven Bildern für 2023 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

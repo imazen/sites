@@ -1,0 +1,81 @@
+# Styling `<img>` elements and layout examples
+
+## Styling `<img>` elements
+
+Images are a key part of most websites, and as web developers, we are often called upon to style and position them. There are a number of CSS properties that can be used to style `<img>` elements, including:
+
+### `border`
+
+The `border` property adds a border around an image:
+
+```css
+img {
+  border: 1px solid black;
+}
+```
+
+### `border-radius`
+
+The `border-radius` property rounds the corners of an image:
+
+```css
+img {
+  border-radius: 50%;
+}
+```
+
+### `box-shadow`
+
+The `box-shadow` property adds a shadow effect to an image:
+
+```css
+img {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+```
+
+### `object-fit`
+
+The `object-fit` property specifies how an image should be resized to fit its container:
+
+```css
+img {
+  object-fit: cover;
+}
+```
+
+### `object-position`
+
+The `object-position` property specifies the position of the image within its container:
+
+```css
+img {
+  object-position: center;
+}
+```
+
+## Layout examples
+
+TODO: 
+
+{{Note that the term used here is not the technical term...}}
+
+{{This document appears to be incomplete.}}
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. Estilizando elementos <img> y ejemplos de diseños
+2. Estilizando elementos <img> y ejemplos de diseños 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

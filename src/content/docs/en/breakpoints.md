@@ -32,5 +32,6 @@ If your answer to 1 was 700px and your answer to 2 was 800px, you can use the fo
 ```
 
 
+
 > You'd think that the browser could nicely handle all these calculations for us based on the CSS. Unfortunately, browsers are aggressively eager to choose an image URL *before* the stylesheets are downloaded. So we have to do the calculations ourselves, and it serves them right if we don't get it perfect.
 

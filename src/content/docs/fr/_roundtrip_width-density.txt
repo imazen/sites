@@ -1,16 +1,16 @@
 ---
-title: Width and Density Descriptors
+title: Width and density descriptors
 description: Examples of using width and density descriptors in `srcset`
-taskInputHash: 370af012c215f8f6
+taskInputHash: 4a03f5d305f71ba2
 lang: en
 ---
-Understand width (`w`) and density (`x`) descriptors in `srcset`. Use examples and use Markdown.
+Understand the width (`w`) and density (`x`) descriptors in `srcset`. Use examples and use markdown.
 
-> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser select the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptors to specify the images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser select the appropriate image based on the device's display characteristics. The `srcset` attribute uses a combination of the `URL` and `w` or `x` descriptors to specify the images.
 
 ## Width Descriptor (`w`)
 
-> The `w` descriptor is used to specify the width of an image in pixels. It is used when we want to provide the browser with the dimensions of an image so that it can choose the appropriate image for the available screen space.
+> The `w` descriptor is used to specify the width of an image in pixels. It is used when we want to provide the browser with the dimensions of an image so it can choose the appropriate image for the available screen space.
 
 > The syntax for using the `w` descriptor in `srcset` is as follows:
 
@@ -22,7 +22,7 @@ Understand width (`w`) and density (`x`) descriptors in `srcset`. Use examples a
   alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding pixel widths. The browser will select the image with the width closest to the available screen space.
+> In the above example, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image with the width closest to the available screen space.
 
 ## Density Descriptor (`x`)
 
@@ -38,9 +38,9 @@ Understand width (`w`) and density (`x`) descriptors in `srcset`. Use examples a
   alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the pixel density closest to the device's screen.
+> In the above example, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the pixel density closest to the device's screen.
 
-> Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options for selection.
+> Note that `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options to choose from.
 =====================
 
 Content prompt used: 
@@ -49,10 +49,13 @@ Translate the following to French, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Width and density descriptors
- 2. Examples of using width and density descriptors in `srcset` 
+ 2. Examples of using width and density descriptors in `srcset`
+
+Metadata returned1. Descripteurs de largeur et de densité
+ 2. Exemples d'utilisation des descripteurs de largeur et de densité dans `srcset` 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

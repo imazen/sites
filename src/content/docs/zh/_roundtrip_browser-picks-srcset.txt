@@ -1,14 +1,14 @@
 ---
-title: How Browsers Choose
-description: How browsers choose images in the srcset attribute
-taskInputHash: cc79cb16bba265aa
+title: How Browsers Choose Images
+description: How browsers choose images in the `srcset` attribute
+taskInputHash: 4f3d39e70c9edd79
 lang: en
 ---
-How do browsers choose images in the `srcset` attribute? Here's a step-by-step guide that covers examples for width and pixel density specifications, as well as how browsers choose based on the device and viewport:
+How do browsers choose images in the `srcset` attribute? Here is a step-by-step explanation, including examples for width and density specifications based on devices and viewport.
 
-- When using the `srcset` attribute in HTML, the browser uses a set of rules to choose the most appropriate image from the provided list of sources. These rules depend on the device's display characteristics (resolution, pixel density) and viewport size. The `srcset` attribute allows you to specify different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's illustrate each case with an example.
+- When using the `srcset` attribute in HTML, the browser uses a set of rules to choose the most appropriate image from the provided list of sources. These rules depend on the display characteristics of the device (resolution, pixel density) and viewport size. The `srcset` attribute allows you to specify different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's take a look at each case with examples.
 
-1\. Width Descriptor (`w`)
+1. Width descriptor (`w`):
 
 Assuming we have the following `srcset` attribute:
 
@@ -18,11 +18,11 @@ Assuming we have the following `srcset` attribute:
 
 ```
 
-The browser will execute the following steps:
+The browser will follow these steps:
 
-a. Determine the device's DPR (device pixel ratio). For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
+a. Determine the DPR (device pixel ratio) of the device. For example, the DPR for a standard display is 1, while the DPR for high-resolution (Retina) displays is 2 or higher.
 
-b. Calculate the effective width of each image in `srcset`. Multiply the width descriptor by DPR. For devices with DPR equal to 1:
+b. Calculate the effective width of each image in the `srcset`. Multiply the width descriptor by the DPR. For a device with DPR of 1:
 
 - example-small.jpg: 400 * 1 = 400px
 
@@ -30,9 +30,9 @@ b. Calculate the effective width of each image in `srcset`. Multiply the width d
 
 - example-large.jpg: 1600 * 1 = 1600px
 
-c. Compare the effective width with the viewport width. Assuming a viewport width of 420px, the browser will choose the image with the smallest effective width that is greater than or equal to the viewport width. In this example, it will choose `example-medium.jpg`.
+c. Compare the effective width with the viewport width. Assuming the viewport width is 420px. The browser will choose the smallest image with an effective width greater than or equal to the viewport width. In this case, it will choose `example-medium.jpg`.
 
-2\. Pixel Density Descriptor (`x`)
+2. Pixel density descriptor (`x`):
 
 Assuming we have the following `srcset` attribute:
 
@@ -42,11 +42,11 @@ Assuming we have the following `srcset` attribute:
 
 ```
 
-The browser will execute the following steps:
+The browser will follow these steps:
 
-a. Determine the device's DPR. For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
+a. Determine the DPR of the device. For example, the DPR for a standard display is 1, while the DPR for high-resolution (Retina) displays is 2 or higher.
 
-b. Compare the device's DPR with the `x` descriptors in `srcset`. In this case, we have three images with the following descriptors:
+b. Compare the device's DPR with the `x` descriptors in the `srcset`. In this case, we have three images with the following descriptors:
 
 - example-1x.jpg: 1x
 
@@ -54,9 +54,9 @@ b. Compare the device's DPR with the `x` descriptors in `srcset`. In this case, 
 
 - example-3x.jpg: 3x
 
-c. Choose the image with the `x` descriptor that is the closest to the device's DPR. For devices with a DPR equal to 1, the browser will choose `example-1x.jp`g. For devices with a DPR equal to 2, it will choose `example-2x.jpg`, and so on.
+c. Choose the image with the `x` descriptor closest to the device's DPR. For a device with DPR of 1, the browser will choose `example-1x.jpg`. For a device with DPR of 2, it will choose `example-2x.jpg` and so on.
 
-Note that you can also use the `sizes` attribute in combination with the `srcset` attribute to provide more information about how images should be displayed at different viewport widths. This is especially useful when using the width descriptor (`w`). Here's an example:
+Note that you can also use the `sizes` attribute in conjunction with the `srcset` attribute to provide more information on how images should be displayed at different viewport widths. This is particularly useful when using the width descriptor (`w`). Here is an example:
 
 ```html
 
@@ -71,10 +71,13 @@ Translate the following to Simplified Chinese, preserving all markdown formattin
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. How the browser chooses
- 2. How the browser chooses between images listed in the srcset attribute 
+ 2. How the browser chooses between images listed in the srcset attribute
+
+Metadata returned1. 浏览器如何选择图像
+2. 浏览器如何在`srcset`属性中选择图片 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

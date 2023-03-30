@@ -1,49 +1,41 @@
 ---
-title: Dichtebeschreibungen & Srcset
-description: Beispiele zur Verwendung von Dichtebeschreibungen in `srcset`
-taskInputHash: 057b2de51328cf48
+title: Density-Descriptoren und Srcset
+description: Beispiele für die Verwendung von Density-Descriptoren in `srcset`
+taskInputHash: db34acb106c5a3dd
 lang: de
 ---
-Srcset mit Dichtebeschreibungen bietet eine einfache und effektive Methode, um für jedes Gerät des Benutzers das am besten geeignete Bild zu liefern und damit Leistung und Benutzererfahrung zu verbessern. Diese Anleitung führt Sie durch die Grundlagen der Verwendung von Srcset mit Dichtebeschreibungen und stellt Beispielmarkierungen für Ihre Bequemlichkeit zur Verfügung.
+Srcset mit Density Descriptors bietet eine einfache und effektive Methode für die Bereitstellung des am besten geeigneten Bildes für jedes Gerät des Benutzers und verbessert die Leistung und die Benutzererfahrung. Diese Anleitung führt Sie durch die Grundlagen der Verwendung von Srcset mit Density Descriptors und bietet Markup-Beispiele für Ihre Bequemlichkeit.
 
-## Was ist Srcset mit Dichtebeschreibungen?
+## Was ist Srcset mit Density Descriptors?
 
-Srcset ist ein HTML-Attribut, das es ermöglicht, mehrere Bilderquellen für ein einziges `<img>`-Element anzugeben. Dichtebeschreibungen (`x`) werden in Verbindung mit Srcset verwendet, um unterschiedlich aufgelöste Bilder basierend auf der Pixeldichte des Displays des Benutzers bereitzustellen.
+Srcset ist ein HTML-Attribut, das es ermöglicht, mehrere Bildquellen für ein einzelnes `<img>`-Element anzugeben. Density Descriptors (`x`) werden in Verbindung mit srcset verwendet, um Bilder in unterschiedlicher Auflösung basierend auf der Pixeldichte des Displays des Benutzers bereitzustellen.
 
-## Wann sollte man Srcset mit Dichtebeschreibungen verwenden?
+## Wann soll man Srcset mit Density Descriptors verwenden?
 
-Srcset mit Dichtebeschreibungen ist besonders nützlich, wenn man:
+Die Verwendung von srcset mit Density Descriptors ist besonders nützlich, wenn Sie:
+1. Hochauflösende Bilder für hohe DPI-Displays (z.B. Retina-Displays) bereitstellen möchten, während Sie für Standard-Displays niedrigere Auflösungen verwenden.
+2. Die Seitenausführung durch die Bereitstellung der am besten geeigneten Bildgröße für jedes Gerät des Benutzers verbessern möchte.
 
-1. Hochauflösende Bilder für Displays mit hoher Pixeldichte (z.B. Retina-Displays) bereitstellen will, während gleichzeitig Bilder mit niedrigerer Auflösung für Standard-Displays bereitgestellt werden sollen.
+## Implementierung von Srcset mit Density Descriptors
 
-2. Die Seitenleistung verbessern will, indem für jedes Gerät des Benutzers das am besten geeignete Bild ausgeliefert wird.
+Um srcset mit Density Descriptors zu verwenden, befolgen Sie diese Schritte:
+1. Bereiten Sie Ihre Bilder in verschiedenen Auflösungen vor.
+2. Fügen Sie das `srcset`-Attribut zum `<img>`-Element hinzu, einschließlich der Bildquellen und entsprechenden Density Descriptors.
+3. Fügen Sie das `sizes`-Attribut optional hinzu, um die Größe des Bildes auf dem Bildschirm festzulegen.
 
-## Implementierung von Srcset mit Dichtebeschreibungen
+### Markup Beispiel
 
-Um Srcset mit Dichtebeschreibungen zu verwenden, befolgen Sie diese Schritte:
-
-1. Bereiten Sie Ihre Bilder in unterschiedlichen Auflösungen vor.
-
-2. Fügen Sie das `srcset`-Attribut zum `<img>`-Element hinzu, einschließlich der Bilderquellen und entsprechender Dichtebeschreibungen.
-
-3. Fügen Sie das `sizes`-Attribut (optional) hinzu, um die Größe des Bildes festzulegen, wie es auf dem Bildschirm angezeigt wird.
-
-### Beispielmarkierung
-
-Hier ist ein Beispiel, wie Sie Srcset mit Dichtebeschreibungen in Ihre Markierung integrieren können:
+Hier ist ein Beispiel, wie Sie srcset mit Density Descriptors in Ihrem Markup implementieren:
 
 ```html
-<img src="beispielbild-1x.jpg"
-     srcset="beispielbild-1x.jpg 1x, beispielbild-2x.jpg 2x, beispielbild-3x.jpg 3x"
+<img src="example-image-1x.jpg"
+     srcset="example-image-1x.jpg 1x, example-image-2x.jpg 2x, example-image-3x.jpg 3x"
      alt="Ein Beispielbild">
 ```
 
-Diese Beispielmarkierung enthält:
+Dieses Markup-Beispiel enthält:
+- **src**: Die Standardbildquelle, die angezeigt wird, wenn der Browser srcset nicht unterstützt.
+- **srcset**: Die Liste der Bildquellen und ihrer Density Descriptors (1x, 2x, 3x). Der Browser wählt das am besten geeignete Bild basierend auf dem Display des Benutzers aus.
+- **alt**: Eine Beschreibung des Bildes zu Zwecken der Barrierefreiheit.
 
-- **src**: Die Standardbildquelle, die angezeigt wird, wenn der Browser Srcset nicht unterstützt.
-
-- **srcset**: Die Liste der Bildquellen und ihrer Dichtebeschreibungen (1x, 2x, 3x). Der Browser wählt das am besten geeignete Bild auf Basis der Pixeldichte des Displays des Benutzers aus.
-
-- **alt**: Eine Beschreibung des Bildes für Barrierefreiheitszwecke.
-
-Und das war's schon! Sie haben erfolgreich Srcset mit Dichtebeschreibungen implementiert und die Leistung und Benutzererfahrung Ihrer Website verbessert.
+Und das war es schon! Sie haben srcset mit Density Descriptors erfolgreich implementiert und damit die Leistung und Benutzererfahrung Ihrer Website verbessert.

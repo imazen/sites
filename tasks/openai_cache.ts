@@ -32,9 +32,31 @@ export async function completeChatCached(request: openai.CreateChatCompletionReq
 
     }else{
         // run the request
-        const response = await api.createChatCompletion(request);
+				// handle Error: Request failed with status code 429 (too many requests) by waiting an increasing number seconds - randomized +/- 3 seconds, with a 2 second minimum and trying again
+				let response: openai.CreateChatCompletionResponse;
+				let attemptCount = 0;
+				while (true) {
+					try {
+						response = (await api.createChatCompletion(request)).data;
+						break;
+					} catch (error) {
+						if (attemptCount > 10) throw error;
+						if (error.message.includes('429') || error.message.includes('500')) {
+							let maxWaitTime = Math.min(40, (attemptCount + 2) * 2);
+							let minWaitTime = Math.min(1, attemptCount);
+
+							let waitTime = (Math.random() * (maxWaitTime - minWaitTime)) + minWaitTime;
+							console.log(`${error.message}, waiting ${waitTime} seconds before trying again`);
+							await new Promise(resolve => setTimeout(resolve, waitTime * 1000));
+							waitTime = Math.min(waitTime + Math.floor(Math.random() * 6) - 3, 60);
+						} else {
+							throw error;
+						}
+					}
+				}
+			
         // save the response to the cache folder
-        await fs.promises.writeFile(cachePath, JSON.stringify(response.data));
-        return response.data;
+        await fs.promises.writeFile(cachePath, JSON.stringify(response));
+        return response;
     }
 }

@@ -1,13 +1,13 @@
 ---
-title: Använd width och height
-description: Fördelar med att använda width och height-attribut i HTML-koden
-taskInputHash: 1f84f5b125c88c72
+title: Använd bredd och höjd
+description: Fördelar med att använda bredd- och höjdattribut i HTML-kod
+taskInputHash: 0d504ef6a74493f9
 lang: sv
 ---
-Varför ska man lägga till width och height i HTML?
+Varför bör man sätta bredd och höjd i HTML-koden?
 
-> Det rekommenderas att lägga till width och height attribut i HTML-koden för bilder eftersom det hjälper webbläsaren att känna till storleken på bilden innan den är helt nerladdad. Det gör att webbläsaren kan reservera rätt mängd utrymme på webbsidan för bilden, vilket förhindrar att innehållet hoppar runt när bilden laddas.
+> Det rekommenderas att sätta bredd och höjd attribut i HTML-koden för bilder eftersom det hjälper webbläsaren att veta storleken på bilden innan den är helt laddad. Detta gör att webbläsaren kan reservera lämpligt utrymme på webbsidan för bilden, vilket förhindrar att innehållet hoppar runt medan bilden laddas.
 > 
-> Att ange width och height attribut för bilder kan också bidra till att förbättra prestandan för webbsidan. När webbläsaren vet storleken på en bild i förväg kan den mer exakt beräkna mängden utrymme som behövs för att visa bilden och undvika onödiga omformateringar av innehållet när det laddas.
+> Dessutom kan specificerandet av bredd- och höjdattributen för bilder också bidra till att förbättra prestandan för webbsidan som helhet. När en webbläsare känner till storleken på en bild i förväg kan den mer noggrant beräkna mängden utrymme som behövs för att visa bilden och undvika onödiga omgörningar eller ominställningar av innehållet när det laddas.
 > 
-> Sammanfattningsvis kan användningen av width och height attribut i HTML-koden för bilder förbättra användarupplevelsen genom att göra innehållet laddas snabbare och minska visuella glapp.
+> Sammanfattningsvis kan användningen av bredd- och höjdattributen i HTML-koden för bilder förbättra användarupplevelsen genom att göra innehållet lastas snabbare och minska visuella fel.

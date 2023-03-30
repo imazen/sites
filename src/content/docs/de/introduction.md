@@ -1,35 +1,34 @@
 ---
-title: srcset &amp; &lt;img&gt; sizes
-description: Ein effizienter und überzeugter Leitfaden für responsive Bilder bis 2023
-taskInputHash: 323967389e7378e6
+title: srcset & <img> sizes
+description: Ein effizienter und besonnener Leitfaden zu responsiven Bildern für 2023
+taskInputHash: 287f4de1aa9f1f54
 lang: de
 sidebar_sort_priority: 1000
 ---
-**Ein effizienter und überzeugter Leitfaden für Bilder bis 2023**
+**Ein effizienter und besonnener Leitfaden für Bilder im Jahr 2023**
 
-Überprüfen Sie die Seitenleiste für das Deep Dive. Dies ist die Schnellreferenz für die Aktualisierung dieser `<img>`-Tags, um moderne Geräte in all ihren verschiedenen Größen und Pixeldichten zu verarbeiten. Sie sollten [wissen, dass Pixel != Pixel](/de/pixels-not-pixels) und `devicePixelRatio` wahrscheinlicher bei 3,875 als 1:1 liegt. Moderne Telefone geben vor, für die Lesbarkeit 320-428px breit zu sein.
+Schau in die Seitenleiste für eine detaillierte Anleitung. Hier findest du eine schnelle Referenz, um `<img>`-Tags für moderne Geräte mit ihren verschiedenen Größen und Pixeldichten zu optimieren. Du solltest [wissen, dass Pixel != Pixel](/de/pixels-not-pixels) sind und `devicePixelRatio` eher bei 3,875 als bei 1:1 liegt. Moderne Telefone tun so, als ob sie für die Lesbarkeit 320-428px breit wären (in CSS-Pixel), haben jedoch viele Gerätepixel pro CSS-Pixel.
 
-> Wenn Ihr Bild nie seine Größe ändert, egal wie schmal Sie das Browserfenster machen, sollten Sie stattdessen einen [Dichtebeschreibungs-Descriptor verwenden](/de/density-descriptors). Dies ist oft für Logos, Symbole und Schaltflächen geeignet.
+> Wenn dein Bild keine Größenänderung erfährt, unabhängig davon, wie schmal du das Browserfenster machst, solltest du stattdessen [Dichtebeschreibungen](/de/density-descriptors) verwenden. Dies ist oft für Logos, Icons und Schaltflächen geeignet.
 
-Wissen Sie, welche [Breakpoints](/de/breakpoints) Sie haben? Sie benötigen diese Zahlen, um die untenstehende Lösung feinzustimmen - und mindestens den Viewport-Brechpunkt, an dem der Hauptinhalt aufhört zu wachsen.
-
+Weißt du, was deine [Breakpoints](/de/breakpoints) sind? Du wirst diese Zahlen für die Feinabstimmung der Lösung unten benötigen - und mindestens den Breakpoint für die Viewport-Breite, bei der der Hauptinhalt aufhört zu wachsen.
 
 ### Die einfache Methode
 
 ```html
 
 <img src = "img.jpg?w=480" 
-        srcset="img.jpg?format=webp&w=480 480w, 
-                img.jpg?format=webp&w=800 800w, 
-                img.jpg?format=webp&w=1200 1200w, 
-                img.jpg?format=webp&w=1600 1600w, 
-                img.jpg?format=webp&w=2000 2000w"
+        srcset="img.jpg?format=webp&w=480 480w, 
+                img.jpg?format=webp&w=800 800w, 
+                img.jpg?format=webp&w=1200 1200w, 
+                img.jpg?format=webp&w=1600 1600w, 
+                img.jpg?format=webp&w=2000 2000w"
+        sizes="(max-width: 700px) 100vw, 800px" alt="Hund, der ein Fahrrad fährt" />
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Hund, der Fahrrad fährt"/> 
+<!-- Wir haben angenommen, dass du bei 700px einen Breakpoint hast. 
+      Und dass unter dieser Viewport-Breite, dieses Bild die volle Breite einnimmt, aber
+      wenn der Viewport größer ist, ist das Bild auf 800 CSS-Pixel begrenzt -->
 
-<!-- Wir haben angenommen, dass Sie einen Breakpoint bei 700px haben. 
-     Und dass unter dieser Viewport-Breite dieses Bild 100% Breite einnimmt, aber wenn 
-     Der Viewport ist größer, das Bild ist auf 800 CSS Pixel begrenzt -->
-
-<!-- Hier wird auch vorausgesetzt, dass Sie einen RIAPI-konformen Bildserver wie Imageflow verwenden. 
-     Die Produktion von Bildvarianten im Flug ist unerlässlich für die geistige Gesundheit der Entwickler.-->
+<!-- Dies setzt voraus, dass du einen RIAPI-konformen Bildserver wie Imageflow verwendest. 
+     Die On-the-fly-Bildvariantenerstellung ist unverzichtbar für die geistige Gesundheit eines Entwicklers. -->
+```

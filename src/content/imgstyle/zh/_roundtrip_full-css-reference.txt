@@ -1,0 +1,176 @@
+---
+title: Complete CSS Reference
+description: Complete CSS effects reference with examples
+taskInputHash: db084e09620978ea
+lang: en
+---
+This is a complete reference for CSS effects and borders that you can apply to images, with examples for each effect:
+
+1. **Border:** Add a border around the image.
+
+```css
+img {
+  border: 2px solid black;
+}
+```
+
+
+2. **Box Shadow:** Add a shadow around the image.
+
+```css
+img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+```
+
+
+3. **Opacity:** Adjust the transparency of the image.
+
+```css
+img {
+  opacity: 0.5;
+}
+```
+
+
+4. **Grayscale:** Convert the image to grayscale.
+
+```css
+img {
+  filter: grayscale(100%);
+}
+```
+
+
+5. **Sepia:** Apply sepia effect to the image.
+
+```css
+img {
+  filter: sepia(100%);
+}
+```
+
+
+6. **Blur:** Blur the image.
+
+```css
+img {
+  filter: blur(5px);
+}
+```
+
+
+7. **Brightness:** Adjust the brightness of the image.
+
+```css
+img {
+  filter: brightness(50%);
+}
+```
+
+
+8. **Contrast:** Adjust the contrast of the image.
+
+```css
+img {
+  filter: contrast(200%);
+}
+```
+
+
+9. **Hue Rotate:** Rotate the hue of the image.
+
+```css
+img {
+  filter: hue-rotate(90deg);
+}
+```
+
+
+10. **Invert:** Invert the color of the image.
+
+```css
+img {
+  filter: invert(100%);
+}
+```
+
+
+11. **Saturate:** Adjust the saturation of the image.
+
+```css
+img {
+  filter: saturate(200%);
+}
+```
+
+
+12. **Sepia:** Apply sepia effect to the image.
+
+```css
+img {
+  filter: sepia(100%);
+}
+```
+
+
+13. **Drop Shadow:** Add a drop shadow around the image.
+
+```css
+img {
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+```
+
+
+14. **Transition:** Add a transition effect to the image.
+
+```css
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.1);
+}
+```
+
+
+15. **Animation:** Add an animation effect to the image.
+
+```css
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+img {
+  animation: slidein 1s ease;
+}
+```
+
+
+
+These are just a few examples of the many CSS effects and borders that you can apply to images. Try out different styles to create unique and eye-catching designs!
+
+{{Note that the term used here is not the technical term...}}. (The term "brown" is referring to a sepia effect.)
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Full CSS reference
+ 2. Full CSS reference for effects, with examples
+
+Metadata returned1. 完整的CSS参考
+2. 带有示例的完整CSS效果参考 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

@@ -1,14 +1,12 @@
 ---
-title: Exempel med <picture>-elementet
+title: Exempel med <picture> elementet
 description: >-
-  Tillhandahåller exempel med <picture>-elementet, för responsiva bilder,
-  konstnärlig riktning och olika bildformat.
-taskInputHash: 1b874203783dde1a
+  Ger exempel med <picture> elementet, för responsiva bilder, konstriktning och
+  olika bildformat.
+taskInputHash: 3b4e429f7eb84ce2
 lang: sv
 ---
-Ge flera exempel på användning av `<picture>` elementet och förklara kortfattat varje exempel:
-
-Här är några exempel på användning av `<picture>` elementet och deras förklaringar:
+Här är några exempel på hur man använder `<picture>` elementet och deras förklaringar:
 
 1\. Exempel för responsiva bilder:
 
@@ -20,9 +18,9 @@ Här är några exempel på användning av `<picture>` elementet och deras förk
 </picture>
 ```
 
-Förklaring: I detta exempel används `<picture>` elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar. `<source>` elementen specificerar olika bildkällor med hjälp av attributen "srcset" och "media" för att specificera villkoren under vilka varje källa ska användas. `<img>` elementet används som ett säkerhetsnät för äldre webbläsare eller när villkoren som anges i `<source>` elementen inte uppfylls.
+Förklaring: I detta exempel används `<picture>` elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar. `<source>` elementen specifierar de olika bildkällorna med hjälp av attributen "srcset" och "media" för att specifiera villkoren under vilka varje källa bör användas. `<img>` elementet används som en reserv om äldre webbläsare eller när villkoren som anges i `<source>` elementen inte uppfylls.
 
-2\. Exempel för konstnärligt riktning:
+2\. Exempel för konstriktning:
 
 ```html
 <picture>
@@ -32,7 +30,7 @@ Förklaring: I detta exempel används `<picture>` elementet för att tillhandah�
 </picture>
 ```
 
-Förklaring: I detta exempel används `<picture>` elementet för att ange olika bildkällor beroende på enhetens riktning. `<source>` elementet med attributet "media" som är satt till "(orientation: landscape)" specificerar en bildkälla för breda skärmar, medan `<img>` elementet specificerar en bildkälla för porträttskärmar.
+Förklaring: I detta exempel används `<picture>` elementet för att tillhandahålla olika bildkällor beroende på enhetens orientering. `<source>` elementet med attributet "media" satt till "(orientation: landscape)" specifierar en bildkälla för breda skärmar, medan `<img>` elementet specifierar en bildkälla för porträttskärmar.
 
 3\. Exempel för olika bildformat:
 
@@ -46,4 +44,12 @@ Förklaring: I detta exempel används `<picture>` elementet för att ange olika 
 </picture>
 ```
 
-Förklaring: I detta exempel används `<picture>` elementet för att tillhandahålla olika bildkällor för olika bildformat. `<source>` elementen specificerar olika bildkällor med hjälp av atributen "srcset" och "type" för att specificera bildformatet. `<img>` elementet används som en fallback för äldre webbläsare som inte stöder `<picture>` elementet.
+Förklaring: I detta exempel används `<picture>` elementet för att tillhandahålla olika bildkällor för olika bildformat. `<source>` elementen specificerar olika bildkällor med hjälp av attributen "srcset" och "type" för att specificera bildformatet. `<img>` elementet används som en reserv för äldre webbläsare som inte stöder `<picture>` elementet.
+
+## Brytpunkter
+
+Inom responsiv design används brytpunkter för att definiera när layouten på en webbplats eller applikation bör ändras baserat på viewportens storlek. Brytpunkter definieras vanligtvis med media queries i CSS, som tillämpar olika stil beroende på skärmens bredd. Dessa brytpunkter kan användas i samband med `<picture>` elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar.
+
+Till exempel använde vi i det första exemplet ovan attributet `media` för att specificera skärmens bredd under vilken varje källa bör användas. När skärmens bredd är större än eller lika med 768 pixlar används källan `image-large.jpg`; när skärmens bredd är större än eller lika med 480 pixlar men mindre än 768 pixlar används källan `image-medium.jpg`; och när skärmens bredd är mindre än 480 pixlar används källan `image-small.jpg`. Detta gör det möjligt för oss att servera lämpligt dimensionerade bilder för varje enhet, vilket minskar sidlasttiden och förbättrar användarupplevelsen.
+
+Brytpunkter kan definieras vid vilken skärmstorlek som helst, och flera brytpunkter kan användas för att skapa layouter som responderar på en stor mängd enheter. Genom att kombinera brytpunkter med `<picture>` elementet kan du skapa flexibla och responsiva designer som ser fantastiska ut på vilken enhet som helst.
