@@ -6,5 +6,6 @@ export default  {
 	address: 'https://www.srcset.tips',
 	algoliaIndex: 'srcset',
 	algoliaDomain: 'srcset.tips',
-	contentCollection: 'docs'
+	contentCollection: 'docs',
+	translationNamespace: 'srcset'
 } as const;

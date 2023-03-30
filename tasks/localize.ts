@@ -1,7 +1,7 @@
 // npm run localize
 // Borrowed heavily from https://github.com/ObservedObserver/chatgpt-i18n
 
-import { Configuration, pApi, openai } from 'openai';
+import openai from 'openai';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
@@ -119,10 +119,10 @@ function matchJSON (str: string) {
     return str.slice(start, end + 1);
 }
 
-const configuration = new Configuration({
+const configuration = new openai.Configuration({
 	apiKey: process.env.VITE_OPENAI_API_KEY,
 });
-const openapi = new OpenAIApi(configuration);
+const openapi = new openai.OpenAIApi(configuration);
 
 
 
@@ -138,7 +138,7 @@ async function translate(inputJson: any, targetLang: string) {
         messages: [
             {
                 role: "system",
-                content: `You are a great translate bot. Translate a i18n locale array content to ${targetLang}. It's a array structure, contains many strings, translate each of them and make a new array of translated strings. Consider all the string as a context to make better translation.\n`,
+                content: `You are a great translate bot optimized for technical websites. Translate a i18n locale array content to ${targetLang}. It's a array structure, contains many strings, translate each of them and make a new array of translated strings. Consider all the string as a context to make better translation.\n`,
             },
             {
                 role: "user",
@@ -218,9 +218,15 @@ async function localize() {
             const { folderLangCode: lang, langNameInEnglish, input } = task;
             console.log(`Translating ${input.path} to ${lang} (${langNameInEnglish})...`);
             const translated = await translate(input.content, langNameInEnglish);
-            // write the translated file asynchronously to `./public/locales/${lang}/translation.json`
+            // write the translated file asynchronously to `./public/locales/${lang}/{path}.json`
             await fs.promises.writeFile(task.targetPath, translated);
             console.log(`Translated to ${lang} (${langNameInEnglish})`);
+
+						// now roundtrip back to english as _roundtrip_{path}
+						const roundtripPath = `./public/locales/${lang}/_roundtrip_${path.basename(task.targetPath)}`;
+						const roundtrip = await translate(translated, 'English');
+						await fs.promises.writeFile(roundtripPath, roundtrip);
+						console.log(`Round-tripped to ${lang} (${langNameInEnglish})`);
             
         }));
     }

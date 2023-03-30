@@ -7,5 +7,6 @@ export default  {
 	defaultLocale: 'en',
 	algoliaIndex: 'imgstyle',
 	algoliaDomain: 'img.style',
-	contentCollection: 'imgstyle'
+	contentCollection: 'imgstyle',
+	translationNamespace: 'imgstyle'
 } as const;

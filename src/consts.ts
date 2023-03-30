@@ -39,7 +39,7 @@ export const LANGUAGES: Language[] = [
 export const i18n_CONFIG = {
 		locales: LANGUAGES.map((lang) => { return lang.langCode }), // must include defaultLocale
 		defaultLocale: SITE.defaultLanguage,
-		defaultNamespace: 'srcset',
+		defaultNamespace: SITE.translationNamespace,
 		localePath: './public/locales',
 }
 

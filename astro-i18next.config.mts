@@ -9,11 +9,11 @@ const config: AstroI18nextConfig = {
     resourcesBasePath: i18n_CONFIG.localePath,
 
     defaultNamespace: i18n_CONFIG.defaultNamespace,
+		namespaces : [i18n_CONFIG.defaultNamespace],
     i18nextServer: {
         // debug: true,
         // saveMissing: true,
         // saveMissingTo: 'all',
-        
         //lng: 'en',
         //fallbackLng: 'en',
         // fallbackLng: false ,
@@ -23,7 +23,8 @@ const config: AstroI18nextConfig = {
           // saveMissingTo: 'fallback',
           // path where resources get loaded from
           loadPath: `${i18n_CONFIG.localePath}/{{lng}}/{{ns}}.json`,
-
+					defaultNamespace: i18n_CONFIG.defaultNamespace,
+					namespaces : [i18n_CONFIG.defaultNamespace],
           // path to post missing resources
           // addPath: '${i18n_CONFIG.localePath}/{{lng}}/{{ns}}.missing.json',
         }
