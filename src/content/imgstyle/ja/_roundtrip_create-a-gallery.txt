@@ -1,0 +1,70 @@
+---
+title: Creating a gallery
+description: How to create a gallery on a website
+taskInputHash: 8159c2a6287228bc
+lang: en
+---
+The general steps for creating an image gallery on a website are as follows:
+
+1. Create a new HTML file for the image gallery. For example, you can name it "gallery.html".
+2. Add HTML structure to the file. This usually includes a head section containing a title and any necessary CSS stylesheets, and a body section for adding the actual gallery.
+3. Use the `<div>` tag to create a container for the gallery. Specify an ID or class so that you can style it later.
+4. Within the container, add individual image elements using the `<img>` tag. Set the source attribute to the path or URL of the image file and add alt text or captions as needed.
+5. Use CSS to style the gallery. You can use properties such as display, width, height, margin, padding, and border to control its layout and appearance.
+
+The following is an example code for creating a simple image gallery:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Image Gallery</title>
+	<style>
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.gallery img {
+			width: 300px;
+			height: 200px;
+			margin: 10px;
+			object-fit: cover;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<img src="image1.jpg" alt="Image 1">
+		<img src="image2.jpg" alt="Image 2">
+		<img src="image3.jpg" alt="Image 3">
+		<img src="image4.jpg" alt="Image 4">
+		<img src="image5.jpg" alt="Image 5">
+		<img src="image6.jpg" alt="Image 6">
+	</div>
+</body>
+</html>
+```
+
+In this example, the gallery container has a class of "gallery" and the style has been set to use flexbox to arrange the images in a grid. Each image has a width of 300px, a height of 200px, a margin of 10px, and a black 2px border. The object-fit property is used to ensure that the aspect ratio of the images is maintained, even if they are not the same size.
+
+This code can be customized to fit specific needs and design preferences.
+=====================
+
+Content prompt used: 
+Translate the following to Japanese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'ja' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Create a gallery
+ 2. How to create a gallery on a website
+
+Metadata returned1. ギャラリーを作成する
+2. ウェブサイト上でギャラリーを作成する方法 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

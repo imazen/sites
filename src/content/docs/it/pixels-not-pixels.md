@@ -1,22 +1,16 @@
 ---
-title: px ≠ pixels
-description: >-
-  Dispositivi pixels ≠ px browser ≠ px immagine
-
-
-  (Note: The translation of the title is based on the assumption that the word
-  'pixels' is meant to be translated to 'pixels'. If the word 'pixels' should be
-  translated to another word based on the context, kindly let me know.)
-taskInputHash: 4ab884e82e2f9b69
+title: px ≠ pixel
+description: Pixel del dispositivo ≠ px del browser ≠ px dell'immagine
+taskInputHash: 5cb0d1fb2057aeac
 lang: it
 sidebar_sort_priority: 900
 ---
-### Dispositivi pixels ≠ px browser ≠ px immagine
+### Device pixels ≠ px del browser ≠ px dell'immagine
 
-Grazie ad Apple, i pixels di CSS e HTML (`px`) **vengono mappati quasi sempre su molti dispositivi/stampe**. Il devicePixelRatio del mio telefono è 3,875; [quale è il tuo?](https://www.mydevice.io/)
+Grazie ad Apple, i pixel CSS e HTML (`px`) **quasi sempre corrispondono a multipli di pixel del dispositivo/stampante**. Il `devicePixelRatio` del mio telefono è 3,875; [qual è il tuo?](https://www.mydevice.io/)
 
-Il mio devicePixelRatio sul desktop cambia in base allo zoom del browser, ma di default è 1,5 (il mio `Sistema > Display > Scalabilità` è al 150%, dopotutto).
+Il `devicePixelRatio` del mio desktop cambia allo zoom del browser, ma di default è 1,5 (dato che il mio `Sistema > Display > Zoom` è al 150%).
 
-I file delle immagini (esclusi quelli SVG) decodificano in una griglia di pixels. **È fastidiosamente difficile ottenere che i pixels dell'immagine vengano visualizzati perfettamente a una proporzione di 1:1 con i dispositivi pixels - ma con `srcset` puoi arrivare *quasi* vicino**, e un po' di Javascript può regolare le dimensioni dell'elemento html dopo il caricamento se hai motivazioni davvero giustificate per aver bisogno di questa mappatura perfetta, anche se tali arti proibite non verranno qui rivelate.
+I file di immagine (esclusi gli SVG) vengono decodificati in una griglia di pixel. **È fastidiosamente difficile ottenere pixel dell'immagine che si visualizzino in modo perfetto a un rapporto 1:1 con i pixel del dispositivo, ma con `srcset` puoi essere *abbastanza vicino***, e un po' di Javascript può regolare la dimensione degli elementi HTML dopo il caricamento se hai ragioni sufficienti per ottenere un mappatura perfetta, anche se queste arti proibite non saranno rivelate qui.
 
-> Altre unità assolute [(in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/it/docs/Web/CSS/length) sono definite in funzione del numero di pixels CSS e fanno finta che tutto abbia una risoluzione di 96dpi. Gli sviluppatori evitano le unità assolute perché di solito è meglio usare unità derivate dalle dimensioni del carattere o delle dimensioni viewport/contenitore. Unità non corrispondenti possono compromettere un layout se l'utente regola il moltiplicatore del testo in `Accessibilità > Dimensioni testo`, effettua lo zoom del browser o fa ruotare il dispositivo. Inutile dire che dovresti fare tutte queste cose prima di pubblicare il tuo sito.
+> Altre unità assolute [in, pc, pt, mm, cm, Q](https://developer.mozilla.org/it/docs/Web/CSS/length) sono definite in termini di numero di pixel CSS e fingono che tutto sia a 96 dpi. I dev evitano le unità assolute perché in generale è meglio usare unità derivate dalla dimensione del carattere o dalle dimensioni del viewport/contenitore. Unità incoerenti possono rompere un layout se l'utente regola il moltiplicatore `Accessibilità > Dimensioni testo`, fa zoom sul browser o ruota il dispositivo. Ovviamente, dovresti fare tutte queste cose prima di pubblicare il tuo sito.

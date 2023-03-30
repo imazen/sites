@@ -1,16 +1,16 @@
 ---
 title: px ≠ pixels
-description: Pixels de l'appareil ≠ pixels du navigateur ≠ pixels de l'image
-taskInputHash: 4c09170abf1da027
+description: Pixels d'appareil ≠ pixels du navigateur ≠ pixels d'image
+taskInputHash: 7de2b9bb6354abff
 lang: fr
 sidebar_sort_priority: 900
 ---
-### Les pixels de l'appareil ≠ les pixels du navigateur ≠ les pixels de l'image
+### Pixels d'appareil ≠ pixels du navigateur ≠ pixels d'image
 
-Grâce à Apple, les pixels CSS et HTML (`px`) **correspondent presque toujours à plusieurs pixels de l'appareil/imprimante**. Le devicePixelRatio sur mon téléphone est de 3,875 ; [et toi ?](https://www.mydevice.io/)
+Grâce à Apple, les pixels CSS et HTML (`px`) **sont presque toujours représentés par plusieurs pixels d'appareil/imprimante**. Le `devicePixelRatio` sur mon téléphone est de 3,875 ; [et le vôtre ?](https://www.mydevice.io/)
 
-Le devicePixelRatio de mon ordinateur de bureau change lors du zoom du navigateur, mais revient à 1,5 par défaut (mon `Système > Affichage > Échelle` est à 150 %, après tout).
+Le `devicePixelRatio` de mon ordinateur de bureau change en fonction du zoom du navigateur, mais est par défaut de 1,5 (après tout mon `Système > Affichage > Échelle` est à 150%).
 
-Les fichiers d'images (à l'exclusion des SVG) se décodent en une grille de pixels. **Il est franchement difficile d'obtenir une affichage parfait des pixels de l'image à un rapport de 1:1 avec les pixels de l'appareil, mais avec `srcset` vous pouvez vous en approcher suffisamment**, et un peu de Javascript peut ajuster la taille de l'élément html après le chargement si vous avez de bonnes raisons valables pour besoin d'un tel mapping parfait, bien que de tels arts interdits ne seront pas révélés ici.
+Les fichiers d'image (à l'exception des fichiers SVG) sont découpés en une grille de pixels. **Il est difficilement ennuyeux d'obtenir une représentation parfaite des pixels d'image à un ratio de 1:1 avec les pixels d'appareil, mais avec `srcset`, vous pouvez vous en approcher suffisamment**, et un peu de Javascript peut ajuster la taille de l'élément html après le chargement si vous avez des raisons parfaitement justifiées pour avoir besoin de cette mappage parfait, bien que de telles pratiques interdites ne seront pas révélées ici.
 
-> D'autres unités absolues [ (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/fr/docs/Web/CSS/longueur) sont définies en fonction du nombre de pixels CSS et prétendent que tout est en 96 dpi. Les développeurs évitent les unités absolues car il est généralement préférable d'utiliser des unités dérivées de la taille de police ou de la dimension de la fenêtre d'affichage/conteneur. Les unités incompatibles peuvent casser une disposition si l'utilisateur ajuste leur multiplicateur `Accessibilité > Taille de texte`, agrandit le navigateur ou fait pivoter leur appareil. Inutile de dire que vous devez faire tout cela avant de publier votre site.
+> D'autres unités absolues ([en, pc, pt, mm, cm, Q)](https://developer.mozilla.org/fr/docs/Web/CSS/longueur) sont définies en fonction du nombre de pixels CSS et prétendent que tout est de 96 dpi. Les développeurs évitent les unités absolues car il est généralement préférable d'utiliser des unités dérivées de la taille de police ou des dimensions du viewport/conteneur. Des unités incompatibles peuvent rompre une mise en page si l'utilisateur ajuste son multiplicateur de `Accessibilité > Taille de texte`, zoome le navigateur ou fait pivoter son appareil. Inutile de dire que vous devriez faire toutes ces choses avant de publier votre site.

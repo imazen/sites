@@ -1,0 +1,70 @@
+---
+title: Creating a Photo Gallery
+description: How to create a photo gallery on your website
+taskInputHash: 8c39e5b796c53973
+lang: en
+---
+Here are general steps for creating a photo gallery on your website:
+
+1. Create a new HTML file for your photo gallery. You can name it something like "gallery.html".
+2. Add HTML structure to the file. This usually includes the head section with a title and any necessary CSS stylesheets, as well as the body section for adding the actual gallery.
+3. Create a container for your gallery using a `<div>` tag. Give it an ID or class for styling later.
+4. Within the container, use the `<img>` tag to add individual image elements. Set the source attribute to the image file path or URL and add any alt text or captions as needed.
+5. Style your gallery with CSS. Use properties like display, width, height, margin, padding, and border to control the layout and appearance of the gallery.
+
+Here is an example code for creating a simple photo gallery:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Image Gallery</title>
+	<style>
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.gallery img {
+			width: 300px;
+			height: 200px;
+			margin: 10px;
+			object-fit: cover;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<img src="image1.jpg" alt="Image 1">
+		<img src="image2.jpg" alt="Image 2">
+		<img src="image3.jpg" alt="Image 3">
+		<img src="image4.jpg" alt="Image 4">
+		<img src="image5.jpg" alt="Image 5">
+		<img src="image6.jpg" alt="Image 6">
+	</div>
+</body>
+</html>
+```
+
+In this example, the gallery container has a class of "gallery" and is styled using flexbox to arrange the images in a grid. Each image has a width of 300px, height of 200px, a 10px margin, a black 2px solid border, and object-fit to maintain their aspect ratio even if they have different sizes.
+
+You can customize this code according to your specific needs and design preferences.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Create a gallery
+ 2. How to create a gallery on a website
+
+Metadata returned1. 创建一个图库
+2. 如何在网站上创建图库 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

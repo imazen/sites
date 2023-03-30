@@ -1,0 +1,37 @@
+---
+title: When to use the <picture> element
+description: Explains in which situations you should use the <picture> element
+taskInputHash: 639923b41acd7168
+lang: en
+---
+The `picture` element is used to provide multiple versions of an image and determine which image version to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design.
+
+Here are some specific scenarios in which you might want to use the `picture` element:
+
+* **Retina displays:** High-density displays like Apple Retina displays have a higher pixel density, which means that images can appear blurry or pixelated if they are not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice as many pixels as the regular version, so it looks sharp on Retina displays.
+
+* **Different aspect ratios:** If you are designing a website that needs to display images with different aspect ratios (like landscape vs. portrait), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
+
+* **Bandwidth limitations:** Images can be large files that take up a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page load times.
+
+* **Artistic direction in layout:** Sometimes you may want to present an image in a certain way depending on the layout of the rest of the page. For example, you may want to show a close-up of a person's face on mobile devices, but a wider image on desktop computers. The `picture` element allows you to provide different versions of the image that are optimized for different layouts.
+
+Overall, the `picture` element is a powerful tool that can help you optimize your images for a variety of use cases and ensure that they look great no matter what device or screen size they are displayed on.
+=====================
+
+Content prompt used: 
+Translate the following to Swedish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'sv' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. When to use <picture> element
+ 2. Explains in which situations you should use the <picture> element
+
+Metadata returned1. När man ska använda <bilden>-elementet
+2. Förklarar i vilka situationer du bör använda <bilden>-elementet 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

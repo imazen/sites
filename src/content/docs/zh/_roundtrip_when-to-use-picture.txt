@@ -1,0 +1,37 @@
+---
+title: When to Use the `<picture>` Element
+description: Explains when you should use the `<picture>` element
+taskInputHash: 11e0f18547c6d9d0
+lang: en
+---
+The `picture` element is used to provide multiple versions of an image and determine which version to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions and is widely used in responsive web design.
+
+Here are some specific scenarios where you may need to use the `picture` element:
+
+* **Retina Displays:** High-density displays, like Apple's Retina displays, have higher pixel density which means images may appear blurry or pixelated if not optimized for high resolution. Using the `picture` element, you can provide a version with double the pixels to make it sharp and clear on Retina displays.
+
+* **Different Aspect Ratios:** If you're designing a site that needs to display images with different aspect ratios (e.g., landscape and portrait), you can use the `picture` element to provide different versions optimized for each aspect ratio.
+
+* **Bandwidth Limitations:** Images can be large files that consume a lot of bandwidth, especially on mobile devices. Using the `picture` element, you can provide smaller versions of images for devices with smaller screens or slower internet connections, which helps to reduce page load times.
+
+* **Art Direction Layouts:** Sometimes you may want to display an image in a particular way based on the layout of the rest of the page. For example, you may want to show a close-up of a face on a mobile device and a wider landscape on a desktop device. The `picture` element allows you to provide different versions of images optimized for different layouts.
+
+Overall, the `picture` element is a powerful tool that can help you optimize images for a variety of use cases and ensure they look great no matter the device or screen size.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. When to use <picture> element
+ 2. Explains in which situations you should use the <picture> element
+
+Metadata returned1. 何时使用`<picture>`元素
+2. 解释您应该在哪些情况下使用`<picture>`元素 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

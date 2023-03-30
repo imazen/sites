@@ -1,0 +1,69 @@
+---
+title: Creating whitespace around images
+description: How to use CSS and aspect ratio to center images and create whitespace
+taskInputHash: 6a58944d4b373491
+lang: en
+---
+You can center images and create whitespace using CSS and aspect ratio, as follows:
+
+1. First, you need to wrap the image in a container element such as `<div>` or `<figure>`. This allows you to apply styles that affect the image within the container.
+2. Set the container's `position` property to `relative`, which enables you to position the image inside the container.
+3. Add a `::after` pseudo-element to the container. This is used to maintain the aspect ratio of the image and create whitespace.
+4. Set the `content` property of the `::after` pseudo-element to an empty string. This is necessary to create the element.
+5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value that corresponds to the aspect ratio of the image. For example, if the aspect ratio of the image is 4:3, set the padding to `75%` (3/4=0.75).
+6. Set the `position` property of the `::after` pseudo-element to `absolute`. This places the element inside the container.
+7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This fills the container and creates whitespace.
+8. Finally, set the `position` property of the image itself to `absolute`. This allows you to center the image inside the container using the `top`, `left`, `bottom`, and `right` properties.
+
+Here is an example of CSS code that is used to center an image with 4:3 aspect ratio and create whitespace:
+
+```css
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+```
+
+In this example, the `.container` element is the container for the image. The `::after` pseudo-element creates whitespace and maintains the aspect ratio of the image. The `img` element is set to `position: absolute`, which allows you to center it inside the container using the `top`, `left`, `bottom`, and `right` properties.
+
+By setting the `max-width` and `max-height` properties of the image to `100%`, the image maintains the aspect ratio while scaling up or down to fit the available space. This means that the whitespace created by the `::after` pseudo-element is always proportional to the size of the image.
+=====================
+
+Content prompt used: 
+Translate the following to Japanese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'ja' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Pad an image
+ 2. How to pad an image using css and aspect ratio to center
+
+Metadata returned1. 画像の余白を作成する
+2. CSSとアスペクト比を使用して画像を中央揃えし、余白を作成する方法 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

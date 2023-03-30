@@ -1,19 +1,19 @@
 ---
 title: px ≠ pixels
-description: Unit px ≠ browser px ≠ image px
-taskInputHash: 69ed91e31fe2aa4d
+description: Device pixels ≠ browser pixels ≠ image pixels
+taskInputHash: fd81e79f3e2dea92
 lang: en
 sidebar_sort_priority: 900
 ---
-### Device pixels ≠ CSS pixels ≠ image pixels
+### Device Pixels ≠ Browser Pixels ≠ Image Pixels
 
-Thanks to Apple, CSS and HTML pixels (`px`) are almost always mapped to **multiple device/print pixels**. The devicePixelRatio on my phone is 3.875; [what's yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/browser pixels**. The `devicePixelRatio` on my phone is 3.875; [what's yours?](https://www.mydevice.io/)
 
-My computer's devicePixelRatio changes with browser zoom, but is set to 1.5 by default (because my `System > Display > Scale` is set to 150%).
+My desktop's `devicePixelRatio` changes when I zoom the browser, but it's typically 1.5 (my `System > Display > Scale` is 150% by default).
 
-Image files (except for SVG) are decoded into an array of pixels. **It's hard to display image pixels perfectly in a 1:1 relationship with device pixels, but with `srcset` you can get *close enough* and with some JavaScript you can adjust the size of the html element after loading it if you have a really compelling reason to need that perfect mapping, although such forbidden tricks won't be revealed here.
+Image files (excluding SVG) are decoded into a grid of pixels. **It's annoyingly hard to get image pixels to display perfectly with a 1:1 correspondence to device pixels, but with `srcset` you can come *reasonably close***, and with a bit of JavaScript you can adjust the HTML element's size after it loads if you have a really good reason for needing that perfect match, though such forbidden sorcery won't be revealed here.
 
-> Other absolute [units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined in terms of CSS pixels and pretend everything has a resolution of 96 dpi. Developers avoid absolute units because it's better to use units that come from the font size or viewport/container dimensions. Incorrect units can break a layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms in the browser, or rotates their device. As you can understand, all of these should be done before launching your website.
+> Other absolute [units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined in terms of actual CSS pixels pretending everything is 96dpi. Developers avoid absolute units because it's generally better to use units derived from font-size or viewport/container dimensions. Mismatched units can break layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device. Obviously, you should do all those things before you ship your site. {{Note that the term used here is not the technical term, so it may be confusing for some readers.}}
 =====================
 
 Content prompt used: 
@@ -22,10 +22,13 @@ Translate the following to Swedish, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. px ≠ pixels
- 2. Device px ≠ browser px ≠ image px 
+ 2. Device px ≠ browser px ≠ image px
+
+Metadata returned1. px ≠ pixlar
+2. Enhetspx ≠ webbläsarpx ≠ bildpx 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

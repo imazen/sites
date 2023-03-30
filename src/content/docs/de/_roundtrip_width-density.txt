@@ -1,18 +1,18 @@
 ---
-title: Width and Density Descriptions
-description: Examples of using width and density descriptions in `srcset`
-taskInputHash: b761a08492340672
+title: Width and density descriptors
+description: Examples of using width and density descriptors in `srcset`
+taskInputHash: 3afb179ed8087fd4
 lang: en
 ---
-Understanding width (`w`) and density (`x`) descriptions in `srcset`. Use examples and utilize markdown.
+Understanding width (`w`) and density (`x`) descriptors in `srcset`. Use examples and use Markdown.
 
-> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities and allow the browser to select the appropriate image based on the display properties of the device. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptions to specify the images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities and let the browser choose the appropriate image based on the display properties of the device. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptors to specify the images.
 
-## Width (`w`) Description
+## Width (`w`) Descriptor
 
-> The `w` description is used to specify the width of an image in pixels. It is used when we want to give the browser the dimensions of an image so that it can select the appropriate image for the available screen space.
+> The `w` descriptor is used to indicate the width of an image in pixels. It is used when we want to provide the browser with the dimensions of an image so that it can select the appropriate image for the available screen space.
 
-> The syntax for using the `w` description in `srcset` is as follows:
+> The syntax for using the `w` descriptor in `srcset` is as follows:
 
 ```html
 <img src="small.jpg"
@@ -22,13 +22,13 @@ Understanding width (`w`) and density (`x`) descriptions in `srcset`. Use exampl
   alt="Example image">
 ```
 
-> In the above example, we have provided the browser with three images and their respective widths in pixels. The browser will choose the image with the nearest width to the available screen space.
+> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser selects the image with the nearest width to the available screen space.
 
-## Density (`x`) Description
+## Density (`x`) Descriptor
 
-> The `x` description is used to specify the pixel density of an image, i.e. the ratio of physical pixels to CSS pixels. It is used when we want to provide the browser with different versions of the same image with different pixel densities.
+> The `x` descriptor is used to indicate the pixel density of an image which represents the ratio of physical pixels to CSS pixels. It is used when we want to provide the browser with different versions of the same image with different pixel densities.
 
-> The syntax for using the `x` description in `srcset` is as follows:
+> The syntax for using the `x` descriptor in `srcset` is as follows:
 
 ```html
 <img src="small.jpg"
@@ -38,9 +38,9 @@ Understanding width (`w`) and density (`x`) descriptions in `srcset`. Use exampl
   alt="Example image">
 ```
 
-> In the above example, we have provided the browser with three images and their respective pixel densities. The browser will choose the image with the nearest pixel density of the device.
+> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser selects the image with the nearest density to the device's screen.
 
-> Note that the `w` and `x` descriptions can be used in the same `srcset` attribute to provide the browser with more choices.
+> Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to give the browser more choices.
 =====================
 
 Content prompt used: 
@@ -49,10 +49,13 @@ Translate the following to German, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Width and density descriptors
- 2. Examples of using width and density descriptors in `srcset` 
+ 2. Examples of using width and density descriptors in `srcset`
+
+Metadata returned1. Breiten- und Dichtebeschreibungen
+2. Beispiele zur Verwendung von Breiten- und Dichtebeschreibungen in `srcset` 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

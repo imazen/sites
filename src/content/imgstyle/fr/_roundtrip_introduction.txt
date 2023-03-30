@@ -1,0 +1,101 @@
+# Formatting `<img>` elements and layout examples
+
+## Formatting `<img>` elements
+
+`<img>` elements allow you to display images on your web pages. To format the ` <img>` element, you can use the following attributes:
+
+- `src`: the URL of the image you want to display
+- `alt`: a text description of the image that is displayed if the image fails to load
+- `width`: the width of the image in pixels or as a percentage of the container
+- `height`: the height of the image in pixels or as a percentage of the container
+
+Here's an example of an `<img>` element that displays an image with a width of 200 pixels and a height of 100 pixels:
+
+```html
+<img src="example.jpg" alt="Example image" width="200" height="100">
+```
+
+It's also possible to use CSS to style the `<img>` element, such as adding a border, changing the size, or making it responsive to different screen sizes. 
+
+## Layout examples
+
+Layout examples provide a way to display multiple elements on a web page in a visually appealing way. Here are some examples:
+
+### Grid layout
+
+A grid layout is a common way to lay out multiple elements in a grid-like pattern. CSS Grid is a powerful way to create grid layouts, allowing you to specify the number of columns and rows and their sizes. Here's an example:
+
+```html
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+</div>
+```
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+```
+
+### Flexbox layout
+
+Flexbox is another way to lay out elements on a web page, allowing you to easily create a responsive layout that adjusts to different screen sizes. Here's an example:
+
+```html
+<div class="flex-container">
+  <div class="flex-item">Item 1</div>
+  <div class="flex-item">Item 2</div>
+  <div class="flex-item">Item 3</div>
+  <div class="flex-item">Item 4</div>
+</div>
+```
+
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  background-color: #fff;
+  width: calc(25% - 10px);
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+```
+
+These are just a few examples of different layout options you can use on your web pages. Experiment with different layouts to find the one that works for your content and design goals.
+=====================
+
+Content prompt used: 
+Translate the following to French, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'fr' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. La mise en forme des éléments <img> et des exemples de mise en page
+2. La mise en forme des éléments <img> et des exemples de mise en page 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

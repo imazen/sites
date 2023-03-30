@@ -1,0 +1,157 @@
+---
+title: FAQ
+description: >-
+  Frequently asked questions regarding formatting and layout of images with CSS
+taskInputHash: 506d8eea8b2a7d92
+lang: en
+---
+Some frequently asked questions regarding formatting and layout of images with CSS are:
+
+**1. How do you define the size of an image in CSS?**
+
+To define the size of an image in CSS, you can use the `width` and `height` properties. For example, to set the width of an image to 300 pixels, you can use the following CSS code:
+
+```css
+img {
+  width: 300px;
+}
+```
+
+**2. How do you center an image both horizontally and vertically with CSS?**
+
+To center an image both horizontally and vertically with CSS, you can use the `display: flex` property and `justify-content: center` and `align-items: center` properties on a container that holds the image. For example, to center an image within a `div` element, you can use the following CSS code:
+
+```css
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div img {
+  /* Optional: set a maximum width for the image */
+  max-width: 100%;
+}
+```
+
+**3. How do you make an image responsive with CSS?**
+
+To make an image responsive with CSS, you can use the `max-width: 100%` property on the image. This will ensure that the image never exceeds the width of its container. For example:
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+**4. How do you add a border or shadow to an image with CSS?**
+
+To add a border or shadow to an image with CSS, you can use the `border` and `box-shadow` properties, respectively. For example:
+
+```css
+img {
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+```
+
+**5. How do you align images side by side with CSS?**
+
+To align images side by side with CSS, you can use the `display: inline-block` property on the images. For example:
+
+```css
+img {
+  display: inline-block;
+  /* Optional: set a margin between the images */
+  margin-right: 10px;
+}
+```
+
+**6. How do you set a background image with CSS?**
+
+To set a background image with CSS, you can use the `background-image` property. For example:
+
+```css
+div {
+  background-image: url('image.jpg');
+}
+```
+
+**7. How do you crop an image with CSS?**
+
+To crop an image with CSS, you can use the `clip` property. For example:
+
+```css
+img {
+  clip: rect(0px, 100px, 100px, 0px);
+}
+```
+
+This will crop the image to a square of 100x100 pixels starting from the top left corner.
+
+**8. How do you add a hover effect to an image with CSS?**
+
+To add a hover effect to an image with CSS, you can use the `:hover` pseudo-class. For example:
+
+```css
+img {
+  /* Set the initial state of the image */
+  opacity: 0.8;
+}
+
+img:hover {
+  /* Set the state of the image when hovered over */
+  opacity: 1;
+}
+```
+
+**9. How do you control the spacing between images with CSS?**
+
+To control the spacing between images with CSS, you can use the `margin` property. For example:
+
+```css
+img {
+  margin-right: 10px;
+}
+```
+
+This will add a 10 pixel margin to the right of each image.
+
+**10. How do you create an image slideshow with CSS?**
+
+To create an image slideshow with CSS, you can use the `@keyframes` rule to define the animation and the `animation` property to apply it to the images. For example:
+
+```css
+@keyframes slideshow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+img {
+  /* Set the initial state of the images */
+  opacity: 0;
+  /* Set the duration and timing function of the animation */
+  animation: slideshow 2s ease-in-out 0s infinite alternate;
+}
+```
+
+{{Note that the term used here is not the technical term for "hover effect", but it is commonly used in web development.}}
+=====================
+
+Content prompt used: 
+Translate the following to French, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'fr' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. FAQ
+ 2. Frequently asked questions regarding styling and laying out images with CSS
+
+Metadata returned1. FAQ
+2. Questions fréquemment posées concernant la mise en forme et la disposition des images avec CSS 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

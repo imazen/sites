@@ -1,19 +1,19 @@
 ---
 title: px ≠ Pixels
 description: Device Pixels ≠ Browser Pixels ≠ Image Pixels
-taskInputHash: 75742aca9ccfa689
+taskInputHash: 05719ac1ce8d77d0
 lang: en
 sidebar_sort_priority: 900
 ---
 ### Device Pixels ≠ Browser Pixels ≠ Image Pixels
 
-Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/printer pixels**. My phone has a devicePixelRatio of 3.875; [what's yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to more than one device/printer pixel**. My phone's devicePixelRatio is 3.875; [what's yours?](https://www.mydevice.io/)
 
-My desktop's devicePixelRatio changes with browser zoom, but has a default value of 1.5 (since my `System > Display > Scale` is 150%).
+The devicePixelRatio of my desktop device varies with browser zooming, but defaults to 1.5 (after all, I have `System > Display > Scale` set to 150%).
 
-Image files (not including SVGs) decode to pixel grids. **To get image pixels to display 1:1 with device pixels is frustratingly difficult - but it can be approximated sufficiently with `srcset`**, and if you really need precise mapping, some JavaScript can adjust HTML element sizes after loading, though that black magic won't be divulged here.
+Image files (except SVGs) are decoded into pixel grids. **It's hard to get image pixels to display perfectly at a 1:1 ratio with device pixels, but with `srcset` you can get close enough**. If you do have a reason for this perfect mapping, some JavaScript can adjust the size of HTML elements after loading, though such forbidden skills are not demonstrated here.
 
-> Other absolute units (like `in`, `pc`, `pt`, `mm`, `cm`, `Q`) are defined based on the number of CSS pixels and assume everything is 96dpi. Developers should avoid absolute units because it's often better to use units derived from font sizes, viewport/container sizes. If a user doubles their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device, it can cause unit mismatch and break the layout. Without a doubt, you should perform all of these actions before publishing your website.
+> Other absolute units (in, pc, pt, mm, cm, Q) are defined in terms of a quantity of CSS pixels and pretend everything is 96dpi. Developers avoid absolute units since it's better to use units derived from font sizes or viewport/container dimensions. Mismatched units can break layouts if users adjust their `Accessibility > Text Size` multiplier, zoom the browser, or rotate their device. Needless to say, you should perform all these operations before publishing your site.
 =====================
 
 Content prompt used: 
@@ -22,10 +22,13 @@ Translate the following to Simplified Chinese, preserving all markdown formattin
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. px ≠ pixels
- 2. Device px ≠ browser px ≠ image px 
+ 2. Device px ≠ browser px ≠ image px
+
+Metadata returned1. px ≠ 像素
+ 2. 设备像素 ≠ 浏览器像素 ≠ 图片像素 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

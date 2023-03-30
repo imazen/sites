@@ -1,0 +1,81 @@
+# Styling the `<img>` Element and Layout Examples
+
+## Styling the `<img>` Element
+
+The `<img>` element is a self-closing tag used to embed images in an HTML document. It has several attributes, including `src`, `alt`, `width`, and `height`. To style the `<img>` element, you can use CSS properties like `width`, `height`, `border`, and `margin`.
+
+Here is an example of how to style the `<img>` element:
+
+```css
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+```
+
+In this example, the `width` is set to 100% to make the image responsive to the size of the parent container. The `height` is set to `auto` to maintain the aspect ratio of the image. The `border` property adds a thin black border around the image, and the `margin` property adds a 10-pixel vertical margin and no horizontal margin.
+
+Other CSS properties that can be used to style the `<img>` element include `background-color`, `box-shadow`, and `object-fit`.
+
+## Layout Examples
+
+Here are some layout examples using the `<img>` element:
+
+### Centered Image
+
+To center an image inside a container, you can use the `text-align` property set to `center` on the container:
+
+```html
+<div style="text-align: center;">
+  <img src="path/to/image.jpg" alt="description of the image">
+</div>
+```
+
+### Floating Image
+
+To float an image to the left or right of the text, you can use the `float` property:
+
+```html
+<div style="float: left; margin-right: 10px;">
+  <img src="path/to/image.jpg" alt="description of the image">
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus, nisi vitae molestie accumsan, nisl velit scelerisque libero, et facilisis dolor leo eu tellus.</p>
+```
+
+### Responsive Image Grid
+
+To create a responsive image grid, you can use CSS flexbox or CSS grid. Here is an example using flexbox:
+
+```html
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="path/to/image1.jpg" alt="description of the image">
+  <img src="path/to/image2.jpg" alt="description of the image">
+  <img src="path/to/image3.jpg" alt="description of the image">
+  <!-- more images... -->
+</div>
+```
+
+In this example, the container uses `display: flex` to enable flexbox and `flex-wrap: wrap` to allow the images to wrap onto multiple rows on smaller screens. 
+
+{{Notes that this is the end of the translated documentation}}
+=====================
+
+Content prompt used: 
+Translate the following to Swedish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'sv' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. Att styla `<img>`-element och exempel på layouts
+2. Att styla `<img>`-element och exempel på layouts 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

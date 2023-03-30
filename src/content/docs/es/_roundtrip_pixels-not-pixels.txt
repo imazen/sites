@@ -1,33 +1,35 @@
 ---
 title: px ≠ pixels
-description: Device pixels ≠ browser pixels ≠ image pixels
-taskInputHash: 14c451a76970a245
+description: >-
+  Device pixels are not the same as browser pixels or image pixels
+taskInputHash: d01e3b9515e2e27e
 lang: en
 sidebar_sort_priority: 900
 ---
-### Device pixels ≠ browser pixels ≠ image pixels
+### Device Pixels are not the same as Browser Pixels or Image Pixels
 
-Thanks to Apple, CSS and HTML pixels (`px`) are **almost always mapped to multiple device/printer pixels**. My phone's devicePixelRatio is 3.875; [what's yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML pixels (`px`) **are almost always mapped to multiple device or printer pixels**. My phone's `devicePixelRatio` is 3.875; [what's yours?](https://www.mydevice.io/)
 
-My desktop devicePixelRatio changes with my browser zoom, but by default it's 1.5 (after all, my `System > Display > Scale` is 150%).
+My desktop's `devicePixelRatio` changes when I zoom in the browser, but the default value is 1.5 (because my `System > Display > Scale` setting is 150%).
 
-Image files (excluding SVGs) are decoded to a grid of pixels. **Getting the image pixels to display perfectly 1:1 with device pixels is excruciatingly difficult, but with `srcset`, you can get *close enough***, and a little JavaScript can adjust the size of the HTML element after load if you have a really good reason for needing that perfect mapping, though such dark arts won't be revealed here.
+Image files (excluding SVGs) are decoded into a grid of pixels. **It's annoying to get image pixels to display at a perfect 1:1 ratio with device pixels, but with `srcset` you can get close enough**, and a bit of Javascript can adjust the HTML element size after the page loads if you have truly compelling reasons for needing that perfect mapping, but such forbidden arts will not be revealed here.
 
-> Other absolute units [in, pc, pt, mm, cm, Q](https://developer.mozilla.org/en/docs/Web/CSS/length) are defined in terms of a number of CSS pixels and pretend everything is at 96 dpi. Developers avoid absolute units because it's generally better to use units derived from font size or viewport/container dimensions. Mismatched units can break a layout if the user adjusts their `Accessibility > Text size` multiplier, zooms in the browser, or rotates their device. Needless to say, you should do all these things before launching your site.
+> The other absolute units [in, pc, pt, mm, cm, Q](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined in terms of the number of CSS pixels and assume that everything is running at 96dpi. Developers avoid absolute units because it's generally better to use units that derive from font size or frame/container dimensions. Unequal units can break a layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms in the browser or rotates their device. Actually, you should do all these things before launching your site.
 =====================
 
 Content prompt used: 
-Translate the following to Spanish, preserving all markdown formatting. 
-Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses. 
-Inside code blocks, only translate comments
-
-
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. px ≠ pixels
- 2. Device px ≠ browser px ≠ image px 
+ 2. Device px ≠ browser px ≠ image px
+
+Metadata returned1. px ≠ píxeles
+2. Los píxeles del dispositivo no son iguales a los píxeles del navegador ni los píxeles de las imágenes 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

@@ -1,31 +1,31 @@
 ---
-title: Density Descriptors & Srcset
+title: Density descriptors and srcset
 description: Examples of using density descriptors in `srcset`
-taskInputHash: e40dae0e7a12162d
+taskInputHash: 935c76acf22c926c
 lang: en
 ---
-Srcset with density descriptors provides a simple and effective method for delivering the most appropriate image to each user’s device, improving performance and user experience. This guide will walk you through the essential elements of using srcset with density descriptors and provide markup examples for your convenience.
+Srcset with density descriptors provides a simple and effective method for providing the most appropriate image for each user's device, thus improving performance and the user experience. This guide will walk you through the essentials of using srcset with density descriptors and provide markup examples for your convenience.
 
-## What is Srcset with Density Descriptors?
+## What is Srcset with density descriptors?
 
-Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in conjunction with srcset to provide images of varying resolution based on the pixel density of the user’s screen.
+Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in conjunction with srcset to provide images of different resolutions based on the pixel density of the user's screen.
 
-## When to Use Srcset with Density Descriptors
+## When to use Srcset with density descriptors?
 
 Using srcset with density descriptors is particularly useful when you want to:
-1. Provide high-resolution images to high DPI screens (such as Retina displays) while providing lower-resolution images to standard screens.
-2. Improve page performance by providing the most appropriate image size for each user’s device.
+1. Serve high-resolution images on high-DPI screens (e.g. Retina displays) while providing lower resolution images to standard screens.
+2. Improve page performance by providing the most appropriate image size to each user's device.
 
-## Implementing Srcset with Density Descriptors
+## Implementation of Srcset with density descriptors
 
 To use srcset with density descriptors, follow these steps:
-1. Prepare your images in different resolutions.
+1. Prepare your images at different resolutions.
 2. Add the `srcset` attribute to the `<img>` element, including the image sources and corresponding density descriptors.
-3. Add the `sizes` attribute (optional) to specify the image size as it will be displayed on screen.
+3. Add the `sizes` attribute (optional) to specify the image size as it will be displayed on the screen.
 
-### Markup Example
+### Markup example
 
-Here's an example of implementing srcset with density descriptors in your markup:
+Here is an example implementation of srcset with density descriptors in your markup:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -34,8 +34,8 @@ Here's an example of implementing srcset with density descriptors in your markup
 ```
 
 This markup example includes:
-- **src**: The default image source, displayed if the browser doesn't support srcset.
-- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser will select the most appropriate image based on the user’s screen.
+- **src**: The default image source, displayed if the browser does not support srcset.
+- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser will choose the most appropriate image based on the user's screen.
 - **alt**: A description of the image for accessibility purposes.
 
 And there you have it! You have successfully implemented srcset with density descriptors, improving the performance and user experience of your website.
@@ -47,10 +47,13 @@ Translate the following to French, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Density descriptors & srcset
- 2. Examples of using density descriptors in `srcset` 
+ 2. Examples of using density descriptors in `srcset`
+
+Metadata returned1. Descripteurs de densité et srcset
+2. Exemples d'utilisation de descripteurs de densité dans `srcset` 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

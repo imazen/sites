@@ -1,0 +1,37 @@
+---
+title: 'TailwindCSS classes for `<img>`'
+description: List of most commonly used TailwindCSS classes for `<img>`
+taskInputHash: 87831f4aeaea8e10
+lang: en
+---
+TailwindCSS provides several utility classes for the `<img>` tag. Here are the most commonly used classes:
+
+- `object-contain`: This class sets the image to fit its container while preserving its aspect ratio. It will shrink or expand the image as necessary to fit within the container.
+- `object-cover`: This class sets the image to cover the entire container while preserving its aspect ratio. It will crop or shrink the image as necessary to cover the container.
+- `object-fill`: This class fills the entire container with the image, regardless of its aspect ratio. This may cause the image to stretch or compress to fit within the container.
+- `object-none`: This class sets the image to its natural size, without resizing or cropping.
+- `object-center`: This class horizontally and vertically centers the image within its container.
+- `object-left`: This class aligns the image to the left within its container.
+- `object-right`: This class aligns the image to the right within its container.
+- `object-top`: This class aligns the top of the image with the top of its container.
+- `object-bottom`: This class aligns the bottom of the image with the bottom of its container.
+
+These classes can be combined with other TailwindCSS classes to further style the image, such as setting a specific width or height, adding borders or shadows, or adjusting opacity.
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. TailwindCSS helpers for `<img>`
+ 2. List of most commonly used TailwindCSS helpers for `<img>`
+
+Metadata returned1. `<img>`的TailwindCSS辅助类
+2. 最常用的`<img>`的TailwindCSS辅助类列表 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

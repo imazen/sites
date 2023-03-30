@@ -1,35 +1,38 @@
 ---
 title: Breakpoints and Images
-description: Why some (but not all) breakpoints are important for your images
-taskInputHash: ccd25a230851ea3d
+description: Why some (but not all) breakpoints matter for your images
+taskInputHash: 376271cff22dc9c5
 lang: en
 ---
 ### Context
-Small screens and large monitors require different layouts. For `srcset` and `sizes` purposes, we need to decide.
 
-Web developers must decide what to shrink, hide, or move to smaller screens--or, more commonly, what to expand, reveal or add on larger screens. They also have very little information to go on. Is the user on a tablet, in landscape mode or on a small browser window?
+Small screens and larger monitors require different layouts. For `srcset` and `sizes` purposes, it's necessary to know at which point the layout changes.
 
-We need to choose an arbitrary viewport width where the layout changes. This is called a **breakpoint**. It's an arbitrary number of CSS pixels ([not device pixels](/en/px-are-not-px)). Polypane has a [great article](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) on commonly used breakpoints.
+Web developers need to decide what to shrink, hide, or move on smaller screens - or more commonly, what to expand, reveal, or add on larger screens. They also have very little information to go on. Is the user using a tablet or phone in landscape mode - or a small browser window?
 
-Some images (like logos, icons, or buttons) might be immune to layout shifts caused by these breakpoints (and work well with [srcset density descriptors](/en/density-descriptors)).
+We have to choose an arbitrary viewport width at which the layout changes. This is called a **breakpoint**. It's an arbitrary number of CSS pixels ([not device pixels](/en/pixels-not-pixels)). Polypane has a [great article](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) on commonly used breakpoints.
 
-Main content images will be constrained by the size of their container. Typically, the main content area of a page will be limited to a certain width on larger screens, a `max-width`, but on smaller screens, the main content area will fill the entire viewport.
+Some images (like logos, icons, or buttons) might be immune to layout shifts caused by these breakpoints (and will work well with [srcset density descriptors](/en/density-descriptors)).
 
-If you have more than one column at certain breakpoints, it becomes harder to calculate actual sizing rules, because the percentage of viewport width that an image occupies will change.
+Images in the main content will be limited by the size of their container. Typically, the main content area of a page will be limited to a certain width on larger devices, a `max-width`, but on smaller screens, the main content area will fill the entire viewport.
 
-### The Easy Method
-That said, don't make things too complicated. The following may work just fine:
-1. At what point does the main column (or image container) stop growing? Up until this viewport width, we can use `100vw` for the image `sizes` attribute to indicate that the image takes up 100% of the viewport width.
-2. What is the maximum width the container has ever been? We can set that as a fixed `width` for everything else.
+If you have more than one column at certain breakpoints, it will be harder to calculate the actual sizing rules, since the percentage of viewport width that the image occupies will change.
 
-If you answered 700px to the first question and 800px to the second, you can use the following `sizes` attribute:
+### The easy method
+
+That being said, don't overcomplicate things. You'll probably be fine with the following approximation:
+
+1. At what size does the main column (or image container) stop growing? Until that viewport width, we can use `100vw` in the image's `sizes` attribute to indicate that the image occupies 100% of the viewport width.
+2. What is the maximum width that container reaches? We can set it as a fixed `width` for everything else.
+
+If the answer to point 1 is 700px and the answer to point 2 is 800px, you can use the following `sizes` attribute:
+
 ```html
 <!-- These are CSS pixels, not device or image pixels. -->
 <img [...] sizes="(max-width: 700px) 100vw, 800px"  />
 ```
-> One might think that the browser can handle all of these calculations elegantly based on CSS. Unfortunately, browsers are very keen to choose an image URL *before* stylesheets are downloaded. So we have to do the calculations ourselves, and if we don't do them perfectly, too bad for them.
 
-{{Note: There are no mistakes or clumsy phrasing or grammar issues.}}
+> You might think that the browser can handle all these calculations perfectly for us based on CSS. Unfortunately, browsers are aggressively eager to choose an image URL *before* style sheets are downloaded. So we have to do the calculations ourselves, and that's okay if it's not perfect.
 =====================
 
 Content prompt used: 
@@ -38,10 +41,13 @@ Translate the following to Italian, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Breakpoints & images
- 2. Why some (but not all) breakpoints matter for your images 
+ 2. Why some (but not all) breakpoints matter for your images
+
+Metadata returned1. Breakpoint e immagini
+2. Perché alcuni (ma non tutti) i breakpoint sono importanti per le tue immagini 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

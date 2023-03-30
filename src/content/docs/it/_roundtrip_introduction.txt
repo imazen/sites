@@ -1,36 +1,37 @@
 ---
-title: srcset & <img> sizes
-description: An Efficient and Decisive Guide to Responsive Images for 2023
-taskInputHash: 9fad2f8d356df766
+title: srcset and <img> dimensions
+description: An efficient and opinionated guide to responsive images for 2023.
+taskInputHash: 68cdeab4f43079cc
 lang: en
 sidebar_sort_priority: 1000
 ---
-**An efficient and decisive guide to images for 2023**
+**An efficient and opinionated guide to images for 2023**
 
-Check the sidebar for a deeper dive. This is the quick guide to updating `<img>` tags to handle modern devices in all their various sizes and pixel densities. You should know that pixels are not equal and that `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones pretend to have a width between 320 and 428px for legibility.
+Check the sidebar for an in-depth guide. This is the summary for updating `<img>` tags to handle modern devices in their various sizes and pixel densities. You should know that pixels != pixels and that `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones pretend to be 320-428px wide for readability (in CSS pixels) but have many device pixels per CSS pixel.
 
-> If your image never changes size, no matter how much you resize the browser window, you should instead use a [density descriptor](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
+> If your image never changes size, no matter how much you shrink the browser window, you should use a [density descriptor](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
 
-Do you know your [breakpoints](/en/breakpoints)? You'll need these numbers to refine the solution below, and at least the breakpoint of the viewport width at which the main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You'll need those numbers to fine-tune the solution below, and at least the breakpoint of the viewport width where the main content area stops growing.
 
-### The easy method
+### The easy way
 
 ```html
 <img src="img.jpg?w=480" 
-        srcset="img.jpg?format=webp&amp;w=480 480w, 
-                img.jpg?format=webp&amp;w=800 800w, 
-                img.jpg?format=webp&amp;w=1200 1200w, 
-                img.jpg?format=webp&amp;w=1600 1600w, 
-                img.jpg?format=webp&amp;w=2000 2000w"
-        sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
+    srcset="img.jpg?format=webp&amp;w=480 480w, 
+            img.jpg?format=webp&amp;w=800 800w, 
+            img.jpg?format=webp&amp;w=1200 1200w, 
+            img.jpg?format=webp&amp;w=1600 1600w, 
+            img.jpg?format=webp&amp;w=2000 2000w"
+    sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bike" />
 
-<!-- We have assumed that you have a breakpoint at 700px. 
-     And that below that viewport width, this image should occupy 100% of the width, but
-     when the viewport width is larger, the image is constrained to 800 CSS pixels -->
+<!-- We've assumed you have a breakpoint at 700px. 
+      And that below that viewport width, this image takes up 100% of the width, but 
+      when the viewport is larger, the image is restricted to 800 CSS pixels. -->
 
-<!-- This assumption holds true even if you are using an RIAPI-compatible image server like Imageflow. 
-     On-the-fly production of image variants is essential for developer sanity. -->
+<!-- This assumes that you're using a RIAPI-compliant image server like Imageflow. 
+     Generating image variants on the fly is essential for programmer health. -->
 ```
+
 =====================
 
 Content prompt used: 
@@ -39,10 +40,13 @@ Translate the following to Italian, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. srcset & <img> sizes 
- 2. An Efficient and Opinionated Guide to Responsive Images for 2023 
+ 2. An Efficient and Opinionated Guide to Responsive Images for 2023
+
+Metadata returned1. srcset e le dimensioni degli <img>
+2. Una guida efficiente e orientata all'opinione sulle immagini responsive per il 2023. 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

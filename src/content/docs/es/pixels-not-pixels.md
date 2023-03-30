@@ -1,16 +1,18 @@
 ---
 title: px ≠ píxeles
-description: Píxeles de dispositivo ≠ píxeles de navegador ≠ píxeles de imagen
-taskInputHash: 14c451a76970a245
+description: >-
+  Los píxeles del dispositivo no son iguales a los píxeles del navegador ni los
+  píxeles de las imágenes
+taskInputHash: d01e3b9515e2e27e
 lang: es
 sidebar_sort_priority: 900
 ---
-### Los píxeles de dispositivo ≠ píxeles de navegador ≠ píxeles de imagen
+### Los píxeles de los dispositivos no son iguales a los píxeles del navegador ni los píxeles de las imágenes
 
-Gracias a Apple, los píxeles CSS y HTML (`px`) **casi siempre se asignan a múltiples píxeles de dispositivo/impresora**. El devicePixelRatio en mi teléfono es 3,875; [¿cuál es el tuyo?](https://www.mydevice.io/)
+Gracias a Apple, los píxeles del CSS y HTML (`px`) **casi siempre se asignan a varios píxeles del dispositivo o de la impresora**. El dispositivoPixelRatio de mi teléfono es de 3.875; [¿cuál es el tuyo?](https://www.mydevice.io/)
 
-Mi devicePixelRatio de escritorio cambia con el zoom del navegador, pero por defecto es 1.5 (después de todo, mi `Sistema > Pantalla > Escala` es del 150%).
+El dispositivoPixelRatio de mi escritorio cambia al hacer zoom en el navegador, pero el valor predeterminado es 1.5 (porque mi configuración de `Sistema > Pantalla > Escala` es 150%).
 
-Los archivos de imagen (excluyendo SVG) se decodifican a una cuadrícula de píxeles. **Es insoportablemente difícil conseguir que los píxeles de la imagen se muestren perfectamente en una relación de 1:1 con los píxeles del dispositivo - pero con `srcset`, puedes conseguir *lo suficientemente cerca***, y un poco de Javascript puede ajustar el tamaño del elemento HTML después de la carga si tienes razones realmente justificadas para necesitar ese mapeo perfecto, aunque tales artes prohibidas no se revelarán aquí.
+Los archivos de imagen (excluyendo SVG) se decodifican en una cuadrícula de píxeles. **Es molesto tener que lograr que los píxeles de la imagen se muestren perfectamente en una proporción de 1:1 con los píxeles del dispositivo, pero con `srcset` se puede acercar lo suficiente**, y un poco de Javascript puede ajustar el tamaño del elemento HTML después de cargar la página si tienes razones verdaderamente justificadas para necesitar ese mapeo perfecto, aunque aquí no se revelarán tales artes prohibidas.  
 
-> Otras unidades absolutas [in, pc, pt, mm, cm, Q](https://developer.mozilla.org/es/docs/Web/CSS/length) se definen en términos de número de píxeles CSS y pretender que todo está a 96 ppp. Los desarrolladores evitan las unidades absolutas porque generalmente es mejor usar unidades que se derivan del tamaño de fuente o de las dimensiones del viewport/contenedor. Las unidades no coincidentes pueden romper un diseño si el usuario ajusta su multiplicador de `Accesibilidad > Tamaño de texto`, hace zoom en el navegador o gira su dispositivo. No hace falta decir que debes hacer todas estas cosas antes de lanzar tu sitio.
+> Las otras unidades absolutas [in, pc, pt, mm, cm, Q](https://developer.mozilla.org/en-US/docs/Web/CSS/length) se definen en función del número de píxeles CSS y suponen que todo se ejecuta a 96 ppp. Los desarrolladores evitan las unidades absolutas porque generalmente es mejor usar unidades que se derivan del tamaño de fuente o de las dimensiones del marco/contenedor. Las unidades desiguales pueden desorganizar una diseño si el usuario ajusta su multiplicador de `Accesibilidad > Tamaño del Texto`, hace zoom en el navegador o rota su dispositivo. Al decir verdad, deberías hacer todas estas cosas antes de lanzar tu sitio.

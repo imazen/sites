@@ -1,45 +1,56 @@
 ---
-title: Examples of \<picture\> Element
-description: Examples of <picture> element that provides responsive images, art direction, and different image formats
-taskInputHash: f0da7d04fc418896
+title: Example usage of `<picture>` element
+description: Provides examples for using `<picture>` element for responsive images, art direction, and different image formats
+taskInputHash: 4cec70ff1dc4182d
 lang: en
 ---
-Here are some examples that demonstrate how to use the `<picture>` element:
+The following are examples and explanations for using the `<picture>` element:
 
-1\. Example for responsive images:
-
-```html
- <picture>
-   <source srcset="image-large.jpg" media="(min-width: 768px)" />
-   <source srcset="image-medium.jpg" media="(min-width: 480px)" />
-   <img src="image-small.jpg" alt="An image" />
- </picture>
-```
-
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different screen sizes. The `<source>` element specifies different image sources using the "srcset" attribute and the "media" attribute, which specify the conditions for which each resource is used. The `<img>` element is used as a fallback for older browsers or when the conditions specified in the `<source>` element are not met.
-
-2\. Example for art direction:
+1. Example of responsive images:
 
 ```html
- <picture>
-   <source srcset="image-wide.jpg" media="(orientation: landscape)" />
-   <img src="image-portrait.jpg" alt="An image" />
- </picture>
+<picture>
+  <source srcset="image-large.jpg" media="(min-width: 768px)" />
+  <source srcset="image-medium.jpg" media="(min-width: 480px)" />
+  <img src="image-small.jpg" alt="image" />
+</picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources depending on the device orientation. The `<source>` element with the "media" attribute set to "(orientation: landscape)" specifies an image source for wide screens, while the `<img>` element specifies an image source for portrait screens.
+Explanation: This example uses the `<picture>` element to provide different image sources for different screen sizes. The `<source>` element specifies different image sources using the "srcset" attribute, and uses the "media" attribute to specify the conditions under which each source is used. The `<img>` element is used as a fallback for older browsers or when the conditions specified in the `<source>` elements are not met.
 
-3\. Example for different image formats:
+2. Example for art direction:
 
 ```html
- <picture>
-   <source srcset="image.webp" type="image/webp" />
-   <source srcset="image.png" type="image/png" />
-   <img src="image.jpg" alt="An image" />
- </picture>
+<picture>
+  <source srcset="image-wide.jpg" media="(orientation: landscape)" />
+
+  <img src="image-portrait.jpg" alt="image" />
+</picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different image formats. The `<source>` element specifies different image sources for different formats using the "type" attribute and the "srcset" attribute. The `<img>` element is used as a fallback for older browsers that do not support the `<picture>` element.
+Explanation: This example uses the `<picture>` element to provide different image sources based on the device's orientation. The `<source>` element with the "media" attribute set to "(orientation: landscape)" specifies the image source for wide screens, while the `<img>` element specifies the image source for portrait orientation.
+
+3. Example for different image formats:
+
+```html
+<picture>
+  <source srcset="image.webp" type="image/webp" />
+
+  <source srcset="image.png" type="image/png" />
+
+  <img src="image.jpg" alt="image" />
+</picture>
+```
+
+Explanation: This example uses the `<picture>` element to provide different image sources in different image formats. The `<source>` element specifies different image sources using both the "srcset" and "type" attributes. The `<img>` element is used as a fallback for older browsers that do not support the `<picture>` element.
+
+## Breakpoints
+
+In responsive design, breakpoints are used to define conditions under which the layout of a website or application changes based on the size of the viewport. Breakpoints are usually defined using CSS media queries and different styles are applied based on the screen width. These breakpoints are combined with the `<picture>` element to provide different image sources for different screen sizes.
+
+For example, in the first example, the `media` attribute is used to specify the screen width under which each source is used. If the screen width is 768 pixels or more, the source `image-large.jpg` is used. If the screen width is between 480 and 768 pixels, `image-medium.jpg` is used. If the screen width is less than 480 pixels, `image-small.jpg` is used. This provides appropriately sized images for each device, reduces page load time, and improves the user experience.
+
+Breakpoints can be defined for any screen size and multiple breakpoints can be used to create layouts that adapt to different devices. Combining breakpoints with the `<picture>` element allows for visually appealing, flexible, and responsive design on any device.
 =====================
 
 Content prompt used: 
@@ -48,10 +59,13 @@ Translate the following to Japanese, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Examples using <picture> element
- 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats 
+ 2. Provides examples using the <picture> element, for responsive images, art direction and different image formats
+
+Metadata returned1. `<picture>`要素を使用する例
+2. レスポンシブ画像、アートディレクション、異なる画像形式に対して`<picture>`要素を使用する例を提供する 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

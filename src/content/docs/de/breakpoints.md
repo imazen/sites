@@ -1,35 +1,36 @@
 ---
 title: Breakpoints & Bilder
-description: Warum manche (aber nicht alle) Breakpoints für deine Bilder wichtig sind.
-taskInputHash: de254d45ab719b4d
+description: Warum manche (aber nicht alle) Breakpoints für deine Bilder wichtig sind
+taskInputHash: 62e4888677f4c953
 lang: de
 ---
 ### Hintergrund
 
-Kleine Bildschirme und große Monitore benötigen unterschiedliche Layouts. Für `srcset` und `sizes` müssen wir dies berücksichtigen.
+Kleine Bildschirme und große Monitore erfordern unterschiedliche Layouts. Für `srcset` und `sizes` müssen wir wissen, an welchem Punkt das Layout geändert wird.
 
-Webentwickler müssen entscheiden, was auf kleineren Bildschirmen verkleinert, ausgeblendet oder verschoben werden soll - oder, was auf größeren Bildschirmen erweitert, aufgedeckt oder hinzugefügt werden soll. Sie haben jedoch sehr wenig Informationen darüber. Befindet sich der Benutzer auf einem Tablet oder einem Telefon im Querformat - oder einem kleinen Browserfenster?
+Web-Entwickler müssen entscheiden, was sie auf kleineren Bildschirmen verkleinern, ausblenden oder verschieben bzw. auf größeren Bildschirmen erweitern, enthüllen oder hinzufügen sollen. Sie haben auch sehr wenig Informationen zur Verfügung. Befindet sich der Benutzer auf einem Tablet oder einem telefon in Landscape-Modus - oder einem kleinen Browserfenster?
 
-Wir müssen eine willkürliche Viewport-Breite wählen, an welcher das Layout ändert. Das wird **Breakpoint** genannt. Es ist eine willkürliche Anzahl von CSS-Pixel ([nicht Geräte-Pixel](/de/pixels-not-pixels)). Polypane hat einen [großartigen Artikel](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) zu den häufig verwendeten Breakpoints.
+Wir müssen eine willkürliche Viewport-Breite wählen, an der das Layout geändert wird. Dies wird als **Breakpoint** bezeichnet. Es handelt sich um eine willkürliche Anzahl von CSS-Pixeln ([nicht Geräte-Pixeln](/en/pixels-not-pixels)). Polypane hat einen [großartigen Artikel](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) zu den häufig verwendeten Breakpoints.
 
-Einige Bilder (wie Logos, Symbole oder Schaltflächen) können immun gegen die Layout-Verschiebungen sein, die durch diese Breakpoints verursacht werden (und in Ordnung mit [Dichte-Deskriptoren von srcset](/de/density-descriptors)).
+Einige Bilder (wie Logos oder Steuerelemente oder Schaltflächen) sind möglicherweise immun gegen die Layoutverschiebungen, die durch diese Breakpoints verursacht werden (und sind in Ordnung mit [srcset-Dichte-Deskriptoren](/en/density-descriptors)).
 
-Bilder des Hauptinhalts werden durch die Größe des Containers begrenzt. In der Regel wird der Hauptinhalt einer Seite auf den größten Bildschirmen auf eine bestimmte Breite beschränkt, eine `max-width`, aber auf kleinen Bildschirmen füllt der Hauptinhalt die gesamte Viewport-Breite aus.
+Hauptinhaltbilder werden durch die Größe ihres Containers begrenzt. In der Regel wird der Hauptinhaltbereich einer Seite auf den größten Bildschirmen auf eine bestimmte Breite begrenzt, eine `max-width`, aber auf kleinen Bildschirmen füllt der Hauptinhaltbereich den gesamten Viewport aus.
 
-Wenn Sie an einigen Breakpoints mehr als eine Spalte haben, wird es schwieriger, die effektiven Größenregeln zu berechnen, da sich der prozentuale Anteil der Viewport-Breite, den das Bild einnimmt, ändern wird.
+Wenn Sie an einigen Breakpoints mehr als eine Spalte haben, wird es schwieriger, die effektiven Größenregeln zu berechnen, da sich der Prozentsatz der Viewportbreite ändert, den das Bild einnimmt.
 
 ### Die einfache Methode
 
-Dennoch sollten Sie darüber nicht zu viel nachdenken. Sie werden wahrscheinlich sehr zufrieden mit der folgenden Näherung sein:
+Das gesagt habend, sollten Sie das nicht überdenken. Sie werden wahrscheinlich sehr gut mit der folgenden Annäherung leben können:
 
-1. Bei welcher Größe hört die Hauptspalte (oder der Container des Bildes) auf zu wachsen? Bis zu dieser Viewport-Breite können wir `100vw` für das `sizes`-Attribut des Bildes verwenden, um zu sagen, dass das Bild 100% der Viewport-Breite einnimmt.
-2. Was ist die maximale Breite, die der Container jemals erreicht? Wir können das als feste `width` für alles andere setzen.
+1. Ab welcher Größe hört die Hauptspalte (oder der Container des Bildes) auf zu wachsen? Bis zu dieser Viewport-Breite können wir `100vw` für das `sizes`-Attribut des Bildes verwenden, um zu sagen, dass das Bild 100% der Viewport-Breite einnimmt.
+2. Was ist die maximal Breite, die der Container jemals erreicht? Wir können das als feste `Breite` für alles andere festlegen.
 
-Wenn Ihre Antwort auf 1 700px und auf 2 800px lautet, können Sie das folgende `sizes`-Attribut verwenden:
+Wenn Ihre Antwort auf 1 700px und Ihre Antwort auf 2 800px war, können Sie das folgende `sizes`-Attribut verwenden:
 
 ```html
-<!-- Dies sind CSS-Pixel, keine Geräte-Pixel oder Bildpixel. -->
+<!-- Dies sind CSS-Pixel, keine Geräte-Pixel oder Bild-Pixel .-->
 <img [...] sizes="(max-width: 700px) 100vw, 800px"  />
 ```
 
-> Man könnte denken, dass der Browser alle diese Berechnungen für uns basierend auf dem CSS schön handhaben könnte. Leider sind Browser sehr gierig darauf, eine Bild-URL *vor* dem Herunterladen von Stylesheets zu wählen. Daher müssen wir die Berechnungen selbst durchführen, und es ist nur gerecht, wenn wir es nicht perfekt hinbekommen.
+
+> Man würde meinen, dass der Browser alle diese Berechnungen basierend auf dem CSS schön für uns handhaben könnte. Leider sind die Browser aggressiv bestrebt, eine Bild-URL *vor* dem Herunterladen der Stylesheets auszuwählen. Wir müssen die Berechnungen also selbst durchführen, und es dient ihnen recht, wenn wir es nicht perfekt hinbekommen.

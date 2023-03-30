@@ -1,0 +1,70 @@
+---
+title: Create a Gallery
+description: How to create a gallery on a website
+taskInputHash: c53f8f23fba93bad
+lang: en
+---
+Here are the general steps to create an image gallery on a website:
+
+1. Create a new HTML file for your image gallery. You can name it something like "gallery.html".
+2. Add the HTML structure to your file. This typically includes the header section with a title and any required CSS style sheet, and the body section where you'll add the actual gallery.
+3. Create a container for your gallery using a `<div>` tag. Give it an ID or a class so you can style it later.
+4. Inside the container, add individual image elements using the `<img>` tag. You can set the source attribute to the image file's path or URL, and add any description text or captions as needed.
+5. Style your gallery with CSS. You can use properties like display, width, height, margin, padding, and border to control the layout and appearance of your gallery.
+
+Here's an example code to create a simple image gallery:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Image Gallery</title>
+	<style>
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.gallery img {
+			width: 300px;
+			height: 200px;
+			margin: 10px;
+			object-fit: cover;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<img src="image1.jpg" alt="Image 1">
+		<img src="image2.jpg" alt="Image 2">
+		<img src="image3.jpg" alt="Image 3">
+		<img src="image4.jpg" alt="Image 4">
+		<img src="image5.jpg" alt="Image 5">
+		<img src="image6.jpg" alt="Image 6">
+	</div>
+</body>
+</html>
+```
+
+In this example, the gallery container has a class of "gallery" and is styled using flexbox to arrange the images into a grid. Each image has a width of 300px, a height of 200px, a margin of 10px, and a 2px solid black border. The object-fit property is used to ensure that the images maintain their aspect ratio even if they aren't the same size.
+
+You can customize this code to fit your specific needs and design preferences.
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Create a gallery
+ 2. How to create a gallery on a website
+
+Metadata returned1. Crea una galería
+2. Cómo crear una galería en un sitio web 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

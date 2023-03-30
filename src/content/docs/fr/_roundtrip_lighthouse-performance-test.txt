@@ -1,26 +1,18 @@
----
-title: Testing performance with Lighthouse
-description: Steps to test the performance of a website using Lighthouse
-taskInputHash: c85f8f45a0d42a51
-lang: en
----
-How to test the performance of your website with Lighthouse?
+How to test your website's performance with Lighthouse?
 
-> Lighthouse is a tool that can be used to measure the performance, accessibility, and other aspects of a website. To test the performance of your website with Lighthouse, follow these steps:
+>Lighthouse is a tool that can be used to measure the performance, accessibility, and other aspects of a website. To test your website's performance with Lighthouse, follow these steps:
 >
-> 1. Open the Google Chrome web browser and navigate to the page you want to test.
+>1. Open the Google Chrome web browser and navigate to the page you want to test.
 >
-> 2. Click on the three dots in the upper right corner of the browser window, then select "More tools" and "Developer tools" or simply use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
+>2. Click on the three dots at the top right of the browser window, then select "More tools" and then "Developer tools" or simply use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
 >
-> 3. In the Developer tools panel, click on the Lighthouse icon located on the left side of the panel or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the Command menu, then type "Lighthouse" and select "Generate report."
+>3. In the Developer tools panel, click on the Lighthouse icon located on the left side of the panel or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the command menu, then type "Lighthouse" and select "Generate report".
 >
-> 4. In the Lighthouse dialog box, select the performance options and other relevant options that you want to test, then click "Generate report."
+>4. In the Lighthouse dialog box, select the performance options and other relevant options you want to test, then click "Generate report".
 >
-> 5. After Lighthouse has finished analyzing, you will see a report with scores and recommendations for improving the performance, accessibility, and other areas of your website.
+>5. After Lighthouse has finished analyzing, you will see a report with scores and recommendations for improving your website's performance, accessibility, and other areas.
 >
-> By following these steps, you can use Lighthouse to test and optimize the performance of your website, which can help improve the user experience and search engine rankings.
-
-{{No mistakes or clumsy phrasing.}}
+>By following these steps, you can use Lighthouse to test and optimize your website's performance, which can help improve the user experience and ranking in search engines.
 =====================
 
 Content prompt used: 
@@ -29,10 +21,13 @@ Translate the following to French, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Test performance with Lighthouse
- 2. Steps on how to test a website's performance using Lighthouse 
+ 2. Steps on how to test a website's performance using Lighthouse
+
+Metadata returned1. Tester les performances avec Lighthouse
+2. Étapes pour tester les performances d'un site web à l'aide de Lighthouse 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

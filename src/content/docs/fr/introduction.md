@@ -1,17 +1,18 @@
 ---
-title: srcset et tailles d'<img>
-description: Un guide efficace et convaincant sur les images adaptatives pour 2023
-taskInputHash: 9067da6b012a9380
+title: srcset et les tailles des balises <img>
+description: Un guide efficace et partial sur les images réactives pour 2023
+taskInputHash: 0885934b6e1e9afa
 lang: fr
 sidebar_sort_priority: 1000
 ---
-**Un guide efficace et convaincant sur les images pour 2023**
+**Un guide efficace et partial sur les images pour 2023**
 
-Consultez la barre latérale pour une plongée en profondeur. Voici la référence rapide pour améliorer les balises `<img>` afin de gérer les appareils modernes dans toutes leurs tailles et densités de pixels variées. Vous devez [savoir que pixels != pixels](/fr/pixels-not-pixels) et que `devicePixelRatio` est plus susceptible d'être environ 3,875 que de 1:1. Les téléphones modernes prétendent être de largeur 320-428px pour la lisibilité.
+Consultez la barre latérale pour découvrir en détail. Ceci est une référence rapide pour améliorer les balises `<img>` afin de gérer les nouveaux périphériques aux différentes tailles et densités de pixels. Vous devez [savoir que pixels != pixels](/fr/pixels-not-pixels)(en anglais) et que `devicePixelRatio` est plus susceptible d'être d'environ 3,875 que de 1:1. Les téléphones modernes se font passer pour des écrans larges de 320 à 428 px pour améliorer la lisibilité (en pixels CSS), mais ont de nombreux pixels de périphérique par pixel CSS.
 
-> Si votre image ne change jamais de taille, quelle que soit la largeur de la fenêtre du navigateur, vous devriez utiliser un [descripteur de densité à la place](/fr/density-descriptors). Ceci est souvent adapté pour les logos, les icônes et les boutons.
+> Si votre image ne change jamais de taille, quelle que soit la largeur de la fenêtre de navigateur, vous devriez utiliser un [descripteur de densité](/fr/density-descriptors) (en anglais) à la place. Cela convient souvent aux logos, icônes et boutons.
 
-Savez-vous quels sont vos [points de rupture](/fr/breakpoints)? Vous aurez besoin de ces nombres pour affiner la solution ci-dessous - et au minimum le point de rupture de la largeur de la zone de contenu principal où la croissance s'arrête.
+Savez-vous quels sont vos [points de rupture](/fr/breakpoints) (en anglais) ? Vous aurez besoin de ces chiffres pour affiner la solution ci-dessous - et au minimum le point de rupture de la largeur de la fenêtre d'affichage où la zone de contenu principal cesse de s'agrandir.
+
 
 ### La méthode facile
 
@@ -24,12 +25,12 @@ Savez-vous quels sont vos [points de rupture](/fr/breakpoints)? Vous aurez besoi
                 img.jpg?format=webp&w=1600 1600w, 
                 img.jpg?format=webp&w=2000 2000w"
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Chien faisant de la bicyclette" />
+        sizes="(max-width: 700px) 100vw, 800px" alt="Chien faisant du vélo" />
 
 <!-- Nous avons supposé que vous avez un point de rupture à 700px. 
-      Et que sous cette largeur d'affichage, cette image prend 100% de la largeur, mais
-      lorsque la fenêtre d'affichage est plus grande, l'image est limitée à 800 pixels CSS -->
+      Et qu'en dessous de cette largeur de fenêtre, l'image prend 100 % de la largeur, mais
+      quand la fenêtre d'affichage est plus grande, l'image est limitée à 800 pixels CSS -->
 
-<!-- Ceci suppose également que vous utilisez un serveur d'images conforme à RIAPI, tel que Imageflow. 
-     La production de variantes d'images à la volée est essentielle pour la santé mentale du développeur. -->
+<!-- Cela suppose que vous utilisez un serveur d'images compatible RIAPI tel que Imageflow. 
+     La production de variantes d'image à la volée est essentielle pour la santé mentale du développeur. -->
 ```

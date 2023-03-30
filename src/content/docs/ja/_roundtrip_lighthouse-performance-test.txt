@@ -1,26 +1,26 @@
 ---
-title: Testing Performance with Lighthouse
-description: Steps for testing website performance with Lighthouse
-taskInputHash: 68d8ce375ac152cf
+title: Testing Website Performance with Lighthouse
+description: Steps for using Lighthouse to test website performance
+taskInputHash: b2e7941d54dc5c65
 lang: en
 ---
-How can you test your site's performance with Lighthouse?
+# How to Test Website Performance with Lighthouse?
 
-> Lighthouse is a tool that can be used to measure website performance, accessibility, and more. To test a website's performance using Lighthouse, follow these steps:
+> Lighthouse is a tool that can be used to measure website performance, accessibility, and other aspects. To use Lighthouse to test the performance of a website, follow the steps below.
 
-> 1. Open the Google Chrome web browser and navigate to the page you want to test.
+> 1. Open the Google Chrome web browser and navigate to the page you wish to test.
 
-> 2. Click on the three dots in the upper right corner of the browser window, and select "More Tools" and then "Developer Tools," or use the keyboard shortcut "Ctrl + Shift + I" (Windows, Linux) or "Command + Option + I" (macOS).
+> 2. Click the three dots located in the upper right corner of the browser window, select "More Tools," then select "Developer Tools," or use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
 
-> 3. In the Developer Tools panel, click on the Lighthouse icon on the left side of the panel or press "Ctrl + Shift + P" (Windows, Linux) or "Command + Shift + P" (macOS) to open the command menu, type "Lighthouse," and select "Generate Report."
+> 3. In the Developer Tools panel, click the Lighthouse icon on the left side of the panel, or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the Command menu, type "Lighthouse", and select "Generate Report".
 
-> 4. In the Lighthouse dialog box, select the performance and other relevant options you want to test, and click "Generate report."
+> 4. In the Lighthouse dialog box, select the performance and other relevant options you wish to test, then click "Generate Report."
 
-> 5. After Lighthouse completes its analysis, a report will be displayed that includes scores for website performance, accessibility, and other areas along with recommended improvements.
+> 5. When Lighthouse completes the analysis, a report will be displayed containing scores and recommendations to improve website performance, accessibility, and other areas.
 
-> By following these steps, you can use Lighthouse to test and optimize website performance, which can lead to improvements in user experience and search engine rankings.
+> By following these steps, you can use Lighthouse to test and optimize website performance. This may lead to improvements in user experience and search engine rankings.
 
-{{Note that the term used here is not the technical term...}}.
+{{Note: The term "performance" in the title has been changed to "website performance" for clarity.}}
 =====================
 
 Content prompt used: 
@@ -29,10 +29,13 @@ Translate the following to Japanese, preserving all markdown formatting.
         Inside code blocks, only translate comments
 
 Metadata prompt used: 
-Also carefully translate the title and description for the article:
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
 1. Test performance with Lighthouse
- 2. Steps on how to test a website's performance using Lighthouse 
+ 2. Steps on how to test a website's performance using Lighthouse
+
+Metadata returned1. Lighthouseによるパフォーマンステスト
+2. Lighthouseを使用してウェブサイトのパフォーマンスをテストする手順 
 
 
 Roundtrip (isolated) prompt used: 
-Translate the following to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as {{Note that the term used here is not the technical term...}}.
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

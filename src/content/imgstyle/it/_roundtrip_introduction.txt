@@ -1,0 +1,34 @@
+---
+title: Styling `<img>` Elements and Sample Layouts
+description: Styling `<img>` Elements and Sample Layouts
+taskInputHash: bee844b57e8752ed
+lang: en
+sidebar_sort_priority: 1000
+---
+# Styling `<img>` Elements and Sample Layouts
+
+## Styling `<img>` Elements
+
+TODO: 
+
+{{translation}}
+
+Note: the term "sample layouts" is not defined in this document, so it may refer to a specific concept in a different context.
+=====================
+
+Content prompt used: 
+Translate the following to Italian, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'it' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. Stilizzazione degli elementi <img> e dei layout di esempio
+2. Stilizzazione degli elementi <img> e dei layout di esempio 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

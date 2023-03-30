@@ -1,10 +1,10 @@
 ---
 title: Density Descriptors and Srcset
-description: Examples of using density descriptors in `srcset`
-taskInputHash: 37bc38b313c4ea53
+description: Examples of how to use density descriptors in `srcset`
+taskInputHash: e966c5af35628703
 lang: en
 ---
-Srcset with density descriptors provides a simple and effective method for providing the most suitable image to each user's device, improving performance and user experience. This guide will walk you through the essentials of using srcset with density descriptors and provide markup examples for your convenience.
+Srcset with density descriptors provides a simple and effective way to deliver the most appropriate image to each user's device, enhancing performance and user experience. This guide will walk you through the essential concepts of how to use srcset with density descriptors and provide markup examples for your convenience.
 
 ## What is Srcset with Density Descriptors?
 
@@ -13,15 +13,15 @@ Srcset is an HTML attribute designed to allow you to specify multiple image sour
 ## When to Use Srcset with Density Descriptors
 
 Using srcset with density descriptors is especially useful when you want to:
-1. Serve high-resolution images to high-DPI screens (e.g. Retina displays) and provide lower-resolution images to standard screens.
-2. Improve page performance by delivering the most appropriate image size for each user's device.
+1. Serve high-resolution images to high pixel density screens (e.g. Retina displays) while providing low-resolution images to standard screens.
+2. Improve page performance by delivering the most appropriate image size to each user's device.
 
 ## Implementing Srcset with Density Descriptors
 
 To use srcset with density descriptors, follow these steps:
 1. Prepare your images at different resolutions.
-2. Add the `srcset` attribute to the `<img>` element, including the image sources and corresponding density descriptors.
-3. Add the optional `sizes` attribute to specify the image size as it will appear on the screen.
+2. Add the `srcset` attribute to the `<img>` element, including the image sources and their corresponding density descriptors.
+3. Add the `sizes` attribute (optional) to specify the image size as it will appear on the screen.
 
 ### Markup Example
 
@@ -34,8 +34,26 @@ Here's an example of how to implement srcset with density descriptors in your ma
 ```
 
 This markup example includes:
-- **src**: The default image source, displayed if the browser does not support srcset.
+- **src**: The default image source, shown if the browser doesn't support srcset.
 - **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser will choose the most appropriate image based on the user's screen.
 - **alt**: A description of the image for accessibility purposes.
 
-And that's it! You have successfully implemented srcset with density descriptors, improving your website's performance and user experience.
+And that's it! You have successfully implemented srcset with density descriptors, enhancing performance and user experience on your website.
+=====================
+
+Content prompt used: 
+Translate the following to Spanish, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'es' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. Density descriptors & srcset
+ 2. Examples of using density descriptors in `srcset`
+
+Metadata returned1. Descriptores de densidad y srcset
+2. Ejemplos de cómo utilizar descriptores de densidad en `srcset` 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....

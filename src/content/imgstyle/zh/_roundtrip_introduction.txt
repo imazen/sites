@@ -1,0 +1,99 @@
+---
+title: Setting the Style and Layout of `<img>` Elements
+description: Learn how to set the style and layout of `<img>` elements.
+taskInputHash: a8e7c4dfd2d458ad
+lang: en
+sidebar_sort_priority: 1000
+---
+# Setting the Style and Layout of `<img>` Elements
+
+## Setting the Style of `<img>` Elements
+
+You can use CSS to set the style of `<img>` elements, such as changing their size, border, and position.
+
+For example, to make an image a certain size, you can use the `width` and `height` properties:
+
+```css
+img {
+  width: 200px;
+  height: 150px;
+}
+```
+
+To add a border or change its color, you can use the `border` property:
+
+```css
+img {
+  border: 1px solid black;
+}
+```
+
+You can also use the `margin` and `padding` properties to control the spacing around the image:
+
+```css
+img {
+  margin: 10px;
+  padding: 5px;
+}
+```
+
+## Example Layouts with `<img>` Elements
+
+### Centering an Image
+
+To center an image on a webpage, you can use the following CSS:
+
+```css
+img {
+  display: block;
+  margin: 0 auto;
+}
+```
+
+This will set the image to display as a block element, and then set the left and right margins to auto, which centers the image along the horizontal axis.
+
+### Aligning Images Horizontally
+
+To align images horizontally, you can use the `text-align` property on the containing element:
+
+```css
+.container {
+  text-align: center;
+}
+```
+
+This will center any content, including images, inside the container element.
+
+### Creating a Gallery Layout
+
+To create a gallery layout with a grid of images, you can use CSS grid:
+
+```css
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+```
+
+This will create a grid with 4 columns and an equal fraction of space for each column. The `grid-gap` property sets the amount of space between each image. You can adjust the number of columns or the gap size to fit your design. 
+
+{{Note that the CSS grid property is not supported by some older browsers, such as Internet Explorer.}}
+=====================
+
+Content prompt used: 
+Translate the following to Simplified Chinese, preserving all markdown formatting.
+        Don't translate html elements or URLs, but do change 'en' to 'zh' inside link addresses.
+        Inside code blocks, only translate comments
+
+Metadata prompt used: 
+Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
+1. styling <img> elements and example layouts
+ 2. styling <img> elements and example layouts
+
+Metadata returned1. 设置 `<img>` 元素的样式和示例布局
+2. 设置 `<img>` 元素的样式和示例布局 
+
+
+Roundtrip (isolated) prompt used: 
+Translate the following technical documentation to english, preserving all markdown, code blocks, and links. After the translation, list any mistakes or clumsy phrasing or grammar inside brackets, such as Note that the term used here is not the technical term....
