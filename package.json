@@ -11,7 +11,8 @@
     "astro": "astro",
     "translate": "tsx tasks/translate.ts",
     "localize": "tsx tasks/localize.ts",
-    "jsonld": "tsx tasks/jsonld.ts"
+    "jsonld": "tsx tasks/jsonld.ts",
+    "feedback": "tsx tasks/ai_feedback.ts"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
@@ -27,6 +28,7 @@
     "astro-i18next": "^1.0.0-beta.21",
     "he": "^1.2.0",
     "i18next-locize-backend": "^6.2.1",
+    "linebreak": "^1.1.0",
     "preact": "^10.7.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
