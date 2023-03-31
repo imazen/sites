@@ -1,6 +1,8 @@
 ---
 title: When to use <picture> element
 description: Explains in which situations you should use the <picture> element
+date_published: '2023-03-27'
+date_modified: '2023-03-27'
 ---
 The `picture` element is used to provide multiple versions of an image and determines which version of the image to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design.
 Here are some specific scenarios where you might want to use the `picture` element:

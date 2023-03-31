@@ -1,6 +1,8 @@
 ---
 title: Add tap to view full-screen image to a gallery
 description: How to add a tap to view full-screen image option to a gallery
+date_published: '2023-03-29'
+date_modified: '2023-03-29'
 ---
 
 To add a "Tap to view full-screen image" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen mode when the user taps on it.

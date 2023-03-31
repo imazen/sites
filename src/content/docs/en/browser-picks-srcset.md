@@ -1,6 +1,8 @@
 ---
 title: How the browser chooses
-description: 'How the browser chooses between images listed in the srcset attribute'
+description: How the browser chooses between images listed in the srcset attribute
+date_published: '2023-03-24'
+date_modified: '2023-03-26'
 ---
 
 How does the browser choose between images listed in the srcset attribute? Here's a step-by-step, with examples for both width and density specifications and how the browser decides based on device and viewport.
