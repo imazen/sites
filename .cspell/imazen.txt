@@ -1,0 +1,12 @@
+# Custom Dictionary Words
+consts
+execa
+imgstyle
+openapi
+preactastrojs
+docsearchlocize
+linebreakastrodotbuild
+jasonld
+webp
+frontmatter
+imazen

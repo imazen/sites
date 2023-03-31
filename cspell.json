@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+    "ignorePaths": ["node_modules"],
+    "dictionaryDefinitions": [
+      {
+        "name": "imazen",
+        "path": "./.cspell/imazen.txt",
+        "description": "imazen dictionary"
+      }
+    ],
+    "dictionaries": ["softwareTerms", "typescript", "node", "html", "css", "npm","imazen"],
+    "words": [],
+    "ignoreWords": [],
+    "import": [],
+    "overrides": [
+      {
+          "filename": "**/en/**",
+          "languageId": "en"
+      },
+      {
+          "filename": "**/fr/**",
+          "languageId": "fr"
+      },
+      {
+          "filename": "**/es/**",
+          "languageId": "es"
+      },
+      {
+          "filename": "**/de/**",
+          "languageId": "de"
+      },
+      {
+          "filename": "**/sv/**",
+          "languageId": "sv"
+      },
+      {
+          "filename": "**/zh/**",
+          "languageId": "zh-Hans"
+      },
+      {
+          "filename": "**/it/**",
+          "languageId": "it"
+      },
+      {
+          "filename": "**/ja/**",
+          "languageId": "ja"
+      }
+
+  ]
+}
