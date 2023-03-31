@@ -6,7 +6,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
 import { completeChatCached } from './openai_cache';
-import { ParsedMd, loadAndParseMdFiles, tryLoadFileString} from './markdown'
+import { ParsedMd, loadAndParseMdFiles, tryLoadFileString, updateFrontmatterDates} from './markdown'
 //var LineBreaker = require('linebreak');
 import LineBreaker from 'linebreak';
 
@@ -266,5 +266,7 @@ async function feedbackOne() {
 //await feedbackOne();
 
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
+
+await updateFrontmatterDates(CONTENT_COLLECTIONS);
 
 await feedbackAll(CONTENT_COLLECTIONS, ['en']);
