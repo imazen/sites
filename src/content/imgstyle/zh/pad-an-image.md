@@ -3,6 +3,8 @@ title: 图像填充
 description: 如何使用 CSS 和宽高比填充图像并使其居中
 taskInputHash: c0f932c493b16453
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下是如何使用 CSS 和宽高比使图像居中且有填充的方法：
 

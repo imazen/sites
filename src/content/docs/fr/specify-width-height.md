@@ -1,10 +1,11 @@
 ---
 title: Utiliser la largeur et la hauteur
 description: >-
-  Avantages de l'utilisation des attributs de largeur et hauteur dans le code
-  HTML
+  Avantages de l'utilisation des attributs de largeur et hauteur dans le code HTML
 taskInputHash: 20fdc2770df3d02b
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Pourquoi devriez-vous mettre la largeur et la hauteur dans le HTML?
 

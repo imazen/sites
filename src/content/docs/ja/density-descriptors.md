@@ -3,6 +3,8 @@ title: 密度指定子とsrcset
 description: '`srcset`内で密度指定子を使用する例'
 taskInputHash: bec3d5c89aadc6b1
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ## Srcset with Density Descriptorsとは何ですか？
 

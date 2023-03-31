@@ -4,6 +4,8 @@ description: Una Guida Efficientemente di Opinione sulle Immagini Responsive per
 taskInputHash: 68cdeab4f43079cc
 lang: it
 sidebar_sort_priority: 1000
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 **Una guida efficiente e di opinione sulle immagini per il 2023**
 

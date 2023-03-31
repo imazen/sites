@@ -1,10 +1,11 @@
 ---
 title: Exempel med <picture> elementet
 description: >-
-  Ger exempel med <picture> elementet, för responsiva bilder, konstriktning och
-  olika bildformat.
+  Ger exempel med <picture> elementet, för responsiva bilder, konstriktning och olika bildformat.
 taskInputHash: 3b4e429f7eb84ce2
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Här är några exempel på hur man använder `<picture>` elementet och deras förklaringar:
 

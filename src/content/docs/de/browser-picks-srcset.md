@@ -3,6 +3,8 @@ title: Wie der Browser auswählt
 description: Wie der Browser zwischen Bildern im "srcset"-Attribut auswählt
 taskInputHash: 21fa78dd27583003
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Wie wählt der Browser zwischen Bildern, die im "srcset"-Attribut aufgeführt sind? Hier ist eine Schritt-für-Schritt-Anleitung mit Beispielen sowohl für Breiten- als auch Dichteangaben und wie der Browser anhand des Geräts und des Viewports entscheidet.
 

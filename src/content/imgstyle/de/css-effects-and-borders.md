@@ -3,6 +3,8 @@ title: CSS-Effekte und Rahmen
 description: Wie man einem Bild CSS-Effekte und -Ränder hinzufügen kann.
 taskInputHash: 8fc9fd8a5ada1dc6
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Um CSS-Effekte und -Rahmen zu einem Bild hinzuzufügen, können Sie folgende Schritte unternehmen:
 1. Wählen Sie das Bild-Element in Ihrem HTML-Code aus. Dies können Sie durch Verwendung eines ID- oder Klassen-Selektors tun oder durch direkte Auswahl des `<img>`-Elements.

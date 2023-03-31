@@ -3,6 +3,8 @@ title: FAQ（よくある質問）
 description: CSSで画像のスタイリングやレイアウトに関するよくある質問
 taskInputHash: 43687265433c85f3
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 CSSで画像の装飾やレイアウトに関する一般的な質問には以下のものがあります：
 

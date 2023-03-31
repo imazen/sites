@@ -3,6 +3,8 @@ title: 幅と高さを使用すること
 description: HTMLコードの幅と高さの属性を使用する利点
 taskInputHash: ca13960ad801bb8b
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 HTMLに幅と高さを指定する理由は何ですか？
 

@@ -3,6 +3,8 @@ title: 幅と密度のディスクリプタ
 description: '`srcset`で幅と密度のディスクリプタを使用する例'
 taskInputHash: f3b6e41b13c1f46a
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 `srcset`での幅（`w`）および密度（`x`）記述子の理解。例を使用し、Markdownを使用してください。
 

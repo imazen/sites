@@ -3,6 +3,8 @@ title: Tester les performances avec Lighthouse
 description: Étapes pour tester les performances d'un site web en utilisant Lighthouse
 taskInputHash: 6d7527c6c141e234
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Comment tester les performances de votre site avec Lighthouse?
 

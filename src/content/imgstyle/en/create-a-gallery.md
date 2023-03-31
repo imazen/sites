@@ -3,6 +3,7 @@ title: Create a gallery
 description: How to create a gallery on a website
 date_published: '2023-03-29'
 date_modified: '2023-03-29'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 Here are the general steps to create an image gallery on a website:

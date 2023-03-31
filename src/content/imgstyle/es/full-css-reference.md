@@ -3,6 +3,8 @@ title: Referencia completa de CSS
 description: 'Referencia completa de CSS para efectos, con ejemplos'
 taskInputHash: 2528ffac6924c613
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Aquí hay una referencia completa de efectos de CSS y bordes que se pueden aplicar a imágenes, junto con ejemplos para cada uno:
 

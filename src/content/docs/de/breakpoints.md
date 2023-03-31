@@ -3,6 +3,8 @@ title: Breakpoints & Bilder
 description: Warum manche (aber nicht alle) Breakpoints wichtig für Ihre Bilder sind
 taskInputHash: 6532c039ed74cf5c
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Hintergrund
 

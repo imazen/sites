@@ -3,6 +3,8 @@ title: Bredd och densitet beskrivare
 description: Exempel på hur man använder bredd och densitet beskrivare i `srcset`
 taskInputHash: 0f5f9ebc2c843512
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Förståelse för bredd (`w`) och densitet (`x`) beskrivare i `srcset`. Använd exempel och använd Markdown.
 

@@ -3,6 +3,8 @@ title: Breiten- und Dichtedeskriptoren
 description: Beispiele für die Verwendung von Breiten- und Dichtedeskriptoren in `srcset`
 taskInputHash: 3afb179ed8087fd4
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Verständnis der Breiten- (w) und Dichte- (x) Deskriptoren in `srcset`. Verwenden Sie Beispiele und Markdown.
 

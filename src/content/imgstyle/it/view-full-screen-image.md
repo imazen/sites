@@ -1,10 +1,11 @@
 ---
 title: Aggiungi il tocco per visualizzare l'immagine a schermo intero ad una galleria
 description: >-
-  Come aggiungere un'opzione di tocco per visualizzare l'immagine a schermo
-  intero ad una galleria
+  Come aggiungere un'opzione di tocco per visualizzare l'immagine a schermo intero ad una galleria
 taskInputHash: caa826b44a67fa4b
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Per aggiungere un'opzione "Tocca per visualizzare l'immagine a schermo intero" a una galleria, è possibile utilizzare JavaScript e CSS per creare un overlay che mostri l'immagine a schermo intero quando l'utente ci clicca sopra.
 

@@ -4,6 +4,8 @@ description: Una guía eficiente y con opinión para imágenes responsivas en 20
 taskInputHash: 16daf7ce071c0f0c
 lang: es
 sidebar_sort_priority: 1000
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 **Una Guía Eficiente y Con Opinion para Imágenes para 2023**
 

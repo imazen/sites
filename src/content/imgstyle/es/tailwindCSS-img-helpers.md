@@ -3,6 +3,8 @@ title: Ayudas de TailwindCSS para `<img>`
 description: Lista de las ayudas más comúnmente utilizadas de TailwindCSS para `<img>`
 taskInputHash: f12179a0e32e0400
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 TailwindCSS proporciona varias clases auxiliares para trabajar con la etiqueta `<img>`. Aquí están algunas de las más comúnmente utilizadas:
 - `object-contain`: Esta clase ajusta la imagen dentro de su contenedor manteniendo su relación de aspecto. Redimensionará o ampliará la imagen según sea necesario para asegurarse de que encaje dentro del contenedor.

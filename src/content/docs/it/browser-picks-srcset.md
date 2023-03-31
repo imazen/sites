@@ -3,6 +3,8 @@ title: Come sceglie il browser
 description: Come il browser sceglie tra le immagini elencate nell'attributo srcset
 taskInputHash: 5f305bd3a8d992cf
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Come fa il browser a scegliere tra le immagini elencate nell'attributo `srcset`? Ecco i passaggi dettagliati, con esempi sia per le specifiche di larghezza che di densità e come il browser decide in base al dispositivo e alla viewport:
 

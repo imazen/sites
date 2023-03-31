@@ -4,6 +4,8 @@ description: Enhet px ≠ webbläsare px ≠ bild px
 taskInputHash: fd81e79f3e2dea92
 lang: sv
 sidebar_sort_priority: 900
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Enhet pixlar ≠ webbläsare px ≠ bild px
 

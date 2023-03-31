@@ -3,6 +3,8 @@ title: Utilizzare larghezza e altezza
 description: Vantaggi dell'utilizzo degli attributi di larghezza e altezza nel codice HTML
 taskInputHash: 84ec1c6320346568
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Perché dovresti inserire larghezza e altezza nell'HTML? 
 

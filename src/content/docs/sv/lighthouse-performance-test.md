@@ -3,6 +3,8 @@ title: Testa prestanda med Lighthouse
 description: Steg för att testa en webbplats prestanda med Lighthouse
 taskInputHash: af03949da9667eff
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Hur testar du din webbplats prestanda med Lighthouse?
 

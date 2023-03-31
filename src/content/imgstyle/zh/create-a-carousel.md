@@ -3,6 +3,8 @@ title: 创建一个轮播
 description: 如何在网站上创建轮播
 taskInputHash: 550c26ad456dd836
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下是在网站上创建图像轮播的一般步骤： 
 

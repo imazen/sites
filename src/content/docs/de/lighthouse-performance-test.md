@@ -3,6 +3,8 @@ title: Testen Sie die Leistung mit Lighthouse
 description: Schritte zur Überprüfung der Leistung einer Website mit Lighthouse
 taskInputHash: 1ad1148d3b72b768
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Wie testen Sie die Leistung Ihrer Website mit Lighthouse?
 

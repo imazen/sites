@@ -3,6 +3,7 @@ title: Breakpoints & images
 description: Why some (but not all) breakpoints matter for your images
 date_published: '2023-03-26'
 date_modified: '2023-03-30'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 ### Background

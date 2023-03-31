@@ -1,10 +1,11 @@
 ---
 title: Testare la performance con Lighthouse
 description: >-
-  I passaggi su come testare la performance di un sito web utilizzando
-  Lighthouse
+  I passaggi su come testare la performance di un sito web utilizzando Lighthouse
 taskInputHash: 779fccd79a30edfc
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Come si testa la performance del tuo sito con Lighthouse?
 

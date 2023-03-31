@@ -3,6 +3,8 @@ title: Hur webbläsaren väljer
 description: Hur webbläsaren väljer mellan bilder som listas i srcset-attributet
 taskInputHash: 3fd2b41750391cb2
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Hur väljer webbläsaren mellan bilder listade i `srcset`-attributet? Här är en steg-för-steg-beskrivning, med exempel för både bredd- och densitetsspecifikationer och hur webbläsaren väljer baserat på enhet och viewport storlek.
 

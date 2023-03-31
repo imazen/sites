@@ -3,6 +3,8 @@ title: Quand utiliser l'élément <picture>
 description: Explique dans quelles situations vous devriez utiliser l'élément <picture>
 taskInputHash: 0b07f8e9feba7038
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 L'élément `picture` est utilisé pour fournir plusieurs versions d'une image et détermine quelle version de l'image afficher en fonction de certaines conditions. Il est particulièrement utile pour optimiser les images pour différentes tailles d'écrans et résolutions, et est couramment utilisé en conception web responsive.
 

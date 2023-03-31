@@ -3,6 +3,8 @@ title: Använd bredd och höjd
 description: Fördelar med att använda bredd- och höjdattribut i HTML-kod
 taskInputHash: 0d504ef6a74493f9
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Varför bör man sätta bredd och höjd i HTML-koden?
 

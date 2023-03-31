@@ -3,6 +3,8 @@ title: Descripteurs de largeur et de densité
 description: Exemples d'utilisation des descripteurs de largeur et de densité dans `srcset`
 taskInputHash: 4a03f5d305f71ba2
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Comprendre les descripteurs de largeur (`w`) et de densité (`x`) dans `srcset`. Utilisez des exemples et utilisez Markdown.
 

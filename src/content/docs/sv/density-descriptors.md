@@ -3,6 +3,8 @@ title: Densitetsdescriptors och srcset
 description: Exempel på att använda densitetsdescriptors i `srcset`
 taskInputHash: fe4017c7a115e9fc
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Srcset med densitetsdescriptors ger en enkel och effektiv metod för att leverera den mest lämpliga bilden till varje användares enhet, vilket förbättrar prestanda och användarupplevelse. Den här guiden går igenom det väsentliga i att använda srcset med densitetsdescriptors och ger exempel på markup för din bekvämlighet.
 ## Vad är Srcset med densitetsdescriptors?

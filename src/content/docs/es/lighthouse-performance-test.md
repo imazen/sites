@@ -3,6 +3,8 @@ title: Prueba el rendimiento con Lighthouse
 description: Pasos sobre cómo probar el rendimiento de un sitio web utilizando Lighthouse
 taskInputHash: 95fc41eaa5abb61e
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ¿Cómo se prueba el rendimiento del sitio con Lighthouse?
 

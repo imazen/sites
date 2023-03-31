@@ -3,6 +3,8 @@ title: Brytpunkter & bilder
 description: Varför vissa (men inte alla) brytpunkter är viktiga för dina bilder
 taskInputHash: 28770a79c61c9c7e
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Bakgrund
 

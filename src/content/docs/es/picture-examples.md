@@ -1,10 +1,11 @@
 ---
 title: Ejemplos utilizando el elemento <picture>
 description: >-
-  Proporciona ejemplos utilizando el elemento <picture> para imágenes
-  responsivas, dirección de arte y diferentes formatos de imagen.
+  Proporciona ejemplos utilizando el elemento <picture> para imágenes responsivas, dirección de arte y diferentes formatos de imagen.
 taskInputHash: aa9de5a15f947b5e
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Aquí hay algunos ejemplos de uso del elemento `<picture>` y sus explicaciones:
 

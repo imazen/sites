@@ -1,10 +1,11 @@
 ---
 title: Esempi di utilizzo dell'elemento <picture>
 description: >-
-  Fornisce esempi di utilizzo dell'elemento <picture> per immagini responsive,
-  direzione artistica e diversi formati di immagine.
+  Fornisce esempi di utilizzo dell'elemento <picture> per immagini responsive, direzione artistica e diversi formati di immagine.
 taskInputHash: 23abfd2c45089cf6
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Ecco alcuni esempi di utilizzo dell'elemento `<picture>` e le loro spiegazioni:
 

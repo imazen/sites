@@ -4,6 +4,8 @@ description: 设备像素 ≠ 浏览器像素 ≠ 图像像素
 taskInputHash: 05719ac1ce8d77d0
 lang: zh
 sidebar_sort_priority: 900
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### 设备像素 ≠ 浏览器像素 ≠ 图像像素
 

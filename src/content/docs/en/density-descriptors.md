@@ -3,6 +3,7 @@ title: Density descriptors & srcset
 description: Examples of using density descriptors in `srcset`
 date_published: '2023-03-26'
 date_modified: '2023-03-26'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 Srcset with density descriptors provides a simple and effective method for delivering the most suitable image to each user's device, improving performance and user experience. This guide will walk you through the essentials of using srcset with density descriptors and provide markup examples for your convenience.

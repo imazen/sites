@@ -1,10 +1,11 @@
 ---
 title: FAQ
 description: >-
-  Questions fréquemment posées concernant la mise en forme et la mise en page
-  des images avec CSS
+  Questions fréquemment posées concernant la mise en forme et la mise en page des images avec CSS
 taskInputHash: 506d8eea8b2a7d92
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Certaines questions courantes liées à la mise en forme et à la mise en page des images avec CSS incluent :
 

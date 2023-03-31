@@ -3,6 +3,8 @@ title: Density-Descriptoren und Srcset
 description: Beispiele für die Verwendung von Density-Descriptoren in `srcset`
 taskInputHash: db34acb106c5a3dd
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Srcset mit Density Descriptors bietet eine einfache und effektive Methode für die Bereitstellung des am besten geeigneten Bildes für jedes Gerät des Benutzers und verbessert die Leistung und die Benutzererfahrung. Diese Anleitung führt Sie durch die Grundlagen der Verwendung von Srcset mit Density Descriptors und bietet Markup-Beispiele für Ihre Bequemlichkeit.
 

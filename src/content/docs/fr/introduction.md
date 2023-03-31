@@ -4,6 +4,8 @@ description: Un guide efficace et engagé pour les images réactives en 2023
 taskInputHash: 0885934b6e1e9afa
 lang: fr
 sidebar_sort_priority: 1000
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 **Un guide efficace et engagé pour les images en 2023**
 

@@ -3,6 +3,8 @@ title: Cómo elige el navegador
 description: Cómo elige el navegador entre imágenes listadas en el atributo srcset
 taskInputHash: 5d7773a8c6385fd7
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ¿Cómo elige el navegador entre las imágenes listadas en el atributo `srcset`? Aquí se explican los pasos, con ejemplos tanto para especificaciones de ancho como de densidad, y cómo el navegador decide según el dispositivo y el tamaño de ventana.
 

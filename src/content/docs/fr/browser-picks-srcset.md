@@ -3,6 +3,8 @@ title: Comment le navigateur choisit
 description: Comment le navigateur choisit entre les images listées dans l'attribut srcset
 taskInputHash: df517c34368094dc
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Comment le navigateur choisit-il entre les images listées dans l'attribut srcset? Voici étape par étape, avec des exemples pour les spécifications de largeur et de densité, comment le navigateur décide en fonction du support et du viewport.
 

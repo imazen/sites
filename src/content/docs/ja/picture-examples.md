@@ -3,6 +3,8 @@ title: '`<picture>` 要素を使用する例'
 description: レスポンシブイメージ、アートディレクション、異なる画像形式に対して、 `<picture>` 要素を使用するための例を提供します。
 taskInputHash: 4cec70ff1dc4182d
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下は、 `<picture>` 要素を使用する例とその説明です。
 

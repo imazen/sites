@@ -4,6 +4,8 @@ description: Ein effizienter und besonnener Leitfaden zu responsiven Bildern fü
 taskInputHash: 287f4de1aa9f1f54
 lang: de
 sidebar_sort_priority: 1000
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 **Ein effizienter und besonnener Leitfaden für Bilder im Jahr 2023**
 

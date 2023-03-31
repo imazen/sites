@@ -3,6 +3,8 @@ title: CSS-effekter och ramar
 description: Hur du lägger till CSS-effekter och ramar till en bild
 taskInputHash: ac9a5fd4be58520a
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 För att lägga till CSS-effekter och ramar till en bild kan du använda följande steg:
 1. Välj bild-elementet i din HTML-kod. Du kan göra detta genom att använda en ID- eller klassväljare, eller genom att välja `<img>`-elementet direkt.

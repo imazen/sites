@@ -4,6 +4,7 @@ description: Device px ≠ browser px ≠ image px
 sidebar_sort_priority: 900
 date_published: '2023-03-26'
 date_modified: '2023-03-26'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 ### Device pixels ≠ browser px ≠ image px

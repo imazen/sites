@@ -3,6 +3,8 @@ title: FAQ
 description: Domande frequenti riguardanti lo stile e il layout delle immagini con CSS.
 taskInputHash: 4b4effa971941945
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Alcune domande frequenti relative allo stile e al layout delle immagini con CSS includono:
 

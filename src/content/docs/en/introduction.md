@@ -4,6 +4,7 @@ description: An Efficient and Opinionated Guide to Responsive Images for 2023
 sidebar_sort_priority: 1000
 date_published: '2023-03-23'
 date_modified: '2023-03-27'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 **An Efficient and Opinionated Guide to Images for 2023**

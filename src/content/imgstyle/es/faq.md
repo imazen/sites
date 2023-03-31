@@ -3,6 +3,8 @@ title: Preguntas frecuentes
 description: Preguntas frecuentes sobre el estilo y disección de imágenes con CSS
 taskInputHash: ee189e91846cf50f
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Algunas preguntas comúnmente formuladas relacionadas con el estilo y diseño de imágenes con CSS incluyen:
 

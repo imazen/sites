@@ -3,6 +3,8 @@ title: Verwende Breite und Höhe
 description: Vorteile der Verwendung von Breiten- und Höhenattributen im HTML-Code
 taskInputHash: 0d50f8eddff0eef4
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Warum sollte man Breite und Höhe in das HTML einfügen?
 

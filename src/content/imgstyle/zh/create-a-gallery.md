@@ -3,6 +3,8 @@ title: 创建图库
 description: 如何在网站上创建图库
 taskInputHash: 8c39e5b796c53973
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下是在网站上创建图库的一般步骤：
 1. 为您的图库创建一个新的HTML文件。您可以将其命名为"gallery.html"之类的。

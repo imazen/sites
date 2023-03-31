@@ -1,10 +1,11 @@
 ---
 title: Exemples d'utilisation de l'élément <picture>
 description: >-
-  Fournit des exemples d'utilisation de l'élément <picture> pour des images
-  adaptatives, l'art direction et différents formats d'images.
+  Fournit des exemples d'utilisation de l'élément <picture> pour des images adaptatives, l'art direction et différents formats d'images.
 taskInputHash: 3db6dce4b89b4275
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Voici quelques exemples d'utilisation de l'élément `<picture>` et leurs explications:
 

@@ -1,10 +1,11 @@
 ---
 title: Classi di supporto TailwindCSS per `<img>`
 description: >-
-  Elenco delle classi di supporto TailwindCSS più comunemente utilizzate per
-  `<img>`
+  Elenco delle classi di supporto TailwindCSS più comunemente utilizzate per `<img>`
 taskInputHash: 9165c82bd1717912
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 TailwindCSS fornisce diverse classi di supporto per lavorare con il tag `<img>`. Ecco alcune delle più comunemente utilizzate:
 - `object-contain`: questa classe imposta l'immagine in modo da adattarsi al contenitore mantenendo il rapporto di forma. Se necessario, rimpicciolirà o ingrandirà l'immagine per farla entrare nel contenitore.

@@ -3,6 +3,8 @@ title: 用 Lighthouse 测试性能
 description: 使用 Lighthouse 测试网站性能的步骤
 taskInputHash: e38b55a37fab7457
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 如何使用 Lighthouse 测试您的站点性能？
 

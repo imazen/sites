@@ -3,6 +3,8 @@ title: Erstellen Sie eine Galerie
 description: Wie erstelle ich eine Galerie auf einer Website
 taskInputHash: 42ae1b2794083cf2
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Hier sind die allgemeinen Schritte zur Erstellung einer Bildergalerie auf einer Website:
 1. Erstellen Sie eine neue HTML-Datei für Ihre Bildergalerie. Sie können sie beispielsweise "gallery.html" nennen.

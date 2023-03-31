@@ -3,6 +3,8 @@ title: CSSの完全なリファレンス
 description: 効果に対するCSSの完全なリファレンス（例付き）
 taskInputHash: 90fc24f78f728a6f
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下は画像に適用できるCSSの効果と枠の包括的参照です。各例ごとに例を示します。
 

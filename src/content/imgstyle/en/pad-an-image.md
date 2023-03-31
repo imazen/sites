@@ -3,6 +3,7 @@ title: Pad an image
 description: How to pad an image using css and aspect ratio to center
 date_published: '2023-03-29'
 date_modified: '2023-03-29'
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 
 Here's how you can use CSS and aspect ratio to center and pad an image: 

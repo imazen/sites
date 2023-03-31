@@ -4,6 +4,8 @@ description: Píxeles de dispositivo ≠ píxeles del navegador ≠ píxeles de 
 taskInputHash: d01e3b9515e2e27e
 lang: es
 sidebar_sort_priority: 900
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Píxeles de dispositivo ≠ píxeles del navegador ≠ píxeles de imagen
 

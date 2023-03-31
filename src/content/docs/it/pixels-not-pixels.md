@@ -4,6 +4,8 @@ description: Pixel del dispositivo ≠ pixel del browser ≠ pixel dell'immagine
 taskInputHash: 5cb0d1fb2057aeac
 lang: it
 sidebar_sort_priority: 900
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Pixel del dispositivo ≠ pixel del browser ≠ pixel dell'immagine
 

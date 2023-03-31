@@ -3,6 +3,8 @@ title: Bild polstern
 description: Wie man ein Bild mit CSS und Seitenverhältnis zum Zentrieren polstert.
 taskInputHash: ed552176cf3bdf5c
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 So können Sie CSS und Seitenverhältnisse verwenden, um ein Bild zu zentrieren und zu polstern:
 

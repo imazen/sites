@@ -3,6 +3,8 @@ title: 使用 <picture> 元素的例子
 description: 提供使用 <picture> 元素的示例，用于可响应式图片、艺术向导和不同的图片格式。
 taskInputHash: 84ee999fd4dc56dc
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 以下是使用 `<picture>` 元素的一些例子以及它们的解释：
 

@@ -3,6 +3,8 @@ title: Lighthouseでパフォーマンスをテストする
 description: Lighthouseを使用してウェブサイトのパフォーマンスをテストする手順
 taskInputHash: b2e7941d54dc5c65
 lang: ja
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Lighthouseを使用してサイトのパフォーマンスをテストするには？
 

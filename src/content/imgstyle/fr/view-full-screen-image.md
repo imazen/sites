@@ -1,12 +1,12 @@
 ---
 title: >-
-  Ajouter un bouton tactile pour afficher une image en plein écran dans une
-  galerie
+  Ajouter un bouton tactile pour afficher une image en plein écran dans une galerie
 description: >-
-  Comment ajouter une option de vue en plein écran d'images en appuyant sur un
-  bouton tactile dans une galerie
+  Comment ajouter une option de vue en plein écran d'images en appuyant sur un bouton tactile dans une galerie
 taskInputHash: acfcd95755eb1185
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Pour ajouter une option "Touchez pour voir l'image en plein écran" à une galerie, vous pouvez utiliser du JavaScript et du CSS pour créer un overlay qui affiche l'image en mode plein écran lorsque l'utilisateur appuie dessus.
 

@@ -3,6 +3,8 @@ title: 浏览器如何选择图像
 description: 浏览器如何在`srcset`属性中选择图片
 taskInputHash: 4f3d39e70c9edd79
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 浏览器如何在`srcset`属性中选择图片？下面是一个逐步解释的过程，包括针对设备和视口的宽度和密度规格的例子。
 

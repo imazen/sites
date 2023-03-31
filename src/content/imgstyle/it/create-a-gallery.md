@@ -3,6 +3,8 @@ title: Creare una galleria
 description: Come creare una galleria su un sito web
 taskInputHash: 5d485d89c96e6a0a
 lang: it
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Ecco i passi generali per creare una galleria di immagini su un sito web:
 1. Crea un nuovo file HTML per la tua galleria di immagini. Puoi chiamarlo ad esempio "galleria.html".

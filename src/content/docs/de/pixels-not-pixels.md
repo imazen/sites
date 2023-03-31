@@ -4,6 +4,8 @@ description: Geräte-Pixel ≠ Browser-Pixel ≠ Bild-Pixel
 taskInputHash: 0129dd19d1654a4c
 lang: de
 sidebar_sort_priority: 900
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ### Gerätepixel ≠ Browser px ≠ Bild px
 

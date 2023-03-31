@@ -3,6 +3,8 @@ title: Efectos y bordes CSS
 description: Cómo agregar efectos y bordes CSS a una imagen
 taskInputHash: 7a326c1fc1c7a1c6
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Para agregar efectos CSS y bordes a una imagen, puede seguir los siguientes pasos:
 1. Seleccione el elemento de imagen en su código HTML. Puede hacer esto usando un selector de ID o clase, o seleccionando directamente el elemento `<img>`.

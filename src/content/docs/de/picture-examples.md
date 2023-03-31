@@ -1,10 +1,11 @@
 ---
 title: Beispiele für die Verwendung des <picture>-Elements
 description: >-
-  Bietet Beispiele für die Verwendung des <picture>-Elements für responsive
-  Bilder, Art Direction und verschiedene Bildformate.
+  Bietet Beispiele für die Verwendung des <picture>-Elements für responsive Bilder, Art Direction und verschiedene Bildformate.
 taskInputHash: aace1b3e0a9751e5
 lang: de
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Hier sind einige Beispiele für die Verwendung des `<picture>`-Elements und deren Erklärungen:
 

@@ -4,6 +4,8 @@ description: En effektiv och åsiktsbaserad guide till responsiva bilder för 20
 taskInputHash: 20aa757c75414ddf
 lang: sv
 sidebar_sort_priority: 1000
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 **En effektiv och åsiktsbaserad guide till bilder för 2023**
 

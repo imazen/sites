@@ -3,6 +3,8 @@ title: Créer une galerie
 description: Comment créer une galerie sur un site web
 taskInputHash: 70014b301bcbc066
 lang: fr
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Voici les étapes générales pour créer une galerie d'images sur un site web :
 1. Créer un nouveau fichier HTML pour votre galerie d'images. Vous pouvez le nommer quelque chose comme "gallery.html".

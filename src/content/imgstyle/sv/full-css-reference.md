@@ -3,6 +3,8 @@ title: Fullständig CSS-referens
 description: 'Fullständig CSS-referens för effekter, med exempel'
 taskInputHash: a2dfd495505a6c32
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Här är en omfattande referens för CSS-effekter och ramar som du kan tillämpa på bilder, tillsammans med exempel för varje:
 

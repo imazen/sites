@@ -3,6 +3,8 @@ title: Skapa en bildkarusell
 description: Hur man skapar en bildkarusell på en webbplats
 taskInputHash: 4218c8e58ee05198
 lang: sv
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 Här är de allmänna stegen för att skapa en bildkarusell på en webbplats:
 1. Skapa en ny HTML-fil för din bildkarusell. Du kan namnge den något som "karusell.html".

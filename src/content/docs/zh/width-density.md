@@ -3,6 +3,8 @@ title: 宽度和密度描述符
 description: 在`srcset`中使用宽度和密度描述符的示例
 taskInputHash: c57df7b62d51259b
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 了解`srcset`中的宽度（`w`）和密度（`x`）描述符。使用示例并使用Markdown语言。
 

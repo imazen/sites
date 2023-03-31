@@ -3,6 +3,8 @@ title: 在画廊中添加点击查看全屏图像
 description: 如何在画廊中添加点击查看全屏图像选项
 taskInputHash: 8908aa00b38b1728
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 为了在画廊中添加“点击以查看全屏图像”的选项，您可以使用JavaScript和CSS创建一个覆盖层，在用户点击图像时以全屏模式显示图像。
 

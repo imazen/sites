@@ -3,6 +3,8 @@ title: Usa ancho y alto
 description: Beneficios de usar los atributos de ancho y alto en el código HTML
 taskInputHash: fc544b6b62f34977
 lang: es
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 ¿Por qué deberías poner los atributos de ancho y alto en HTML?
 

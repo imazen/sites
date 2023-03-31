@@ -3,6 +3,8 @@ title: 何时使用`<picture>`元素
 description: 解释了在哪些情况下应该使用`<picture>`元素。
 taskInputHash: 11e0f18547c6d9d0
 lang: zh
+date_published: "2023-03-31T15:01:44-06:00"
+date_updated: "2023-03-31T15:01:44-06:00"
 ---
 `picture` 元素用于提供多个版本的图像，并根据特定条件确定显示哪个版本的图像。它特别适用于为不同的屏幕大小和分辨率优化图像，通常在响应式网页设计中使用。
 
