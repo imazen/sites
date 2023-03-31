@@ -1,8 +1,12 @@
 ---
 title: CSSの完全なリファレンス
 description: 効果に対するCSSの完全なリファレンス（例付き）
-taskInputHash: 90fc24f78f728a6f
+taskInputHash: 65da6992482c3405
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 以下は画像に適用できるCSSの効果と枠の包括的参照です。各例ごとに例を示します。
 

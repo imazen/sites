@@ -1,12 +1,20 @@
-## Using Width and Height in HTML
+---
+title: Using Width and Height Attributes
+description: Benefits of using width and height attributes in HTML code
+taskInputHash: 0c2998c00c21d9e0
+lang: en
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-24'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
+---
+Why should you set width and height in HTML?
 
-Why should you include width and height attributes in your HTML?
-
-It is recommended to add width and height attributes to images in your HTML code because it helps web browsers know the size of the image before it is fully loaded. This enables the browser to properly reserve space for the image on the webpage and prevent content from jumping around while the image is loading.
-
-Additionally, specifying the width and height of an image can also improve the overall performance of a webpage. When the browser knows the size of the image in advance, it can more accurately calculate the space required to display the image and avoid unnecessary reflow or repaint during the loading process.
-
-Overall, using width and height attributes on images in your HTML code can improve the user experience by making content load faster and reducing visual glitches.
+> It is recommended to set the width and height attributes of images in HTML code because it allows web browsers to know the size of the image before it is fully loaded. This allows the browser to reserve the appropriate space for the image on the webpage, thereby preventing content from jumping around while the image loads.
+>
+> Additionally, specifying the width and height attributes of an image can help improve the overall performance of a webpage. When the browser knows the size of the image beforehand, it can more accurately calculate the space needed to display the image and avoid unnecessary reflow or repaint.
+>
+> Overall, using width and height attributes for images in HTML code can enhance the user experience, make content load faster, and reduce visual disruptions.
 =====================
 
 Content prompt used: 

@@ -1,8 +1,12 @@
 ---
 title: ギャラリーにタップして全画面表示のオプションを追加する
 description: ギャラリーにタップして全画面表示のオプションを追加する方法
-taskInputHash: 6d842ebf89621c74
+taskInputHash: dd9038256ecdfee1
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 以下のmarkdownの装飾を保持したまま日本語に翻訳してください。
 html要素やURLは翻訳しないでください。ただし、リンク先の 'en' を 'ja' に変更してください。コードブロック内では、コメントのみ翻訳してください。

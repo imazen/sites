@@ -3,8 +3,12 @@ title: Breakpoints e imágenes
 description: >-
   Por qué algunos (pero no todos) los puntos de interrupción son importantes
   para tus imágenes
-taskInputHash: dc5b5ae442126362
+taskInputHash: cc4be952df3fef63
 lang: es
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Antecedentes
 

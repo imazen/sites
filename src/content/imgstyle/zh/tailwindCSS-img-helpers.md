@@ -1,8 +1,12 @@
 ---
 title: '`<img>` 的 TailwindCSS 辅助类'
 description: '`<img>` 最常用的 TailwindCSS 辅助类列表'
-taskInputHash: 87831f4aeaea8e10
+taskInputHash: 9afbb9bbe518b0b4
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 TailwindCSS 提供了几个针对 `<img>` 标签的辅助类。以下是一些常用的类：
 - `object-contain`：此类将图像设置为适应容器并保持其长宽比。它将根据需要缩小或扩大图像以确保其适合容器。

@@ -1,31 +1,35 @@
 ---
-title: Density descriptors and srcset
-description: Examples of using density descriptors in srcset
-taskInputHash: fe4017c7a115e9fc
+title: Density Descriptors and Srcset
+description: Examples of using density descriptors in `srcset`
+taskInputHash: 55ea5bbfbf5779eb
 lang: en
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-Srcset with density descriptors provides a simple and effective method for delivering the most appropriate image to each user's device, improving performance and user experience. This guide goes through the essentials of using srcset with density descriptors and provides examples of markup for your convenience.
+Srcset with density descriptors provides a simple and effective method for delivering the most appropriate image to each user's device, improving performance and user experience. This guide covers the essentials of using srcset with density descriptors and provides examples of markup for your convenience.
 
-## What is Srcset with density descriptors?
+## What is Srcset with Density Descriptors?
 
-Srcset is an HTML attribute designed to let you specify multiple image sources for a single <img> element. Density descriptors (`x`) are used in conjunction with srcset to provide images with different resolutions based on the user's screen pixel density.
+Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in combination with srcset to provide images with different resolutions based on the user's screen pixel density.
 
-## When to use Srcset with density descriptors
+## When to Use Srcset with Density Descriptors
 
 Using srcset with density descriptors is particularly useful when you want to:
-1. Serve high-resolution images to high-DPI screens (e.g. Retina screens) while providing lower-resolution images to standard screens.
+1. Serve high-resolution images to high-DPI screens (e.g. Retina screens) while providing lower-resolution images to normal screens.
 2. Improve page performance by delivering the most appropriate image size to each user's device.
 
-## Implementing Srcset with density descriptors
+## Implementing Srcset with Density Descriptors
 
 To use srcset with density descriptors, follow these steps:
 1. Prepare your images in different resolutions.
-2. Add the `srcset` attribute to the `<img>` element, including image sources and their corresponding density descriptors.
-3. Add the optional `sizes` attribute to specify the image size when displayed on screen.
+2. Add the `srcset` attribute to the `<img>` element, including the image sources and corresponding density descriptors.
+3. Add the `sizes` attribute (optional) to specify the size of the image when displayed on the screen.
 
-### Markup example
+### Markup Example
 
-Here is an example of how to implement srcset with density descriptors in your markup:
+Here's an example of how to implement srcset with density descriptors in your markup:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -35,13 +39,12 @@ Here is an example of how to implement srcset with density descriptors in your m
 
 This markup example includes:
 - **src**: Default image source displayed if the browser does not support srcset.
-- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser selects the most appropriate image based on the user's screen.
+- **srcset**: List of image sources and their density descriptors (1x, 2x, 3x). The browser selects the most appropriate image based on the user's screen.
 - **alt**: A description of the image for accessibility purposes.
 
 And that's it! You have successfully implemented srcset with density descriptors, improving your website's performance and user experience.
 
-
-{{Note that the term "standard screens" is a bit ambiguous and imprecise as there are many different kinds of screens with different resolutions and pixel densities.}}
+{{Note that the term "density descriptor" is not commonly used in English-speaking regions, and "pixel density descriptor" or simply "descriptor" may be more appropriate. The guide's language could be further simplified by using simpler words like "image size qualifier."}}
 =====================
 
 Content prompt used: 

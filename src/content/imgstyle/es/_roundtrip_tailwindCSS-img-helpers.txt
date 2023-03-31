@@ -1,16 +1,20 @@
 ---
 title: TailwindCSS helpers for `<img>`
 description: List of the most commonly used TailwindCSS helpers for `<img>`
-taskInputHash: f12179a0e32e0400
+taskInputHash: bd36a678fd9225a6
 lang: en
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-TailwindCSS provides various utility classes for working with `<img>` tag. Here are some of the commonly used ones:
+TailwindCSS provides several helper classes for working with the `<img>` tag. Here are some of the most commonly used ones:
 
-- `object-contain`: This class adjusts the image within its container while maintaining its aspect ratio. It will resize or scale the image as necessary to ensure it fits within the container.
+- `object-contain`: This class adjusts the image within its container while maintaining its aspect ratio. It will resize or enlarge the image as necessary to ensure it fits within the container.
 - `object-cover`: This class adjusts the image to cover the entire container while maintaining its aspect ratio. It will crop or resize the image as necessary to cover the container.
-- `object-fill`: This class adjusts the image to fill the entire container, without maintaining its aspect ratio. This can cause the image to stretch or compress to fit within the container.
-- `object-none`: This class adjusts the image to its natural size, without any resizing or cropping.
-- `object-center`: This class vertically and horizontally centers the image within its container.
+- `object-fill`: This class adjusts the image to fill the entire container, without maintaining its aspect ratio. This may cause the image to stretch or compress to fit within the container.
+- `object-none`: This class adjusts the image to its natural size without any scaling or cropping.
+- `object-center`: This class horizontally and vertically centers the image within its container.
 - `object-left`: This class aligns the image to the left within its container.
 - `object-right`: This class aligns the image to the right within its container.
 - `object-top`: This class aligns the image to the top of its container.

@@ -1,8 +1,12 @@
 ---
 title: Descripteurs de densité et srcset
 description: Exemples d'utilisation des descripteurs de densité dans `srcset`
-taskInputHash: 935c76acf22c926c
+taskInputHash: 4a6e8aedba865baf
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Srcset avec descripteurs de densité fournit une méthode simple et efficace pour livrer l'image la plus adaptée à chaque appareil de l'utilisateur, améliorant les performances et l'expérience utilisateur. Ce guide vous guidera à travers l'essentiel de l'utilisation de srcset avec descripteurs de densité et fournira des exemples de balisage pour votre commodité.
 ## Qu'est-ce que Srcset avec descripteurs de densité?

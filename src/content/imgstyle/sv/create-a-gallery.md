@@ -1,8 +1,12 @@
 ---
 title: Skapa ett galleri
 description: Hur du skapar ett galleri på en hemsida
-taskInputHash: b00702760ee5792d
+taskInputHash: 406dad1385d012a0
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Här är de allmänna stegen för att skapa ett bildgalleri på en hemsida:
 1. Skapa en ny HTML-fil för ditt bildgalleri. Du kan ge den ett namn som "gallery.html".

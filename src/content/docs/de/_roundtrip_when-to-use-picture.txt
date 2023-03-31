@@ -1,21 +1,26 @@
 ---
-title: When to use the <picture> element
-description: Explains in which situations the <picture> element should be used
-taskInputHash: 3e9b5a65e12565d4
+title: When to Use the <picture> Element
+description: 'Explains in which situations to use the <picture> element.'
+taskInputHash: 0d098655c456a3e4
 lang: en
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-27'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-The `picture` element is used to provide multiple versions of an image and determine which version of the image to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions and is commonly used in responsive web design.
-Here are some specific scenarios where you would want to use the `picture` element:
+The `picture` element is used to provide multiple versions of an image and choose which version of the image to display based on certain conditions. It is especially useful for optimizing images for different screen sizes and resolutions and is commonly used in responsive web design.
 
-* **Retina displays:** High-density screens like Apple's Retina displays have a higher pixel density, which means images can appear blurry or pixelated if not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice as many pixels as the normal version, making it sharp and clear on Retina displays.
+Here are some specific scenarios in which you would want to use the `picture` element:
 
-* **Different aspect ratios:** When designing a website that needs to display images with different aspect ratios (such as landscape vs portrait), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
+* **Retina displays:** High-resolution screens such as Apple's Retina displays have a higher pixel density, which means that images can look blurry or pixelated if they are not optimized for high resolutions. With the `picture` element, you can provide a version of the image that has twice as many pixels as the normal version, so it looks sharp and clear on Retina displays.
 
-* **Bandwidth limitations:** Images can be large files that consume a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page load times.
+* **Different aspect ratios:** If you are designing a website that needs to display images with different aspect ratios (e.g. landscape vs. portrait), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
 
-* **Art-directed layouts:** Sometimes you may want to present an image in a particular way depending on the layout of the rest of the page. For example, you may want to show a close-up of a person's face on mobile devices, but a wider shot on desktop devices. The `picture` element allows you to provide different versions of the image that are optimized for different layouts.
+* **Bandwidth limitations:** Images can be large files that require a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, to reduce website load times.
 
-Overall, the `picture` element is a powerful tool that allows you to optimize your images for a variety of use cases and ensure that they look great regardless of the device or screen size.
+* **Art-directed layouts:** Sometimes you want to present an image in a certain way depending on the layout of the rest of the page. For example, you might want to show a close-up of a person's face on mobile devices, but a wider view on desktop devices. The `picture` element allows you to provide different versions of the image that are optimized for different layouts.
+
+Overall, the `picture` element is a powerful tool that allows you to optimize your images for a variety of use cases and ensure they look great regardless of the device or screen size.
 =====================
 
 Content prompt used: 
@@ -29,7 +34,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Explains in which situations you should use the <picture> element
 
 Metadata returned1. Wann man das <picture>-Element verwenden sollte
-2. Erläutert in welchen Situationen man das <picture>-Element verwenden sollte 
+2. Erklärt, in welchen Situationen das <picture>-Element verwendet werden sollte. 
 
 
 Roundtrip (isolated) prompt used: 

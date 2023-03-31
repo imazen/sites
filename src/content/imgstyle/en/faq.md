@@ -2,7 +2,7 @@
 title: FAQ
 description: Frequently asked questions regarding styling and laying out images with CSS
 date_published: '2023-03-29'
-date_modified: '2023-03-29'
+date_modified: '2023-03-31'
 ---
 
 Some commonly asked questions related to styling and laying out images with CSS include:

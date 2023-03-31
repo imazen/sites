@@ -1,8 +1,12 @@
 ---
 title: 密度描述符与srcset
 description: 在`srcset`中使用密度描述符的示例
-taskInputHash: 8c3e0dc73b98c364
+taskInputHash: b82d9308b6826856
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Srcset with density descriptors（带密度描述符的Srcset）提供了一种简单而有效的方法，为每个用户的设备提供最合适的图像，提高了性能和用户体验。本指南将引导您了解如何使用带密度描述符的srcset，并为您提供标记示例。
 ## 什么是带密度描述符的Srcset？

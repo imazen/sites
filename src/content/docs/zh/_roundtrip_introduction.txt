@@ -1,35 +1,41 @@
 ---
-title: 'srcset and <img> sizes'
-description: An efficient and opinionated guide to responsive images in 2023
-taskInputHash: c8fe1f1e28c8cbe2
+title: srcset and <img> sizes
+description: Efficient and subjective guide to responsive images in 2023
+taskInputHash: ff8b517c77f33d91
 lang: en
+ignore: '/* cSpell:locale zh,en*/'
 sidebar_sort_priority: 1000
+date_published: '2023-03-23'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-**An Efficient and Opinionated Guide to Images in 2023**
+**Efficient and subjective guide to images in 2023**
 
-Please check the sidebar for a deep dive. This is a quick reference for upgrading your `<img>` tags to handle modern devices in their various sizes and pixel densities. You should [know that a pixel != a pixel](/en/pixels-not-pixels), and that `devicePixelRatio`s are more likely to be 3.875 than 1:1. Modern phones pretend to be 320-428px wide (in CSS pixels) for legibility, but each CSS pixel is made up of many device pixels.
+For an in-depth understanding, check out the sidebar. This is a quick reference for upgrading those `<img>` tags to handle various sizes and pixel densities of modern devices. You should [know that pixels aren't pixels](/en/pixels-not-pixels), and that `devicePixelRatio` is more likely to be 3.875 than 1:1. Modern phones pretend to be between 320-428px wide (in CSS pixels) for legibility, but many device pixels support each CSS pixel.
 
-> If your image dimensions will never change, no matter how narrow you shrink the browser window, you should use [density descriptors](/en/density-descriptors). This is typically true for logos, icons, and buttons.
+> If your image will never change size no matter how narrow the browser window is, use [density descriptors](/en/density-descriptors) instead. This usually applies to logos, icons, and buttons.
 
-Do you know your [breakpoints](/en/breakpoints)? You'll need those numbers to adjust the schemes below--at the very least the viewport width breakpoint where your main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You need these numbers to fine-tune the solutions below - at minimum the viewport width breakpoint where the main content area stops growing.
 
-### A Simple Approach
+
+### Simple
 
 ```html
+
 <img src="img.jpg?w=480" 
      srcset="img.jpg?format=webp&w=480 480w, 
              img.jpg?format=webp&w=800 800w, 
              img.jpg?format=webp&w=1200 1200w, 
              img.jpg?format=webp&w=1600 1600w, 
              img.jpg?format=webp&w=2000 2000w"
-     sizes="(max-width: 700px) 100vw, 800px" alt="Dog on a bicycle">
+     sizes="(max-width: 700px) 100vw, 800px" 
+     alt="dog riding bike" />
 
-<!-- We're assuming you have a breakpoint at 700 pixels, and that 
-     at that viewport width, this image takes up 100% of the width, but 
-     it's capped at 800 CSS pixels when the viewport is larger. -->
+<!-- We assume your breakpoint is at 700px. At that viewport width, this image takes up 100% of the width,
+     but when the viewport is larger, the image is capped at 800 CSS pixels -->
 
-<!-- This assumes that you're using an image server that conforms to the RIAPI standard, such as Imageflow. Making variants of images on the fly is essential for developer sanity. -->
-
+<!-- This assumes you're using an RIAPI-compatible image server such as Imageflow. On-the-fly image variant generation is vital for developers' sanity. -->
+```
 =====================
 
 Content prompt used: 
@@ -42,8 +48,8 @@ Also carefully translate the title and description for the article; do not use &
 1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
-Metadata returned1. `srcset`与`<img>`sizes 
- 2. 2023年响应式图像的高效且具有个人意见的指南 
+Metadata returned1. srcset 和 <img> sizes
+2. 2023 年响应式图像的高效且主观的指南 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,14 +1,9 @@
----
-title: Add "Tap to Fullscreen" Option to Gallery
-description: How to add an option to gallery in which users can tap to view images in fullscreen
-taskInputHash: 6d842ebf89621c74
-lang: en
----
-To add the "Tap to Fullscreen" option to a gallery, create an overlay using JavaScript and CSS that will display the image in fullscreen mode when the user taps it.
+# Adding "Tap to Fullscreen" Option to Gallery
+
+To add a "tap to fullscreen" option to a gallery, we can create an overlay that displays the image in fullscreen mode when the user taps it. We'll need to use JavaScript and CSS to create this overlay.
 
 Here are the basic steps:
-
-1. First, create a container for the gallery and add all the images you want to display:
+1. First, create a container for the gallery and add all the images you want to display inside it.
 
 ```html
 <div class="gallery">
@@ -19,7 +14,7 @@ Here are the basic steps:
 </div>
 ```
 
-2. Next, add some CSS to style the gallery and images:
+2. Next, add CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -34,7 +29,7 @@ Here are the basic steps:
 }
 ```
 
-3. Then, use JavaScript to add a click event listener to each image. When the user clicks an image, the script will create an overlay and display the image in fullscreen mode:
+3. Then, use JavaScript to add a click event listener to each image. When the user clicks on an image, the JavaScript creates an overlay and displays the image in fullscreen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -60,7 +55,7 @@ images.forEach((image) => {
 });
 ```
 
-4. Finally, add some CSS to style the overlay and fullscreen image:
+4. Finally, add CSS to style the overlay and the fullscreen image.
 
 ```css
 .overlay {
@@ -82,7 +77,7 @@ images.forEach((image) => {
 }
 ```
 
-By following these steps, you can create a gallery that allows users to tap images to view them in fullscreen mode.
+Following these steps will give your users the ability to tap and view images in fullscreen mode.
 =====================
 
 Content prompt used: 

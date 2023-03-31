@@ -1,8 +1,12 @@
 ---
 title: Référence complète CSS
 description: 'Référence complète CSS pour les effets, avec des exemples'
-taskInputHash: e1581e8e9efc6672
+taskInputHash: af79aea14d270817
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Voici une référence complète des effets et bordures CSS que vous pouvez appliquer aux images, avec des exemples pour chacun :
 

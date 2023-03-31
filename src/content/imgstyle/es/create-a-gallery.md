@@ -1,8 +1,12 @@
 ---
 title: Crea una galería
 description: Cómo crear una galería en un sitio web
-taskInputHash: c53f8f23fba93bad
+taskInputHash: 3e1b9e8d5dc2cd54
 lang: es
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Aquí están los pasos generales para crear una galería de imágenes en un sitio web:
 

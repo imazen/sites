@@ -3,8 +3,12 @@ title: Stoppa en bild
 description: >-
   Så här stoppar du en bild med hjälp av CSS och bildförhållande för att
   centrera
-taskInputHash: c5381c99f314e33a
+taskInputHash: aa05bec5881ea67f
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Så här kan du använda CSS och bildförhållande för att centrera och stoppa en bild:
 1. Först måste du omsluta din bild i en container-element, såsom en `<div>` eller `<figure>`. Detta gör det möjligt att tillämpa stilar på containern som påverkar bilden inuti.

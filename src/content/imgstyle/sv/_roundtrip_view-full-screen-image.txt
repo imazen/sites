@@ -1,13 +1,17 @@
 ---
-title: Add "Click to view fullscreen" to a gallery
+title: Add "click to view fullscreen" to a gallery
 description: >-
   How to add a "click to view fullscreen" option to a gallery
-taskInputHash: 07520f189521764b
+taskInputHash: 27d6d01e11cbb5c5
 lang: en
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-To add a "Click to view image in fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen mode when the user clicks on it.
+To add a "click to view fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen when the user clicks on it.
 
-Here is a basic method you can use:
+Here's a basic method you can use:
 
 1. First, create a container for your gallery and add all the images you want to display.
 
@@ -16,13 +20,11 @@ Here is a basic method you can use:
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- add more images here -->
+  <!-- Add more images here -->
 </div>
 ```
 
-
-
-2. Then, add CSS to style the gallery and images.
+2. Next, add CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -37,9 +39,7 @@ Here is a basic method you can use:
 }
 ```
 
-
-
-3. Now, add a click event listener to each image with JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in fullscreen mode.
+3. Now, add a click event listener to each image with JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in fullscreen.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -56,16 +56,14 @@ images.forEach((image) => {
     fullscreenImage.src = image.src;
     fullscreenImage.classList.add('fullscreen-image');
     
-    // add the image element to the overlay
+    // add image element to overlay
     overlay.appendChild(fullscreenImage);
     
-    // add the overlay to the page
+    // add overlay to page
     document.body.appendChild(overlay);
   });
 });
 ```
-
-
 
 4. Finally, add CSS to style the overlay and the fullscreen image.
 
@@ -89,9 +87,7 @@ images.forEach((image) => {
 }
 ```
 
-
-
-With these steps, you should now have a gallery that allows users to view images in fullscreen mode by clicking on them.
+With these steps, you should now have a gallery that allows users to view images in fullscreen by clicking on them.
 =====================
 
 Content prompt used: 

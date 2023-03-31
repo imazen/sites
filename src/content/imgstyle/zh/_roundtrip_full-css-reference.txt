@@ -1,11 +1,14 @@
 ---
 title: Complete CSS Reference
-description: Complete CSS effects reference with examples
-taskInputHash: db084e09620978ea
+description: Complete CSS effects and borders reference with examples
+taskInputHash: dbb7d3e328844243
 lang: en
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-This is a complete reference for CSS effects and borders that you can apply to images, with examples for each effect:
-
+This is a complete CSS effects and borders reference with examples that you can apply to images:
 1. **Border:** Add a border around the image.
 
 ```css
@@ -24,7 +27,7 @@ img {
 ```
 
 
-3. **Opacity:** Adjust the transparency of the image.
+3. **Opacity:** Adjust the opacity of the image.
 
 ```css
 img {
@@ -33,7 +36,7 @@ img {
 ```
 
 
-4. **Grayscale:** Convert the image to grayscale.
+4. **Grayscale:** Convert the image to a grayscale.
 
 ```css
 img {
@@ -42,7 +45,7 @@ img {
 ```
 
 
-5. **Sepia:** Apply sepia effect to the image.
+5. **Sepia:** Apply a sepia effect to the image.
 
 ```css
 img {
@@ -78,7 +81,7 @@ img {
 ```
 
 
-9. **Hue Rotate:** Rotate the hue of the image.
+9. **Hue Rotation:** Rotate the hue of the image.
 
 ```css
 img {
@@ -87,7 +90,7 @@ img {
 ```
 
 
-10. **Invert:** Invert the color of the image.
+10. **Invert:** Invert the colors of the image.
 
 ```css
 img {
@@ -96,7 +99,7 @@ img {
 ```
 
 
-11. **Saturate:** Adjust the saturation of the image.
+11. **Saturation:** Adjust the saturation of the image.
 
 ```css
 img {
@@ -105,7 +108,7 @@ img {
 ```
 
 
-12. **Sepia:** Apply sepia effect to the image.
+12. **Sepia:** Apply a sepia effect to the image.
 
 ```css
 img {
@@ -114,7 +117,7 @@ img {
 ```
 
 
-13. **Drop Shadow:** Add a drop shadow around the image.
+13. **Drop Shadow:** Add a shadow effect around the image.
 
 ```css
 img {
@@ -153,9 +156,7 @@ img {
 
 
 
-These are just a few examples of the many CSS effects and borders that you can apply to images. Try out different styles to create unique and eye-catching designs!
-
-{{Note that the term used here is not the technical term...}}. (The term "brown" is referring to a sepia effect.)
+These are just a few examples of many CSS effects and borders that can be applied to images. Try different styles to create unique and eye-catching designs!
 =====================
 
 Content prompt used: 

@@ -1,8 +1,12 @@
 ---
 title: 完整的CSS参考
 description: 带有示例的完整CSS效果参考
-taskInputHash: db084e09620978ea
+taskInputHash: dbb7d3e328844243
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 这是一个完整的CSS效果和边框参考，您可以对图片应用其中的效果，并带有每个效果的示例：
 1. **边框：** 在图像周围添加边框。

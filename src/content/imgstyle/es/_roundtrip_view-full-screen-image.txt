@@ -1,27 +1,29 @@
 ---
-title: >-
-  Adding the option to tap to view the image in full-screen to a gallery
-description: >-
-  How to add an option to tap to view the image in full-screen in a gallery
-taskInputHash: 65576124df67622f
+title: Adding the option to tap and view an image in full screen to a gallery
+description: How to add an option to tap and view an image in full screen to a gallery
+taskInputHash: 39687ec0ca18f284
 lang: en
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-To add a "Tap to view the image in full-screen" option to a gallery, you can use JavaScript and CSS to create a layer that displays the image in full-screen mode when the user taps on it.
+To add a "Tap to view image in full screen" option to a gallery, you can use JavaScript and CSS to create a layer that displays the image in full screen mode when the user taps it.
 
 Here's a basic approach you can use:
 
-1. First, create a container for your gallery and add all the images you want to display.
+1. First, create a container for your gallery and add all the images that you want to display.
 
 ```html
 <div class="gallery">
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- Add more images here -->
+  <!-- add more images here -->
 </div>
 ```
 
-2. Then, add some CSS to style the gallery and the images.
+2. Then, add some CSS to style the gallery and images.
 
 ```css
 .gallery {
@@ -36,7 +38,7 @@ Here's a basic approach you can use:
 }
 ```
 
-3. Now, add a click event listener for each image using JavaScript. When the user clicks on an image, JavaScript will create a layer and display the image in full-screen mode.
+3. Now, add a click event listener for each image using JavaScript. When the user clicks on an image, JavaScript will create a layer and display the image in full screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -62,7 +64,7 @@ images.forEach((image) => {
 });
 ```
 
-4. Finally, add some CSS styles to style the layer and the full-screen image.
+4. Finally, add some CSS styles to style the layer and full screen image.
 
 ```css
 .overlay {
@@ -84,7 +86,7 @@ images.forEach((image) => {
 }
 ```
 
-With these steps, you should now have a gallery that allows users to view images in full-screen mode by tapping on them.
+With these steps, you should now have a gallery that allows users to view images in full screen mode by tapping on them.
 =====================
 
 Content prompt used: 

@@ -4,7 +4,7 @@ description: >-
   Provides examples using the <picture> element, for responsive images, art
   direction and different image formats
 date_published: '2023-03-24'
-date_modified: '2023-03-27'
+date_modified: '2023-03-31'
 ---
 
 Here are a few examples of using the `<picture>` element and their explanations:

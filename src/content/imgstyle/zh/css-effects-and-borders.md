@@ -1,8 +1,12 @@
 ---
 title: CSS效果和边框
 description: 如何为图像添加CSS效果和边框
-taskInputHash: 54a9c95abb70dcaa
+taskInputHash: 5edb792186d24d64
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 要为图像添加CSS效果和边框，可以按照以下步骤操作：
 1.在HTML代码中选择图像元素。您可以使用ID或类选择器进行此操作，也可以直接选择`<img>`元素。

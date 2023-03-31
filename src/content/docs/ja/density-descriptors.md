@@ -1,8 +1,12 @@
 ---
 title: 密度指定子とsrcset
 description: '`srcset`内で密度指定子を使用する例'
-taskInputHash: bec3d5c89aadc6b1
+taskInputHash: 00a6fe116a4f2366
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ## Srcset with Density Descriptorsとは何ですか？
 

@@ -1,8 +1,12 @@
 ---
 title: 画像をパディングする方法
 description: CSSとアスペクト比を使用して画像を中央に配置する方法
-taskInputHash: 6a58944d4b373491
+taskInputHash: 9a5dd6ecc4d98a45
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 以下は、CSSとアスペクト比を使用して画像を中央に配置してパディングする方法です：
 

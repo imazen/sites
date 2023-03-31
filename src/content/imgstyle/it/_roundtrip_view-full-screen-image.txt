@@ -1,15 +1,19 @@
 ---
-title: Add Touch to View Full-Screen Image to Gallery
+title: Add Touch to Display Images in Full Screen Mode to a Gallery
 description: >-
-  How to add a touch option to view a gallery image in full-screen.
-taskInputHash: caa826b44a67fa4b
+  How to add a touch option to display images in full-screen mode to a gallery
+taskInputHash: eda45ecf7dcc987d
 lang: en
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-To add a "Touch to View Full-Screen Image" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen when the user clicks on it.
+To add a "Touch to Display Image in Full Screen" option to a gallery, you can use JavaScript and CSS to create an overlay that shows the image in full-screen mode when the user clicks on it.
 
-Here is a basic approach you can use:
+Here's a basic approach you can use:
 
-1. First, create a container for your gallery and add all the images you want to display.
+1. First of all, create a container for your gallery and add all the images you want to display.
 
 ```html
 <div class="gallery">
@@ -35,7 +39,7 @@ Here is a basic approach you can use:
 }
 ```
 
-3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full-screen.
+3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full-screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -61,7 +65,7 @@ images.forEach((image) => {
 });
 ```
 
-4. Finally, add some CSS to style the overlay and full-screen image.
+4. Finally, add some CSS to style the overlay and the image in full-screen mode.
 
 ```css
 .overlay {
@@ -83,7 +87,7 @@ images.forEach((image) => {
 }
 ```
 
-With these steps, you should now have a gallery that allows users to view images in full-screen by touching them.
+With these steps, you should now have a gallery that allows users to view images in full-screen mode by touching them.
 =====================
 
 Content prompt used: 

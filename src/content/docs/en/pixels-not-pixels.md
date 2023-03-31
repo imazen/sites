@@ -3,7 +3,7 @@ title: px ≠ pixels
 description: Device px ≠ browser px ≠ image px
 sidebar_sort_priority: 900
 date_published: '2023-03-26'
-date_modified: '2023-03-26'
+date_modified: '2023-03-31'
 ---
 
 ### Device pixels ≠ browser px ≠ image px

@@ -1,31 +1,35 @@
 ---
 title: Density descriptors and srcset
 description: Examples of using density descriptors in `srcset`
-taskInputHash: 935c76acf22c926c
-lang: en
+taskInputHash: 4a6e8aedba865baf
+lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-Srcset with density descriptors provides a simple and effective method to deliver the most appropriate image for each user's device, improving performance and user experience. This guide will walk you through the essentials of using srcset with density descriptors and provide markup examples for your convenience.
+Srcset with density descriptors provides a simple and effective method for delivering the most suitable image to each user's device, improving performance and user experience. This guide will take you through the fundamentals of using srcset with density descriptors and provide markup examples for your convenience.
 
 ## What is Srcset with density descriptors?
 
-Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in conjunction with srcset to provide images of different resolution based on the user's display pixel density.
+Srcset is an HTML attribute designed to allow you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in conjunction with srcset to provide images of different resolution depending on the pixel density of the user's display.
 
 ## When to use Srcset with density descriptors
 
 Using srcset with density descriptors is particularly useful when you want to:
-1. Serve high-resolution images to high pixel density displays (e.g. Retina displays) while providing lower resolution images to standard displays.
-2. Improve page performance by delivering the most appropriate image size to each user's device.
+1. Serve high-resolution images to high-density pixel displays (such as Retina displays) while providing lower-resolution images to standard displays.
+2. Improve page performance by delivering the image size that is most appropriate for each user's device.
 
 ## Implementing Srcset with density descriptors
 
 To use srcset with density descriptors, follow these steps:
 1. Prepare your images in different resolutions.
-2. Add the `srcset` attribute to the `<img>` element, including the image sources and corresponding density descriptors.
-3. Add the `sizes` attribute (optional) to specify the image size as it will be displayed on-screen.
+2. Add the `srcset` attribute to the `<img>` element, including the image sources and their corresponding density descriptors.
+3. Add the `sizes` attribute (optional) to specify the image size as it will be displayed on the screen.
 
-### Markup Example
+### Example Markup
 
-Here is an example of implementing srcset with density descriptors in your markup:
+Here is a sample implementation of srcset with density descriptors in your markup:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -35,7 +39,7 @@ Here is an example of implementing srcset with density descriptors in your marku
 
 This markup example includes:
 - **src**: The default image source, displayed if the browser does not support srcset.
-- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser will select the most appropriate image based on the user's display.
+- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser will choose the most appropriate image based on the user's display.
 - **alt**: A description of the image for accessibility purposes.
 
 And there you have it! You have successfully implemented srcset with density descriptors, improving the performance and user experience of your website.

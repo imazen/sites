@@ -1,8 +1,12 @@
 ---
 title: Vollständige CSS-Referenz
 description: Vollständige CSS-Referenz für Effekte mit Beispielen
-taskInputHash: 128698cc8402c44f
+taskInputHash: 14c2d1e815930d7b
 lang: de
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Hier ist eine umfassende Referenz von CSS-Effekten und -Rahmen, die Sie auf Bilder anwenden können, zusammen mit Beispielen für jeden Effekt:
 

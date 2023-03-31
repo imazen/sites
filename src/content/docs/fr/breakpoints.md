@@ -3,8 +3,12 @@ title: Points de rupture et images
 description: >-
   Pourquoi certains points de rupture (mais pas tous) sont importants pour vos
   images
-taskInputHash: 40287daab3fdebb3
+taskInputHash: b9dc6c0d27d7c8b7
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Contexte
 

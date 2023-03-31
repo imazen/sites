@@ -1,76 +1,90 @@
----
-title: Styling and Layout Examples for the `<img>` Element
-description: How to style and lay out the `<img>` element
-taskInputHash: a8e7c4dfd2d458ad
-lang: en
-sidebar_sort_priority: 1000
----
-# Styling and Layout Examples for the `<img>` Element
+# Setting Styles and Example Layout for `<img>` Elements
 
-## Styling the `<img>` Element
+## Setting Styles for `<img>` Elements
 
-To style an `<img>` element, you can use CSS properties such as `width`, `height`, `border`, `margin`, and `padding`. For example, to set the width of an image to 50%, use the following CSS:
+The `<img>` tag is used to display an image in a web page. Here are some common styles that you can apply to `<img>` elements:
+
+### 1. Changing the width and height
+
+You can change the width and height of an image using the `width` and `height` properties, as shown below:
 
 ```css
 img {
-  width: 50%;
+  width: 200px;
+  height: 150px;
 }
 ```
 
-You can also use pseudo-classes such as `:hover` or `:focus` to change the appearance of an image when it's hovered over or in focus:
+### 2. Adding margins
+
+You can add margins around an image using the `margin` property, as shown below:
 
 ```css
-img:hover {
-  border: 1px solid blue;
+img {
+  margin: 10px;
 }
 ```
 
-## Layout Examples
+### 3. Aligning the image
 
-Here are some examples of how you can use CSS to lay out `<img>` elements on a page.
-
-### Centering an Image
-
-To center an image horizontally and vertically within its container, use the following CSS:
+You can align an image to the left, right, or center of its container using the `float` property, as shown below:
 
 ```css
-.container {
+img {
+  float: left;
+}
+```
+
+### 4. Adding borders
+
+You can add a border to an image using the `border` property, as shown below:
+
+```css
+img {
+  border: 1px solid black;
+}
+```
+
+### 5. Adding a border radius
+
+You can round the corners of an image using the `border-radius` property, as shown below:
+
+```css
+img {
+  border-radius: 10px;
+}
+```
+
+## Example Layout for `<img>` Elements
+
+Here is an example layout for using `<img>` elements to create a gallery:
+
+```html
+<div class="gallery">
+  <img src="image1.jpg">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
+  <img src="image4.jpg">
+  <img src="image5.jpg">
+  <img src="image6.jpg">
+</div>
+```
+
+```css
+.gallery {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  flex: 1 0 200px;
+  margin: 5px;
 }
 ```
 
-```html
-<div class="container">
-  <img src="example.jpg">
-</div>
-```
+This layout uses `display: flex` to create a flex container that wraps its children onto multiple lines. The `flex: 1 0 200px` declaration makes each image as wide as possible, while never exceeding a width of 200 pixels. The `margin: 5px` declaration adds spacing between the images. 
 
-### Creating a Grid of Images
-
-To create a grid of images with a fixed number of columns, use the following CSS:
-
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-```
-
-```html
-<div class="grid">
-  <img src="example1.jpg">
-  <img src="example2.jpg">
-  <img src="example3.jpg">
-  <img src="example4.jpg">
-  <img src="example5.jpg">
-  <img src="example6.jpg">
-</div>
-```
-
-These are just a few examples of how you can style and lay out `<img>` elements with CSS. For more information on CSS properties and layout techniques, see the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS).
+{{It would be helpful to provide a brief explanation or context for each CSS declaration, especially for those who are new to CSS.}}
 =====================
 
 Content prompt used: 

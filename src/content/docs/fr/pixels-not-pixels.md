@@ -1,9 +1,13 @@
 ---
 title: px ≠ pixels
 description: Pixels d'écran ≠ pixels de navigateur ≠ pixels d'image
-taskInputHash: 7de2b9bb6354abff
+taskInputHash: 7dfd1c9b5c352f62
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Pixels d'écran ≠ pixels de navigateur ≠ pixels d'image
 

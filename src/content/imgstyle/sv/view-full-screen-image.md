@@ -3,8 +3,12 @@ title: Lägg till "tryck för att se i fullskärm" till en galleria
 description: >-
   Hur man lägger till en "tryck för att se i fullskärm" -alternativ till en
   galleria
-taskInputHash: 07520f189521764b
+taskInputHash: 27d6d01e11cbb5c5
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 För att lägga till en "Tryck för att se bild i fullskärm" -alternativ till en galleria kan du använda JavaScript och CSS för att skapa ett överlager som visar bilden i fullskärmsläge när användaren klickar på den.
 

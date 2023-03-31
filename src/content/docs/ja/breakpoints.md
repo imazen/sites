@@ -1,8 +1,12 @@
 ---
 title: ブレークポイントと画像
 description: なぜ画像においていくつかの（すべてではない）ブレークポイントが重要なのか
-taskInputHash: ae3cf758bff87e92
+taskInputHash: f409cdb7248e141b
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### 背景
 

@@ -1,10 +1,14 @@
 ---
 title: Complete CSS Reference
-description: 'Complete CSS reference for effects, with examples'
-taskInputHash: 6402a8827ceb81dc
+description: 'Complete CSS Reference for Effects, with Examples'
+taskInputHash: 4c1f6c0906532679
 lang: en
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-Here is a complete reference of CSS effects and borders that you can apply to images, along with examples for each:
+Here is a complete reference of CSS effects and borders you can apply to images, along with examples for each:
 
 1. **Border:** Adds a border around the image.
 
@@ -78,7 +82,7 @@ img {
 ```
 
 
-9. **Hue-Rotate:** Rotates the color of the image.
+9. **Hue Rotation:** Rotates the color of the image.
 
 ```css
 img {
@@ -114,7 +118,7 @@ img {
 ```
 
 
-13. **Drop Shadow:** Adds a drop shadow effect to the image.
+13. **Drop-Shadow:** Adds a drop shadow effect to the image.
 
 ```css
 img {
@@ -153,7 +157,7 @@ img {
 
 
 
-These are just some examples of the many CSS effects and borders that you can apply to images. Experiment with different styles to create unique and eye-catching designs!
+These are just some examples of the many CSS effects and borders you can apply to images. Experiment with different styles to create unique and eye-catching designs!
 =====================
 
 Content prompt used: 

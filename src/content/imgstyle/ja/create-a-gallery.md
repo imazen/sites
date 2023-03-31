@@ -1,8 +1,12 @@
 ---
 title: ギャラリーを作成する
 description: ウェブサイトにギャラリーを作成する方法
-taskInputHash: 8159c2a6287228bc
+taskInputHash: 67635dce5f7d39b8
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ウェブサイトに画像ギャラリーを作成する一般的な手順は次のとおりです。
 1.画像ギャラリー用の新しいHTMLファイルを作成します。 "gallery.html"のような名前を付けることができます。

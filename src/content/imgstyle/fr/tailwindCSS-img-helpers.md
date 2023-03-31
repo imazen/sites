@@ -1,8 +1,12 @@
 ---
 title: Aides TailwindCSS pour `<img>`
 description: Liste des aides TailwindCSS les plus couramment utilisées pour `<img>`
-taskInputHash: c78febb7924d0b56
+taskInputHash: d74274b58054a96e
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 TailwindCSS fournit plusieurs classes d'aide pour travailler avec la balise `<img>`. Voici les plus couramment utilisées :
 - `object-contain` : cette classe définit l'image pour qu'elle s'adapte au conteneur tout en conservant son ratio. Elle réduira ou agrandira l'image si nécessaire pour qu'elle s'adapte au conteneur.

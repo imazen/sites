@@ -1,8 +1,12 @@
 ---
 title: 创建图库
 description: 如何在网站上创建图库
-taskInputHash: 8c39e5b796c53973
+taskInputHash: c1101189a7725eb9
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 以下是在网站上创建图库的一般步骤：
 1. 为您的图库创建一个新的HTML文件。您可以将其命名为"gallery.html"之类的。

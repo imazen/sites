@@ -5,8 +5,12 @@ title: >-
 description: >-
   Cómo agregar una opción de tocar para ver la imagen en pantalla completa en
   una galería
-taskInputHash: 65576124df67622f
+taskInputHash: 39687ec0ca18f284
 lang: es
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Para agregar una opción "Tocar para ver la imagen en pantalla completa" en una galería, puedes usar JavaScript y CSS para crear una capa que muestre la imagen en modo de pantalla completa cuando el usuario toque en ella.
 

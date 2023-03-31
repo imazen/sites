@@ -1,8 +1,12 @@
 ---
 title: Riferimento completo CSS
 description: 'Riferimento completo CSS per gli effetti, con esempi'
-taskInputHash: 6402a8827ceb81dc
+taskInputHash: 4c1f6c0906532679
 lang: it
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Ecco un riferimento completo di effetti CSS e bordi che puoi applicare alle immagini, insieme a esempi per ognuno:
 

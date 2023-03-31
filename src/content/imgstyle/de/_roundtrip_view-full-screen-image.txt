@@ -1,12 +1,16 @@
 ---
 title: >-
-  Add "Tap to view image in fullscreen" to a gallery.
+  Add "Tap to View Image in Fullscreen" to a Gallery.
 description: >-
-  How to create a tap option to display an image in full screen in a gallery.
-taskInputHash: 4f0c658efa66bb46
+  How to create a tap option to display an image in fullscreen mode in a gallery.
+taskInputHash: dd22005fc000b519
 lang: en
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-To add a "Tap to view image in fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full screen when the user taps it.
+To add a "tap to view image in fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen mode when the user taps on it.
 
 Here's a basic approach you can use:
 
@@ -36,7 +40,7 @@ Here's a basic approach you can use:
 }
 ```
 
-3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript creates an overlay and displays the image in fullscreen.
+3. Now add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript creates an overlay and displays the image in fullscreen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -84,7 +88,7 @@ images.forEach((image) => {
 }
 ```
 
-With these steps, you should now have a gallery that allows users to view images in fullscreen by tapping on them.
+With these steps, you should now have a gallery where users can view images in fullscreen mode by tapping on them.
 =====================
 
 Content prompt used: 

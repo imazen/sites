@@ -2,65 +2,59 @@
 
 ## Styling `<img>` elements
 
-Images are a key part of most websites, and as web developers, we are often called upon to style and position them. There are a number of CSS properties that can be used to style `<img>` elements, including:
+`<img>` elements can be styled with CSS using the `img` selector. Some common styling properties include:
 
-### `border`
+- `width` and `height` to specify the dimensions of the image
+- `border` to add a border around the image
+- `box-shadow` to add a shadow effect to the image
+- `margin` and `padding` to adjust the spacing around the image
 
-The `border` property adds a border around an image:
-
-```css
-img {
-  border: 1px solid black;
-}
-```
-
-### `border-radius`
-
-The `border-radius` property rounds the corners of an image:
+Here’s an example of CSS code to apply some of these styles to an `<img>` element:
 
 ```css
 img {
-  border-radius: 50%;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px #ccc;
+  margin: 10px;
+  padding: 5px;
 }
 ```
 
-### `box-shadow`
-
-The `box-shadow` property adds a shadow effect to an image:
-
-```css
-img {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-```
-
-### `object-fit`
-
-The `object-fit` property specifies how an image should be resized to fit its container:
-
-```css
-img {
-  object-fit: cover;
-}
-```
-
-### `object-position`
-
-The `object-position` property specifies the position of the image within its container:
-
-```css
-img {
-  object-position: center;
-}
-```
+This will display the image with a width of 300 pixels, a height of 200 pixels, a gray border, a shadow effect, and some spacing around it.
 
 ## Layout examples
 
-TODO: 
+Here are some examples of layouts that use `<img>` elements:
 
-{{Note that the term used here is not the technical term...}}
+### Basic grid
 
-{{This document appears to be incomplete.}}
+```
+[<img>][<img>][<img>]
+[<img>][<img>][<img>]
+```
+
+### Image gallery
+
+```
+[<img>]
+[<img>]
+[<img>]
+[<img>]
+[<img>]
+[<img>]
+```
+
+### Image with caption
+
+```
+[<img>]
+Caption text
+```
+
+
+Note that the term used here is not the technical term for the `img` selector, which is simply "image selector". Also, some additional styling properties and layout examples could be added.
 =====================
 
 Content prompt used: 

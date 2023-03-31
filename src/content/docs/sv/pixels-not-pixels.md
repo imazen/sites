@@ -1,9 +1,13 @@
 ---
 title: px ≠ pixlar
 description: Enhet px ≠ webbläsare px ≠ bild px
-taskInputHash: fd81e79f3e2dea92
+taskInputHash: 2b5adfa6783beef0
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Enhet pixlar ≠ webbläsare px ≠ bild px
 

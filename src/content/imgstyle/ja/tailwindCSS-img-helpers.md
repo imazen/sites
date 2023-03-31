@@ -1,8 +1,12 @@
 ---
 title: '`<img>` タグのためのTailwindCSSのヘルパー'
 description: '`<img>` タグに最も一般的に使用されるTailwindCSSのヘルパーのリスト'
-taskInputHash: 6b7c1683996f4d4b
+taskInputHash: 87d484fd62bcb203
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 TailwindCSSは、`<img>` タグを操作するためのいくつかのヘルパークラスを提供しています。以下が最も一般的に使用されるものです:
 

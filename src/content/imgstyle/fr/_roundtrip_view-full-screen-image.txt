@@ -1,14 +1,17 @@
 ---
-title: Adding a Touch Button to Display an Image in Full-Screen in a Gallery
-description: How to add an option for viewing images in full-screen by pressing a touch button in a gallery
-taskInputHash: acfcd95755eb1185
+title: Adding a Touch Button to Display an Image in Full Screen in a Gallery
+description: How to add a touch-to-view full screen image option in a gallery
+taskInputHash: 584d5c86f88a6746
 lang: en
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-To add a "Touch to View Image in Full-Screen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen when the user presses it.
+To add a "Touch to view full screen image" option to a gallery, you may use JavaScript and CSS to create an overlay that displays the image in full screen mode when the user clicks on it.
 
-Here's a basic approach you can use:
-
-1. First, create a container for your gallery and add all the images you want to display.
+Here is a basic approach you can use:
+1. Firstly, create a container for your gallery and add all the images you want to display.
 
 ```html
 <div class="gallery">
@@ -19,7 +22,8 @@ Here's a basic approach you can use:
 </div>
 ```
 
-2. Next, add CSS to style the gallery and images.
+
+2. Next, add CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -34,7 +38,8 @@ Here's a basic approach you can use:
 }
 ```
 
-3. Now, add a click event handler to each image using JavaScript. When the user clicks an image, the JavaScript will create an overlay and display the image in full-screen mode.
+
+3. Now, add a click event handler to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -42,25 +47,26 @@ const images = gallery.querySelectorAll('img');
 
 images.forEach((image) => {
   image.addEventListener('click', () => {
-    // create overlay
+    // create the overlay
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
-
-    // create image element
+    
+    // create the image element
     const fullScreenImage = document.createElement('img');
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
-
-    // add image element to overlay
+    
+    // add the image element to the overlay
     overlay.appendChild(fullScreenImage);
-
-    // add overlay to page
+    
+    // add the overlay to the page
     document.body.appendChild(overlay);
   });
 });
 ```
 
-4. Finally, add CSS to style the overlay and the full-screen image.
+
+4. Finally, add CSS to style the overlay and the full screen image.
 
 ```css
 .overlay {
@@ -82,7 +88,9 @@ images.forEach((image) => {
 }
 ```
 
-With these steps, you should now have a gallery that allows users to view images in full-screen mode by touching them.
+
+
+With these steps, you should now have a gallery that allows users to view images in full screen mode by touching them.
 =====================
 
 Content prompt used: 

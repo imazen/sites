@@ -1,9 +1,13 @@
 ---
 title: px ≠ 像素
 description: 设备像素 ≠ 浏览器像素 ≠ 图像像素
-taskInputHash: 05719ac1ce8d77d0
+taskInputHash: af021fc2c7e6641e
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### 设备像素 ≠ 浏览器像素 ≠ 图像像素
 

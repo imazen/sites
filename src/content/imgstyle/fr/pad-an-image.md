@@ -3,8 +3,12 @@ title: Remplir une image
 description: >-
   Comment remplir une image en utilisant le CSS et le rapport d'aspect pour
   centrer.
-taskInputHash: 5a77bdcdafcc6600
+taskInputHash: 51ccc94970c567ab
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Voici comment utiliser le CSS et le rapport d'aspect pour centrer et remplir une image :
 1. Tout d'abord, vous devez envelopper votre image dans un élément conteneur, tel qu'un `<div>` ou une `<figure>`. Cela vous permettra d'appliquer des styles au conteneur qui affecteront l'image à l'intérieur. 

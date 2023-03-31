@@ -1,21 +1,27 @@
 ---
 title: Testa prestanda med Lighthouse
-description: Steg för att testa en webbplats prestanda med Lighthouse
-taskInputHash: af03949da9667eff
+description: >-
+  Steg för steg guide för att testa en webbplats prestanda med hjälp av
+  Lighthouse
+taskInputHash: d9b9eb078ceeeb1f
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-24'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Hur testar du din webbplats prestanda med Lighthouse?
 
-> Lighthouse är ett verktyg som kan användas för att mäta prestanda, tillgänglighet och andra aspekter av en webbplats. För att testa din webbplats prestanda med Lighthouse, följ dessa steg:
+> Lighthouse är ett verktyg som kan användas för att mäta prestandan, tillgängligheten och andra aspekter av en webbplats. För att testa din webbplats prestanda med Lighthouse, följ dessa steg:
 > 
-> 1\. Öppna Google Chrome-webbläsaren och navigera till den sida du vill testa.
+> 1\. Öppna Google Chrome webbläsare och navigera till sidan du vill testa.
 > 
 > 2\. Klicka på de tre punkterna i det övre högra hörnet av webbläsarfönstret, välj sedan "Fler verktyg" och sedan "Utvecklarverktyg" eller använd helt enkelt tangentbordsgenvägen "Ctrl + Shift + I" (Windows, Linux) eller "Command + Option + I" (macOS).
 > 
-> 3\. I panelen Utvecklarverktyg klickar du på Lighthouse-ikonen som finns på vänster sida av panelen eller trycker på "Ctrl + Shift + P" (Windows, Linux) eller "Command + Shift + P" (macOS) för att öppna kommandomenyn, sedan skriva "Lighthouse" och välj "Skapa en rapport".
+> 3\. I Utvecklarverktyg panelen, klicka på Lighthouse ikonen som ligger på vänster sida av panelen eller tryck "Ctrl+Shift+P" (Windows, Linux) eller "Command+Shift+P" (macOS) för att öppna Kommando-menyn, skriv sedan "Lighthouse" och välj "Generera rapport".
 > 
-> 4\. I Lighthouse dialogrutan väljer du prestanda och andra relevanta alternativ som du vill testa, klicka sedan på "Generera rapport."
+> 4\. I Lighthouse dialogrutan, välj prestanda och andra relevanta alternativ som du vill testa, klicka sedan på "Generera rapport".
 > 
-> 5\. Efter att Lighthouse har slutfört sin analys kommer du att se en rapport med poäng och rekommendationer för att förbättra din webbplats prestanda, tillgänglighet och andra områden.
+> 5\. Efter att Lighthouse har slutfört sin analys, kommer du att se en rapport med poäng och rekommendationer för att förbättra din webbplats prestanda, tillgänglighet och andra områden.
 > 
-> Genom att följa dessa steg kan du använda Lighthouse för att testa och optimera din webbplats prestanda, vilket kan bidra till att förbättra dess användarupplevelse och sökmotorrankningar.
+> Genom att följa dessa steg kan du använda Lighthouse för att testa och optimera din webbplats prestanda, vilket kan hjälpa till att förbättra dess användarupplevelse och sökmotor ranking.

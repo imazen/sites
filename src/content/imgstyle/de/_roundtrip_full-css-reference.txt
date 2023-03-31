@@ -1,8 +1,12 @@
 ---
 title: Complete CSS Reference
-description: Complete CSS reference for effects with examples
-taskInputHash: 128698cc8402c44f
+description: Complete CSS Reference for effects with examples
+taskInputHash: 14c2d1e815930d7b
 lang: en
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Here is a comprehensive reference of CSS effects and frames that you can apply to images, along with examples for each effect:
 
@@ -153,7 +157,7 @@ img {
 
 
 
-These are just some examples of the many CSS effects and frames that you can apply to images. Experiment with different styles to create unique and eye-catching designs!
+These are just a few examples of the many CSS effects and frames that you can apply to images. Experiment with different styles to create unique and eye-catching designs!
 =====================
 
 Content prompt used: 

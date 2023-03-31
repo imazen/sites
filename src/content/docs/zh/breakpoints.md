@@ -1,8 +1,12 @@
 ---
 title: 断点和图像
 description: 为什么您的图像会受到某些（但不是全部）断点的影响
-taskInputHash: 381f678e05b50b44
+taskInputHash: e220f548add04019
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### 背景
 

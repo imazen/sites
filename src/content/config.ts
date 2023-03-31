@@ -1,3 +1,4 @@
+import { ZodString } from 'astro/zod';
 import { defineCollection, z } from 'astro:content';
 import { SITE } from '../consts';
 

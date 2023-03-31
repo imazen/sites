@@ -3,8 +3,12 @@ title: Aggiungere spazio intorno a un'immagine
 description: >-
   Come aggiungere spazio intorno a un'immagine utilizzando CSS e il rapporto di
   aspetto per centrarla
-taskInputHash: bef5fe97d556f437
+taskInputHash: c8be68607c0acc04
 lang: it
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Ecco come puoi usare CSS e il rapporto di aspetto per centrare e riempire di spazio un'immagine:
 1. Innanzitutto, devi avvolgere l'immagine in un elemento contenitore, come un `<div>` o una `<figure>`. Ciò ti consentirà di applicare stili al contenitore che influenzeranno l'immagine al suo interno.

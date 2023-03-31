@@ -1,13 +1,17 @@
 ---
-title: Styling and Layout Examples for the <img> Element
+title: Examples of styling and layout for the <img> element
 description: Examples of styling and layout for the <img> element
-taskInputHash: 6ab592f11f8a3157
+taskInputHash: 22fa02f7bf5c8c9f
 lang: en
+ignore: '/* cSpell:locale ja,en*/'
 sidebar_sort_priority: 1000
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-# Styling and Layout Examples for the <img> Element
+# Examples of styling and layout for the <img> element
 
-## Styling the <img> Element
+## Styling the <img> element
 
 TODO:
 =====================

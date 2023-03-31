@@ -1,8 +1,12 @@
 ---
 title: TailwindCSS-hjälpklasser för `<img>`
 description: Lista över de mest använda TailwindCSS-hjälpklasserna för `<img>`
-taskInputHash: c82bd1743afbf6ec
+taskInputHash: 0f3d6a39a35f5092
 lang: sv
+ignore: '/* cSpell:locale sv,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 TailwindCSS tillhandahåller flera hjälpklasser för att arbeta med `<img>`-taggen. Här är några av de mest använda:
 - `object-contain`: Denna klass ställer in bilden så att den passar i sin behållare samtidigt som den bibehåller sitt bildförhållande. Den kommer antingen att krympa eller expandera bilden efter behov för att se till att den passar i behållaren.

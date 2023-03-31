@@ -1,28 +1,32 @@
 ---
 title: Come sceglie il browser
 description: Come il browser sceglie tra le immagini elencate nell'attributo srcset
-taskInputHash: 5f305bd3a8d992cf
+taskInputHash: 0eb976f059b10502
 lang: it
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-24'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-Come fa il browser a scegliere tra le immagini elencate nell'attributo `srcset`? Ecco i passaggi dettagliati, con esempi sia per le specifiche di larghezza che di densità e come il browser decide in base al dispositivo e alla viewport:
+Come sceglie il browser tra le immagini elencate nell'attributo srcset? Ecco una procedura dettagliata, con esempi sia per le specifiche di larghezza che di densità e come il browser decide in base al dispositivo e alla viewport.
 
-- Quando si utilizza l'attributo `srcset` in HTML, il browser utilizza una serie di regole per scegliere l'immagine più adatta da un elenco di fonti fornite. Queste regole dipendono dalle caratteristiche di visualizzazione del dispositivo (risoluzione, densità di pixel) e dalla dimensione della viewport. L'attributo `srcset` consente di specificare immagini diverse in base alla larghezza (utilizzando il descrittore `w`) o alla densità di pixel (utilizzando il descruttore `x`). Vediamo ogni caso con esempi.
+- Quando si utilizza l'attributo `srcset` in HTML, il browser utilizza un insieme di regole per scegliere l'immagine più appropriata da un elenco di fonti fornite. Queste regole dipendono dalle caratteristiche dello schermo del dispositivo (risoluzione, densità dei pixel) e dalle dimensioni della viewport. L'attributo `srcset` consente di specificare diverse immagini in base alla larghezza (utilizzando il descrittore `w`) o alla densità dei pixel (utilizzando il descrittore `x`). Vediamo ogni caso con degli esempi.
 
 1\. Descrittore di larghezza (`w`):
 
-Supponiamo di avere l'attributo `srcset` seguente:
+Supponiamo di avere il seguente attributo `srcset`:
 
 ```html
 
-<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Esempio di immagine">
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example Image">
 
 ```
 
 Il browser seguirà questi passaggi:
 
-a. Determina il DPR (Device Pixel Ratio) del dispositivo. Ad esempio, un display standard ha un DPR di 1, mentre un display ad alta risoluzione (Retina) ha un DPR di 2 o superiore.
+a. Determinare il DPR (Device Pixel Ratio) del dispositivo. Ad esempio, un display standard ha un DPR di 1, mentre un display ad alta risoluzione (Retina) ha un DPR di 2 o superiore.
 
-b. Calcola la larghezza effettiva per ogni immagine in `srcset`. Moltiplica il descrittore di larghezza per il DPR. Per un dispositivo con un DPR di 1:
+b. Calcolare la larghezza efficace per ogni immagine nella `srcset`. Moltiplicare il descrittore di larghezza per il DPR. Per un dispositivo con un DPR di 1:
 
 - example-small.jpg: 400 \* 1 = 400px
 
@@ -30,23 +34,23 @@ b. Calcola la larghezza effettiva per ogni immagine in `srcset`. Moltiplica il d
 
 - example-large.jpg: 1600 \* 1 = 1600px
 
-c. Confronta le larghezze effettive con la larghezza della viewport. Supponiamo che la larghezza della viewport sia 420px. Il browser sceglierà l'immagine più piccola con una larghezza effettiva maggiore o uguale alla larghezza della viewport. In questo caso, selezionerà `example-medium.jpg`.
+c. Confrontare le larghezze efficaci con la larghezza viewport. Supponiamo che la larghezza viewport sia di 420px. Il browser sceglierà l'immagine più piccola con larghezza efficace maggiore o uguale alla larghezza viewport. In questo caso, selezionerà `example-medium.jpg`.
 
-1\. Descrittore di densità di pixel (`x`):
+2\. Descrittore di densità dei pixel (`x`):
 
-Supponiamo di avere l'attributo `srcset` seguente:
+Supponiamo di avere il seguente attributo `srcset`:
 
 ```html
 
-<img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Esempio di immagine">
+<img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example Image">
 
 ```
 
 Il browser seguirà questi passaggi:
 
-a. Determina il DPR (Device Pixel Ratio) del dispositivo. Ad esempio, un display standard ha un DPR di 1, mentre un display ad alta risoluzione (Retina) ha un DPR di 2 o superiore.
+a. Determinare il DPR (Device Pixel Ratio) del dispositivo. Ad esempio, un display standard ha un DPR di 1, mentre un display ad alta risoluzione (Retina) ha un DPR di 2 o superiore.
 
-b. Confronta il DPR del dispositivo con i descrittori `x` in `srcset`. In questo caso, abbiamo tre immagini con i seguenti descrittori:
+b. Confrontare il DPR del dispositivo con i descrittori `x` presenti nella `srcset`. In questo caso, abbiamo tre immagini con i seguenti descrittori:
 
 - example-1x.jpg: 1x
 
@@ -54,9 +58,9 @@ b. Confronta il DPR del dispositivo con i descrittori `x` in `srcset`. In questo
 
 - example-3x.jpg: 3x
 
-c. Scegli l'immagine con il descrittore `x` più vicino al DPR del dispositivo. Per un dispositivo con un DPR di 1, il browser selezionerà `example-1x.jpg`. Per un dispositivo con un DPR di 2, sceglierà `example-2x.jpg`, e così via.
+c. Scegliere l'immagine con il descrittore `x` più vicino al DPR del dispositivo. Per un dispositivo con un DPR di 1, il browser selezionerà `example-1x.jpg`. Per un dispositivo con un DPR di 2, sceglierà `example-2x.jpg`, e così via.
 
-È importante notare che è anche possibile utilizzare l'attributo `sizes` in combinazione con l'attributo `srcset` per fornire ulteriori informazioni su come l'immagine verrà visualizzata a diverse larghezze della viewport. Questo è particolarmente utile quando si utilizza il descrittore di larghezza (`w`). Ecco un esempio:
+È importante notare che è possibile utilizzare anche l'attributo `sizes` in combinazione con l'attributo `srcset` per fornire ulteriori informazioni su come l'immagine verrà visualizzata su diverse larghezze viewport. Questo è particolarmente utile quando si utilizza il descrittore di larghezza (`w`). Ecco un esempio:
 
 ```html
 

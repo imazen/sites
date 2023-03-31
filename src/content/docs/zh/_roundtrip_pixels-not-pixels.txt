@@ -1,19 +1,23 @@
 ---
 title: px ≠ Pixels
 description: Device Pixels ≠ Browser Pixels ≠ Image Pixels
-taskInputHash: 05719ac1ce8d77d0
+taskInputHash: af021fc2c7e6641e
 lang: en
+ignore: '/* cSpell:locale zh,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Device Pixels ≠ Browser Pixels ≠ Image Pixels
 
-Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/printer pixels**. My phone has a device pixel ratio of 3.875; [what's yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML Pixels (`px`) **map to multiple device/printer pixels almost every time**. My phone's device pixel ratio is 3.875; [what's yours?](https://www.mydevice.io/)
 
-The device pixel ratio of my desktop changes when the browser zooms, but it is 1.5 by default (after all, my `System > Display > Scale` is set to 150%).
+My desktop's device pixel ratio changes with browser zoom, but is by default 1.5 (after all, my `System > Display > Scale` is set to 150%).
 
-Image files (excluding SVGs) get decoded into pixel grids. **It's very difficult to get image pixels to display perfectly at a 1:1 ratio on device pixels, but with `srcset`, you can get pretty close**. If you really have a legitimate reason for a perfect map, some JavaScript can adjust the HTML element size after loading, but we won't get into the details of this taboo art here.
+Image files (excluding SVG) decode into pixel grids. **It's hard to get image pixels to display at a 1:1 ratio on device pixels, but `srcset` gets you pretty close to perfect**. If you do have a legitimate reason for a perfect mapping, some JavaScript can adjust HTML element sizes after loading, but we won't get into the details of this black art here.
 
-> Other absolute units (such as in, pc, pt, mm, cm, Q) are represented in CSS pixel counts, pretending that everything is at 96dpi. Developers avoid using absolute units because it's usually best to use units derived from font size or viewport/container size. Units that don't match may break the layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device. Needless to say, you should perform all of these operations before publishing your website.
+> Other absolute units (such as in, pc, pt, mm, cm, Q) are represented with a number of CSS pixels, pretending that everything is 96dpi. Developers will avoid absolute units as it's usually better to use units derived from font size or viewport/container size. Mismatched units can break layouts if the user adjusts their `Accessibility > Text Size` multiplier, zooms in the browser, or rotates their device. Needless to say, you should test all of these before launching your site.
 =====================
 
 Content prompt used: 

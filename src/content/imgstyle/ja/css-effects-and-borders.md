@@ -1,8 +1,12 @@
 ---
 title: CSSエフェクトとボーダー
 description: 画像にCSSエフェクトとボーダーを追加する方法
-taskInputHash: 880a3d0aa9bb8e31
+taskInputHash: 279000ebf22e6f15
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 画像にCSSエフェクトやボーダーを追加するには、次の手順を使用できます。
 

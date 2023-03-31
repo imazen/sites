@@ -5,8 +5,12 @@ title: >-
 description: >-
   Comment ajouter une option de vue en plein écran d'images en appuyant sur un
   bouton tactile dans une galerie
-taskInputHash: acfcd95755eb1185
+taskInputHash: 584d5c86f88a6746
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Pour ajouter une option "Touchez pour voir l'image en plein écran" à une galerie, vous pouvez utiliser du JavaScript et du CSS pour créer un overlay qui affiche l'image en mode plein écran lorsque l'utilisateur appuie dessus.
 

@@ -1,8 +1,12 @@
 ---
 title: Helfer von TailwindCSS für `<img>`
 description: Liste der am häufigsten verwendeten Helfer von TailwindCSS für `<img>`
-taskInputHash: 2b83dafcad963676
+taskInputHash: 64efd2c697fc9820
 lang: de
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 TailwindCSS bietet mehrere Hilfsklassen für die Arbeit mit dem `<img>`-Tag an. Hier sind einige der am häufigsten verwendeten: 
 - `object-contain`: Diese Klasse passt das Bild innerhalb seines Containers an und erhält dabei das Seitenverhältnis. Das Bild wird entweder verkleinert oder vergrößert, um sicherzustellen, dass es in den Container passt. 

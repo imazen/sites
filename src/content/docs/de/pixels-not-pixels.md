@@ -1,9 +1,13 @@
 ---
 title: px ≠ Pixel
 description: Geräte-Pixel ≠ Browser-Pixel ≠ Bild-Pixel
-taskInputHash: 0129dd19d1654a4c
+taskInputHash: 6bf2840ae3339b2e
 lang: de
+ignore: '/* cSpell:locale de,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Gerätepixel ≠ Browser px ≠ Bild px
 

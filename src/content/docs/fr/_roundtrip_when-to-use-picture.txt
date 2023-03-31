@@ -1,22 +1,25 @@
 ---
-title: When to Use the <picture> Element
-description: Explains when you should use the <picture> element
-taskInputHash: 0b07f8e9feba7038
+title: When to use the <picture> element
+description: Explains in which situations you should use the <picture> element
+taskInputHash: 745796c8db3f3527
 lang: en
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-27'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-The `picture` element is used to provide multiple versions of an image and determine which version of the image to display based on certain conditions. It's particularly useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design.
+The `picture` element is used to provide multiple versions of an image and determine which version of the image to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design.
+Here are some specific scenarios where you would want to use the `picture` element:
 
-Here are some specific scenarios where you may want to use the `picture` element:
+* **Retina Displays:** High-density displays such as Apple's Retina displays have a higher pixel density, which means that images may look blurry or pixelated if they are not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice as many pixels as the normal version, making it sharp and clear on Retina displays.
 
-* **Retina Screens:** High-density screens like Apple's Retina displays have a higher pixel density, which means that images can appear blurry or pixelated if they're not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice as many pixels as the normal version, so that it appears sharp and clear on Retina screens.
+* **Different Aspect Ratios:** If you are designing a site that needs to display images with different aspect ratios (such as landscape vs. portrait), you can use the `picture` element to provide different versions of the image optimized for each aspect ratio.
 
-* **Different Aspect Ratios:** If you're designing a site that needs to display images with different aspect ratios (such as landscape versus portrait), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
+* **Bandwidth Limitations:** Images can be large files that consume a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page load times.
 
-* **Bandwidth Limitations:** Images can be large files that consume a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page loading times.
+* **Art Direction Layout:** Sometimes, you may want to present an image in a certain way based on the layout of the rest of the page. For example, you may want to display a close-up of a person's face on mobile devices, but a wider shot on desktop computers. The `picture` element allows you to provide different versions of the image optimized for different layouts.
 
-* **Art-directed Layouts:** Sometimes, you may want to present an image in a certain way based on the layout of the rest of the page. For example, you may want to show a close-up of a person's face on mobile devices, but a wider shot on desktop devices. The `picture` element allows you to provide different versions of the image that are optimized for different layouts.
-
-Overall, the `picture` element is a powerful tool that can help you optimize your images for a variety of use cases and ensure they look great no matter what device or screen size they're displayed on.
+Overall, the `picture` element is a powerful tool that can help you optimize your images for a variety of use cases and ensure that they look great no matter which device or screen size they are displayed on.
 =====================
 
 Content prompt used: 

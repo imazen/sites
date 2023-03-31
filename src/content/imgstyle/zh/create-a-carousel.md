@@ -1,8 +1,12 @@
 ---
 title: 创建一个轮播
 description: 如何在网站上创建轮播
-taskInputHash: 550c26ad456dd836
+taskInputHash: e0d9c0cd3e4a8e7b
 lang: zh
+ignore: '/* cSpell:locale zh,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 以下是在网站上创建图像轮播的一般步骤： 
 

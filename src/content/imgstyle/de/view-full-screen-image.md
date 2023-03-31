@@ -5,8 +5,12 @@ title: >-
 description: >-
   Wie Sie eine Tippen-Option erstellen, um ein Bild im Vollbildmodus in einer
   Galerie anzuzeigen.
-taskInputHash: 4f0c658efa66bb46
+taskInputHash: dd22005fc000b519
 lang: de
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Um eine "Tippen, um Vollbildansicht des Bildes zu sehen" Option zu einer Galerie hinzuzufügen, können Sie JavaScript und CSS verwenden, um ein Overlay zu erstellen, das das Bild im Vollbildmodus anzeigt, wenn der Benutzer darauf tippt.
 

@@ -1,8 +1,12 @@
 ---
 title: Rellenar una imagen
 description: Cómo rellenar una imagen usando CSS y relación de aspecto para centrar.
-taskInputHash: 016375442ac6e970
+taskInputHash: 8ca09b6e431a5c92
 lang: es
+ignore: '/* cSpell:locale es,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Aquí te mostramos cómo puedes utilizar CSS y la relación de aspecto para centrar y rellenar una imagen:
 

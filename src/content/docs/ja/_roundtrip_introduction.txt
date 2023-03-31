@@ -1,41 +1,43 @@
 ---
-title: '`srcset` and `<img>` `sizes`'
-description: An efficient and idiosyncratic guide to responsive images for 2023
-taskInputHash: 206cd5282647f2d1
+title: '`srcset` and `sizes` for `<img>`'
+description: An Efficient and Subjective Guide to Responsive Images in 2023
+taskInputHash: fb587f981b4441f1
 lang: en
+ignore: '/* cSpell:locale ja,en*/'
 sidebar_sort_priority: 1000
+date_published: '2023-03-23'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-**An Efficient and Idiosyncratic Guide to Images for 2023**
+**An Efficient and Subjective Guide to Responsive Images in 2023**
 
-Check out the sidebar. It’s a quick reference for upgrading your `<img>` tags to handle all the various sizes and pixel densities of modern devices. You’ll need to [know that pixels aren't pixels](/en/what-is-a-pixel) and understand that `devicePixelRatio` is often more like 3.875:1 than 1:1. Modern phones might mimic CSS pixels of 320-428px wide for legibility, but they have many device pixels per CSS pixel.
+For a deeper dive, consult the sidebar. This is a quick reference to upgrade your `<img>` game, covering how to handle various image sizes and pixel densities in the modern age. You need to know that pixels != pixels [{{Note that the term used here is not the technical term}}](/en/pixels-not-pixels), and that `devicePixelRatio` is more like 3.875 than 1:1. Modern smartphones have many device pixels per CSS pixel, and they are often declared to have a viewport width in CSS pixels that's different from their physical width in device pixels.
 
+> If an image has to be the same size irrespective of the browser window, [a density descriptor](/en/density-descriptors) should be used. This is suitable for logos, icons, buttons, etc.
 
-> If your image won't change size no matter how narrow you make the browser window, [consider using density descriptors](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#density_descriptors). This is great for logos, icons, and buttons.
+Do you know your [breakpoints](/en/breakpoints)? You'll need these numbers to fine-tune the following solutions— at a minimum, you need the breakpoint at which the main content area stops expanding and the viewport width. 
 
-
-Do you know your [breakpoints](/en/responsive-images#breakpoints)? You'll need those numbers to fine-tune this solution. At least you'll need the breakpoint of the viewport width where the main content area stops growing.
-
-
-### The Easy Way
+### The Easy Solution
 
 ```html
-
 <img src="img.jpg?w=480" 
         srcset="img.jpg?format=webp&w=480 480w, 
                 img.jpg?format=webp&w=800 800w, 
                 img.jpg?format=webp&w=1200 1200w, 
                 img.jpg?format=webp&w=1600 1600w, 
                 img.jpg?format=webp&w=2000 2000w"
+                
+        sizes="(max-width: 700px) 100vw, 800px" alt="A dog riding a bike." />
+      
+<!-- Assumes a breakpoint of 700px. 
+      This image takes up 100% of the width below that breakpoint, 
+      but is limited to 800 CSS pixels otherwise. -->
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding bike" />
-
-<!--Assumes you have a breakpoint at 700px,
-  and if the viewport width is narrower than that, this image takes up 100% width,
-  but if it’s wider, then it's capped at 800 CSS pixels. -->
-
-<!--This assumes you're using an RIAPI-compliant image server,
-  for the sake of developer sanity, on-the-fly image variations are essential.-->
+<!-- Assumes that you’re using an RIAPI-compliant image server like Imageflow. 
+     Generating dynamic versions of images is mandatory for developer sanity. -->
 ```
+
+{{The translation is complete and accurate.}}
 =====================
 
 Content prompt used: 
@@ -49,7 +51,7 @@ Also carefully translate the title and description for the article; do not use &
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
 Metadata returned1. `srcset` と `<img>` の `sizes`
-2. 2023年に向けたレスポンシブ画像の効率的かつ独自なガイド 
+2. 2023年のレスポンシブイメージの効率的で主観的なガイド 
 
 
 Roundtrip (isolated) prompt used: 

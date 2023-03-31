@@ -1,17 +1,12 @@
----
-title: Styling the `<img>` Element and Example Layouts
-description: Styling the `<img>` Element and Example Layouts
-taskInputHash: ac51a63e9520fa85
-lang: en
-sidebar_sort_priority: 1000
----
-# Styling the `<img>` Element and Example Layouts
+# Styling the `<img>` element and example layouts
 
-## Styling the `<img>` Element
+## Styling the `<img>` element
 
-The `<img>` element is used to display an image on a web page. To style this element, we can use CSS properties such as `width`, `height`, `margin`, `padding`, and `border`. 
+The `<img>` element is used to display images on a webpage. It is a self-closing element, which means it doesn't have a closing tag. To style the `<img>` element, you can use CSS.
 
-Here's an example of how to set the width and height of an image to 200 pixels:
+### Setting the size of an `<img>` element
+
+You can set the width and height of an `<img>` element using CSS. Here's an example:
 
 ```css
 img {
@@ -20,115 +15,102 @@ img {
 }
 ```
 
-We can also use the `object-fit` property to control how the image is displayed within its container. Here's an example:
+### Aligning an `<img>` element
+
+You can align an `<img>` element to the left or right of its container using CSS. Here's an example:
 
 ```css
 img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  float: left; /* or float: right; */
 }
 ```
 
-This will make the image cover the entire container, while maintaining its aspect ratio.
+### Adding borders to an `<img>` element
 
-## Example Layouts
+You can add a border to an `<img>` element using CSS. Here's an example:
+
+```css
+img {
+  border: 1px solid black;
+}
+```
+
+## Example layouts
 
 Here are some example layouts that use the `<img>` element:
 
-### Basic Image Grid
+### Layout 1: Image with caption
 
-```html
-<div class="image-grid">
-  <img src="image1.jpg">
-  <img src="image2.jpg">
-  <img src="image3.jpg">
-</div>
-```
-
-```css
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-img {
-  max-width: 100%;
-}
-```
-
-This layout displays a simple grid of images with a 10 pixel gap between each image.
-
-### Image with Caption
+This layout shows an image with a caption below it.
 
 ```html
 <div class="image-with-caption">
-  <img src="image.jpg">
-  <div class="caption">This is the caption for the image.</div>
+  <img src="image.jpg" alt="Image" />
+  <p class="caption">This is the caption for the image.</p>
 </div>
 ```
 
 ```css
 .image-with-caption {
-  position: relative;
-  display: inline-block;
+  text-align: center;
 }
 
 .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
+  font-style: italic;
 }
 ```
 
-This layout displays an image with a caption overlaid on top of it.
+### Layout 2: Two images side by side
 
-**Note**: The term used here, "aspect ratio," refers to the proportional relationship between an image's width and height. 
-
-### Image with Text Overlay
+This layout shows two images side by side.
 
 ```html
-<div class="image-with-overlay">
-  <img src="image.jpg">
-  <div class="overlay">
-    <h2>Heading</h2>
-    <p>Some text overlaying the image.</p>
+<div class="two-images">
+  <img src="image1.jpg" alt="Image 1" />
+  <img src="image2.jpg" alt="Image 2" />
+</div>
+```
+
+```css
+.two-images {
+  display: flex;
+  justify-content: space-between;
+}
+```
+
+### Layout 3: Image gallery
+
+This layout shows an image gallery with three images in a row.
+
+```html
+<div class="image-gallery">
+  <div class="row">
+    <img src="image1.jpg" alt="Image 1" />
+    <img src="image2.jpg" alt="Image 2" />
+    <img src="image3.jpg" alt="Image 3" />
+  </div>
+  <div class="row">
+    <img src="image4.jpg" alt="Image 4" />
+    <img src="image5.jpg" alt="Image 5" />
+    <img src="image6.jpg" alt="Image 6" />
   </div>
 </div>
 ```
 
 ```css
-.image-with-overlay {
-  position: relative;
-  display: inline-block;
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.overlay h2 {
-  margin-top: 0;
-}
-
-.overlay p {
-  margin-bottom: 0;
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 ```
 
-This layout displays an image with text overlaid on top of it. The text is centered both horizontally and vertically on the image.
+{{In Layout 3: Image gallery, the CSS style ".row" could have been inside ".image-gallery" but for better organization, it was separated.}}
 =====================
 
 Content prompt used: 

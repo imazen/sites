@@ -1,9 +1,13 @@
 ---
 title: px ≠ ピクセル
 description: デバイスpx ≠ ブラウザpx ≠ 画像px
-taskInputHash: 4ab9ca69e0f3774e
+taskInputHash: 73be94d33f113c9c
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### デバイスピクセル ≠ ブラウザpx ≠ 画像px
 

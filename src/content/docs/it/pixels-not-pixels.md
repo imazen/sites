@@ -1,9 +1,13 @@
 ---
 title: px ≠ pixel
 description: Pixel del dispositivo ≠ pixel del browser ≠ pixel dell'immagine
-taskInputHash: 5cb0d1fb2057aeac
+taskInputHash: 9e3d515b23db4c50
 lang: it
+ignore: '/* cSpell:locale it,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Pixel del dispositivo ≠ pixel del browser ≠ pixel dell'immagine
 

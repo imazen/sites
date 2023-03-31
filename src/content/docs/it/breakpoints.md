@@ -1,8 +1,12 @@
 ---
 title: Breakpoint e immagini
 description: Perché alcuni (ma non tutti) i breakpoint sono importanti per le tue immagini
-taskInputHash: e6ea31b34a72e447
+taskInputHash: 7714cadfe55d82ca
 lang: it
+ignore: '/* cSpell:locale it,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Contesto
 

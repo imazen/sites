@@ -1,8 +1,12 @@
 ---
 title: Erstelle ein Karussell
 description: Wie man ein Karussell auf einer Website erstellt
-taskInputHash: 6797b4446b178094
+taskInputHash: 230c6ecf771bf3cb
 lang: de
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Hier sind die allgemeinen Schritte zur Erstellung eines Bildkarussells auf einer Website:
 1. Erstellen Sie eine neue HTML-Datei für Ihr Bildkarussell. Sie können es beispielsweise "carousel.html" nennen.

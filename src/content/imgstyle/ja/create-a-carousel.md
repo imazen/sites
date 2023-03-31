@@ -1,8 +1,12 @@
 ---
 title: 画像カルーセルを作成する
 description: ウェブサイトで画像カルーセルを作成する方法
-taskInputHash: 0b9f519516c5f51a
+taskInputHash: ce9dfbf355cdeeb9
 lang: ja
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ウェブサイトで画像のカルーセルを作成する一般的な手順は以下の通りです：
 1. 画像カルーセル用の新しいHTMLファイルを作成します。 "carousel.html"のような名前を付けることができます。

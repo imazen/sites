@@ -1,103 +1,122 @@
 ---
-title: Complete CSS Reference
-description: Comprehensive reference for CSS effects and borders with examples.
-taskInputHash: 90fc24f78f728a6f
+title: Complete Reference for CSS
+description: Comprehensive reference for CSS effects (with examples).
+taskInputHash: 65da6992482c3405
 lang: en
+ignore: '/* cSpell:locale ja,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
-Below is a comprehensive reference for CSS effects and borders that can be applied to images, along with examples.
 
-1. **Border:** Adds a border to the image.
+The following is a comprehensive reference for CSS effects and frames that can be applied to images. Each example will be accompanied by a code snippet.
+
+1. **Border:** adds a border to an image.
+
 ```css
 img {
   border: 2px solid black;
 }
 ```
 
-2. **Box Shadow:** Adds a shadow around the image.
+2. **Box Shadow:** adds a shadow around an image.
+
 ```css
 img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 ```
 
-3. **Opacity:** Adjusts the opacity of the image.
+3. **Opacity:** adjusts the opacity of an image.
+
 ```css
 img {
   opacity: 0.5;
 }
 ```
 
-4. **Grayscale:** Converts the image to grayscale.
+4. **Grayscale:** converts an image to grayscale.
+
 ```css
 img {
   filter: grayscale(100%);
 }
 ```
 
-5. **Sepia:** Applies a sepia effect to the image.
+5. **Sepia:** applies a sepia effect to an image.
+
 ```css
 img {
   filter: sepia(100%);
 }
 ```
 
-6. **Blur:** Blurs the image.
+6. **Blur:** blurs the image.
+
 ```css
 img {
   filter: blur(5px);
 }
 ```
 
-7. **Brightness:** Adjusts the brightness of the image.
+7. **Brightness:** adjusts the brightness of an image.
+
 ```css
 img {
   filter: brightness(50%);
 }
 ```
 
-8. **Contrast:** Adjusts the contrast of the image.
+8. **Contrast:** adjusts the contrast of an image.
+
 ```css
 img {
   filter: contrast(200%);
 }
 ```
 
-9. **Hue Rotate:** Rotates the hue of the image.
+9. **Hue Rotate:** rotates the hue of an image.
+
 ```css
 img {
   filter: hue-rotate(90deg);
 }
 ```
 
-10. **Invert:** Inverts the colors of the image.
+10. **Invert:** inverts the colors of an image.
+
 ```css
 img {
   filter: invert(100%);
 }
 ```
 
-11. **Saturate:** Adjusts the saturation of the image.
+11. **Saturate:** adjusts the saturation of an image.
+
 ```css
 img {
   filter: saturate(200%);
 }
 ```
 
-12. **Sepia:** Applies a sepia effect to the image.
+12. **Sepia:** applies a sepia effect to an image.
+
 ```css
 img {
   filter: sepia(100%);
 }
 ```
 
-13. **Drop-Shadow:** Adds a drop shadow effect to the image.
+13. **Drop-Shadow:** adds a drop shadow effect to an image.
+
 ```css
 img {
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
 }
 ```
 
-14. **Transition:** Adds a transition effect to the image.
+14. **Transition:** adds a transition effect to an image.
+
 ```css
 img {
   transition: transform 0.3s ease;
@@ -107,7 +126,8 @@ img:hover {
 }
 ```
 
-15. **Animation:** Adds an animation effect to the image.
+15. **Animation:** adds an animation effect to an image.
+
 ```css
 @keyframes slidein {
   from {
@@ -122,7 +142,7 @@ img {
 }
 ```
 
-These are just some examples of the many CSS effects and border styles that can be applied to images. Try experimenting with different styles to create unique and eye-catching designs!
+These are just a few examples of the many CSS effects and frames that can be applied to images. Try different styles to create unique and eye-catching designs!
 =====================
 
 Content prompt used: 

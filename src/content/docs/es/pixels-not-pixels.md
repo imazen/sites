@@ -1,9 +1,13 @@
 ---
 title: px ≠ píxeles
 description: Píxeles de dispositivo ≠ píxeles del navegador ≠ píxeles de imagen
-taskInputHash: d01e3b9515e2e27e
+taskInputHash: a6f6575dc9ddbf59
 lang: es
+ignore: '/* cSpell:locale es,en*/'
 sidebar_sort_priority: 900
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Píxeles de dispositivo ≠ píxeles del navegador ≠ píxeles de imagen
 

@@ -1,8 +1,12 @@
 ---
 title: Breakpoints & Bilder
 description: Warum manche (aber nicht alle) Breakpoints wichtig für Ihre Bilder sind
-taskInputHash: 6532c039ed74cf5c
+taskInputHash: 57ab72e7e951b197
 lang: de
+ignore: '/* cSpell:locale de,en*/'
+date_published: '2023-03-26'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 ### Hintergrund
 

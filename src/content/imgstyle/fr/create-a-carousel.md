@@ -1,8 +1,12 @@
 ---
 title: Créer un carrousel
 description: Comment créer un carrousel sur un site web
-taskInputHash: 3188d411d7bafa1a
+taskInputHash: 5f088be61bc17cb7
 lang: fr
+ignore: '/* cSpell:locale fr,en*/'
+date_published: '2023-03-29'
+date_modified: '2023-03-31'
+date_updated: '2023-03-31'
 ---
 Voici les étapes générales pour créer un carrousel d'images sur un site web :
 1. Créez un nouveau fichier HTML pour votre carrousel d'images. Vous pouvez lui donner un nom comme "carousel.html".
