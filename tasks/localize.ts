@@ -36,22 +36,22 @@ export function estimateTokenCount(content: any): number {
     return 1
 }
 
-export function compressValuesInJson (conentJson: any, path: string, pairs: [string, any][]) {
-    if (typeof conentJson === 'object') {
-        Object.keys(conentJson).forEach(k => {
+export function compressValuesInJson (contentJson: any, path: string, pairs: [string, any][]) {
+    if (typeof contentJson === 'object') {
+        Object.keys(contentJson).forEach(k => {
             let p = path
             if (p.length !== 0) {
                 p += '.'
             }
             p += k;
-            if (typeof conentJson[k] !== 'object') {
-                pairs.push([p, conentJson[k]])
+            if (typeof contentJson[k] !== 'object') {
+                pairs.push([p, contentJson[k]])
             } else {
-                compressValuesInJson(conentJson[k], p, pairs)
+                compressValuesInJson(contentJson[k], p, pairs)
             }
         })
     } else {
-        pairs.push([path, conentJson])
+        pairs.push([path, contentJson])
     }
 }
 

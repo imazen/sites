@@ -9,7 +9,7 @@ import matter from 'gray-matter';
 import { exit } from 'process';
 import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
 import { completeChatCached } from './openai_cache';
-import { ParsedMd, loadAndParseMdFiles, readFrontMatter, tryLoadFileString} from './markdown'
+import { ParsedMd, loadAndParseMdFiles, readFrontMatter, tryLoadFileString, updateFrontmatterDates} from './markdown'
 
 const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
@@ -207,6 +207,7 @@ async function translateTask(task: TranslationTask) {
 
     newFrontMatter.title = newTitle;
     newFrontMatter.description = newDescription;
+		newFrontMatter.date_updated = new Date().toISOString().split('T')[0];
 
     // serialize newFrontMatter to yaml
     const translatedFileContent = matter.stringify(translatedRaw, newFrontMatter);
@@ -249,7 +250,7 @@ async function translateDocs(contentCollections: string[]) {
 			});
 		});
 	
-	// create the folders for each language and coontent collection
+	// create the folders for each language and content collection
     await Promise.all(
 		allFolders.map(async (folder) => {
 			if (!fs.existsSync(folder)){
@@ -282,4 +283,7 @@ async function translateOne() {
         await translateTask(tasks[0]);
     }
 }
+
+await updateFrontmatterDates(CONTENT_COLLECTIONS);
+
 await translateDocs(CONTENT_COLLECTIONS);

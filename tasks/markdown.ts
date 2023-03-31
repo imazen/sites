@@ -1,11 +1,9 @@
-import { Configuration, OpenAIApi, openai } from 'openai';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import matter from 'gray-matter';
-import { exit } from 'process';
 import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES} from '../src/consts';
-
+import {execa} from 'execa';
 import { CurrentCollectionEntry } from '../src/current'
 
 
@@ -102,4 +100,80 @@ export async function tryLoadFileString(filePath: string, defaultString: string)
         }
     }
     return defaultString;
+}
+
+
+
+interface GitDates {
+	parsedFile: ParsedMd;
+	firstCommitDate: Date;
+	lastCommitDate: Date;
+}
+async function getGitDates(parsedFile: ParsedMd) {
+	const gitDates: GitDates = {
+		firstCommitDate: new Date(),
+		lastCommitDate: new Date(),
+		parsedFile: parsedFile,
+	};
+	const gitLog = await execa('git', ['log', '--follow', '--format=%at', parsedFile.filePath]);
+	const commitDates = gitLog.stdout.split('\n').map((date) => new Date(parseInt(date) * 1000));
+	gitDates.firstCommitDate = commitDates[commitDates.length - 1];
+	gitDates.lastCommitDate = commitDates[0];
+	return gitDates;
+}
+
+export async function updateFrontmatterDates(contentCollections: string[]) {
+	const allFolders = contentCollections.flatMap((contentCollection) => {
+		return `./src/content/${contentCollection}/${SITE.defaultLanguage}`;
+	});
+
+	// For each folder, run loadAndParseMdFiles()
+	const allParsedFiles = (
+		await Promise.all(allFolders.map((folder) => loadAndParseMdFiles(folder)))
+	).flat();
+
+	// for each parsed file, check the git log for the first and last commit date
+	const withDates = await Promise.all(allParsedFiles.map((parsedFile) => getGitDates(parsedFile)));
+
+	// for each parsed file, check if the frontmatter has the git dates and they are up to date
+	// otherwise write the new file to disk
+	for (const gitDates of withDates) {
+		const { firstCommitDate, lastCommitDate, parsedFile } = gitDates;
+		const { data, content } = gitDates.parsedFile;
+
+		if (data.title == null) {
+			// skip
+			console.log(`skipping ${parsedFile.filePath} because it has no title`);
+			continue;
+		}
+
+		// in YYYY-MM-DD format
+		const firstCommitDateString = firstCommitDate.toISOString().split('T')[0];
+		const lastCommitDateString = lastCommitDate.toISOString().split('T')[0];
+		// get the data.date_published  and data.date_modified
+		// Parse them and convert them to YYYY-MM-DD format
+		// if they are not the same as the git dates, write the new file to disk
+
+		const dataDatePublished = data.date_published;
+		const dataDateModified = data.date_modified;
+		if (dataDatePublished != null && dataDateModified != null) {
+			const dataDatePublishedString = new Date(dataDatePublished).toISOString().split('T')[0];
+			const dataDateModifiedString = new Date(dataDateModified).toISOString().split('T')[0];
+			if (
+				dataDatePublishedString === firstCommitDateString &&
+				dataDateModifiedString === lastCommitDateString
+			) {
+				// skip
+				continue;
+			}
+		}
+
+		data.date_published = firstCommitDateString;
+		data.date_modified = lastCommitDateString;
+		const newFileContent = matter.stringify(content, data);
+
+		// update the file
+		await fs.promises.writeFile(parsedFile.filePath, newFileContent);
+		console.log(`Updated ${parsedFile.filePath}`);
+	}
 }
