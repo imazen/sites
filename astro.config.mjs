@@ -4,6 +4,7 @@ import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap";
 import astroI18next from "astro-i18next";
+import vercel from '@astrojs/vercel/static';
 
 
 // https://astro.build/config
@@ -21,5 +22,7 @@ export default defineConfig({
 	}),
 	astroI18next()
 	],
-  site: SITE.address
+  site: SITE.address,
+	output: 'static',
+	adapter: vercel({analytics: true})
 });
