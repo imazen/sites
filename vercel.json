@@ -4,8 +4,8 @@
     },
     "redirects": [
       {
-        "from": "/",
-        "to": "/en/introduction"
+        "source": "/",
+        "destination": "/en/introduction"
       }
     ]
   }
