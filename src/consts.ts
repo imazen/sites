@@ -2,6 +2,8 @@ import SITE_INFO from './site-info';
 
 export const SITE = SITE_INFO;
 
+export const SITES_KEYS = ['srcset', 'imgstyle'];
+
 export const CONTENT_COLLECTIONS = ['docs', 'imgstyle'];
 
 export const GITHUB_EDIT_URL = `https://github.com/imazen/sites/tree/main`;

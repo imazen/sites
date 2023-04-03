@@ -7,13 +7,16 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build-imgstyle": "tsx tasks/switch.ts imgstyle && astro build && tsx tasks/switch.ts srcset",
     "preview": "astro preview",
     "astro": "astro",
+    "switch": "tsx tasks/switch.ts", 
     "translate": "tsx tasks/translate.ts",
     "localize": "tsx tasks/localize.ts",
     "jsonld": "tsx tasks/jsonld.ts",
     "feedback": "tsx tasks/ai_feedback.ts",
-    "dates": "tsx tasks/update-frontmatter-dates.ts"
+    "dates": "tsx tasks/update-frontmatter-dates.ts",
+    "site-info": "tsx tasks/site_info.ts"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",

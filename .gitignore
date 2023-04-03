@@ -25,3 +25,4 @@ pnpm-lock.yaml
 
 #cached openai responses
 .aicache/
+.vercel/output/

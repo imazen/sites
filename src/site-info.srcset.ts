@@ -6,8 +6,10 @@ export default  {
 	description: 'Templates, guides, examples, and tools for correct and efficient responsive images',
 	defaultLanguage: 'en',
 	address: 'https://www.srcset.tips/',
-	algoliaIndex: 'srcset', //
+	algoliaIndex: 'srcset',
+	defaultLocale: 'en',
 	algoliaDomain: 'srcset.tips',
 	contentCollection: 'docs',
-	translationNamespace: 'srcset'
+	translationNamespace: 'srcset',
+	outDir: './dist',
 } as const;
