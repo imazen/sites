@@ -1,5 +1,11 @@
 {
     "github": {
       "silent": true
-    }
+    },
+    "redirects": [
+      {
+        "from": "/",
+        "to": "/en/introduction"
+      }
+    ],
   }
