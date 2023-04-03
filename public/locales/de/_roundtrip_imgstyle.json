@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": "- Tips on srcset",
- "siteTitleName": "Reference and tips for srcset",
+ "siteTitleSuffix": "- img.style",
+ "siteTitleName": "Image Design & Optimization",
  "skipToContentText": "Skip to content",
  "editPage": "Edit this page",
  "joinCommunity": "Join our community",
  "footerLicense": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License",
- "translatedContentDisclaimer": "Please let us know if something is wrong. Our translator is not yet completely smart, but relies on feedback, so leave some tips!",
- "reportIssue": "Get in touch on Github",
+ "translatedContentDisclaimer": "Please let us know if something is not right. Our translator is not yet fully intelligent, but takes feedback. So please leave some tips!",
+ "reportIssue": "Join us on Github",
  "sidebarTitle": "Topics",
  "communitySidebarTitle": "Community"
 }

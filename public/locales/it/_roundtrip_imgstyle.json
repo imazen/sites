@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": "- Srcset tips",
- "siteTitleName": "Srcset reference and tips",
+ "siteTitleSuffix": "- img.style",
+ "siteTitleName": "image style and optimization",
  "skipToContentText": "Skip to content",
  "editPage": "Edit this page",
  "joinCommunity": "Join our community",
  "footerLicense": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License",
- "translatedContentDisclaimer": "Please let us know if there's anything wrong. Our translator is not fully autonomous yet, but it incorporates feedback, so give us some tips!",
+ "translatedContentDisclaimer": "Please let us know if something is wrong. Our translator is not yet fully autonomous, but takes feedback into account, so leave some suggestions!",
  "reportIssue": "Get in touch on Github",
- "sidebarTitle": "Themes",
+ "sidebarTitle": "Topics",
  "communitySidebarTitle": "Community"
 }
