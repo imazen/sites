@@ -1,21 +1,33 @@
 ---
 import type { MarkdownHeading } from 'astro';
+import { i18n_CONFIG } from '../../consts';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
+import i18next from "i18next";
 
-type Props = {
-	title: string;
+import type {CurrentCollectionEntry} from '../../current';
+
+type Props = CurrentCollectionEntry['data'] & {
 	headings: MarkdownHeading[];
-	githubEditUrl: string;
-	lang: string;
 };
 
-const { title, headings, githubEditUrl, lang } = Astro.props;
+const { title, headings, githubEditUrl, lang, date_published, date_updated } = Astro.props;
+
+const datePublished = date_published ? new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(Date.parse(date_published)) : '';
+let dateUpdated = date_published ?  new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(Date.parse(date_updated ?? date_published)) : '';
+if (dateUpdated){
+	dateUpdated = i18next.t('updatedPrefix','Updated') + " " + dateUpdated;
+}
+
+
 ---
 
 <article id="article" class="content">
 	<section class="main-section">
 		<h1 class="content-title" id="overview">{title}</h1>
+		<!--add updated date and published date  -->
+		<span class="dateUpdated	">{dateUpdated}</span>
+
 		<nav class="block sm:hidden">
 			<TableOfContents lang={lang} client:media="(max-width: 50em)" headings={headings} />
 		</nav>
@@ -42,6 +54,15 @@ const { title, headings, githubEditUrl, lang } = Astro.props;
 
 	.block {
 		display: block;
+	}
+
+	.dateUpdated{
+		font-size: 0.8rem;
+		color: #999;
+		font-weight: bold;
+		margin: 0;
+		margin-top: 0 !important;
+		margin-bottom: -1rem !important;
 	}
 
 	@media (min-width: 50em) {
