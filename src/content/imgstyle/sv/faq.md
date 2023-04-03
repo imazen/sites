@@ -1,18 +1,17 @@
 ---
-title: FAQ
-description: Vanliga frågor relaterade till att styla och layouta bilder med CSS
-taskInputHash: 262d75dd5be2cd90
+title: Frågor och svar
+description: Vanligt ställda frågor relaterade till att styla och lägga ut bilder med CSS
+taskInputHash: fecb908964b90ca9
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Några vanliga frågor relaterade till att styla och layouta bilder med CSS inkluderar:
+Några vanligt ställda frågor relaterade till att styla och lägga ut bilder med CSS inkluderar:
 
-**1. Hur ställer du in storleken på en bild i CSS?**
+**1. Hur ställer man in storleken på en bild med CSS?**
 
-För att ställa in storleken på en bild i CSS kan du använda egenskaperna `width` och `height`. Till exempel, för att ställa in bredden på en bild till 300 pixlar kan du använda följande CSS-kod:
+För att ställa in storleken på en bild med CSS kan du använda egenskaperna `width` och `height`. Till exempel, för att ställa in bredden på en bild till 300 pixlar, kan du använda följande CSS-kod:
 
 ```css
 img {
@@ -20,9 +19,9 @@ img {
 }
 ``` 
 
-**2. Hur centrera du en bild horisontellt och vertikalt med hjälp av CSS?**
+**2. Hur centrerar man en bild horisontellt och vertikalt med CSS?**
 
-För att centrera en bild horisontellt och vertikalt med hjälp av CSS kan du använda egenskaperna `display: flex`, `justify-content: center` och `align-items: center` på en behållare som håller bilden. Till exempel, för att centrer en bild i en `div`-element kan du använda följande CSS-kod:
+För att centrera en bild horisontellt och vertikalt med CSS, kan du använda egenskaperna `display: flex` och `justify-content: center` och `align-items: center` på en behållare som håller bilden. Till exempel, för att centrera en bild inuti ett `div`-element, kan du använda följande CSS-kod:
 
 ```css
 div {
@@ -32,14 +31,14 @@ div {
 }
 
 div img {
-  /* Valfritt: sätt en maximal bredd för bilden */
+  /* Frivilligt: sätt en maximal bredd för bilden */
   max-width: 100%;
 }
 ``` 
 
-**3. Hur gör du en bild responsiv med hjälp av CSS?**
+**3. Hur gör man en bild responsiv med CSS?**
 
-För att göra en bild responsiv med hjälp av CSS kan du använda egenskapen `max-width: 100%` på bilden. Detta kommer att se till att bilden aldrig överstiger bredden på dess behållare. Till exempel:
+För att göra en bild responsiv med CSS, kan du använda egenskapen `max-width: 100%` på bilden. Detta kommer att säkerställa att bilden aldrig överskrider bredden på dess behållare. Till exempel:
 
 ```css
 img {
@@ -48,9 +47,9 @@ img {
 }
 ``` 
 
-**4. Hur lägger du till en ram eller skugga till en bild i CSS?**
+**4. Hur lägger man till en ram eller skugga på en bild i CSS?**
 
-För att lägga till en ram eller skugga till en bild i CSS kan du använda egenskaperna `border` och `box-shadow`. Till exempel:
+För att lägga till en ram eller skugga på en bild i CSS, kan du använda egenskaperna `border` och `box-shadow`, respektive. Till exempel:
 
 ```css
 img {
@@ -59,31 +58,31 @@ img {
 }
 ``` 
 
-**5. Hur justerar du bilder bredvid varandra med hjälp av CSS?**
+**5. Hur justerar man bilder bredvid varandra med CSS?**
 
-För att justera bilder bredvid varandra med hjälp av CSS kan du använda egenskapen `display: inline-block` på bilderna. Till exempel:
+För att justera bilder bredvid varandra med CSS, kan du använda egenskapen `display: inline-block` på bilderna. Till exempel:
 
 ```css
 img {
   display: inline-block;
-  /* Valfritt: sätt ett mellanrum mellan bilderna */
+  /* Frivilligt: sätt ett mellanrum mellan bilderna */
   margin-right: 10px;
 }
 ``` 
 
-**6. Hur ställer du in en bakgrundsbild i CSS?**
+**6. Hur sätter man en bakgrundsbild i CSS?**
 
-För att ställa in en bakgrundsbild i CSS kan du använda egenskapen `background-image`. Till exempel:
+För att sätta en bakgrundsbild i CSS kan du använda egenskapen `background-image`. Till exempel:
 
 ```css
 div {
-  background-image: url('image.jpg');
+  background-image: url('bild.jpg');
 }
 ``` 
 
-**7. Hur beskär du en bild med hjälp av CSS?**
+**7. Hur beskär man en bild med CSS?**
 
-För att beskära en bild med hjälp av CSS kan du använda egenskapen `clip`. Till exempel:
+För att beskära en bild med CSS kan du använda egenskapen `clip`. Till exempel:
 
 ```css
 img {
@@ -91,27 +90,27 @@ img {
 }
 ```
 
-Detta kommer att beskära bilden till en 100x100 pixlar stor kvadrat som börjar i övre vänstra hörnet. 
+Detta kommer att beskära bilden till en 100x100 pixlars kvadrat som startar i övre vänstra hörnet. 
 
-**8. Hur lägger du till en hover-effekt till en bild med hjälp av CSS?**
+**8. Hur lägger man till en hover-effekt på en bild med CSS?**
 
-För att lägga till en hover-effekt till en bild med hjälp av CSS kan du använda pseudo-elementet `:hover`. Till exempel:
+För att lägga till en hover-effekt på en bild med CSS kan du använda pseudo-klassen `:hover`. Till exempel:
 
 ```css
 img {
-  /* Sätt det initiala tillståndet för bilden */
+  /* Sätt det inledande tillståndet på bilden */
   opacity: 0.8;
 }
 
 img:hover {
-  /* Sätt tillståndet för bilden när du hovrar över den */
+  /* Sätt tillståndet på bilden när man svävar över den */
   opacity: 1;
 }
 ``` 
 
-**9. Hur kontrollerar du avståndet mellan bilder med hjälp av CSS?**
+**9. Hur kontrollerar man utrymmet mellan bilder med CSS?**
 
-För att kontrollera avståndet mellan bilder med hjälp av CSS kan du använda egenskapen `margin`. Till exempel:
+För att kontrollera utrymmet mellan bilder med CSS kan du använda egenskapen `margin`. Till exempel:
 
 ```css
 img {
@@ -119,20 +118,21 @@ img {
 }
 ```
 
-Detta kommer att lägga till en 10 pixlar stor marginal till höger om varje bild.
+Detta kommer att lägga till en 10 pixel margen till höger om varje bild.
 
-**10. Hur skapar du en bildspel med bilder med hjälp av CSS?**
+**10. Hur skapar man en bildspel med bilder med CSS?**
 
-För att skapa en bildspel med bilder med hjälp av CSS kan du använda `@keyframes`-regeln för att definiera animationen och egenskapen `animation` för att tillämpa den på bilderna. Till exempel:
+För att skapa en bildspel med bilder med CSS kan du använda regeln `@keyframes` för att definiera animationen och egenskapen `animation` för att tillämpa den på bilderna. Till exempel:
 
 ```css
-@keyframes slideshow {
+@keyframes bildspel {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 img {
-  /* Sätt det initiala tillståndet för bilderna */
+  /* Sätt det inledande tillståndet på bilderna */
   opacity: 0;
-  /* Sätt durationen och timing-funktionen för animationen */
-  animation: slideshow 
+  /* Sätt durationen och tidfunktionen på animationen */
+  animation: bildspel
+```

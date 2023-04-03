@@ -1,8 +1,8 @@
 ---
 title: Full CSS reference
 description: 'Full CSS reference for effects, with examples'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
 ---
 
 Here's a comprehensive reference of CSS effects and borders that you can apply to images, along with examples for each:

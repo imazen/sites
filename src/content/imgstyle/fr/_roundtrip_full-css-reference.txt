@@ -1,14 +1,13 @@
 ---
 title: Complete CSS Reference
-description: 'Complete CSS Reference for effects, with examples'
-taskInputHash: af79aea14d270817
+description: 'Complete CSS reference for effects, with examples'
+taskInputHash: b664a3fa60d1a039
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Here's a complete reference for CSS effects and borders that can be applied to images, with examples for each:
+Here is a complete reference of CSS effects and borders that you can apply to images, with examples for each:
 
 1. **Border:** Adds a border around the image.
 
@@ -82,7 +81,7 @@ img {
 }
 ```
 
-10. **Invert:** Inverts the colors of the image.
+10. **Inversion:** Inverts the colors of the image.
 
 ```css
 img {
@@ -121,7 +120,7 @@ img {
   transition: transform 0.3s ease;
 }
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1, 1);
 }
 ```
 
@@ -141,7 +140,7 @@ img {
 }
 ```
 
-These are just a few examples of the many CSS effects and borders that can be applied to images. Experiment with different styles to create unique and eye-catching designs!
+These are just a few examples among the many CSS effects and borders that you can apply to images. Experiment with different styles to create unique and eye-catching designs!
 =====================
 
 Content prompt used: 
@@ -155,7 +154,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Full CSS reference for effects, with examples
 
 Metadata returned1. Référence complète CSS
-2. Référence complète CSS pour les effets, avec des exemples 
+2. Référence complète CSS pour les effets, avec exemples 
 
 
 Roundtrip (isolated) prompt used: 

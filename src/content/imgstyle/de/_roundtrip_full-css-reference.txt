@@ -1,16 +1,15 @@
 ---
 title: Complete CSS Reference
-description: Complete CSS Reference for effects with examples
-taskInputHash: 14c2d1e815930d7b
+description: Complete CSS reference for effects with examples
+taskInputHash: d4c0669b963e7e19
 lang: en
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Here is a comprehensive reference of CSS effects and frames that you can apply to images, along with examples for each effect:
+Here is a comprehensive reference of CSS effects and borders that can be applied to images, along with examples for each effect:
 
-1. **Border:** Adds a border around the image.
+1. **Border:** Adds a border to the image.
 
 ```css
 img {
@@ -19,7 +18,7 @@ img {
 ```
 
 
-2. **Box Shadow:** Adds a shadow around the image.
+2. **Box Shadow:** Adds a shadow to the image.
 
 ```css
 img {
@@ -28,7 +27,7 @@ img {
 ```
 
 
-3. **Opacity:** Adjusts the transparency of the image.
+3. **Opacity:** Allows adjusting the transparency of the image.
 
 ```css
 img {
@@ -46,7 +45,7 @@ img {
 ```
 
 
-5. **Sepia:** Applies a sepia effect to the image.
+5. **Sepia:** Gives the image a sepia effect.
 
 ```css
 img {
@@ -55,7 +54,7 @@ img {
 ```
 
 
-6. **Blur:** Blurs the image.
+6. **Blur:** Makes the image blurry.
 
 ```css
 img {
@@ -82,7 +81,7 @@ img {
 ```
 
 
-9. **Hue Rotate:** Rotates the hue of the image.
+9. **Hue-rotate:** Rotates the color of the image.
 
 ```css
 img {
@@ -100,7 +99,7 @@ img {
 ```
 
 
-11. **Saturation:** Adjusts the saturation of the image.
+11. **Saturate:** Adjusts the saturation of the image.
 
 ```css
 img {
@@ -109,7 +108,7 @@ img {
 ```
 
 
-12. **Sepia:** Applies a sepia effect to the image.
+12. **Sepia:** Gives the image a sepia effect.
 
 ```css
 img {
@@ -157,7 +156,7 @@ img {
 
 
 
-These are just a few examples of the many CSS effects and frames that you can apply to images. Experiment with different styles to create unique and eye-catching designs!
+These are just a few examples of the many CSS effects and borders that you can apply to images. Experiment with different styles to create unique and engaging designs!
 =====================
 
 Content prompt used: 

@@ -1,22 +1,21 @@
 ---
-title: TailwindCSS-hjälpklasser för `<img>`
-description: Lista över de mest använda TailwindCSS-hjälpklasserna för `<img>`
-taskInputHash: 0f3d6a39a35f5092
+title: TailwindCSS hjälpare för `<img>`
+description: Lista över de vanligast använda TailwindCSS hjälparna för `<img>`
+taskInputHash: 8356ff8677fe1c0a
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-TailwindCSS tillhandahåller flera hjälpklasser för att arbeta med `<img>`-taggen. Här är några av de mest använda:
-- `object-contain`: Denna klass ställer in bilden så att den passar i sin behållare samtidigt som den bibehåller sitt bildförhållande. Den kommer antingen att krympa eller expandera bilden efter behov för att se till att den passar i behållaren.
-- `object-cover`: Denna klass ställer in bilden så att den täcker hela behållaren samtidigt som den bibehåller sitt bildförhållande. Den kommer antingen att beskära bilden eller krympa den efter behov för att se till att den täcker behållaren.
-- `object-fill`: Denna klass ställer in bilden så att den fyller hela behållaren, utan att bibehålla sitt bildförhållande. Detta kan orsaka att bilden sträcks eller komprimeras för att passa i behållaren.
-- `object-none`: Denna klass ställer in bilden till sin naturliga storlek, utan någon ändring av storlek eller beskärning.
-- `object-center`: Denna klass centrerar bilden horisontellt och vertikalt i sin behållare.
-- `object-left`: Denna klass justerar bilden till vänster i sin behållare.
-- `object-right`: Denna klass justerar bilden till höger i sin behållare.
-- `object-top`: Denna klass justerar bilden till toppen av sin behållare.
-- `object-bottom`: Denna klass justerar bilden till botten av sin behållare.
+TailwindCSS tillhandahåller flera hjälparklasser för att arbeta med taggen `<img>`. Här är några av de vanligast använda: 
+- `object-contain`: Denna klass ställer in bilden så att den passar inom dess container samtidigt som den behåller sitt sidförhållande. Den krymper eller expanderar bilden efter behov för att säkerställa att den passar inom containern. 
+- `object-cover`: Denna klass ställer in bilden så att den täcker hela containern samtidigt som den behåller sitt sidförhållande. Den beskär eller krymper bilden efter behov för att säkerställa att den täcker containern. 
+- `object-fill`: Denna klass ställer in bilden så att den fyller hela containern, utan att behålla sitt sidförhållande. Detta kan orsaka att bilden sträcks ut eller komprimeras för att passa inom containern. 
+- `object-none`: Denna klass ställer in bilden till dess naturliga storlek, utan att ändra storlek eller beskära den. 
+- `object-center`: Denna klass centrerar bilden horisontellt och vertikalt inom sin container. 
+- `object-left`: Denna klass placerar bilden till vänster inom sin container. 
+- `object-right`: Denna klass placerar bilden till höger inom sin container. 
+- `object-top`: Denna klass placerar bilden högst upp i sin container. 
+- `object-bottom`: Denna klass placerar bilden längst ner i sin container.
 
-Dessa klasser kan användas tillsammans med andra TailwindCSS-klasser för att ytterligare styla dina bilder, såsom att ställa in en specifik bredd eller höjd, lägga till ramar eller skuggor eller justera opaciteten.
+Dessa klasser kan användas i kombination med andra TailwindCSS-klasser för att ytterligare stilisera dina bilder, exempelvis genom att ställa in en specifik bredd eller höjd, lägga till ramar eller skuggor eller justera opaciteten.

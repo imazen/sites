@@ -1,91 +1,91 @@
 ---
-title: ギャラリーにタップして全画面表示のオプションを追加する
-description: ギャラリーにタップして全画面表示のオプションを追加する方法
-taskInputHash: dd9038256ecdfee1
+title: ギャラリーにフルスクリーン表示のためのタップを追加する方法
+description: ギャラリーにタップしてフルスクリーン表示するオプションを追加する方法
+taskInputHash: 44235a54a6e8dc70
 lang: ja
-ignore: '/* cSpell:locale ja,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-以下のmarkdownの装飾を保持したまま日本語に翻訳してください。
-html要素やURLは翻訳しないでください。ただし、リンク先の 'en' を 'ja' に変更してください。コードブロック内では、コメントのみ翻訳してください。
+"Tap to view full-screen image"というオプションをギャラリーに追加するには、JavaScriptとCSSを使用して、ユーザーがタップすると画像をフルスクリーンモードで表示するオーバーレイを作成します。
 
-ギャラリーに「タップして全画面表示」オプションを追加するには、JavaScriptとCSSを使用して、ユーザーがそれをタップすると画像をフルスクリーンモードで表示するオーバーレイを作成します。
-
-次に使える基本的な方法を示します。
-1. まず、ギャラリーのコンテナを作成し、表示するすべての画像を追加してください。
+次の基本的なアプローチを使用できます。
+1.最初に、ギャラリーのコンテナを作成して、表示するすべての画像を追加します。
 
 ```html
 <div class="gallery">
-  <img src="image1.jpg">
-  <img src="image2.jpg">
-  <img src="image3.jpg">
-  <!-- add more images here -->
-</div>
+  <img src="image1.jpg">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
+  <!--ここに画像を追加-->
+</div> 
 ```
 
-2. 次に、CSSを追加してギャラリーと画像のスタイルを設定します。
+
+2.次に、CSSを追加して、ギャラリーと画像をスタイルします。
 
 ```css
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .gallery img {
-  width: 100%;
-  height: auto;
-  margin: 5px;
+  width: 100%;
+  height: auto;
+  margin: 5px;
 }
 ```
 
-3. 次に、JavaScriptを使って各画像にクリックイベントリスナーを追加します。ユーザーが画像をクリックすると、JavaScriptはオーバーレイを作成し、画像をフルスクリーンモードで表示します。
+
+3.次に、JavaScriptを使用して、各画像にクリックイベントリスナーを追加します。ユーザーが画像をクリックすると、JavaScriptはオーバーレイを作成し、画像をフルスクリーンモードで表示します。
 
 ```javascript
 const gallery = document.querySelector('.gallery');
 const images = gallery.querySelectorAll('img');
 
 images.forEach((image) => {
-  image.addEventListener('click', () => {
-    // create overlay　オーバーレイの作成
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
+  image.addEventListener('click', () => {
+    //オーバーレイを作成
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
 
-    // create image element　イメージ要素の作成
-    const fullScreenImage = document.createElement('img');
-    fullScreenImage.src = image.src;
-    fullScreenImage.classList.add('full-screen-image');
+    //画像要素を作成
+    const fullScreenImage = document.createElement('img');
+    fullScreenImage.src = image.src;
+    fullScreenImage.classList.add('full-screen-image');
 
-    // add image element to overlay　イメージ要素をオーバーレイに追加
-    overlay.appendChild(fullScreenImage);
+    //画像要素をオーバーレイに追加
+    overlay.appendChild(fullScreenImage);
 
-    // add overlay to page　ページにオーバーレイを追加
-    document.body.appendChild(overlay);
-  });
+    //オーバーレイをページに追加
+    document.body.appendChild(overlay);
+  });
 });
 ```
 
-4. 最後に、オーバーレイとフルスクリーンイメージのスタイルを設定するCSSを追加してください。
+
+4.最後に、CSSを追加して、オーバーレイとフルスクリーン画像をスタイルします。
 
 ```css
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .full-screen-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 ```
 
-これらの手順を実行すると、ユーザーがタップして画像を全画面表示できるギャラリーができます。
+
+これらのステップで、ユーザーはタップすることで画像をフルスクリーンモードで表示できるギャラリーを持つはずです。

@@ -1,89 +1,89 @@
 ---
-title: Create a Carousel
-description: How to create a carousel on a website
-taskInputHash: e0d9c0cd3e4a8e7b
+title: Create an Image Carousel
+description: How to create an image carousel on a website
+taskInputHash: 6d86d4a08ccd0412
 lang: en
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Here are the general steps to create an image carousel on your website:
+Here are the general steps to create an image carousel on a website:
 
-1. Create a new HTML file for your image carousel. You can name it "carousel.html".
-2. Add the HTML structure to your file, typically including a head section with a title and any necessary CSS stylesheets, and a body section where you will add the actual carousel.
-3. Create a container for your carousel using a `<div>` tag. Give it an ID or class for styling later.
-4. Within the container, add individual image elements using `<img>` tags. Set the source attribute to the image file path or URL, and add alt text or a title as needed.
-5. Add navigation buttons for your carousel using `<button>` or `<a>` tags. You'll need one button or link for the left arrow and another for the right arrow.
-6. Add JavaScript code to make your carousel functional. You'll need to listen for click events on the navigation buttons and update the carousel display accordingly. You can use the DOM API or a JavaScript library such as jQuery or React to accomplish this.
+1. Create a new HTML file for your image carousel. You can name it something like "carousel.html".
+2. Add HTML structure to the file. This usually includes a header with a title and any necessary CSS styles, and a body section to add the actual carousel.
+3. Create a container for your carousel using a `<div>` tag. Assign an ID or class for later style settings.
+4. Within the container, use `<img>` tags to add individual image elements to your carousel. You can set the source attribute to an image file path or URL, and add any alt text or captions as needed.
+5. Add navigation buttons to your carousel using `<button>` or `<a>` tags. You will need one for a left arrow button or link and another for a right arrow.
+6. Add JavaScript code to make your carousel function correctly. You will need to listen for click events on the navigation buttons and update the carousel display accordingly. You can use the DOM API or JavaScript libraries (such as jQuery or React) to achieve this.
 
-Here is an example code snippet that uses jQuery to create a simple image carousel:
-
+Here is an example code for creating a simple image carousel using jQuery:
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Image Carousel</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-	<style>
-		.carousel {
-			margin: 50px auto;
-		}
-		.carousel img {
-			width: 100%;
-			height: auto;
-		}
-		.owl-nav {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 100%;
-		}
-		.owl-prev, .owl-next {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			margin: auto;
-			width: 50px;
-			height: 50px;
-			background-color: rgba(0, 0, 0, 0.5);
-			color: #fff;
-			font-size: 30px;
-			text-align: center;
-			line-height: 50px;
-			cursor: pointer;
-			border-radius: 50%;
-		}
-		.owl-prev {
-			left: 0;
-		}
-		.owl-next {
-			right: 0;
-		}
-	</style>
+  <title>My Image Carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+  .carousel {
+    margin: 50px auto;
+  }
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .owl-prev, .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .owl-prev {
+    left: 0;
+  }
+  .owl-next {
+    right: 0;
+  }
+</style>
 </head>
 <body>
-	<div class="carousel owl-carousel owl-theme">
-		<img src="image1.jpg" alt="Image 1">
-		<img src="image2.jpg" alt="Image 2">
-		<img src="image3.jpg" alt="Image 3">
-		<img src="image4.jpg" alt="Image 4">
-		<img src="image5.jpg" alt="Image 5">
-		<img src="image6.jpg" alt="Image 6">
-	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('.carousel').owlCarousel({
-				loop:true,
-				margin:10,
-				nav:true,
-				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-				responsive:{
-					0:{
+  <div class="carousel owl-carousel owl-theme">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+    <img src="image5.jpg" alt="Image 5">
+    <img src="image6.jpg" alt="Image 6">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+      responsive:{
+        0:{
 ```
+
+{{Note that the code snippet seems incomplete as it's missing the closing tags for `</script>` and `</html>`.}}
 =====================
 
 Content prompt used: 
@@ -96,8 +96,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Create a carousel
  2. How to create a carousel on a website
 
-Metadata returned1. 创建一个轮播
-2. 如何在网站上创建轮播 
+Metadata returned1. 创建一个图片轮播
+2. 如何在网站上创建图片轮播 
 
 
 Roundtrip (isolated) prompt used: 

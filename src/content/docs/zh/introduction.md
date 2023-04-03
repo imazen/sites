@@ -1,24 +1,23 @@
 ---
-title: srcset 和 <img> sizes
-description: 2023 年响应式图像的高效且主观的指南
-taskInputHash: ff8b517c77f33d91
+title: '`srcset`和`<img>`的大小'
+description: 2023年响应式图片的高效且有见解的指南
+taskInputHash: 508db0f0818d638b
 lang: zh
-ignore: '/* cSpell:locale zh,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-**2023 年图像高效且主观的指南**
+**一份高效且有见解的2023年图片指南**
 
-查看侧边栏进行深入了解。这是快速参考，用于升级那些 `<img>` 标签以处理现代设备的各种尺寸和像素密度。您应该[知道像素不等于像素](/zh/pixels-not-pixels)，而 `devicePixelRatio` 更有可能是 3.875，而不是 1:1。现代手机为了可读性会假装宽度为 320-428px（在 CSS 像素中），但是有许多设备像素支持每个 CSS 像素。 
+查看侧边栏以进行深入了解。这是快速升级`<img>`标签以处理各种大小和像素密度的现代设备的参考。您应该[知道像素不等于像素](/zh/pixels-not-pixels)，`devicePixelRatio`更有可能是3.875而不是1:1。现代手机为了可读性而假装是320-428像素宽（在CSS像素中），但每个CSS像素有许多设备像素。
 
-> 如果您的图像永远不会更改大小，无论您将浏览器窗口缩小到多窄，您应该使用[分辨率描述符](/zh/density-descriptors)代替。这通常适用于徽标、图标和按钮。
+> 如果您的图像大小永远不会改变，无论您将浏览器窗口变窄多少，您应该使用[密度描述符](/zh/density-descriptors)。这通常适用于徽标、图标和按钮。
 
-您知道您的[断点](/zh/breakpoints)是什么吗？您需要这些数字来微调以下解决方案-至少是主内容区域停止增长的视口宽度断点。
+您知道自己的[断点](/zh/breakpoints)是多少吗？您需要这些数字来微调下面的解决方案，至少还需要视口宽度断点，该视口宽度断点是主内容区停止增长的位置。
 
 
-### 简单方法
+### 易用方法
 
 ```html
 
@@ -29,10 +28,11 @@ date_updated: '2023-03-31'
                 img.jpg?format=webp&w=1600 1600w, 
                 img.jpg?format=webp&w=2000 2000w"
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="狗骑自行车" />
+        sizes="(max-width: 700px) 100vw, 800px" alt="骑自行车的狗" />
 
-<!-- 我们假设您在 700px 处断点。在该视口宽度下，此图像占用 100% 的宽度，
-     但是当视口更大时，图像被限制为 800 CSS 像素 -->
+<!-- 我们假设您在700px处有一个断点。 
+      在此视口宽度下，此图像占据100％的宽度，但在视口更大时，图像仅限于800个CSS像素 -->
 
-<!-- 这假定您使用 RIAPI 兼容的图像服务器，例如 Imageflow。即时的图像变体生成对开发人员的理智非常重要。-->
+<!-- 这假定您使用一个符合RIAPI标准的图像服务器，如Imageflow。 
+      实时图像变体生产对于开发人员的心理健康至关重要。 -->
 ```

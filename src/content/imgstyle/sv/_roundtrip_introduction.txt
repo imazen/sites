@@ -1,116 +1,115 @@
-# Styling the `<img>` element and example layouts
+# Formatting of the `<img>` element and examples of layouts
 
-## Styling the `<img>` element
+## Formatting of the `<img>` Element
 
-The `<img>` element is used to display images on a webpage. It is a self-closing element, which means it doesn't have a closing tag. To style the `<img>` element, you can use CSS.
+Images are often a key part of a webpage's content and design, and understanding how to format the `<img>` element is important for creating visually appealing layouts.
 
-### Setting the size of an `<img>` element
+The `<img>` element has several HTML attributes that can be used to control its appearance and behavior. Some of the most commonly used attributes include:
 
-You can set the width and height of an `<img>` element using CSS. Here's an example:
+- `src` specifies the URL of the image to be displayed.
+- `alt` provides a text description of the image for screen readers and in cases where the image cannot be displayed.
+- `width` and `height` control the size of the image. It's generally recommended to define these in CSS rather than using HTML attributes.
+- `class` and `id` can be used to apply styles or JavaScript functionality to the element.
 
-```css
-img {
-  width: 200px;
-  height: 200px;
-}
-```
-
-### Aligning an `<img>` element
-
-You can align an `<img>` element to the left or right of its container using CSS. Here's an example:
-
-```css
-img {
-  float: left; /* or float: right; */
-}
-```
-
-### Adding borders to an `<img>` element
-
-You can add a border to an `<img>` element using CSS. Here's an example:
-
-```css
-img {
-  border: 1px solid black;
-}
-```
-
-## Example layouts
-
-Here are some example layouts that use the `<img>` element:
-
-### Layout 1: Image with caption
-
-This layout shows an image with a caption below it.
+Here's an example of using the `<img>` element with some of these attributes:
 
 ```html
-<div class="image-with-caption">
-  <img src="image.jpg" alt="Image" />
-  <p class="caption">This is the caption for the image.</p>
-</div>
+<img src="example.png" alt="An example image" width="400" height="300" class="bordered" id="example-image">
 ```
+
+## Examples of layouts
+
+Below are some examples of how the `<img>` element can be used in different layouts:
+
+### Centered image
+
+To center an image within a container, you can use the following CSS:
 
 ```css
-.image-with-caption {
-  text-align: center;
-}
-
-.caption {
-  font-style: italic;
-}
-```
-
-### Layout 2: Two images side by side
-
-This layout shows two images side by side.
-
-```html
-<div class="two-images">
-  <img src="image1.jpg" alt="Image 1" />
-  <img src="image2.jpg" alt="Image 2" />
-</div>
-```
-
-```css
-.two-images {
+.container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
 ```
 
-### Layout 3: Image gallery
-
-This layout shows an image gallery with three images in a row.
+And the corresponding HTML:
 
 ```html
-<div class="image-gallery">
-  <div class="row">
-    <img src="image1.jpg" alt="Image 1" />
-    <img src="image2.jpg" alt="Image 2" />
-    <img src="image3.jpg" alt="Image 3" />
+<div class="container">
+  <img src="example.png" alt="An example image">
+</div>
+```
+
+### Image with caption
+
+To add a caption to an image, you can use the following HTML and CSS:
+
+```html
+<figure>
+  <img src="example.png" alt="An example image">
+  <figcaption>An example caption</figcaption>
+</figure>
+```
+
+```css
+figure {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+```
+
+### Image grid
+
+To create a grid of images, you can use the following HTML and CSS:
+
+```html
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="example-1.png" alt="Example 1">
   </div>
-  <div class="row">
-    <img src="image4.jpg" alt="Image 4" />
-    <img src="image5.jpg" alt="Image 5" />
-    <img src="image6.jpg" alt="Image 6" />
+  <div class="grid-item">
+    <img src="example-2.png" alt="Example 2">
+  </div>
+  <div class="grid-item">
+    <img src="example-3.png" alt="Example 3">
   </div>
 </div>
 ```
 
 ```css
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 1rem;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
+.grid-item img {
   width: 100%;
+  height: auto;
 }
 ```
 
-{{In Layout 3: Image gallery, the CSS style ".row" could have been inside ".image-gallery" but for better organization, it was separated.}}
+These are just a few examples of how the `<img>` element can be formatted and used in different layouts. With some creativity and experimentation, you can achieve a variety of visually compelling designs.
 =====================
 
 Content prompt used: 
@@ -123,8 +122,8 @@ Also carefully translate the title and description for the article; do not use &
 1. styling <img> elements and example layouts
  2. styling <img> elements and example layouts
 
-Metadata returned1. Styla `<img>` element och exempellayouter
-2. Styla `<img>` element och exempellayouter 
+Metadata returned1. Formatering av <img>-element och exempel på layouter
+2. Formatering av <img>-element och exempel på layouter 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,18 +1,17 @@
 ---
 title: CSS Effects and Borders
-description: How to add CSS effects and borders to images
-taskInputHash: 279000ebf22e6f15
+description: How to add CSS effects and borders to an image
+taskInputHash: fb5b5f6a5fc4e531
 lang: en
-ignore: '/* cSpell:locale ja,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-To add CSS effects and borders to images, follow these steps:
+To add CSS effects and borders to an image, you can follow these steps:
 
-1. Within your HTML code, select the image element. This can be done by using an ID or class selector or by directly selecting the `<img>` element.
+1. Select the image element in your HTML code. This can be done using an ID or class selector, or directly selecting the `<img>` element.
 
-2. Define the CSS class or ID selector that will apply the desired styles to the image. For example, you can use the following code to create a simple border around the image:
+2. Define the CSS class or ID selector that will apply the desired style to the image. For example, to add a simple border around the image, you can use the following code:
 
 ```css
 .my-image {
@@ -20,13 +19,13 @@ To add CSS effects and borders to images, follow these steps:
 }
 ```
 
-3. Apply the CSS class or ID selector to the image element. For example, if you used the `.my-image` selector in Step 2, you can apply the style to an image in your HTML by adding the following code:
+3. Apply the CSS class or ID selector to the image element. For example, if you used the `.my-image` selector in Step 2, you can add the following code to your HTML to apply the style to the image:
 
 ```html
 <img src="path/to/image.jpg" class="my-image">
 ```
 
-4. Customize the style as needed. In addition to borders, a variety of CSS effects can be applied to images, including filters, opacity, transitions, and animations. Here are some examples of CSS code that you can use to add effects to your image:
+4. Customize the style as desired. In addition to borders, there are many different CSS effects that can be applied to images, such as filters, opacity, transitions, and animations. Here are some examples of CSS code that you can use to add effects to your images:
 
 ```css
 /* Add a drop shadow effect */
@@ -39,7 +38,7 @@ To add CSS effects and borders to images, follow these steps:
   filter: grayscale(100%);
 }
 
-/* Add a zoom transition effect on hover */
+/* Add a hover zoom transition effect */
 .my-image {
   transition: transform 0.3s ease;
 }
@@ -48,7 +47,7 @@ To add CSS effects and borders to images, follow these steps:
 }
 ```
 
-These are just a few examples of the many CSS effects and borders that you can use to enhance your images. Experiment with different styles to find the ones that work best for your design.
+These are just a few examples of the many CSS effects and borders that you can use to enhance your images. Experiment with different styles to find the design that works best for you.
 =====================
 
 Content prompt used: 
@@ -61,8 +60,8 @@ Also carefully translate the title and description for the article; do not use &
 1. CSS effects and borders
  2. How to add CSS effects and borders to an image
 
-Metadata returned1. CSSエフェクトとボーダー
-2. 画像にCSSエフェクトとボーダーを追加する方法 
+Metadata returned1. CSS エフェクトとボーダー
+2. 画像に CSS エフェクトとボーダーを追加する方法 
 
 
 Roundtrip (isolated) prompt used: 

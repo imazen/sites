@@ -1,8 +1,8 @@
 ---
 title: Breakpoints & images
 description: Why some (but not all) breakpoints matter for your images
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
 ---
 
 ### Background

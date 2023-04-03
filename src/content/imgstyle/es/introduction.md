@@ -1,16 +1,15 @@
 ---
-title: Estilizando elementos <img> y ejemplos de diseños
-description: Estilizando elementos <img> y ejemplos de diseños
-taskInputHash: 75a2e69a268ab2d0
+title: Estilos de elementos <img> y ejemplos de diseños
+description: Estilos de elementos <img> y ejemplos de diseños
+taskInputHash: 96e5c9a371a11536
 lang: es
-ignore: '/* cSpell:locale es,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-# Estilo de elementos `<img>` y ejemplos de disposición
+# Estilos de elementos `<img>` y ejemplos de layouts
 
-## Estilo de elementos `<img>`
+## Estilos de elementos `<img>`
 
 TODO:

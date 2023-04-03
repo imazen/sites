@@ -1,25 +1,24 @@
 ---
 title: TailwindCSS Helpers for `<img>`
 description: List of commonly used TailwindCSS helpers for `<img>`
-taskInputHash: d74274b58054a96e
+taskInputHash: c16c57775ded7597
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
 TailwindCSS provides several helper classes for working with the `<img>` tag. Here are the most commonly used ones:
-- `object-contain`: This class sets the image to fit the container while maintaining its aspect ratio. It will reduce or enlarge the image as necessary to fit the container.
-- `object-cover`: This class sets the image to cover the entire container while maintaining its aspect ratio. It will crop or resize the image as necessary to fully cover the container.
-- `object-fill`: This class sets the image to fill the entire container, disregarding its aspect ratio. This may cause the image to stretch or compress to fit the container.
-- `object-none`: This class sets the image to its natural size, without any resizing or cropping.
+- `object-contain`: This class sets the image to fit its container while preserving its aspect ratio. It will either shrink or enlarge the image as necessary to fit the container.
+- `object-cover`: This class sets the image to cover the entire container while preserving its aspect ratio. It will either crop the image or shrink it as necessary to cover the container.
+- `object-fill`: This class sets the image to fill the entire container without preserving its aspect ratio. This may result in distortion or compression of the image to fit the container.
+- `object-none`: This class sets the image to its natural size without any resizing or cropping.
 - `object-center`: This class centers the image both horizontally and vertically within its container.
-- `object-left`: This class aligns the image to the left within its container.
-- `object-right`: This class aligns the image to the right within its container.
+- `object-left`: This class aligns the image to the left of its container.
+- `object-right`: This class aligns the image to the right of its container.
 - `object-top`: This class aligns the image to the top of its container.
 - `object-bottom`: This class aligns the image to the bottom of its container.
 
-These classes can be used in conjunction with other TailwindCSS classes to further customize images, such as setting a specific width or height, adding borders or shadows, or adjusting opacity.
+These classes can be used in conjunction with other TailwindCSS classes to further customize your images, such as setting a specific height or width, adding borders or shadows, or adjusting opacity.
 =====================
 
 Content prompt used: 

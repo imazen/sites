@@ -1,35 +1,34 @@
 ---
-title: Density descriptors and srcset
+title: Density Descriptors & Srcset
 description: Examples of using density descriptors in `srcset`
-taskInputHash: 0a85d4f28fee785a
+taskInputHash: bb5fed05291ed4a0
 lang: en
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Srcset with density descriptors provides a simple and effective method for delivering the most appropriate image for each user's device, improving performance and user experience. This guide will take you through the basics of using srcset with density descriptors and provide markup examples for your convenience.
+Srcset with density descriptors provides a simple and effective way to serve the most appropriate image for each user's device, thereby improving performance and user experience. This guide will take you through the essentials of srcset with density descriptors and provide markup examples for your convenience.
 
-## What is srcset with density descriptors?
+## What is Srcset with Density Descriptors?
 
-Srcset is an HTML attribute that allows you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used in conjunction with srcset to provide images at different resolutions based on the pixel density of the user's display.
+Srcset is an HTML attribute that allows you to specify multiple image sources for a single `<img>` element. Density descriptors (`x`) are used with srcset to provide images of different resolutions based on the pixel density of the user's display.
 
-## When to use srcset with density descriptors?
+## When to Use Srcset with Density Descriptors?
 
-Using srcset with density descriptors is especially useful when you:
-1. Want to provide high resolution images for high DPI displays (e.g. Retina displays) while using lower resolutions for standard displays.
-2. Want to improve page rendering by providing the most appropriate image size for each user's device.
+Srcset with density descriptors is particularly useful when you want to:
+1. Display high-resolution images on high DPI screens (e.g. Retina displays) while serving low-resolution images on standard displays.
+2. Improve page performance by serving the most appropriate image size for each user's device.
 
-## Implementing srcset with density descriptors
+## Implementing Srcset with Density Descriptors
 
 To use srcset with density descriptors, follow these steps:
-1. Prepare your images in different resolutions.
+1. Prepare your images at different resolutions.
 2. Add the `srcset` attribute to the `<img>` element, including the image sources and corresponding density descriptors.
-3. Optionally, add the `sizes` attribute to set the size of the image on the screen.
+3. Add the `sizes` attribute (optional) to specify the size of the image on the screen.
 
-### Markup example
+### Markup Example
 
-Here is an example of how to implement srcset with density descriptors in your markup:
+Here's an example of how you can implement srcset with density descriptors in your markup:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -38,11 +37,11 @@ Here is an example of how to implement srcset with density descriptors in your m
 ```
 
 This markup example includes:
-- **src**: The default image source to be displayed when the browser does not support srcset.
-- **srcset**: The list of image sources and their density descriptors (1x, 2x, 3x). The browser chooses the most appropriate image based on the user's display.
-- **alt**: A description of the image for accessibility purposes.
+- **src** : The default image source that will be displayed if the browser doesn't support srcset.
+- **srcset** : The list of image sources and their density descriptors (1x, 2x, 3x). The browser will choose the most appropriate image based on the user's display.
+- **alt** : A description of the image for accessibility purposes.
 
-And that's it! You have successfully implemented srcset with density descriptors, improving the performance and user experience of your website.
+And that's it! You have successfully implemented srcset with density descriptors and improved the performance and user experience of your website.
 =====================
 
 Content prompt used: 
@@ -55,8 +54,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Density descriptors & srcset
  2. Examples of using density descriptors in `srcset`
 
-Metadata returned1. Density-Descriptoren und Srcset
-2. Beispiele für die Verwendung von Density-Descriptoren in `srcset` 
+Metadata returned1. Density-Deskriptoren & Srcset
+2. Beispiele zur Verwendung von Density-Deskriptoren in `srcset` 
 
 
 Roundtrip (isolated) prompt used: 

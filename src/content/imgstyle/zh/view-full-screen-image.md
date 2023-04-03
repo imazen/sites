@@ -1,30 +1,28 @@
 ---
-title: 在画廊中添加点击查看全屏图像
-description: 如何在画廊中添加点击查看全屏图像选项
-taskInputHash: 58e4c507eed9eda5
+title: 将“点击查看全屏图像”添加到图库
+description: 如何为图库添加“点击查看全屏图像”选项
+taskInputHash: 262c64e44b6bbc93
 lang: zh
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-为了在画廊中添加“点击以查看全屏图像”的选项，您可以使用JavaScript和CSS创建一个覆盖层，在用户点击图像时以全屏模式显示图像。
+要在图库中添加“点击查看全屏图像”的选项，可以使用JavaScript和CSS创建一个覆盖层，在用户点击图像时显示全屏模式的图像。
 
-以下是您可以使用的基本方法：
-
-1.首先，创建一个容器用于您的画廊，并添加您想要显示的所有图像。
+下面是一个基本方法：
+1. 首先，创建一个图库容器，并添加所有要显示的图像。
 
 ```html
 <div class="gallery">
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- 在此处添加更多图像 -->
+  <!-- 在这里添加更多图片 -->
 </div>
 ```
 
 
-2.接下来，添加一些CSS来设置画廊和图像的样式。
+2. 接下来，添加一些CSS来为图库和图像添加样式。
 
 ```css
 .gallery {
@@ -40,7 +38,7 @@ date_updated: '2023-03-31'
 ```
 
 
-3.现在，使用JavaScript为每个图像添加一个点击事件侦听器。当用户单击某个图像时，JavaScript将创建一个覆盖层，并以全屏模式显示图像。
+3. 现在，使用JavaScript为每个图像添加单击事件侦听器。当用户单击图像时，JavaScript将创建一个覆盖层，并以全屏模式显示图像。
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -57,17 +55,17 @@ images.forEach((image) => {
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // 将图像元素添加到覆盖层中
+    // 将图像元素添加到覆盖层
     overlay.appendChild(fullScreenImage);
     
-    // 将覆盖层添加到页面中
+    // 将覆盖层添加到页面
     document.body.appendChild(overlay);
   });
 });
 ```
 
 
-4.最后，添加一些CSS来设置覆盖层和全屏图像的样式。
+4. 最后，添加一些CSS来为覆盖层和全屏图像添加样式。
 
 ```css
 .overlay {
@@ -91,4 +89,4 @@ images.forEach((image) => {
 
 
 
-有了这些步骤，您现在应该有一个画廊，可以让用户通过点击图像查看全屏图像。
+经过这些步骤，现在您应该拥有一个允许用户通过点击来在全屏模式下查看图像的图库了。

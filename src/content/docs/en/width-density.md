@@ -1,8 +1,8 @@
 ---
 title: Width and density descriptors
 description: Examples of using width and density descriptors in `srcset`
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
 ---
 
 Understanding width (w) and density (x) descriptors in `srcset`. Use examples and use Markdown.

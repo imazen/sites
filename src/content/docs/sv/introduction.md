@@ -1,23 +1,22 @@
 ---
-title: srcset och <img> sizes
-description: En effektiv och tydlig guide till responsiva bilder för 2023
-taskInputHash: 87881becd1c9192b
+title: '`srcset` & `<img>` storlekar'
+description: En effektiv och bestämd guide till responsiva bilder för 2023
+taskInputHash: 9073468e325bcbed
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-**En effektiv och bestämd guide till bilder för 2023**
+**En effektiv och fast guide för bilder år 2023**
 
-Kontrollera sidofältet för en mer ingående beskrivning. Detta är snabbreferensen för att uppgradera `<img>`-taggarna så att de kan hantera moderna enheter i alla sina olika storlekar och pixeldensiteter. Du bör veta att pixels != pixels och `devicePixelRatio` är mer troligt att vara runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixels), men har många enhetspixlar per CSS-pixel.
+Kontrollera sidofältet för djupdykning. Detta är snabbreferensen för att uppgradera `<img>` taggar för att hantera moderna enheter i alla deras olika storlekar och pixeldensiteter. Du bör [veta att pixels != pixels](/en/pixels-not-pixels) och `devicePixelRatio` är mer troligt att vara runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixlar), men har många enhetspixlar per CSS-pixel.
 
-> Om din bild aldrig ändrar storlek, oavsett hur smalt du gör webbläsarfönstret bör du istället använda en densitetsbeskrivning. Detta är ofta lämpligt för logotyper, ikoner och knappar.
+> Om din bild aldrig ändrar storlek, oavsett hur smal du gör webbläsarfönstret, bör du använda en [densitetsbeskrivning istället](/en/density-descriptors). Detta är ofta lämpligt för logotyper, ikoner och knappar.
 
-Vet du vad dina breakpoints är? Du kommer att behöva dessa nummer för att finslipa lösningen nedan - och som minimum viewport width breakpoint där huvudinnehållsytan slutar växa in i bredd.
+Vet du vad dina [pauspunkter](/en/breakpoints) är? Du behöver de siffrorna för att finjustera lösningen nedan - och åtminstone visningsområdets breddpunkt där huvudinnehållsområdet slutar växa.
 
-### Den enkla metoden
+### Det enkla sättet
 
 ```html
 
@@ -30,10 +29,10 @@ Vet du vad dina breakpoints är? Du kommer att behöva dessa nummer för att fin
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Hund som cyklar" />
 
-<!-- Vi antar att du har en breakpoint vid 700px. 
-      Och att under den viewport bredden tar bilden 100% av bredden, men
-      när viewporten är större är bilden begränsad till 800 CSS-pixels -->
+<!-- Vi har antagit att du har ett pausläge vid 700px. 
+      Och att under den visningsbredden tar denna bild 100% av bredden, men
+      när visningsområdet är större är bilden begränsad till 800 CSS-pixlar -->
 
 <!-- Detta förutsätter att du använder en RIAPI-kompatibel bildserver som Imageflow. 
-     Bildvariantproduktion på begäran är avgörande för utvecklarhälsan. -->
+     Att generera bildvarianter på plats är avgörande för utvecklarens själsfrid. -->
 ```

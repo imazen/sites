@@ -1,8 +1,8 @@
 ---
 title: Test performance with Lighthouse
 description: Steps on how to test a website's performance using Lighthouse
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
 ---
 
 How do you test your site’s performance with Lighthouse?

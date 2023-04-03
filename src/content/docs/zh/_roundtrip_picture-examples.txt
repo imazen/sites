@@ -1,24 +1,27 @@
 ---
 title: Examples of using the <picture> element
-description: Examples of using the <picture> element for responsive images, art direction, and different image formats.
-taskInputHash: 84ee999fd4dc56dc
+description: Provides examples of using the <picture> element for responsive images, art direction, and different image formats.
+taskInputHash: 948d982e0b7ea61f
 lang: en
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Here are some examples of using the `<picture>` element and their explanations:
+Here are some examples and explanations of using the <picture> element: 
 
-1. Example of responsive images:
+1. Example for responsive images: 
 
-```html
+```html 
 <picture>
   <source srcset="image-large.jpg" media="(min-width: 768px)" />
   <source srcset="image-medium.jpg" media="(min-width: 480px)" />
   <img src="image-small.jpg" alt="An image" />
-</picture>
+</picture> 
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different screen sizes. The `<source>` element uses the `srcset` and `media` attributes to specify different image sources and the conditions for using each source. When the conditions specified in the `<source>` element are not met, the `<img>` element is used as a fallback image for older browsers.
+Explanation: In this example, the <picture> element is used to provide different sources for images for different screen sizes. The <source> element specifies different sources with the "srcset" and "media" attributes to indicate which source should be used under what conditions. The <img> element is a fallback for older browsers or when the conditions specified by the <source> element are not met. 
 
-2. Example of art direction:
+2. Example for art direction: 
 
 ```html
 <picture>
@@ -27,11 +30,11 @@ Explanation: In this example, the `<picture>` element is used to provide differe
 </picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources based on the device orientation. The `<source>` element uses the `media` attribute and sets it to `(orientation: landscape)` to provide a landscape-oriented image source, while the `<img>` element provides a portrait-oriented image source.
+Explanation: In this example the <picture> element provides different sources for images based on the orientation of the device. The <source> element with the "media" attribute set to "(orientation: landscape)" specifies a source for wide screens, while the <img> element specifies a source for portrait screens. 
 
-3. Example of different image formats:
+3. Example for different image formats: 
 
-```html
+```html 
 <picture>
   <source srcset="image.webp" type="image/webp" />
   <source srcset="image.png" type="image/png" />
@@ -39,15 +42,15 @@ Explanation: In this example, the `<picture>` element is used to provide differe
 </picture>
 ```
 
-Explanation: In this example, the `<picture>` element is used to provide different image sources for different image formats. The `<source>` element uses the `srcset` and `type` attributes to specify different image sources and their image formats, while the `<img>` element is used as a fallback image for older browsers that do not support the `<picture>` element.
+Explanation: In this example, the <picture> element provides different sources for images in different formats. The <source> element with the "srcset" and "type" attributes specifies different image formats and sources. The <img> element is a fallback for older browsers that do not support the <picture> element. 
 
-## Breakpoints
+## Breakpoints 
 
-In responsive design, breakpoints are used to define how the layout of a website or application should change as the viewport size changes. Breakpoints are usually defined using media queries in CSS and apply different styles based on screen width. These breakpoints can be combined with the `<picture>` element to provide different image sources for different screen sizes.
+In responsive design, breakpoints define how a website or application layout should change when the viewport size changes. Breakpoints are typically defined using media queries in CSS to apply different styles based on screen width. These breakpoints can be combined with the <picture> element to provide different sources for images for different screen sizes. 
 
-For example, in the first example above, we used the `media` attribute to specify screen width and therefore specified which screen width should use each source. When the screen width is greater than or equal to 768 pixels, the `image-large.jpg` source will be used; when the screen width is greater than or equal to 480 pixels but less than 768 pixels, the `image-medium.jpg` source will be used; and when the screen width is less than 480 pixels, the `image-small.jpg` source will be used. These operations can provide appropriately sized images for each device, reducing page load times and improving user experience.
+For example, in the first example above, we use the "media" attribute to specify which source to use at which screen width. When the screen width is greater than or equal to 768 pixels, the "image-large.jpg" source is used; when the screen width is greater than or equal to 480 pixels but less than 768 pixels, the "image-medium.jpg" source is used; when the screen width is less than 480 pixels the "image-small.jpg" source is used. This allows us to provide appropriately sized images for each device, shorten page load times, and improve the user experience. 
 
-Breakpoints can be defined for any screen size and multiple breakpoints can be used to create layouts that respond to a wide range of devices. By combining breakpoints with the `<picture>` element, flexible and responsive designs can be created that look great on any device.
+Breakpoints can be defined at any screen size and multiple breakpoints can be used to create layouts that respond to a variety of devices. By combining breakpoints with the <picture> element, flexible and responsive designs can be created that look good on any device.
 =====================
 
 Content prompt used: 
@@ -60,8 +63,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Examples using <picture> element
  2. Provides examples using the <picture> element, for responsive images, art direction and different image formats
 
-Metadata returned1. 使用 <picture> 元素的例子
-2. 提供使用 <picture> 元素的示例，用于可响应式图片、艺术向导和不同的图片格式。 
+Metadata returned1. 使用 <picture> 元素的示例
+2. 提供使用 <picture> 元素的示例，用于响应式图片、艺术方向和不同的图像格式。 
 
 
 Roundtrip (isolated) prompt used: 
