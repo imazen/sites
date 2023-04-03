@@ -8,3 +8,7 @@ export function getLanguageFromURL(pathname: string) {
 	const langCode = langCodeMatch ? langCodeMatch[1] : 'en';
 	return langCode as (typeof KNOWN_LANGUAGE_CODES)[number];
 }
+
+export function changeUrlLanguage(url: string, langCode: string) {
+	return url.replace(langPathRegex, `/${langCode}/`);
+}
