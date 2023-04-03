@@ -45,7 +45,7 @@ const langSubset = [[sidebarTitle, lang]]; // Object.entries(KNOWN_LANGUAGES)
 						<h2 class="nav-group-title">{sidebarTitle}</h2>
 						<ul>
 							{allDocsPosts.filter((p) => { return p.slug.startsWith(langCode); }).map((child) => {
-							const url = Astro.site?.pathname + child.slug;
+							const url = Astro.site?.pathname + child.slug + '/';
 							return (
 								<li class="nav-link">
 									<a href={url} aria-current={currentPageMatch === child.slug ? 'page' : false}>

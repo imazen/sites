@@ -9,7 +9,7 @@ import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
-	// nope trailingSlash: "always",
+	trailingSlash: "always", //Sitemap uses trailing /, we gotta be consistent. This affects dev and production differently
   integrations: [
 	// Enable Preact to support Preact JSX components.
 	preact(),
@@ -19,6 +19,10 @@ export default defineConfig({
 		i18n: {
 			defaultLocale: SITE.defaultLanguage,   // All urls that don't contain `es` or `fr` after `domain.com/` will be treated as default locale, i.e. `en`
 			locales: SITEMAP_LOCALES,
+		},
+		serialize(sitemapItem) {
+
+			return sitemapItem;
 		},
 	}),
 	astroI18next()
