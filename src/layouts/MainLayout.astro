@@ -19,18 +19,23 @@ type Props = CurrentCollectionEntry['data'] & {
 
 
 const { headings, ...data } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/content/${SITE.contentCollection}/${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 
 const lang = getLanguageFromURL(currentPage) || "en";
+const direction = ['ar'].includes(lang) ? 'rtl' : 'ltr';
 i18next.changeLanguage(lang);
 const translatedContentTitle =`${data.title} - ${i18next.t('siteTitleSuffix',SITE.titleSuffix)}`;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// fconst canonicalURL = new URL(Astro.url.pathname.replace(/([^/])$/, '$1/'), Astro.site);
+//if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/`, '/en/');
 ---
 
-<html dir={data.dir} lang={data.lang} class="initial">
+<html dir={direction} lang={lang} class="initial">
 	<head>
 		<HeadCommon />
 		<HeadSEO {...data} canonicalUrl={canonicalURL} lang={lang} />
