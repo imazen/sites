@@ -33,7 +33,7 @@ jobs:
         run: npm run translate
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: src/content/*.md, src/content/*/_roundtrip_*.txt
