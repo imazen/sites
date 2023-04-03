@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { SITES_KEYS } from "../src/consts";
+//import { SITES_KEYS } from "../src/consts";
 
 async function searchFilenamesRecursive(directory: string, include: string): Promise<string[]> {
 	const entries = await fs.promises.readdir(directory, { withFileTypes: true });
@@ -18,11 +18,20 @@ async function searchFilenamesRecursive(directory: string, include: string): Pro
 	return files;
 }
 
-async function switchSymlinks(directory: string, newSitekey: string) {
+async function switchSymlinks(directory: string, newSitekey: string, force: boolean) {
 	const searchPart = `.${newSitekey}.`;
 	const files = await searchFilenamesRecursive(directory, searchPart);
 	for (const newFile of files) {
 		const defaultFile = newFile.replace(searchPart, '.');
+		// check if defaultFile exists
+		if (!fs.existsSync(defaultFile)) {
+			console.log('!!!! Error, default file not found: ' + defaultFile);
+			if (force) {
+				console.log('Forcing symlink ' + defaultFile + ' to use ' + newFile);
+				await fs.promises.symlink(newFile, defaultFile);
+			}
+			continue;
+		}
 		// Check if defaultFile is a symlink
 		const stats = await fs.promises.lstat(defaultFile);
 		if (stats.isSymbolicLink()) {
@@ -41,19 +50,21 @@ async function switchSymlinks(directory: string, newSitekey: string) {
 			await fs.promises.symlink(newFile, defaultFile);
 		} else {
 			console.log('!!!! Error, not a symlink: ' + defaultFile);
-
-			console.log('Not a symlink');
+			if (force) {
+				console.log('Forcing symlink ' + defaultFile + ' to use ' + newFile);
+				await fs.promises.symlink(newFile, defaultFile);
+			}
 		}
 	}
 }
-export async function switchSite(siteKey: string) {
+export async function switchSite(siteKey: string, force: boolean) {
 	// check siteKey is valid
-	if (!SITES_KEYS.includes(siteKey)) {
+	if (!['imgstyle', 'srcset', 'imageflow', 'resizer', 'imazen'].includes(siteKey)) {
 		console.log('Error: invalid site key (' + siteKey + ')');
 		return;
 	}
 
-	console.log('Switching active site to ' + siteKey);
+	console.log('Switching active site to ' + siteKey, force ? ' (forced mode)' : '');
 
 	// check the current folder contains 'astro.config.mjs', if not fail
 	const astroConfigPath = path.join(process.cwd(), 'astro.config.mjs');
@@ -62,5 +73,5 @@ export async function switchSite(siteKey: string) {
 		return;
 	}
 
-	await switchSymlinks(process.cwd(), siteKey);
+	await switchSymlinks(process.cwd(), siteKey, force);
 }
