@@ -5,7 +5,7 @@
     "redirects": [
       {
         "source": "/",
-        "destination": "/en/introduction"
+        "destination": "/en/introduction/"
       }
     ]
   }
