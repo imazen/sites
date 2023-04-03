@@ -1,16 +1,15 @@
 ---
-title: Styla `<img>` element och exempellayouter
-description: Styla `<img>` element och exempellayouter
-taskInputHash: 36036f8ab2156673
+title: Formatering av <img>-element och exempel på layouter
+description: Formatering av <img>-element och exempel på layouter
+taskInputHash: 8bc23a881cdedb7c
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-# Styla `<img>` element och exempellayouter
+# Formatering av `<img>`-element och exempel på layouter
 
-## Styla `<img>` element
+## Formatering av `<img>`-element
 
 TODO:

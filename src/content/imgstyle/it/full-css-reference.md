@@ -1,14 +1,13 @@
 ---
-title: Riferimento completo CSS
-description: 'Riferimento completo CSS per gli effetti, con esempi'
-taskInputHash: 4c1f6c0906532679
+title: Riferimento completo di CSS
+description: 'Riferimento completo di CSS per gli effetti, con esempi'
+taskInputHash: c3593013ecb2579d
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Ecco un riferimento completo di effetti CSS e bordi che puoi applicare alle immagini, insieme a esempi per ognuno:
+Ecco un riferimento completo di effetti CSS e bordi che puoi applicare alle immagini, insieme agli esempi per ciascuno:
 
 1. **Bordo:** Aggiunge un bordo intorno all'immagine.
 
@@ -19,7 +18,7 @@ img {
 ```
 
 
-2. **Ombra Box:** Aggiunge un'ombra intorno all'immagine.
+2. **Box Shadow:** Aggiunge un'ombra intorno all'immagine.
 
 ```css
 img {
@@ -82,7 +81,7 @@ img {
 ```
 
 
-9. **Rotazione dell'Umore:** Ruota il colore dell'immagine.
+9. **Rotazione Croma:** Ruota il croma dell'immagine.
 
 ```css
 img {
@@ -118,7 +117,7 @@ img {
 ```
 
 
-13. **Drop-Shadow:** Aggiunge un effetto di ombreggiatura all'immagine.
+13. **Ombra:** Aggiunge un effetto ombreggiatura all'immagine.
 
 ```css
 img {
@@ -127,7 +126,7 @@ img {
 ```
 
 
-14. **Transizione:** Aggiunge un effetto di transizione all'immagine.
+14. **Transizione:** Aggiunge un effetto transizione all'immagine.
 
 ```css
 img {
@@ -139,7 +138,7 @@ img:hover {
 ```
 
 
-15. **Animazione:** Aggiunge un effetto di animazione all'immagine.
+15. **Animazione:** Aggiunge un effetto animazione all'immagine.
 
 ```css
 @keyframes slidein {
@@ -155,6 +154,4 @@ img {
 }
 ```
 
-
-
-Questi sono solo alcuni esempi dei molti effetti CSS e bordi che puoi applicare alle immagini. Sperimenta con stili diversi per creare design unici e accattivanti!
+Questi sono solo alcuni esempi dei molti effetti CSS e bordi che puoi applicare alle immagini. Sperimenta con stili diversi per creare design unici ed accattivanti!

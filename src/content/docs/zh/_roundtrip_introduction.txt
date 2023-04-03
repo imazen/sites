@@ -1,41 +1,44 @@
 ---
-title: srcset and <img> sizes
-description: Efficient and subjective guide to responsive images in 2023
-taskInputHash: ff8b517c77f33d91
+title: '`srcset` and the size of `<img>`'
+description: A efficient and insightful guide to responsive images in 2023
+taskInputHash: 508db0f0818d638b
 lang: en
-ignore: '/* cSpell:locale zh,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-**Efficient and subjective guide to images in 2023**
+**An Efficient and Insightful Guide to Responsive Images in 2023**
 
-For an in-depth understanding, check out the sidebar. This is a quick reference for upgrading those `<img>` tags to handle various sizes and pixel densities of modern devices. You should [know that pixels aren't pixels](/en/pixels-not-pixels), and that `devicePixelRatio` is more likely to be 3.875 than 1:1. Modern phones pretend to be between 320-428px wide (in CSS pixels) for legibility, but many device pixels support each CSS pixel.
+Check the sidebar for a deep dive. This is a quick reference for upgrading your `<img>` tags to handle various sizes and pixel densities of modern devices. You should [know that a pixel is not a pixel](/en/pixels-not-pixels) and that `devicePixelRatio` is more likely to be 3.875 than 1:1. Modern phones pretend to be 320-428 pixels wide (in CSS pixels) for legibility, but each CSS pixel represents many device pixels. 
 
-> If your image will never change size no matter how narrow the browser window is, use [density descriptors](/en/density-descriptors) instead. This usually applies to logos, icons, and buttons.
+> If your image size will never change no matter how narrow the browser window becomes, you should use [density descriptors](/en/density-descriptors). This is typically the case for logos, icons, and buttons.
 
-Do you know your [breakpoints](/en/breakpoints)? You need these numbers to fine-tune the solutions below - at minimum the viewport width breakpoint where the main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You need these numbers to fine-tune the solutions below, at the very least the viewport width breakpoint, which is where the main content area stops growing.
 
 
-### Simple
+### The Easy Wins
 
 ```html
 
 <img src="img.jpg?w=480" 
-     srcset="img.jpg?format=webp&w=480 480w, 
-             img.jpg?format=webp&w=800 800w, 
-             img.jpg?format=webp&w=1200 1200w, 
-             img.jpg?format=webp&w=1600 1600w, 
-             img.jpg?format=webp&w=2000 2000w"
-     sizes="(max-width: 700px) 100vw, 800px" 
-     alt="dog riding bike" />
+        srcset="img.jpg?format=webp&amp;w=480 480w, 
+                img.jpg?format=webp&amp;w=800 800w, 
+                img.jpg?format=webp&amp;w=1200 1200w, 
+                img.jpg?format=webp&amp;w=1600 1600w, 
+                img.jpg?format=webp&amp;w=2000 2000w"
 
-<!-- We assume your breakpoint is at 700px. At that viewport width, this image takes up 100% of the width,
-     but when the viewport is larger, the image is capped at 800 CSS pixels -->
+        sizes="(max-width: 700px) 100vw, 800px" alt="A dog riding a bike" />
 
-<!-- This assumes you're using an RIAPI-compatible image server such as Imageflow. On-the-fly image variant generation is vital for developers' sanity. -->
+<!-- We assume you have a breakpoint at 700px. 
+     At this viewport width, this image will take up 100% of the width, but it is limited to 800 CSS pixels when the viewport is larger. -->
+
+<!-- This assumes you're using an image server that complies with the RIAPI standards, such as Imageflow. Real-time image variant generation is key to developer mental health. -->
 ```
+
+{{Note that the original has some different formatting in its URLs that could cause URLs to break, so I standardized them into '&amp;' for the sake of clarity.}} 
+
+{{One mistake found and corrected: in the original, the phrase "main content area stops growing" was used instead of "stops". This could be interpreted as meaning the content is no longer being added to the page, which is not what is intended here.}}
 =====================
 
 Content prompt used: 
@@ -48,8 +51,8 @@ Also carefully translate the title and description for the article; do not use &
 1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
-Metadata returned1. srcset 和 <img> sizes
-2. 2023 年响应式图像的高效且主观的指南 
+Metadata returned1. `srcset`和`<img>`的大小 
+2. 2023年响应式图片的高效且有见解的指南 
 
 
 Roundtrip (isolated) prompt used: 

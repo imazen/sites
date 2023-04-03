@@ -1,15 +1,14 @@
 ---
-title: 完整的CSS参考
-description: 带有示例的完整CSS效果参考
-taskInputHash: dbb7d3e328844243
+title: 完整的CSS参考手册
+description: 带有例子的效果完整的CSS参考手册
+taskInputHash: d25ec13d77337801
 lang: zh
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-这是一个完整的CSS效果和边框参考，您可以对图片应用其中的效果，并带有每个效果的示例：
-1. **边框：** 在图像周围添加边框。
+这里是可以应用到图片的CSS效果和边框的综合参考，每个都附有例子:
+1. **Border:** 在图片周围添加边框。
 
 ```css
 img {
@@ -18,7 +17,7 @@ img {
 ```
 
 
-2. **盒子阴影：** 在图像周围添加阴影。
+2. **Box Shadow:** 在图片周围添加阴影。
 
 ```css
 img {
@@ -27,7 +26,7 @@ img {
 ```
 
 
-3. **不透明度：** 调整图像的透明度。
+3. **Opacity:** 调整图片的透明度。
 
 ```css
 img {
@@ -36,7 +35,7 @@ img {
 ```
 
 
-4. **灰度：** 将图像转换为灰度图。
+4. **Grayscale:** 将图片转换为灰度图像。
 
 ```css
 img {
@@ -45,7 +44,7 @@ img {
 ```
 
 
-5. **褐色：** 在图像上应用褐色效果。
+5. **Sepia:** 给图片应用一个复古效果。
 
 ```css
 img {
@@ -54,7 +53,7 @@ img {
 ```
 
 
-6. **模糊：** 模糊图像。
+6. **Blur:** 使图片变模糊。
 
 ```css
 img {
@@ -63,7 +62,7 @@ img {
 ```
 
 
-7. **亮度：** 调整图像的亮度。
+7. **Brightness:** 调整图片的亮度。
 
 ```css
 img {
@@ -72,7 +71,7 @@ img {
 ```
 
 
-8. **对比度：** 调整图像的对比度。
+8. **Contrast:** 调整图片的对比度。
 
 ```css
 img {
@@ -81,7 +80,7 @@ img {
 ```
 
 
-9. **色相旋转：** 旋转图像的色相。
+9. **Hue Rotate:** 旋转图像的色相。
 
 ```css
 img {
@@ -90,7 +89,7 @@ img {
 ```
 
 
-10. **反转：** 反转图像的颜色。
+10. **Invert:** 反转图像颜色。
 
 ```css
 img {
@@ -99,7 +98,7 @@ img {
 ```
 
 
-11. **饱和度：** 调整图像的饱和度。
+11. **Saturate:** 调整图像的饱和度。
 
 ```css
 img {
@@ -108,7 +107,7 @@ img {
 ```
 
 
-12. **褐色：** 在图像上应用褐色效果。
+12. **Sepia:** 给图片应用一个复古效果。
 
 ```css
 img {
@@ -117,7 +116,7 @@ img {
 ```
 
 
-13. **投影：** 在图像周围添加投影效果。
+13. **Drop-Shadow:** 在图像周围添加一个投影效果。
 
 ```css
 img {
@@ -126,34 +125,34 @@ img {
 ```
 
 
-14. **过渡：** 为图像添加过渡效果。
+14. **Transition:** 在图像上添加过渡效果。
 
 ```css
 img {
-  过渡：transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 img:hover {
-  变换：缩放（1.1）;
+  transform: scale(1.1);
 }
 ```
 
 
-15. **动画：** 为图像添加动画效果。
+15. **Animation:** 在图像上添加动画效果。
 
 ```css
 @keyframes slidein {
-  从 {
+  from {
     transform: translateX(100%);
   }
-  到 {
+  to {
     transform: translateX(0);
   }
 }
 img {
-  动画：slidein 1s ease;
+  animation: slidein 1s ease;
 }
 ```
 
 
 
-这些只是许多可以应用于图片的CSS效果和边框的几个示例。尝试不同的样式以创建独特和引人注目的设计！
+这些只是应用于图片的许多CSS效果和边框中的一些例子。尝试不同的样式来创建独特而引人注目的设计！

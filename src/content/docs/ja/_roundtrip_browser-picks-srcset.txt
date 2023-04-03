@@ -1,37 +1,39 @@
 ---
-title: How Browsers Select Images in srcset
-description: Step-by-step explanation of how browsers choose images listed in the srcset attribute
-taskInputHash: c272925d0cc63780
+title: How Browsers Choose
+description: How browsers choose from the list of images in the srcset attribute
+taskInputHash: e33bc9ab3ee1a7e0
 lang: en
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-How does a browser select which image to display from those listed in the `srcset` attribute? We'll explain step-by-step, providing examples for both width and density descriptors based on device and viewport. 
+How does a browser determine which image to select from the list of images in the srcset attribute? This is explained step by step using examples for both width-based and density-based selection, depending on the device and viewport.
 
-When using the `srcset` attribute in HTML, the browser uses a set of rules to select the optimal image from the provided list of sources. These rules depend on the display characteristics of the device (resolution, pixel density) and the size of the viewport. The `srcset` attribute allows specifying different images based on width (`w` descriptor), or based on pixel density (`x` descriptor). Let's explain with examples for each case: 
+When using the `srcset` attribute in HTML, the browser uses a set of rules to select the appropriate image from the list of provided image sources. These rules depend on both the display characteristics of the device (resolution, pixel density) and the size of the viewport. With the `srcset` attribute, you can specify different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's take a look at examples for each case.
 
-1. Width descriptor (`w`):
+1. Width-based descriptor (`w`):
 
-Assume we have the following `srcset` attribute: 
+Assuming the following `srcset` attribute:
 
 ```html
 <img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example Image">
 ```
-The browser follows these steps: 
 
-a. Determine the device's DPR (Device Pixel Ratio). For example, the standard display has a DPR of 1, and high-resolution (Retina) displays have a DPR of 2 or more.
+The browser follows these steps:
 
-b. Calculate the effective width for each image in `srcset` by multiplying its width descriptor by the DPR. For devices with a DPR of 1, they would be as follows:
+a. Determine the device's DPR (device pixel ratio). For example, the standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
+
+b. Calculate the effective width of each image in `srcset` by multiplying the width descriptor by the DPR. For devices with a DPR of 1:
 
 - example-small.jpg: 400 * 1 = 400px
-
 - example-medium.jpg: 800 * 1 = 800px
-
 - example-large.jpg: 1600 * 1 = 1600px
 
-c. Compare each effective width with the viewport width. The browser chooses the smallest image with an effective width larger than the viewport width. In this case, `example-medium.jpg` would be chosen if the viewport width is assumed to be 420px.
+c. Compare the effective width with the width of the viewport. Assuming the viewport width is 420 px, the browser selects the smallest image with an effective width greater than or equal to the viewport width. In this case, `example-medium.jpg` is selected.
 
-2. Density descriptor (`x`):
+2. Density-based descriptor (`x`):
 
-Assume we have the following `srcset` attribute: 
+Assuming the following `srcset` attribute:
 
 ```html
 <img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example Image">
@@ -39,22 +41,20 @@ Assume we have the following `srcset` attribute:
 
 The browser follows these steps:
 
-a. Determine the device's DPR (Device Pixel Ratio). For example, the standard display has a DPR of 1, and high-resolution (Retina) displays have a DPR of 2 or more.
+a. Determine the device's DPR (device pixel ratio). For example, the standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
 
-b. Compare each image's `x` descriptor in `srcset` with the device's DPR. In this case, there are three images with descriptors:
+b. Compare the `x` descriptor in `srcset` with the device's DPR. In this case, we have three images with the following descriptors:
 
 - example-1x.jpg: 1x
-
 - example-2x.jpg: 2x
-
 - example-3x.jpg: 3x
 
-c. The browser chooses the image with the closest descriptor to the device's DPR. With a DPR of 1, the browser will choose `example-1x.jpg`. With a DPR of 2, the browser will choose `example-2x.jpg`. 
+c. Select the image with the `x` descriptor closest to the device's DPR. For a device with a DPR of 1, the browser selects `example-1x.jpg`. For a device with a DPR of 2, the browser selects `example-2x.jpg`, and so on.
 
-When using width descriptors (`w`), you can also provide detailed information about how the image should be displayed on different viewport widths by combining the `sizes` and `srcset` attributes. Here's an example: 
+It's important to note that the `sizes` attribute can be used in combination with the `srcset` attribute to provide more detailed information about how images should be displayed at different viewport widths. This is particularly handy when using width-based descriptors (`w`). Here's an example:
 
 ```html
-<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw, ...
 ```
 =====================
 
@@ -69,7 +69,7 @@ Also carefully translate the title and description for the article; do not use &
  2. How the browser chooses between images listed in the srcset attribute
 
 Metadata returned1. ブラウザが選択する方法
-2. srcset 属性にリストされた画像のブラウザの選択方法 
+2. srcset属性にリストされた画像の間でブラウザが選択する方法 
 
 
 Roundtrip (isolated) prompt used: 

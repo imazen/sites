@@ -1,15 +1,14 @@
 ---
-title: Styling `<img>` elements and example layout
-description: Styling `<img>` elements and example layout
-taskInputHash: 8af13d8006fd2214
+title: Styling `<img>` elements and sample layout
+description: Styling `<img>` elements and sample layout
+taskInputHash: b7f9c4a07677f6a9
 lang: en
-ignore: '/* cSpell:locale it,en*/'
 sidebar_sort_priority: 1000
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-# Styling `<img>` elements and example layout
+# Styling `<img>` elements and sample layout
 
 ## Styling `<img>` elements
 
@@ -26,8 +25,8 @@ Also carefully translate the title and description for the article; do not use &
 1. styling <img> elements and example layouts
  2. styling <img> elements and example layouts
 
-Metadata returned1. Stilizzare gli elementi `<img>` e layout di esempio
-2. Stilizzare gli elementi `<img>` e layout di esempio 
+Metadata returned1. Stilizzazione degli elementi `<img>` e layout di esempio
+2. Stilizzazione degli elementi `<img>` e layout di esempio 
 
 
 Roundtrip (isolated) prompt used: 

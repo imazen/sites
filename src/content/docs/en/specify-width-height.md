@@ -1,8 +1,8 @@
 ---
 title: Use width and height
 description: Benefits of using width and height attributes in HTML code
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
 ---
 
 Why should you put width and height in the HTML?

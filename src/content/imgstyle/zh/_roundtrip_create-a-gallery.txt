@@ -1,22 +1,21 @@
 ---
 title: Creating a Gallery
 description: How to create a gallery on a website
-taskInputHash: c1101189a7725eb9
+taskInputHash: 84ed0f83c84e027d
 lang: en
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Below are the general steps for creating a gallery on a website:
+Below are the general steps to create a web image gallery:
 
-1. Create a new HTML file for your gallery. You can name it something like "gallery.html".
-2. Add HTML structure to the file. This typically includes a head section with a title and any necessary CSS stylesheets, as well as a body section where you will add the actual gallery.
-3. Use a `<div>` tag to create a container for the gallery. Give it an ID or class so that you can style it later.
-4. Inside the container, use `<img>` tags to add individual image elements. You can set the `src` attribute to the image file path or URL, and add any necessary `alt` text or titles as needed.
-5. Design the gallery using CSS styles. You can use properties such as `display`, `width`, `height`, `margin`, `padding`, and `border` to control the layout and appearance of your gallery.
+1. Create a new HTML file for the gallery. You can name it "gallery.html" or whatever name you prefer.
+2. Add the HTML structure to the file. It usually includes the head section with the title and any necessary CSS style sheets, and the body section where you will add the actual gallery.
+3. Create a container using the `<div>` tag. Give it an ID or a class so that you can later style it.
+4. Inside the container, use the `<img>` tag to add individual image elements. You can set the source attribute to the image file path or URL and add any alt text or captions as needed.
+5. Style your gallery using CSS. You can use properties like `display`, `width`, `height`, `margin`, `padding`, and `border` to control the layout and appearance of the gallery.
 
-Here's an example code for creating a simple gallery:
+Here is an example code for creating a simple gallery:
 
 ```html
 <!DOCTYPE html>
@@ -51,9 +50,9 @@ Here's an example code for creating a simple gallery:
 </html>
 ```
 
-In this example, the gallery container has the class "gallery", and uses flexbox styling to arrange the images in a grid. Each image is 300px wide, 200px tall, has a margin of 10px, a solid black 2px border, and uses the `object-fit` property to ensure the image maintains its aspect ratio even if it's not the same size as other pictures.
+In this example, the gallery container has a class of "gallery" and is styled using flexbox to arrange the images in a grid. Each image has a width of 300px, a height of 200px, 10px margin, a cover object-fit, and a 2px black border. The `object-fit` property ensures that the images maintain their aspect ratio even if they have different sizes.
 
-You can customize this code according to your specific needs and design preferences.
+You can customize this code as needed to fit your specific requirements and design preferences.
 =====================
 
 Content prompt used: 
@@ -66,7 +65,7 @@ Also carefully translate the title and description for the article; do not use &
 1. Create a gallery
  2. How to create a gallery on a website
 
-Metadata returned1. 创建图库
+Metadata returned1. 创建一个图库
 2. 如何在网站上创建图库 
 
 

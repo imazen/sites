@@ -1,28 +1,27 @@
 ---
-title: Testing website performance with Lighthouse
-description: Steps for testing website performance using Lighthouse
-taskInputHash: 7f9c623aaf7861da
+title: Testing Performance with Lighthouse
+description: Steps for using Lighthouse to test the performance of a website
+taskInputHash: 514590b0de96e45f
 lang: en
-ignore: '/* cSpell:locale ja,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-# How to test website performance with Lighthouse
+How can I use Lighthouse to test my site's performance?
 
-`Lighthouse` is a tool used for measuring website performance, accessibility, and more. To test a website's performance with `Lighthouse`, follow these steps:
+> Lighthouse is a tool that can be used to measure a website's performance, accessibility, and other aspects. To test the performance of a website using Lighthouse, follow these steps:
 
-1. Open the Google Chrome web browser and navigate to the page you want to test.
+> 1. Open the Google Chrome web browser and navigate to the page you want to test.
 
-2. Click the three dots in the top-right corner of the browser window, select "More Tools," then "Developer Tools," or use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
+> 2. Click the three dots in the upper-right corner of the browser window, select "More Tools," then "Developer Tools," or use the keyboard shortcut "Ctrl+Shift+I" (Windows, Linux) or "Command+Option+I" (macOS).
 
-3. In the Developer Tools panel, click the `Lighthouse` icon on the left side of the panel, or open the command menu by pressing "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS), type "Lighthouse," and select "Generate report."
+> 3. In the Developer Tools panel, click on the Lighthouse icon on the left side of the panel, or press "Ctrl+Shift+P" (Windows, Linux) or "Command+Shift+P" (macOS) to open the Command Menu, type "Lighthouse," and select "Generate Report."
 
-4. In the Lighthouse dialog box, select the relevant options for the performance you want to test, then click "Generate report."
+> 4. In the Lighthouse dialog box, select the performance and other relevant options you want to test, and click "Generate Report."
 
-5. Once `Lighthouse` has completed the analysis, a report will be displayed showing the website's performance, accessibility, and other areas along with scores and recommendations for improvement.
+> 5. After Lighthouse completes its analysis, a report will be displayed with scores and recommendations to improve the website's performance, accessibility, and other areas.
 
-By following these steps, you can use `Lighthouse` to test and optimize website performance, improve user experience, and increase search engine rankings.
+> By following these steps, you can use Lighthouse to test and optimize the performance of your website, helping to improve both user experience and search engine ranking.
 =====================
 
 Content prompt used: 
@@ -35,7 +34,7 @@ Also carefully translate the title and description for the article; do not use &
 1. Test performance with Lighthouse
  2. Steps on how to test a website's performance using Lighthouse
 
-Metadata returned1. Lighthouseによるパフォーマンスのテスト
+Metadata returned1. Lighthouseでパフォーマンスをテストする
 2. Lighthouseを使用してウェブサイトのパフォーマンスをテストする手順 
 
 

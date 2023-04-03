@@ -1,35 +1,34 @@
 ---
-title: Density-Descriptoren und Srcset
-description: Beispiele für die Verwendung von Density-Descriptoren in `srcset`
-taskInputHash: 0a85d4f28fee785a
+title: Density-Deskriptoren & Srcset
+description: Beispiele zur Verwendung von Density-Deskriptoren in `srcset`
+taskInputHash: bb5fed05291ed4a0
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Srcset mit Density Descriptors bietet eine einfache und effektive Methode für die Bereitstellung des am besten geeigneten Bildes für jedes Gerät des Benutzers und verbessert die Leistung und die Benutzererfahrung. Diese Anleitung führt Sie durch die Grundlagen der Verwendung von Srcset mit Density Descriptors und bietet Markup-Beispiele für Ihre Bequemlichkeit.
+Srcset mit Density-Deskriptoren bietet eine einfache und effektive Methode, um das geeignetste Bild für jedes Gerät des Benutzers bereitzustellen, was die Leistung und Benutzererfahrung verbessert. Diese Anleitung führt Sie durch das Wesentliche von Srcset mit Density-Deskriptoren und bietet Markup-Beispiele für Ihre Bequemlichkeit.
 
-## Was ist Srcset mit Density Descriptors?
+## Was ist Srcset mit Density-Deskriptoren?
 
-Srcset ist ein HTML-Attribut, das es ermöglicht, mehrere Bildquellen für ein einzelnes `<img>`-Element anzugeben. Density Descriptors (`x`) werden in Verbindung mit srcset verwendet, um Bilder in unterschiedlicher Auflösung basierend auf der Pixeldichte des Displays des Benutzers bereitzustellen.
+Srcset ist ein HTML-Attribut, das es Ihnen ermöglicht, mehrere Bildquellen für ein einziges `<img>`-Element anzugeben. Density-Deskriptoren (`x`) werden in Verbindung mit Srcset verwendet, um Bilder mit unterschiedlicher Auflösung basierend auf der Pixel-Dichte des Displays des Benutzers bereitzustellen.
 
-## Wann soll man Srcset mit Density Descriptors verwenden?
+## Wann sollte man Srcset mit Density-Deskriptoren verwenden?
 
-Die Verwendung von srcset mit Density Descriptors ist besonders nützlich, wenn Sie:
-1. Hochauflösende Bilder für hohe DPI-Displays (z.B. Retina-Displays) bereitstellen möchten, während Sie für Standard-Displays niedrigere Auflösungen verwenden.
-2. Die Seitenausführung durch die Bereitstellung der am besten geeigneten Bildgröße für jedes Gerät des Benutzers verbessern möchte.
+Srcset mit Density-Deskriptoren ist besonders nützlich, wenn Sie:
+1. Hochauflösende Bilder auf Bildschirmen mit hoher DPI (z.B. Retina-Displays) anzeigen möchten, während Sie auf Standarddisplays Bilder mit niedriger Auflösung bereitstellen möchten.
+2. Die Seitenausführung durch Bereitstellung der geeignetsten Bildgröße für jedes Gerät des Benutzers verbessern möchten. 
 
-## Implementierung von Srcset mit Density Descriptors
+## Implementierung von Srcset mit Density-Deskriptoren
 
-Um srcset mit Density Descriptors zu verwenden, befolgen Sie diese Schritte:
+Um Srcset mit Density-Deskriptoren zu verwenden, befolgen Sie diese Schritte:
 1. Bereiten Sie Ihre Bilder in verschiedenen Auflösungen vor.
-2. Fügen Sie das `srcset`-Attribut zum `<img>`-Element hinzu, einschließlich der Bildquellen und entsprechenden Density Descriptors.
-3. Fügen Sie das `sizes`-Attribut optional hinzu, um die Größe des Bildes auf dem Bildschirm festzulegen.
+2. Fügen Sie dem `<img>`-Element das Attribut `srcset` hinzu, einschließlich der Bildquellen und entsprechender Density-Deskriptoren.
+3. Fügen Sie das Attribut `sizes` (optional) hinzu, um die Größe des Bildes auf dem Bildschirm zu spezifizieren.
 
-### Markup Beispiel
+### Markup-Beispiel
 
-Hier ist ein Beispiel, wie Sie srcset mit Density Descriptors in Ihrem Markup implementieren:
+Hier ist ein Beispiel, wie Sie Srcset mit Density-Deskriptoren in Ihrem Markup implementieren können:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -38,8 +37,8 @@ Hier ist ein Beispiel, wie Sie srcset mit Density Descriptors in Ihrem Markup im
 ```
 
 Dieses Markup-Beispiel enthält:
-- **src**: Die Standardbildquelle, die angezeigt wird, wenn der Browser srcset nicht unterstützt.
-- **srcset**: Die Liste der Bildquellen und ihrer Density Descriptors (1x, 2x, 3x). Der Browser wählt das am besten geeignete Bild basierend auf dem Display des Benutzers aus.
-- **alt**: Eine Beschreibung des Bildes zu Zwecken der Barrierefreiheit.
+- **src** : Die Standardbildquelle, die angezeigt wird, wenn der Browser Srcset nicht unterstützt.
+- **srcset** : Die Liste der Bildquellen und ihrer Density-Deskriptoren (1x, 2x, 3x). Der Browser wählt das geeignetste Bild basierend auf dem Display des Benutzers aus.
+- **alt** : Eine Beschreibung des Bildes für Zugänglichkeitszwecke.
 
-Und das war es schon! Sie haben srcset mit Density Descriptors erfolgreich implementiert und damit die Leistung und Benutzererfahrung Ihrer Website verbessert.
+Und das ist es! Sie haben erfolgreich Srcset mit Density-Deskriptoren implementiert und die Leistung und Benutzererfahrung Ihrer Website verbessert.

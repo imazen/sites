@@ -1,77 +1,38 @@
-# Applying styles to `<img>` elements and layout examples
+# Formatting of `<img>` elements and layout examples
 
-## Applying styles to `<img>` elements
+## Formatting of `<img>` elements
 
-The `<img>` element is used to display images on a web page. You can apply styles to the `<img>` element using CSS to control the size, placement, and other properties of the image.
+When using the `<img>` element to display images on a webpage, there are a few formatting options available. 
 
-### Setting the size of an image
+### 1. Setting image dimensions
 
-You can set the size of an image using the `width` and `height` properties in CSS. For example, to set the width of an image to 200 pixels and the height to 100 pixels, you could use the following CSS:
+You can set the dimensions of an image using the `width` and `height` attributes. For example:
 
-```css
-img {
-  width: 200px;
-  height: 100px;
-}
+```
+<img src="example.jpg" alt="Example image" width="500" height="300">
 ```
 
-### Aligning an image
+### 2. Aligning images
 
-You can align an image using the `text-align` property in CSS. For example, to center an image, you could use the following CSS:
+You can use the `align` attribute to specify how the image should be aligned with the surrounding text. The possible values are `left`, `right`, or `middle`. For example:
 
-```css
-img {
-  display: block;
-  margin: auto;
-}
+```
+<img src="example.jpg" alt="Example image" align="left">
 ```
 
-### Adding a border to an image
+### 3. Adding borders
 
-You can add a border to an image using the `border` property in CSS. For example, to add a 1-pixel solid black border to an image, you could use the following CSS:
+You can use CSS to add a border around an image using the `border` property. For example:
 
-```css
-img {
-  border: 1px solid black;
-}
+```
+<img src="example.jpg" alt="Example image" style="border: 1px solid black;">
 ```
 
-## Layout Examples
+## Layout examples
 
-Here are some examples of how you can use images in a layout:
+TODO: 
 
-### Example 1: Image with centered text
-
-```html
-<div>
-  <img src="image.png" alt="An example image">
-  <p style="text-align: center;">This is an example of centered text.</p>
-</div>
-```
-
-### Example 2: Side-by-side images
-
-```html
-<div>
-  <img src="image1.png" alt="An example image">
-  <img src="image2.png" alt="Another example image">
-</div>
-```
-
-### Example 3: Image with a caption
-
-```html
-<figure>
-  <img src="image.png" alt="An example image">
-  <figcaption>This is a caption for the image.</figcaption>
-</figure>
-```
-
-{{Note that the term used here is not the technical term for the `alt` attribute.}} 
-
-## Conclusion
-
-With CSS, you can style images in many different ways to help create an effective layout for your web pages.
+{{Note that the term used here is not the technical term...}}.
 =====================
 
 Content prompt used: 
@@ -84,8 +45,8 @@ Also carefully translate the title and description for the article; do not use &
 1. styling <img> elements and example layouts
  2. styling <img> elements and example layouts
 
-Metadata returned1. Appliquer des styles aux éléments <img> et exemples de mises en page
-2. Appliquer des styles aux éléments <img> et exemples de mises en page 
+Metadata returned1. Mise en forme des éléments `<img>` et exemples de mise en page
+2. Mise en forme des éléments `<img>` et exemples de mise en page 
 
 
 Roundtrip (isolated) prompt used: 

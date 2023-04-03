@@ -1,33 +1,30 @@
 ---
-title: >-
-  Agregar la opción de tocar para ver la imagen en pantalla completa a una
-  galería
+title: Agregar toque para ver imagen en pantalla completa a una galería
 description: >-
-  Cómo agregar una opción de tocar para ver la imagen en pantalla completa en
-  una galería
-taskInputHash: 39687ec0ca18f284
+  Cómo agregar una opción de toque para ver imagen en pantalla completa a una
+  galería
+taskInputHash: c1d54045b5f7ae70
 lang: es
-ignore: '/* cSpell:locale es,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Para agregar una opción "Tocar para ver la imagen en pantalla completa" en una galería, puedes usar JavaScript y CSS para crear una capa que muestre la imagen en modo de pantalla completa cuando el usuario toque en ella.
+Para agregar una opción "Toca para ver imagen en pantalla completa" a una galería, puedes usar JavaScript y CSS para crear una capa que muestre la imagen en modo de pantalla completa cuando el usuario toque en ella.
 
 Aquí hay un enfoque básico que puedes usar:
-
-1. Primero, crea un contenedor para tu galería y agrega todas las imágenes que quieres mostrar.
+1. Primero, crea un contenedor para tu galería y agrega todas las imágenes que deseas mostrar.
 
 ```html
 <div class="gallery">
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- agregar más imágenes aquí -->
+  <!-- Agrega más imágenes aquí -->
 </div>
 ```
 
-2. Luego, agrega un poco de CSS para dar estilo a la galería y las imágenes.
+
+2. Luego, agrega un poco de CSS para estilizar la galería y las imágenes.
 
 ```css
 .gallery {
@@ -42,7 +39,8 @@ Aquí hay un enfoque básico que puedes usar:
 }
 ```
 
-3. Ahora, agrega un detector de eventos de click para cada imagen usando JavaScript. Cuando el usuario hace clic en una imagen, JavaScript creará una capa y mostrará la imagen en modo de pantalla completa.
+
+3. Ahora, agrega un event listener a cada imagen usando JavaScript. Cuando el usuario haga clic en una imagen, el JavaScript creará una capa y mostrará la imagen en modo de pantalla completa.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -54,12 +52,12 @@ images.forEach((image) => {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     
-    // crear elemento de imagen
+    // crear elemento imagen
     const fullScreenImage = document.createElement('img');
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // agregar elemento de imagen a la capa
+    // agregar elemento imagen a la capa
     overlay.appendChild(fullScreenImage);
     
     // agregar capa a la página
@@ -68,7 +66,8 @@ images.forEach((image) => {
 });
 ```
 
-4. Finalmente, agrega algunos estilos CSS para dar estilo a la capa y la imagen en pantalla completa.
+
+4. Finalmente, agrega algo de CSS para estilizar la capa y la imagen en pantalla completa.
 
 ```css
 .overlay {
@@ -90,4 +89,5 @@ images.forEach((image) => {
 }
 ```
 
-Con estos pasos, ahora deberías tener una galería que permite a los usuarios ver imágenes en modo de pantalla completa tocando en ellas.
+
+Con estos pasos, deberías tener una galería que permite a los usuarios ver imágenes en modo de pantalla completa tocándolas.

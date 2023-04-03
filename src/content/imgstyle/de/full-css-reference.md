@@ -1,16 +1,15 @@
 ---
 title: Vollständige CSS-Referenz
 description: Vollständige CSS-Referenz für Effekte mit Beispielen
-taskInputHash: 14c2d1e815930d7b
+taskInputHash: d4c0669b963e7e19
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Hier ist eine umfassende Referenz von CSS-Effekten und -Rahmen, die Sie auf Bilder anwenden können, zusammen mit Beispielen für jeden Effekt:
+Hier ist eine umfassende Referenz von CSS-Effekten und -Rändern, die auf Bilder angewendet werden können, zusammen mit Beispielen für jeden Effekt:
 
-1. **Rahmen:** Fügt ein Rahmen um das Bild hinzu.
+1. **Rahmen:** Fügt dem Bild einen Rahmen hinzu.
 
 ```css
 img {
@@ -19,7 +18,7 @@ img {
 ```
 
 
-2. **Boxschatten:** Fügt einen Schatten um das Bild hinzu.
+2. **Box Shadow:** Fügt dem Bild einen Schatten hinzu.
 
 ```css
 img {
@@ -28,7 +27,7 @@ img {
 ```
 
 
-3. **Deckkraft:** Passt die Transparenz des Bildes an.
+3. **Transparenz:** Ermöglicht das Anpassen der Transparenz des Bildes.
 
 ```css
 img {
@@ -46,7 +45,7 @@ img {
 ```
 
 
-5. **Sepia:** Wendet einen Sepia-Effekt auf das Bild an.
+5. **Sepia:** Verleiht dem Bild einen Sepia-Effekt.
 
 ```css
 img {
@@ -82,7 +81,7 @@ img {
 ```
 
 
-9. **Hue Rotate:** Dreht die Farbton des Bildes.
+9. **Farbtiefe:** Dreht die Farbtiefe des Bildes.
 
 ```css
 img {
@@ -91,7 +90,7 @@ img {
 ```
 
 
-10. **Invertieren:** Invertiert die Farben des Bildes.
+10. **Invertieren:** Dreht die Farben des Bildes um.
 
 ```css
 img {
@@ -109,7 +108,7 @@ img {
 ```
 
 
-12. **Sepia:** Wendet einen Sepia-Effekt auf das Bild an.
+12. **Sepia:** Verleiht dem Bild einen Sepia-Effekt.
 
 ```css
 img {
@@ -118,7 +117,7 @@ img {
 ```
 
 
-13. **Drop-Shadow:** Fügt dem Bild einen Schlagschatten-Effekt hinzu.
+13. **Drop-Shadow:** Fügt dem Bild einen Schattenwurf-Effekt hinzu.
 
 ```css
 img {
@@ -157,4 +156,4 @@ img {
 
 
 
-Dies sind nur einige Beispiele der vielen CSS-Effekte und -Rahmen, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und auffällige Designs zu schaffen!
+Dies sind nur ein paar Beispiele von vielen CSS-Effekten und -Rändern, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und ansprechende Designs zu erstellen!

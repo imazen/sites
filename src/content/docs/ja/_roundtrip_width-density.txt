@@ -1,22 +1,21 @@
 ---
-title: Width and Density Descriptor
-description: 'An example of using the "srcset" attribute with width and density descriptors'
-taskInputHash: 85e0a3c7357342e1
+title: Width and Density descriptors
+description: 'Example of using `srcset` with width and density descriptors'
+taskInputHash: 90676cde22fe88fe
 lang: en
-ignore: '/* cSpell:locale ja,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Understand the width (w) and density (x) descriptors in `srcset`, using examples and Markdown.
+Understanding the width (`w`) and density (`x`) descriptors within `srcset`. Using Markdown with examples.
 
-The `srcset` attribute is an HTML attribute that allows developers to provide multiple image sources with different resolutions and pixel densities, so that the browser can select the appropriate image based on the device's display characteristics. The `srcset` attribute specifies an image using a combination of a URL and a `w` or `x` descriptor.
+>`srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions and pixel densities, and lets the browser select the appropriate image based on device display characteristics. The `srcset` attribute specifies the image using both a `URL` and a combination of `w` or `x` descriptors.
 
-## Width (w) Descriptor
+## Width (`w`) descriptor
 
-The `w` descriptor is used to specify the width of an image in pixels. It provides the browser with the dimensions of the image, allowing it to choose an image that best fits the available screen space.
+>The `w` descriptor specifies the width of the image in pixels. It is used to provide the dimensions of the image to the browser, so it can select the appropriate image to fit the available screen space.
 
-The syntax for using the `w` descriptor in `srcset` is as follows:
+>The syntax to use the `w` descriptor within `srcset` is as follows:
 
 ```html
 <img src="small.jpg"
@@ -26,13 +25,13 @@ The syntax for using the `w` descriptor in `srcset` is as follows:
   alt="Example Image">
 ```
 
-In the above example, three images are provided to the browser, along with their respective widths in pixels. The browser selects the image with the closest width to the available screen space.
+> In the above example, three images are provided to the browser along with their respective widths in pixels. The browser selects the image with the closest width to the available screen space.
 
-## Density (x) Descriptor
+## Density (`x`) descriptor
 
-The `x` descriptor is used to specify the pixel density of an image, which is the ratio of physical pixels to CSS pixels. It is used when providing different versions of the same image with different pixel densities to the browser.
+>The `x` descriptor is used to specify the pixel density of the image (the ratio of physical pixels to CSS pixels). It is used when providing different versions of the same image with different pixel densities to the browser.
 
-The syntax for using the `x` descriptor in `srcset` is as follows:
+>The syntax to use the `x` descriptor within `srcset` is as follows:
 
 ```html
 <img src="small.jpg"
@@ -42,9 +41,9 @@ The syntax for using the `x` descriptor in `srcset` is as follows:
   alt="Example Image">
 ```
 
-In the above example, three images are provided to the browser, along with their respective pixel densities. The browser selects the image with the closest pixel density to the device's screen.
+> In the above example, three images are provided to the browser along with their respective pixel densities. The browser selects the image with the closest pixel density to the device screen.
 
-Both `w` and `x` descriptors can be used together within the same `srcset` attribute, providing the browser with choices.
+> Note that the `w` and `x` descriptors can be used together within the `srcset` attribute to provide choices to the browser.
 =====================
 
 Content prompt used: 
@@ -57,8 +56,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Width and density descriptors
  2. Examples of using width and density descriptors in `srcset`
 
-Metadata returned1. 幅と密度のディスクリプタ
-2. `srcset`で幅と密度のディスクリプタを使用する例 
+Metadata returned1. 幅と密度の記述子
+2. `srcset`で幅と密度の記述子を使用した例 
 
 
 Roundtrip (isolated) prompt used: 

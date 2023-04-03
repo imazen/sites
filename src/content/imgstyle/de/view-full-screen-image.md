@@ -1,66 +1,66 @@
 ---
 title: >-
-  Fügen Sie "Tippen Sie, um das Bild im Vollbildmodus anzuzeigen" zu einer
-  Galerie hinzu.
+  "Fügen Sie die Option 'Tippen Sie hier, um ein Vollbildbild anzuzeigen' zu
+  einer Galerie hinzu"
 description: >-
-  Wie Sie eine Tippen-Option erstellen, um ein Bild im Vollbildmodus in einer
-  Galerie anzuzeigen.
-taskInputHash: dd22005fc000b519
+  "Wie man der Galerie eine Option zum Tippen hinzufügt, um ein Vollbildbild
+  anzuzeigen"
+taskInputHash: 2080950563d7aca8
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Um eine "Tippen, um Vollbildansicht des Bildes zu sehen" Option zu einer Galerie hinzuzufügen, können Sie JavaScript und CSS verwenden, um ein Overlay zu erstellen, das das Bild im Vollbildmodus anzeigt, wenn der Benutzer darauf tippt.
+Um eine Option "Tippen Sie, um das Vollbildbild anzuzeigen" zu einer Galerie hinzuzufügen, können Sie JavaScript und CSS verwenden, um ein Overlay zu erstellen, das das Bild im Vollbildmodus anzeigt, wenn der Benutzer darauf tippt.
 
 Hier ist ein grundlegender Ansatz, den Sie verwenden können:
-
 1. Erstellen Sie zunächst einen Container für Ihre Galerie und fügen Sie alle Bilder hinzu, die Sie anzeigen möchten.
 
 ```html
-<div class="gallery">
-  <img src="image1.jpg">
-  <img src="image2.jpg">
-  <img src="image3.jpg">
-  <!-- voeg hier meer afbeeldingen toe -->
+<div class="galerie">
+  <img src="bild1.jpg">
+  <img src="bild2.jpg">
+  <img src="bild3.jpg">
+  <!-- hier weitere Bilder hinzufügen -->
 </div>
 ```
 
-2. Fügen Sie als nächstes etwas CSS hinzu, um die Galerie und die Bilder zu gestalten.
+
+2. Fügen Sie als nächstes einige CSS hinzu, um die Galerie und die Bilder zu gestalten.
 
 ```css
-.gallery {
+.galerie {
   display: flex;
   flex-wrap: wrap;
 }
 
-.gallery img {
+.galerie img {
   width: 100%;
   height: auto;
   margin: 5px;
 }
 ```
 
-3. Fügen Sie nun jedem Bild mithilfe von JavaScript einen Klick-Event-Listener hinzu. Wenn der Benutzer auf ein Bild klickt, erstellt das JavaScript ein Overlay und zeigt das Bild im Vollbildmodus an.
+
+3. Fügen Sie jetzt über JavaScript jedem Bild einen Klick-Event-Listener hinzu. Wenn der Benutzer auf ein Bild klickt, erstellt das JavaScript ein Overlay und zeigt das Bild im Vollbildmodus an.
 
 ```javascript
-const gallery = document.querySelector('.gallery');
-const images = gallery.querySelectorAll('img');
+const galerie = document.querySelector('.galerie');
+const bilder = galerie.querySelectorAll('img');
 
-images.forEach((image) => {
-  image.addEventListener('click', () => {
+bilder.forEach((bild) => {
+  bild.addEventListener('click', () => {
     // Overlay erstellen
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     
-    // Bild-Element erstellen
-    const fullScreenImage = document.createElement('img');
-    fullScreenImage.src = image.src;
-    fullScreenImage.classList.add('full-screen-image');
+    // Bildelement erstellen
+    const vollbildBild = document.createElement('img');
+    vollbildBild.src = bild.src;
+    vollbildBild.classList.add('vollbild-bild');
     
-    // Bild-Element zum Overlay hinzufügen
-    overlay.appendChild(fullScreenImage);
+    // Bildelement zum Overlay hinzufügen
+    overlay.appendChild(vollbildBild);
     
     // Overlay zur Seite hinzufügen
     document.body.appendChild(overlay);
@@ -68,7 +68,8 @@ images.forEach((image) => {
 });
 ```
 
-4. Fügen Sie abschließend etwas CSS hinzu, um das Overlay und das Vollbildbild zu gestalten.
+
+4. Fügen Sie schließlich einige CSS hinzu, um das Overlay und das Vollbildbild zu gestalten.
 
 ```css
 .overlay {
@@ -83,11 +84,13 @@ images.forEach((image) => {
   align-items: center;
 }
 
-.full-screen-image {
+.vollbild-bild {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 ```
 
-Mit diesen Schritten sollten Sie nun eine Galerie haben, mit der Benutzer Bilder im Vollbildmodus anzeigen können, indem sie darauf tippen.
+
+
+Mit diesen Schritten sollten Sie jetzt eine Galerie haben, die Benutzern ermöglicht, Bilder im Vollbildmodus anzuzeigen, indem sie darauf tippen.

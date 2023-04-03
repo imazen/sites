@@ -2,128 +2,75 @@
 
 ## Styling of `<img>` Elements
 
-An `<img>` element is used to embed an image in a web page. It is a self-closing tag, which means it does not require a separate closing tag. Here's an example:
+In addition to specifying the source file of an image, the `<img>` element offers some styling options. For example, you can adjust the width and height of the image, align it with the text, or add a border. Here are some examples:
 
 ```html
-<img src="path/to/image.jpg" alt="Description of image">
+<img src="path/to/image.jpg" alt="Description of image" width="300" height="200">
+
+<img src="path/to/image.jpg" alt="Description of image" style="border: 1px solid black">
+
+<p><img src="path/to/image.jpg" alt="Description of image" style="float: left; margin-right: 1em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius dictum dignissim. Sed id scelerisque nibh, at ultrices arcu.</p>
 ```
-
-To style an `<img>` element, you can use CSS. Here are some commonly used CSS properties:
-
-- `width`: sets the width of the image
-- `height`: sets the height of the image
-- `object-fit`: specifies how the image should be resized to fit its container
-- `border`: adds a border around the image
-- `border-radius`: sets the border radius of the image, creating rounded corners
-
-```css
-/* Example CSS */
-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-```
-
-You can also use CSS to style other aspects of the `<img>` element, such as its `alt` attribute or the container in which it is placed.
 
 ## Example Layouts
 
-Here are some example layouts that use `<img>` elements:
+### Image Gallery
 
-### Basic Image Grid
-
-```html
-<div class="image-grid">
-  <img src="path/to/image1.jpg" alt="Description of image 1">
-  <img src="path/to/image2.jpg" alt="Description of image 2">
-  <img src="path/to/image3.jpg" alt="Description of image 3">
-  <img src="path/to/image4.jpg" alt="Description of image 4">
-  <img src="path/to/image5.jpg" alt="Description of image 5">
-  <img src="path/to/image6.jpg" alt="Description of image 6">
-</div>
-```
-
-```css
-/* Example CSS */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: auto;
-}
-```
-
-### Image with Caption
+Here is an example gallery layout with multiple images:
 
 ```html
-<div class="image-with-caption">
-  <img src="path/to/image.jpg" alt="Description of image">
-  <div class="caption">Caption text</div>
+<div class="image-gallery">
+  <div class="image">
+    <img src="path/to/image1.jpg" alt="Description of image">
+  </div>
+  <div class="image">
+    <img src="path/to/image2.jpg" alt="Description of image">
+  </div>
+  <div class="image">
+    <img src="path/to/image3.jpg" alt="Description of image">
+  </div>
 </div>
-```
 
-```css
-/* Example CSS */
-.image-with-caption {
-  position: relative;
+<style>
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.image-with-caption img {
-  width: 100%;
-  height: auto;
-}
-
-.image-with-caption .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
+.image {
+  flex-basis: calc(33.33% - 1em);
+  margin-bottom: 2em;
   text-align: center;
 }
-```
 
-### Image with Overlay
-
-```html
-<div class="image-with-overlay">
-  <img src="path/to/image.jpg" alt="Description of image">
-  <div class="overlay"></div>
-</div>
-```
-
-```css
-/* Example CSS */
-.image-with-overlay {
-  position: relative;
-}
-
-.image-with-overlay img {
-  width: 100%;
+.image img {
+  max-width: 100%;
   height: auto;
 }
-
-.image-with-overlay .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+</style>
 ```
 
-These are just a few examples of how you can layout and style `<img>` elements in your web design. Remember, the possibilities are endless!
+### Image with Text
+
+Here is an example layout where an image is aligned with text:
+
+```html
+<div class="image-with-text">
+  <img src="path/to/image.jpg" alt="Description of image" style="float: left; margin-right: 1em;">
+  <p>Here is some text that is aligned with the image. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius dictum dignissim. Sed id scelerisque nibh, at ultrices arcu.</p>
+</div>
+
+<style>
+.image-with-text img {
+  width: 200px;
+  height: auto;
+}
+</style>
+``` 
+
+{{Note that the term used here is not the technical term for the attribute `object-fit` and that this attribute may not be supported by all browsers.}}
 =====================
 
 Content prompt used: 

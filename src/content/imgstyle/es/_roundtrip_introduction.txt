@@ -1,60 +1,80 @@
-# Styling `<img>` elements and layout examples
+# `<img>` Element Styles and Layout Examples
 
-## Styling `<img>` elements
+## `<img>` Element Styles
 
-`<img>` elements can be styled with CSS using the `img` selector. Some common styling properties include:
+The `<img>` element is used to embed images in a web page. Here are some common styles that can be applied to it:
 
-- `width` and `height` to specify the dimensions of the image
-- `border` to add a border around the image
-- `box-shadow` to add a shadow effect to the image
-- `margin` and `padding` to adjust the spacing around the image
+- `border`: sets the border around the image.
+- `width`: sets the width of the image.
+- `height`: sets the height of the image.
+- `margin`: sets the margin around the image.
+- `display`: sets how the element is displayed, for example as a block or inline element.
+- `float`: sets the horizontal alignment of the element.
 
-Here’s an example of CSS code to apply some of these styles to an `<img>` element:
+## Layout Examples
 
-```css
-img {
-  width: 300px;
-  height: 200px;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px #ccc;
-  margin: 10px;
-  padding: 5px;
-}
+Here are some layout examples that use the `<img>` element:
+
+### Image Caption
+
+![Image Caption Example](./image-caption.png)
+
+In this layout, the image is accompanied by a caption. The caption is usually placed below the image and in a smaller font size. Add the caption using the `<figcaption>` element.
+
+```html
+<figure>
+  <img src="image.jpg" alt="Image Description">
+  <figcaption>Caption goes here</figcaption>
+</figure>
 ```
 
-This will display the image with a width of 300 pixels, a height of 200 pixels, a gray border, a shadow effect, and some spacing around it.
+### Image Gallery
 
-## Layout examples
+![Image Gallery Example](./image-gallery.png)
 
-Here are some examples of layouts that use `<img>` elements:
+In this layout, multiple images are displayed in a grid-like structure to create an image gallery. Use the `<figure>` element to group each image with a caption.
 
-### Basic grid
-
-```
-[<img>][<img>][<img>]
-[<img>][<img>][<img>]
-```
-
-### Image gallery
-
-```
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-```
-
-### Image with caption
-
-```
-[<img>]
-Caption text
+```html
+<div class="image-gallery">
+  <figure>
+    <img src="image1.jpg" alt="Image Description">
+    <figcaption>Caption goes here</figcaption>
+  </figure>
+  <figure>
+    <img src="image2.jpg" alt="Image Description">
+    <figcaption>Caption goes here</figcaption>
+  </figure>
+  <figure>
+    <img src="image3.jpg" alt="Image Description">
+    <figcaption>Caption goes here</figcaption>
+  </figure>
+</div>
 ```
 
+### Image as Link
 
-Note that the term used here is not the technical term for the `img` selector, which is simply "image selector". Also, some additional styling properties and layout examples could be added.
+![Image as Link Example](./image-as-link.png)
+
+In this layout, the image itself is used as a link to another page. Add a link using the `<a>` element.
+
+```html
+<a href="destination.html">
+  <img src="image.jpg" alt="Image Description">
+</a>
+```
+
+### Image with Text Overlay
+
+![Image with Text Overlay Example](./image-text-overlay.png)
+
+In this layout, the image is overlaid with text. Use the `<figure>` element to group the image and text together, and use CSS to position the text.
+
+```html
+<figure class="image-text-overlay">
+  <img src="image.jpg" alt="Image Description">
+  <figcaption>Text overlay goes here</figcaption>
+</figure>
+```
 =====================
 
 Content prompt used: 
@@ -67,8 +87,8 @@ Also carefully translate the title and description for the article; do not use &
 1. styling <img> elements and example layouts
  2. styling <img> elements and example layouts
 
-Metadata returned1. Estilizando elementos <img> y ejemplos de diseños
-2. Estilizando elementos <img> y ejemplos de diseños 
+Metadata returned1. Estilos de elementos <img> y ejemplos de diseños
+2. Estilos de elementos <img> y ejemplos de diseños 
 
 
 Roundtrip (isolated) prompt used: 

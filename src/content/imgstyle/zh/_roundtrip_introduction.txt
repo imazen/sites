@@ -1,90 +1,18 @@
-# Setting Styles and Example Layout for `<img>` Elements
+---
+title: Styling the `<img>` Tag and Example Layout
+description: Styling the `<img>` Tag and Example Layout
+taskInputHash: 097fc49c314b6c4c
+lang: en
+sidebar_sort_priority: 1000
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
+---
+# Styling the `<img>` Tag and Example Layout
 
-## Setting Styles for `<img>` Elements
+## Styling the `<img>` Tag
 
-The `<img>` tag is used to display an image in a web page. Here are some common styles that you can apply to `<img>` elements:
-
-### 1. Changing the width and height
-
-You can change the width and height of an image using the `width` and `height` properties, as shown below:
-
-```css
-img {
-  width: 200px;
-  height: 150px;
-}
-```
-
-### 2. Adding margins
-
-You can add margins around an image using the `margin` property, as shown below:
-
-```css
-img {
-  margin: 10px;
-}
-```
-
-### 3. Aligning the image
-
-You can align an image to the left, right, or center of its container using the `float` property, as shown below:
-
-```css
-img {
-  float: left;
-}
-```
-
-### 4. Adding borders
-
-You can add a border to an image using the `border` property, as shown below:
-
-```css
-img {
-  border: 1px solid black;
-}
-```
-
-### 5. Adding a border radius
-
-You can round the corners of an image using the `border-radius` property, as shown below:
-
-```css
-img {
-  border-radius: 10px;
-}
-```
-
-## Example Layout for `<img>` Elements
-
-Here is an example layout for using `<img>` elements to create a gallery:
-
-```html
-<div class="gallery">
-  <img src="image1.jpg">
-  <img src="image2.jpg">
-  <img src="image3.jpg">
-  <img src="image4.jpg">
-  <img src="image5.jpg">
-  <img src="image6.jpg">
-</div>
-```
-
-```css
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  flex: 1 0 200px;
-  margin: 5px;
-}
-```
-
-This layout uses `display: flex` to create a flex container that wraps its children onto multiple lines. The `flex: 1 0 200px` declaration makes each image as wide as possible, while never exceeding a width of 200 pixels. The `margin: 5px` declaration adds spacing between the images. 
-
-{{It would be helpful to provide a brief explanation or context for each CSS declaration, especially for those who are new to CSS.}}
+TODO:
 =====================
 
 Content prompt used: 
@@ -97,8 +25,8 @@ Also carefully translate the title and description for the article; do not use &
 1. styling <img> elements and example layouts
  2. styling <img> elements and example layouts
 
-Metadata returned1. 设置`<img>`元素的样式和示例布局
-2. 设置`<img>`元素的样式和示例布局 
+Metadata returned1. 样式化`<img>`标签和示例布局
+2. 样式化`<img>`标签和示例布局 
 
 
 Roundtrip (isolated) prompt used: 

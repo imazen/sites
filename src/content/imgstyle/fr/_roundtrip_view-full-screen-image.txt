@@ -1,17 +1,18 @@
 ---
-title: Adding a Touch Button to Display an Image in Full Screen in a Gallery
-description: How to add a touch-to-view full screen image option in a gallery
-taskInputHash: 584d5c86f88a6746
+title: Adding a Click-to-View Fullscreen Image Option to a Gallery
+description: >-
+  How to add a click-to-view fullscreen image option to a gallery
+taskInputHash: 6e153b7f89de16e0
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-To add a "Touch to view full screen image" option to a gallery, you may use JavaScript and CSS to create an overlay that displays the image in full screen mode when the user clicks on it.
+To add a "Click to view fullscreen image" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen mode when the user clicks on it.
 
 Here is a basic approach you can use:
-1. Firstly, create a container for your gallery and add all the images you want to display.
+
+1. First, create a container for your gallery and add all the images you want to display.
 
 ```html
 <div class="gallery">
@@ -23,7 +24,7 @@ Here is a basic approach you can use:
 ```
 
 
-2. Next, add CSS to style the gallery and the images.
+2. Next, add CSS to style the gallery and images.
 
 ```css
 .gallery {
@@ -39,7 +40,7 @@ Here is a basic approach you can use:
 ```
 
 
-3. Now, add a click event handler to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full screen mode.
+3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in fullscreen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -66,7 +67,7 @@ images.forEach((image) => {
 ```
 
 
-4. Finally, add CSS to style the overlay and the full screen image.
+4. Finally, add CSS to style the overlay and the fullscreen image.
 
 ```css
 .overlay {
@@ -90,7 +91,7 @@ images.forEach((image) => {
 
 
 
-With these steps, you should now have a gallery that allows users to view images in full screen mode by touching them.
+With these steps, you should now have a gallery that allows users to view images in fullscreen mode by clicking on them.
 =====================
 
 Content prompt used: 
@@ -103,8 +104,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Add tap to view full-screen image to a gallery
  2. How to add a tap to view full-screen image option to a gallery
 
-Metadata returned1. Ajouter un bouton tactile pour afficher une image en plein écran dans une galerie
-2. Comment ajouter une option de vue en plein écran d'images en appuyant sur un bouton tactile dans une galerie 
+Metadata returned1. Ajouter une option de clic pour voir une image en plein écran à une galerie
+2. Comment ajouter une option de clic pour voir une image en plein écran à une galerie 
 
 
 Roundtrip (isolated) prompt used: 

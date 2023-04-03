@@ -1,16 +1,15 @@
 ---
 title: Référence complète CSS
-description: 'Référence complète CSS pour les effets, avec des exemples'
-taskInputHash: af79aea14d270817
+description: 'Référence complète CSS pour les effets, avec exemples'
+taskInputHash: b664a3fa60d1a038
 lang: fr
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Voici une référence complète des effets et bordures CSS que vous pouvez appliquer aux images, avec des exemples pour chacun :
+Voici une référence complète d'effets CSS et de bordures que vous pouvez appliquer aux images, avec des exemples pour chacun:
 
-1. **Bordure :** Ajoute une bordure autour de l'image.
+1. **Bordure:** Ajoute une bordure autour de l'image.
 
 ```css
 img {
@@ -18,7 +17,7 @@ img {
 }
 ```
 
-2. **Ombre de boîte :** Ajoute une ombre autour de l'image.
+2. **Ombre de boîte:** Ajoute une ombre autour de l'image.
 
 ```css
 img {
@@ -26,15 +25,15 @@ img {
 }
 ```
 
-3. **Opacité :** Ajuste la transparence de l'image.
+3. **Opacité:** Ajuste la transparence de l'image.
 
 ```css
 img {
-  opacity: 0,5;
+  opacity: 0.5;
 }
 ```
 
-4. **Niveau de gris :** Convertit l'image en niveau de gris.
+4. **Niveau de gris:** Convertit l'image en niveaux de gris.
 
 ```css
 img {
@@ -42,7 +41,7 @@ img {
 }
 ```
 
-5. **Sépia :** Applique un effet sépia à l'image.
+5. **Sépia:** Applique un effet sépia sur l'image.
 
 ```css
 img {
@@ -50,7 +49,7 @@ img {
 }
 ```
 
-6. **Flou :** Floute l'image.
+6. **Flou:** Floute l'image.
 
 ```css
 img {
@@ -58,7 +57,7 @@ img {
 }
 ```
 
-7. **Luminosité :** Ajuste la luminosité de l'image.
+7. **Luminosité:** Ajuste la luminosité de l'image.
 
 ```css
 img {
@@ -66,7 +65,7 @@ img {
 }
 ```
 
-8. **Contraste :** Ajuste le contraste de l'image.
+8. **Contraste:** Ajuste le contraste de l'image.
 
 ```css
 img {
@@ -74,7 +73,7 @@ img {
 }
 ```
 
-9. **Rotation de la teinte :** Fait tourner la teinte de l'image.
+9. **Rotation de teinte:** Fait tourner la teinte de l'image.
 
 ```css
 img {
@@ -82,7 +81,7 @@ img {
 }
 ```
 
-10. **Inversion :** Inverse les couleurs de l'image.
+10. **Inversion:** Inverse les couleurs de l'image.
 
 ```css
 img {
@@ -90,7 +89,7 @@ img {
 }
 ```
 
-11. **Saturation :** Ajuste la saturation de l'image.
+11. **Saturation:** Ajuste la saturation de l'image.
 
 ```css
 img {
@@ -98,7 +97,7 @@ img {
 }
 ```
 
-12. **Sépia :** Applique un effet sépia à l'image.
+12. **Sépia:** Applique un effet sépia sur l'image.
 
 ```css
 img {
@@ -106,7 +105,7 @@ img {
 }
 ```
 
-13. **Ombre portée :** Ajoute un effet d'ombre portée à l'image.
+13. **Ombre portée:** Ajoute un effet d'ombre portée à l'image.
 
 ```css
 img {
@@ -114,18 +113,18 @@ img {
 }
 ```
 
-14. **Transition :** Ajoute un effet de transition à l'image.
+14. **Transition:** Ajoute un effet de transition à l'image.
 
 ```css
 img {
-  transition: transform 0.3s ease;
+  transition : transform 0,3s ease;
 }
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1,1);
 }
 ```
 
-15. **Animation :** Ajoute un effet d'animation à l'image.
+15. **Animation:** Ajoute un effet d'animation à l'image.
 
 ```css
 @keyframes slidein {
@@ -141,4 +140,4 @@ img {
 }
 ```
 
-Ce ne sont que quelques exemples des nombreux effets et bordures CSS que vous pouvez appliquer aux images. Expérimentez avec différents styles pour créer des designs uniques et accrocheurs !
+Ce ne sont que quelques exemples parmi les nombreux effets CSS et les bordures que vous pouvez appliquer aux images. Expérimentez avec différents styles pour créer des designs uniques et accrocheurs!

@@ -1,20 +1,18 @@
 ---
-title: >-
-  Ajouter un bouton tactile pour afficher une image en plein écran dans une
-  galerie
+title: Ajouter une option de clic pour voir une image en plein écran à une galerie
 description: >-
-  Comment ajouter une option de vue en plein écran d'images en appuyant sur un
-  bouton tactile dans une galerie
-taskInputHash: 584d5c86f88a6746
+  Comment ajouter une option de clic pour voir une image en plein écran à une
+  galerie
+taskInputHash: 6e153b7f89de16e0
 lang: fr
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Pour ajouter une option "Touchez pour voir l'image en plein écran" à une galerie, vous pouvez utiliser du JavaScript et du CSS pour créer un overlay qui affiche l'image en mode plein écran lorsque l'utilisateur appuie dessus.
+Pour ajouter une option "Cliquer pour voir l'image en plein écran" à une galerie, vous pouvez utiliser JavaScript et CSS pour créer un overlay qui affiche l'image en mode plein écran lorsque l'utilisateur clique dessus.
 
-Voici une approche de base que vous pouvez utiliser :
+Voici une approche de base que vous pouvez utiliser:
+
 1. Tout d'abord, créez un conteneur pour votre galerie et ajoutez toutes les images que vous souhaitez afficher.
 
 ```html
@@ -22,7 +20,7 @@ Voici une approche de base que vous pouvez utiliser :
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- ajoutez plus d'images ici -->
+  <!-- ajouter plus d'images ici -->
 </div>
 ```
 
@@ -43,7 +41,7 @@ Voici une approche de base que vous pouvez utiliser :
 ```
 
 
-3. Ajoutez maintenant un gestionnaire d'événements de clic à chaque image à l'aide de JavaScript. Lorsque l'utilisateur clique sur une image, le JavaScript créera un overlay et affichera l'image en mode plein écran.
+3. Maintenant, ajoutez un écouteur d'événements click à chaque image en utilisant JavaScript. Lorsque l'utilisateur clique sur une image, JavaScript créera un overlay et affichera l'image en mode plein écran.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -55,12 +53,12 @@ images.forEach((image) => {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     
-    // créer l'élément d'image 
+    // créer l'élément image
     const fullScreenImage = document.createElement('img');
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // ajouter l'élément d'image à l'overlay
+    // ajouter l'élément image à l'overlay
     overlay.appendChild(fullScreenImage);
     
     // ajouter l'overlay à la page
@@ -94,4 +92,4 @@ images.forEach((image) => {
 
 
 
-Avec ces étapes, vous devriez maintenant avoir une galerie qui permet aux utilisateurs de voir les images en mode plein écran en les touchant.
+Avec ces étapes, vous devriez maintenant avoir une galerie qui permet aux utilisateurs de visualiser des images en mode plein écran en cliquant dessus.

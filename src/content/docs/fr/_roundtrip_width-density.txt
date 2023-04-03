@@ -1,16 +1,15 @@
 ---
 title: Width and Density Descriptors
 description: Examples of using width and density descriptors in `srcset`
-taskInputHash: 569fd1065931e1e0
+taskInputHash: d4db50f5267305d1
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2023-04-03'
+date_modified: '2023-04-03'
+date_updated: '2023-04-03'
 ---
-Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use examples and Markdown.
+Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Using examples and Markdown.
 
->`srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser select the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of the `URL` and `w` or `x` descriptors to specify the images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser choose the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptors to specify the images.
 
 ## Width Descriptor (`w`)
 
@@ -23,10 +22,10 @@ Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use exa
   srcset="small.jpg 500w,
           medium.jpg 1000w,
           large.jpg 2000w"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image with the closest width to the available screen space.
+> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image with the width closest to the available screen space.
 
 ## Density Descriptor (`x`)
 
@@ -39,10 +38,10 @@ Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use exa
   srcset="small.jpg 1x,
           medium.jpg 2x,
           large.jpg 3x"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the closest pixel density to the device's screen.
+> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the pixel density closest to the device screen.
 
 > Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options for selection.
 =====================
@@ -58,7 +57,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Examples of using width and density descriptors in `srcset`
 
 Metadata returned1. Descripteurs de largeur et de densité
-2. Exemples d'utilisation des descripteurs de largeur et de densité dans `srcset` 
+2. Exemples d'utilisation de descripteurs de largeur et de densité dans `srcset` 
 
 
 Roundtrip (isolated) prompt used: 
