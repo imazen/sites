@@ -23,12 +23,14 @@ async function switchSymlinks(directory: string, newSitekey: string, force: bool
 	const files = await searchFilenamesRecursive(directory, searchPart);
 	for (const newFile of files) {
 		const defaultFile = newFile.replace(searchPart, '.');
+		const relativeTarget =  path.basename(newFile);
+		// get basename
 		// check if defaultFile exists
 		if (!fs.existsSync(defaultFile)) {
 			console.log('!!!! Error, default file not found: ' + defaultFile);
 			if (force) {
-				console.log('Forcing symlink ' + defaultFile + ' to use ' + newFile);
-				await fs.promises.symlink(newFile, defaultFile);
+				console.log('Forcing symlink ' + defaultFile + ' to use ' + relativeTarget);
+				await fs.promises.symlink(relativeTarget, defaultFile);
 			}
 			continue;
 		}
@@ -37,22 +39,22 @@ async function switchSymlinks(directory: string, newSitekey: string, force: bool
 		if (stats.isSymbolicLink()) {
 			// print what it points to
 			const link = await fs.promises.readlink(defaultFile);
-			// if link is already newFile, skip
-			if (link === newFile) {
+			// if link is already relativeTarget, skip
+			if (link === relativeTarget) {
 				console.log('Link already exists from ' + defaultFile + " to " + link);
 				continue;
 			}
 			console.log('Unlinking ' + defaultFile + ' from using ' + link);
 			// delete symlink
 			await fs.promises.unlink(defaultFile);
-			// symlink defaultFile to newFile
-			console.log('Linking ' + defaultFile + ' to use ' + newFile);
-			await fs.promises.symlink(newFile, defaultFile);
+			// symlink defaultFile to relativeTarget
+			console.log('Linking ' + defaultFile + ' to use ' + relativeTarget);
+			await fs.promises.symlink(relativeTarget, defaultFile);
 		} else {
 			console.log('!!!! Error, not a symlink: ' + defaultFile);
 			if (force) {
-				console.log('Forcing symlink ' + defaultFile + ' to use ' + newFile);
-				await fs.promises.symlink(newFile, defaultFile);
+				console.log('Forcing symlink ' + defaultFile + ' to use ' + relativeTarget);
+				await fs.promises.symlink(relativeTarget, defaultFile);
 			}
 		}
 	}
