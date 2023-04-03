@@ -1,3 +1,5 @@
+// You're editing site-info.imgstyle.ts (symlinked)
+
 export default  {
 	title: '<img style> layout and reference', // Used for logo text and og:sitename
 	titleSuffix: ' - img.style', // Appended to page content title
