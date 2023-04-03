@@ -41,7 +41,7 @@ export async function completeChatCached(request: openai.CreateChatCompletionReq
 						break;
 					} catch (error) {
 						if (attemptCount > 10) throw error;
-						if (error.message.includes('429') || error.message.includes('500')) {
+						if (error.message.includes('429') || error.message.includes('500') || error.message.includes('502') || error.message.includes('503') || error.message.includes('504')) {
 							let maxWaitTime = Math.min(40, (attemptCount + 2) * 2);
 							let minWaitTime = Math.min(1, attemptCount);
 
