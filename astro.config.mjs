@@ -9,6 +9,7 @@ import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
+	// nope trailingSlash: "always",
   integrations: [
 	// Enable Preact to support Preact JSX components.
 	preact(),

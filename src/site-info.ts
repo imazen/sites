@@ -3,7 +3,7 @@ export default  {
 	titleSuffix: ' - srcset.tips', // Appended to page content title
 	description: 'Templates, guides, examples, and tools for correct and efficient responsive images',
 	defaultLanguage: 'en',
-	address: 'https://www.srcset.tips',
+	address: 'https://www.srcset.tips/',
 	algoliaIndex: 'srcset',
 	algoliaDomain: 'srcset.tips',
 	contentCollection: 'docs',
