@@ -18,7 +18,7 @@ To add CSS effects and borders to an image, you can use the following steps:
  
 3. Apply the CSS class or ID selector to the image element. For example, if you used the `.my-image` selector in step 2, you could add the following code to your HTML to apply the styles to the image:
 
-```arduino
+```html
 <img src="path/to/image.jpg" class="my-image">
 ```
 
