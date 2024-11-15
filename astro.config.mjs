@@ -7,7 +7,7 @@ import astroI18next from "astro-i18next";
 import vercel from '@astrojs/vercel/static';
 
 
-console.log("Ouptut dir: " + SITE.outDir);
+console.log("Ouput dir: " + SITE.outDir);
 // https://astro.build/config
 export default defineConfig({
 	trailingSlash: "always", //Sitemap uses trailing /, we gotta be consistent. This affects dev and production differently

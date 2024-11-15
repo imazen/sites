@@ -21,3 +21,9 @@ preactastrojs
 sitename
 Svenska
 webp
+astrojs
+locize
+aicache
+Output
+H4NCQEU4H9
+querystrings
