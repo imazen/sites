@@ -44,6 +44,7 @@ export async function completeChatCached(request: openai.CreateChatCompletionReq
 						if (error.message.includes('429') || error.message.includes('500') || error.message.includes('502') || error.message.includes('503') || error.message.includes('504')) {
 							let maxWaitTime = Math.min(40, (attemptCount + 2) * 2);
 							let minWaitTime = Math.min(1, attemptCount);
+							
 
 							let waitTime = (Math.random() * (maxWaitTime - minWaitTime)) + minWaitTime;
 							console.log(`${error.message}, waiting ${waitTime} seconds before trying again`);

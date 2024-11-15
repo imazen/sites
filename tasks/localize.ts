@@ -8,7 +8,7 @@ import crypto from 'crypto';
 import matter from 'gray-matter';
 import { exit } from 'process';
 import { completeChatCached } from './openai_cache';
-import { LANGUAGES } from '../src/consts';
+import { LANGUAGES, OPENAI_TRANSLATE_MODEL } from '../src/consts';
 
 
 // this is an non-accurate way to estimate token numbers;
@@ -120,7 +120,7 @@ function matchJSON (str: string) {
 }
 
 const configuration = new openai.Configuration({
-	apiKey: process.env.VITE_OPENAI_API_KEY,
+	apiKey: process.env.VITE_OPENAI_API_KEY || process.env.OPENAI_API_KEY,
 });
 const openapi = new openai.OpenAIApi(configuration);
 
@@ -134,7 +134,7 @@ async function translate(inputJson: any, targetLang: string) {
     const { requireTranslation, noTranslation } = groupPairs(pairs)
 
     const completion = await completeChatCached({
-        model: "gpt-3.5-turbo",
+        model: OPENAI_TRANSLATE_MODEL,
         messages: [
             {
                 role: "system",

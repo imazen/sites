@@ -7,14 +7,14 @@ import crypto from 'crypto';
 import he from 'he';
 import matter from 'gray-matter';
 import { exit } from 'process';
-import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
+import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS, OPENAI_TRANSLATE_MODEL} from '../src/consts';
 import { completeChatCached } from './openai_cache';
 import { ParsedMd, loadAndParseMdFiles, readFrontMatter, tryLoadFileString, updateFrontmatterDates} from './markdown'
 
 const langNamesInEnglish = FOLDER_TO_ENGLISH_NAMES;
 const langFolderCodes = LANGUAGE_FOLDER_CODES;
 
-const GPT_MODEL = 'gpt-3.5-turbo';
+const GPT_MODEL = OPENAI_TRANSLATE_MODEL;
 
 const AI_CACHE_DIR = './.aicache';
 
@@ -141,7 +141,7 @@ async function createNeededTasks(referenceFolder: string, targetLangCode: string
 }
 
 const configuration = new Configuration({
-	apiKey: process.env.VITE_OPENAI_API_KEY,
+	apiKey: process.env.VITE_OPENAI_API_KEY || process.env.OPENAI_API_KEY,
 });
 const openapi = new OpenAIApi(configuration);
 

@@ -4,13 +4,13 @@ import openai from 'openai';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS} from '../src/consts';
+import { SITE, FOLDER_TO_ENGLISH_NAMES, LANGUAGE_FOLDER_CODES, CONTENT_COLLECTIONS, OPENAI_FEEDBACK_MODEL} from '../src/consts';
 import { completeChatCached } from './openai_cache';
 import { ParsedMd, loadAndParseMdFiles, tryLoadFileString, updateFrontmatterDates} from './markdown'
 //var LineBreaker = require('linebreak');
 import LineBreaker from 'linebreak';
 
-const GPT_MODEL = 'gpt-3.5-turbo';
+const GPT_MODEL = OPENAI_FEEDBACK_MODEL;
 
 interface FeedbackTask {
 	referenceFile: ParsedMd;
@@ -101,7 +101,7 @@ async function createNeededTasks(dir: string): Promise<FeedbackTask[]>{
 }
 
 const configuration = new Configuration({
-	apiKey: process.env.VITE_OPENAI_API_KEY,
+	apiKey: process.env.VITE_OPENAI_API_KEY || process.env.OPENAI_API_KEY
 });
 const openapi = new OpenAIApi(configuration);
 
