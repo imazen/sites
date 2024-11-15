@@ -73,7 +73,7 @@ export const KNOWN_LANGUAGES = LANGUAGES.map((lang) => {
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 export const LANGUAGE_FOLDER_CODES = KNOWN_LANGUAGE_CODES;
 
-export const OPENAI_TRANSLATE_MODEL="gpt-4o-mini"
+export const OPENAI_TRANSLATE_MODEL="gpt-4o"
 export const OPENAI_FEEDBACK_MODEL="gpt-4o"
 
 export const OPEN_GRAPH = {

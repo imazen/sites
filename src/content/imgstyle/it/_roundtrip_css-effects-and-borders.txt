@@ -1,15 +1,15 @@
 ---
 title: CSS Effects and Borders
 description: How to add CSS effects and borders to an image
-taskInputHash: 6905c4474a7b9a5f
+taskInputHash: c1ca100749292a25
 lang: en
 date_published: '2023-03-29'
-date_modified: '2023-04-03'
+date_modified: '2024-11-15'
 date_updated: '2024-11-15'
 ---
 To add CSS effects and borders to an image, you can follow these steps:
-1. Select the image element in your HTML code. You can do this using an ID or class selector, or by selecting the `<img>` element directly.
-2. Define a CSS class or ID selector that applies the desired styles to the image. For example, you could use the following code to create a simple border around the image:
+1. Select the image element in your HTML code. You can do this by using an ID or class selector, or by directly selecting the `<img>` element.
+2. Define a CSS class or ID selector that applies the desired styles to the image. For example, you might use the following code to create a simple border around the image:
 
 ```css
 .my-image {
@@ -36,7 +36,7 @@ To add CSS effects and borders to an image, you can follow these steps:
   filter: grayscale(100%);
 }
 
-/* Add a zoom transition effect on hover */
+/* Add a zoom effect with a transition on hover */
 .my-image {
   transition: transform 0.3s ease;
 }
@@ -45,13 +45,9 @@ To add CSS effects and borders to an image, you can follow these steps:
 }
 ```
 
-These are just a few examples of the many CSS effects and borders that you can use to enhance your images. Experiment with different styles to find the ones that work best for your design.
+These are just a few examples of the many CSS effects and borders you can use to enhance your images. Experiment with different styles to find the ones that work best for your design.
 
----
-
-{{Note that "selettore ID" in Italian translates to "ID selector" in English, which may be less clear in context.}} 
-{{The phrase “a wide range of CSS effects to images” could be more clearly stated as “a wide range of CSS effects for images.”}} 
-{{“Enhance your images” may imply a higher quality, which could be replaced with “improve your images” for clarity.}}
+{{No mistakes or clumsy phrasing found in the translation.}}
 =====================
 
 Content prompt used: 
@@ -64,8 +60,8 @@ Also carefully translate the title and description for the article; do not use &
 1. CSS effects and borders
  2. How to add CSS effects and borders to an image
 
-Metadata returned1. Effetti CSS e bordi  
-2. Come aggiungere effetti CSS e bordi a un'immagine 
+Metadata returned1. Effetti e bordi CSS
+2. Come aggiungere effetti e bordi CSS a un'immagine 
 
 
 Roundtrip (isolated) prompt used: 
