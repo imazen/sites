@@ -1,16 +1,15 @@
 ---
 title: CSS Effects and Borders
 description: How to add CSS effects and borders to an image
-taskInputHash: d341f73c3bcbcb8c
+taskInputHash: aa0567dbecbb479e
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
 date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_modified: '2023-04-03'
+date_updated: '2024-11-15'
 ---
 To add CSS effects and borders to an image, you can follow these steps:
 1. Select the image element in your HTML code. You can do this by using an ID or class selector, or by directly selecting the `<img>` element.
-2. Define a CSS class or ID selector that applies the desired styles to the image. For example, you can use the following code to create a simple border around the image:
+2. Define a CSS class or ID selector that applies the desired styles to the image. For example, you might use the following code to create a simple border around the image:
 
 ```css
 .my-image {
@@ -18,9 +17,9 @@ To add CSS effects and borders to an image, you can follow these steps:
 }
 ```
 
-3. Apply the CSS class or ID selector to the image element. For example, if you used the `.my-image` selector in step 2, you can add the following code to your HTML to apply the styles to the image:
+3. Apply the CSS class or ID selector to the image element. For example, if you used the selector `.my-image` in step 2, you could add the following code to your HTML to apply the styles to the image:
 
-```arduino
+```html
 <img src="path/to/image.jpg" class="my-image">
 ```
 
@@ -46,7 +45,11 @@ To add CSS effects and borders to an image, you can follow these steps:
 }
 ```
 
-These are just a few examples among the many CSS effects and borders that you can use to enhance your images. Experiment with different styles to find the ones that work best for your design.
+These are just a few examples of the many CSS effects and borders you can use to enhance your images. Experiment with different styles to find those that best suit your design.
+
+### Mistakes or Clumsy Phrasing:
+- {{The phrase "ou en sélectionnant directement l'élément `<img>`" could be simplified to "or by directly selecting the `<img>` element."}}
+- {{"Personnalisez les styles selon vos souhaits" could be phrased more naturally as "Customize the styles to your preference."}}
 =====================
 
 Content prompt used: 
@@ -59,8 +62,8 @@ Also carefully translate the title and description for the article; do not use &
 1. CSS effects and borders
  2. How to add CSS effects and borders to an image
 
-Metadata returned1. Effets et bordures CSS
-2. Comment ajouter des effets et bordures CSS à une image 
+Metadata returned1. Effets CSS et bordures  
+2. Comment ajouter des effets CSS et des bordures à une image 
 
 
 Roundtrip (isolated) prompt used: 
