@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": " - img.style",
- "siteTitleName": "styling and optimizing images",
+ "siteTitleSuffix": " - image style",
+ "siteTitleName": "image styling and optimization",
  "skipToContentText": "Skip to content",
  "editPage": "Edit this page",
  "joinCommunity": "Join our community",
  "footerLicense": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License",
- "translatedContentDisclaimer": "Please let us know if something is not right. Our translator is not fully aware yet, but it incorporates feedback, so leave some tips!",
- "reportIssue": "Contact on Github",
+ "translatedContentDisclaimer": "Please let us know if something isn't right. Our translator is not fully aware yet, but it incorporates feedback, so please leave some tips!",
+ "reportIssue": "Contact us on GitHub",
  "sidebarTitle": "Topics",
  "communitySidebarTitle": "Community"
 }

@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": "- srcset 提示",
+ "siteTitleSuffix": " - srcset 提示",
  "siteTitleName": "srcset 参考和提示",
- "skipToContentText": "跳转到内容",
+ "skipToContentText": "跳到正文",
  "editPage": "编辑此页面",
  "joinCommunity": "加入我们的社区",
  "footerLicense": "本作品采用知识共享署名-非商业性使用 4.0 国际许可协议进行许可",
- "translatedContentDisclaimer": "如果有任何问题，请告诉我们。我们的翻译器还没有达到智能水平，但会采纳反馈意见，所以请留下您的建议！",
- "reportIssue": "在 GitHub 上联系我们",
+ "translatedContentDisclaimer": "如果有任何问题，请告知我们。我们的翻译器还没有达到完全智能化，但它会吸纳反馈，请留下您的意见！",
+ "reportIssue": "在 Github 上联系我们",
  "sidebarTitle": "主题",
  "communitySidebarTitle": "社区"
 }
