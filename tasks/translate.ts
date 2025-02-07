@@ -199,15 +199,14 @@ async function translateTask(task: TranslationTask) {
     console.log(newDescription);
 
     // create the target file frontmatter from task.referenceFile.data cloning it
-    var newFrontMatter = {title: newTitle,
-            description: newDescription,
+    var newFrontMatter = {
             taskInputHash:task.taskInputHash,
-            lang: task.targetLangCode,
             ...task.referenceFile.data};
 
     newFrontMatter.title = newTitle;
+	newFrontMatter.lang = task.targetLangCode;
     newFrontMatter.description = newDescription;
-		newFrontMatter.date_updated = new Date().toISOString().split('T')[0];
+		newFrontMatter.date_modified = new Date().toISOString().split('T')[0];
 
     // serialize newFrontMatter to yaml
     const translatedFileContent = matter.stringify(translatedRaw, newFrontMatter);

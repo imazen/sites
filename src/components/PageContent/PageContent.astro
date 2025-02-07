@@ -9,14 +9,20 @@ import type {CurrentCollectionEntry} from '../../current';
 
 type Props = CurrentCollectionEntry['data'] & {
 	headings: MarkdownHeading[];
+	githubEditUrl: string;
 };
 
-const { title, headings, githubEditUrl, lang, date_published, date_updated } = Astro.props;
+const { title, headings, githubEditUrl, lang, date_published, date_modified } = Astro.props;
 
-const datePublished = date_published ? new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(Date.parse(date_published)) : '';
-let dateUpdated = date_published ?  new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(Date.parse(date_updated ?? date_published)) : '';
+const datePublished = date_published ? new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(new Date(date_published)) : '';
+const dateUpdated = date_modified ?  new Intl.DateTimeFormat(lang, { dateStyle: 'full'}).format(new Date(date_modified)) : '';
+let displayDate = '';
 if (dateUpdated){
-	dateUpdated = i18next.t('updatedPrefix','Updated') + " " + dateUpdated;
+	displayDate = i18next.t('updatedPrefix','Updated') + " " + dateUpdated;
+}else if (datePublished){
+	displayDate = i18next.t('publishedPrefix','Published') + " " + datePublished;
+}else{
+	displayDate = '';
 }
 
 
@@ -26,7 +32,7 @@ if (dateUpdated){
 	<section class="main-section">
 		<h1 class="content-title" id="overview">{title}</h1>
 		<!--add updated date and published date  -->
-		<aside class="dateUpdated	">{dateUpdated}</aside>
+		<aside class="dateUpdated	">{displayDate}</aside>
 
 		<nav class="block sm:hidden">
 			<TableOfContents lang={lang} client:media="(max-width: 50em)" headings={headings} />

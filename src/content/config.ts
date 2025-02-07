@@ -9,8 +9,8 @@ const all = defineCollection({
 		sidebar_sort_priority: z.number().optional(),
 		lang: z.string().default(SITE.defaultLanguage),
 		dir: z.union([z.literal('ltr'), z.literal('rtl')]).default('ltr'),
-		date_published: z.date().optional(),
-		date_updated: z.date().optional(),
+		date_published: z.date().or(z.string()).optional(),
+		date_modified: z.date().or(z.string()).optional(),
 		structured_data_type: z.union([z.literal('HowTo'), z.literal('FAQPage'), z.literal('NewsArticle')]).default('NewsArticle'),
 		image: z
 			.object({
@@ -22,4 +22,4 @@ const all = defineCollection({
 	}),
 });
 
-export const collections = { 'docs': all, 'imgstyle':'all' };
+export const collections = { 'docs': all, 'imgstyle': all };
