@@ -1,17 +1,17 @@
 ---
-title: Complete Reference for CSS
-description: Comprehensive reference for CSS effects (with examples).
-taskInputHash: 65da6992482c3405
+taskInputHash: 588ca6cc9244e1d2
+title: |-
+  Carefully translate the article title and description:
+
+  Complete CSS Reference
+description: A comprehensive CSS reference for effects (with examples)
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale ja,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
+Below is a comprehensive reference for CSS effects and borders that can be applied to images. Each is accompanied by examples:
 
-The following is a comprehensive reference for CSS effects and frames that can be applied to images. Each example will be accompanied by a code snippet.
-
-1. **Border:** adds a border to an image.
+1. **Border:** Adds a border around the image.
 
 ```css
 img {
@@ -19,7 +19,8 @@ img {
 }
 ```
 
-2. **Box Shadow:** adds a shadow around an image.
+
+2. **Box Shadow:** Adds a shadow around the image.
 
 ```css
 img {
@@ -27,7 +28,8 @@ img {
 }
 ```
 
-3. **Opacity:** adjusts the opacity of an image.
+
+3. **Opacity:** Adjusts the transparency of the image.
 
 ```css
 img {
@@ -35,7 +37,8 @@ img {
 }
 ```
 
-4. **Grayscale:** converts an image to grayscale.
+
+4. **Grayscale:** Converts the image to grayscale.
 
 ```css
 img {
@@ -43,7 +46,8 @@ img {
 }
 ```
 
-5. **Sepia:** applies a sepia effect to an image.
+
+5. **Sepia:** Applies a sepia effect to the image.
 
 ```css
 img {
@@ -51,7 +55,8 @@ img {
 }
 ```
 
-6. **Blur:** blurs the image.
+
+6. **Blur:** Blurs the image.
 
 ```css
 img {
@@ -59,7 +64,8 @@ img {
 }
 ```
 
-7. **Brightness:** adjusts the brightness of an image.
+
+7. **Brightness:** Adjusts the brightness of the image.
 
 ```css
 img {
@@ -67,7 +73,8 @@ img {
 }
 ```
 
-8. **Contrast:** adjusts the contrast of an image.
+
+8. **Contrast:** Adjusts the contrast of the image.
 
 ```css
 img {
@@ -75,7 +82,8 @@ img {
 }
 ```
 
-9. **Hue Rotate:** rotates the hue of an image.
+
+9. **Hue Rotate:** Rotates the hue of the image.
 
 ```css
 img {
@@ -83,7 +91,8 @@ img {
 }
 ```
 
-10. **Invert:** inverts the colors of an image.
+
+10. **Invert:** Inverts the colors of the image.
 
 ```css
 img {
@@ -91,7 +100,8 @@ img {
 }
 ```
 
-11. **Saturate:** adjusts the saturation of an image.
+
+11. **Saturation:** Adjusts the saturation of the image.
 
 ```css
 img {
@@ -99,7 +109,8 @@ img {
 }
 ```
 
-12. **Sepia:** applies a sepia effect to an image.
+
+12. **Sepia:** Applies a sepia effect to the image.
 
 ```css
 img {
@@ -107,7 +118,8 @@ img {
 }
 ```
 
-13. **Drop-Shadow:** adds a drop shadow effect to an image.
+
+13. **Drop Shadow:** Adds a drop shadow effect to the image.
 
 ```css
 img {
@@ -115,7 +127,8 @@ img {
 }
 ```
 
-14. **Transition:** adds a transition effect to an image.
+
+14. **Transition:** Adds a transition effect to the image.
 
 ```css
 img {
@@ -126,15 +139,16 @@ img:hover {
 }
 ```
 
-15. **Animation:** adds an animation effect to an image.
+
+15. **Animation:** Adds an animation effect to the image.
 
 ```css
 @keyframes slidein {
   from {
-    transform: translateX(100%);
+    transform: translateX(100%); // Slide in from the right
   }
   to {
-    transform: translateX(0);
+    transform: translateX(0); // Original position
   }
 }
 img {
@@ -142,7 +156,12 @@ img {
 }
 ```
 
-These are just a few examples of the many CSS effects and frames that can be applied to images. Try different styles to create unique and eye-catching designs!
+
+These are just a few of the many CSS effects and borders that can be applied to images. Try different styles to create unique and eye-catching designs!
+
+---
+
+{{There is a repetition of the "Sepia" effect description in sections 5 and 12. Additionally, some phrasing is redundant, such as mentioning "applied to images" repeatedly when it is clear from the context. However, given the structure of the documentation, it might suit the instructional style to maintain this repetitiveness for emphasis.}}
 =====================
 
 Content prompt used: 
@@ -155,8 +174,10 @@ Also carefully translate the title and description for the article; do not use &
 1. Full CSS reference
  2. Full CSS reference for effects, with examples
 
-Metadata returned1. CSSの完全なリファレンス
-2. 効果に対するCSSの完全なリファレンス（例付き） 
+Metadata returned記事のタイトルと説明も注意深く翻訳してください:
+
+1. 完全なCSSリファレンス
+2. エフェクトのための完全なCSSリファレンス（例付き） 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,20 +1,21 @@
 ---
-title: Skapa en bildkarusell
-description: Hur man skapar en bildkarusell på en webbplats
-taskInputHash: 994f48005170d531
+taskInputHash: bc02dca4f6f8bd4e
+title: >-
+  Översätt också noggrant titeln och beskrivningen för artikeln; använd inte &
+  eller < eller >
+   Skapa en karusell
+description: Hur man skapar en karusell på en webbplats
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
 Här är de allmänna stegen för att skapa en bildkarusell på en webbplats:
-1. Skapa en ny HTML-fil för din bildkarusell. Du kan namnge den något som "karusell.html".
-2. Lägg till HTML-strukturen i din fil. Detta inkluderar normalt head-sektionen med en titel och eventuella nödvändiga CSS-stilmallar, och body-sektionen där du lägger till själva karusellen.
-3. Skapa en behållare för din karusell med hjälp av en `<div>`-tagg. Ge den en ID eller en class så du kan styla den senare.
-4. Inuti containern, lägg till individuella bild-element med hjälp av `<img>`-taggen. Du kan ställa in sökvägen för källan till bildfilen eller URL:en och lägga till eventuella alt-texter eller bildtexter som behövs.
-5. Lägg till navigeringsknappar till din karusell med hjälp av `<button>` eller `<a>`-taggar. Du behöver en knapp eller länk för vänsterpilen och en annan för högerpilen.
-6. Lägg till JavaScript-kod för att göra din karusell funktionell. Du behöver lyssna på klickhändelserna på navigeringsknapparna och uppdatera karusellens visning därefter. Du kan göra detta med hjälp av DOM API eller ett JavaScript-bibliotek som jQuery eller React.
+1. Skapa en ny HTML-fil för din bildkarusell. Du kan namnge den något i stil med "carousel.html".
+2. Lägg till HTML-strukturen i din fil. Detta innehåller vanligtvis head-sektionen med en titel och eventuella nödvändiga CSS-stilmallar, samt body-sektionen där du lägger till själva karusellen.
+3. Skapa en behållare för din karusell med hjälp av en `<div>`-tagg. Ge den ett ID eller en klass så att du kan styla den senare.
+4. Inne i behållaren, lägg till individuella bildelement med `<img>`-taggen. Du kan ställa in source-attributet till bildfilens sökväg eller URL och lägga till eventuella alt-texter eller bildtexter vid behov.
+5. Lägg till navigeringsknappar i din karusell med `<button>`- eller `<a>`-taggar. Du behöver en knapp eller länk för vänsterpil och en annan för högerpil.
+6. Lägg till JavaScript-kod för att göra din karusell funktionell. Du behöver lyssna på klickhändelser på navigeringsknapparna och uppdatera karusellens visning i enlighet därmed. Du kan göra detta med DOM API eller ett JavaScript-bibliotek som jQuery eller React.
 
 Här är ett exempel på kod för att skapa en enkel bildkarusell med jQuery:
 

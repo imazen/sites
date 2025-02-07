@@ -1,41 +1,37 @@
 ---
-title: Lägg till "tryck för att se i fullskärm" till en galleria
+taskInputHash: 2b7961010cc65edd
+title: Lägg till tryck för att visa bild i helskärm i ett galleri
 description: >-
-  Hur man lägger till en "tryck för att se i fullskärm" -alternativ till en
-  galleria
-taskInputHash: 27d6d01e11cbb5c5
+  Hur man lägger till ett alternativ för att trycka för att visa bild i helskärm
+  i ett galleri
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-För att lägga till en "Tryck för att se bild i fullskärm" -alternativ till en galleria kan du använda JavaScript och CSS för att skapa ett överlager som visar bilden i fullskärmsläge när användaren klickar på den.
+För att lägga till ett alternativ "Tryck för att visa bild i helskärm" i ett galleri kan du använda JavaScript och CSS för att skapa ett överlägg som visar bilden i helskärmsläge när användaren trycker på den.
 
-Här är en grundläggande metod som du kan använda:
-
-1. Skapa först en behållare för din galleria och lägg till alla bilder du vill visa.
+Här är en grundläggande metod du kan använda:
+1. Skapa först en behållare för ditt galleri och lägg till alla bilder du vill visa.
 
 ```html
-<div class="galleri">
-  <img src="bild1.jpg">
-  <img src="bild2.jpg">
-  <img src="bild3.jpg">
+<div class="gallery">
+  <img src="image1.jpg">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
   <!-- lägg till fler bilder här -->
 </div>
 ```
 
 
-
-2. Lägg sedan till CSS för att styla galleriet och bilderna.
+2. Lägg sedan till lite CSS för att styla galleriet och bilderna.
 
 ```css
-.galleri {
+.gallery {
   display: flex;
   flex-wrap: wrap;
 }
 
-.galleri img {
+.gallery img {
   width: 100%;
   height: auto;
   margin: 5px;
@@ -43,39 +39,37 @@ Här är en grundläggande metod som du kan använda:
 ```
 
 
-
-3. Lägg nu till en klickeven lyssnare på varje bild med JavaScript. När användaren klickar på en bild kommer JavaScript att skapa ett överlager och visa bilden i fullskärmsläge.
+3. Lägg nu till en klick-händelsehanterare till varje bild med JavaScript. När användaren klickar på en bild, kommer JavaScript att skapa ett överlägg och visa bilden i helskärmsläge.
 
 ```javascript
-const galleri = document.querySelector('.galleri');
-const bilder = galleri.querySelectorAll('img');
+const gallery = document.querySelector('.gallery');
+const images = gallery.querySelectorAll('img');
 
-bilder.forEach((bild) => {
-  bild.addEventListener('click', () => {
-    // skapa överlagret
-    const överlagret = document.createElement('div');
-    överlagret.classList.add('överlager');
+images.forEach((image) => {
+  image.addEventListener('click', () => {
+    // skapa överlägg
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
     
-    // skapa bild elementet
-    const fullskärmsbild = document.createElement('img');
-    fullskärmsbild.src = bild.src;
-    fullskärmsbild.classList.add('fullskärmsbild');
+    // skapa bildelement
+    const fullScreenImage = document.createElement('img');
+    fullScreenImage.src = image.src;
+    fullScreenImage.classList.add('full-screen-image');
     
-    // lägg till bild elementet i överlagret
-    överlagret.appendChild(fullskärmsbild);
+    // lägg till bildelement till överlägg
+    overlay.appendChild(fullScreenImage);
     
-    // lägg till överlagret på sidan
-    document.body.appendChild(överlagret);
+    // lägg till överlägg på sidan
+    document.body.appendChild(overlay);
   });
 });
 ```
 
 
-
-4. Slutligen, lägg till CSS för att styla överlagret och den fullskärmsbild.
+4. Slutligen, lägg till lite CSS för att styla överlägget och bilden i helskärmsläge.
 
 ```css
-.överlager {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +81,7 @@ bilder.forEach((bild) => {
   align-items: center;
 }
 
-.fullskärmsbild {
+.full-screen-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -96,4 +90,4 @@ bilder.forEach((bild) => {
 
 
 
-Med dessa steg bör du nu ha en galleria som tillåter att användare kan titta på bilder i fullskärmsläge genom att trycka på dem.
+Med dessa steg, bör du nu ha ett galleri som tillåter användare att visa bilder i helskärmsläge genom att trycka på dem.

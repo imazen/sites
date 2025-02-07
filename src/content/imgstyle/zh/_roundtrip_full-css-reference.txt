@@ -1,14 +1,13 @@
 ---
+taskInputHash: 978f5d7ff0f30013
 title: Complete CSS Reference
-description: Complete CSS effects and borders reference with examples
-taskInputHash: dbb7d3e328844243
+description: Complete CSS reference and examples for image effects
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-This is a complete CSS effects and borders reference with examples that you can apply to images:
+Below is a comprehensive reference of CSS effects and borders you can apply to images, along with examples for each:
+
 1. **Border:** Add a border around the image.
 
 ```css
@@ -16,7 +15,6 @@ img {
   border: 2px solid black;
 }
 ```
-
 
 2. **Box Shadow:** Add a shadow around the image.
 
@@ -26,8 +24,7 @@ img {
 }
 ```
 
-
-3. **Opacity:** Adjust the opacity of the image.
+3. **Opacity:** Adjust the transparency of the image.
 
 ```css
 img {
@@ -35,8 +32,7 @@ img {
 }
 ```
 
-
-4. **Grayscale:** Convert the image to a grayscale.
+4. **Grayscale:** Convert the image to grayscale.
 
 ```css
 img {
@@ -44,8 +40,7 @@ img {
 }
 ```
 
-
-5. **Sepia:** Apply a sepia effect to the image.
+5. **Sepia Effect:** Apply a sepia effect to the image.
 
 ```css
 img {
@@ -53,15 +48,13 @@ img {
 }
 ```
 
-
-6. **Blur:** Blur the image.
+6. **Blur:** Make the image blurry.
 
 ```css
 img {
   filter: blur(5px);
 }
 ```
-
 
 7. **Brightness:** Adjust the brightness of the image.
 
@@ -71,7 +64,6 @@ img {
 }
 ```
 
-
 8. **Contrast:** Adjust the contrast of the image.
 
 ```css
@@ -80,15 +72,13 @@ img {
 }
 ```
 
-
-9. **Hue Rotation:** Rotate the hue of the image.
+9. **Hue Rotate:** Rotate the hue of the image.
 
 ```css
 img {
   filter: hue-rotate(90deg);
 }
 ```
-
 
 10. **Invert:** Invert the colors of the image.
 
@@ -98,7 +88,6 @@ img {
 }
 ```
 
-
 11. **Saturation:** Adjust the saturation of the image.
 
 ```css
@@ -107,8 +96,7 @@ img {
 }
 ```
 
-
-12. **Sepia:** Apply a sepia effect to the image.
+12. **Sepia Effect:** Apply a sepia effect to the image.
 
 ```css
 img {
@@ -116,15 +104,13 @@ img {
 }
 ```
 
-
-13. **Drop Shadow:** Add a shadow effect around the image.
+13. **Drop Shadow:** Add a drop shadow effect to the image.
 
 ```css
 img {
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
 }
 ```
-
 
 14. **Transition:** Add a transition effect to the image.
 
@@ -136,7 +122,6 @@ img:hover {
   transform: scale(1.1);
 }
 ```
-
 
 15. **Animation:** Add an animation effect to the image.
 
@@ -154,9 +139,9 @@ img {
 }
 ```
 
+These are just some examples of the many CSS effects and borders you can apply to images. Try different styles to create unique and eye-catching designs!
 
-
-These are just a few examples of many CSS effects and borders that can be applied to images. Try different styles to create unique and eye-catching designs!
+{{No note required regarding mistakes, as translation aligns correctly with original terms and syntax.}}
 =====================
 
 Content prompt used: 
@@ -169,8 +154,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Full CSS reference
  2. Full CSS reference for effects, with examples
 
-Metadata returned1. 完整的CSS参考
-2. 带有示例的完整CSS效果参考 
+Metadata returned1. 完整的 CSS 参考  
+2. 效果的完整 CSS 参考及示例 
 
 
 Roundtrip (isolated) prompt used: 

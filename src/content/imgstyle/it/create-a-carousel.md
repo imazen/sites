@@ -1,28 +1,29 @@
 ---
-title: Creare un carousel
-description: Come creare un carousel su un sito web
-taskInputHash: 12f7f3924af2ff63
+taskInputHash: b422f02083c6206c
+title: >-
+  Traduci anche con attenzione il titolo e la descrizione dell'articolo; non
+  usare & o < o >
+   Creare un carosello
+description: Come creare un carosello su un sito web
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Ecco i passaggi generali per creare un carousel di immagini su un sito web:
-1. Crea un nuovo file HTML per il tuo carousel di immagini. Puoi dargli un nome come "carousel.html".
-2. Aggiungi la struttura HTML al tuo file. Questo di solito include la sezione head con un titolo e eventuali fogli di stile CSS necessari e la sezione body dove aggiungerai il vero carousel.
-3. Crea un contenitore per il tuo carousel con un tag `<div>`. Dalle un ID o una classe in modo da poterlo stilizzare successivamente.
-4. All'interno del contenitore, aggiungi elementi di immagine singoli usando il tag `<img>`. Puoi impostare l'attributo source al percorso del file immagine o all'url e aggiungere testo alternativo o didascalie se necessario.
-5. Aggiungi pulsanti di navigazione al tuo carousel utilizzando i tag `<button>` o `<a>`. Avrai bisogno di un pulsante o link per la freccia sinistra e un altro per la freccia destra.
-6. Aggiungi codice JavaScript per rendere il tuo carousel funzionale. Dovrai ascoltare eventi di clic sui pulsanti di navigazione e aggiornare di conseguenza la visualizzazione del carousel. Puoi farlo usando l'API DOM o una libreria JavaScript come jQuery o React.
+Ecco i passaggi generali per creare un carosello di immagini su un sito web:
+1. Crea un nuovo file HTML per il tuo carosello di immagini. Puoi chiamarlo qualcosa come "carousel.html".
+2. Aggiungi la struttura HTML al tuo file. Questa di solito include la sezione head con un titolo e eventuali fogli di stile CSS necessari, e la sezione body dove aggiungerai il carosello vero e proprio.
+3. Crea un contenitore per il tuo carosello usando un tag `<div>`. Assegnagli un ID o una classe in modo da poterlo stilizzare successivamente.
+4. All'interno del contenitore, aggiungi elementi immagine individuali usando il tag `<img>`. Puoi impostare l'attributo source sul percorso del file immagine o sull'URL e aggiungere eventuali testi alt o didascalie necessari.
+5. Aggiungi pulsanti di navigazione al tuo carosello usando tag `<button>` o `<a>`. Avrai bisogno di un pulsante o un link per la freccia sinistra e un altro per la freccia destra.
+6. Aggiungi codice JavaScript per rendere funzionale il tuo carosello. Dovrai ascoltare gli eventi di clic sui pulsanti di navigazione e aggiornare di conseguenza la visualizzazione del carosello. Puoi farlo utilizzando l'API DOM o una libreria JavaScript come jQuery o React.
 
-Ecco un codice di esempio per creare un semplice carousel di immagini utilizzando jQuery:
+Ecco un esempio di codice per creare un semplice carosello di immagini utilizzando jQuery:
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Il mio carousel di immagini</title>
+	<title>Il Mio Carosello di Immagini</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>

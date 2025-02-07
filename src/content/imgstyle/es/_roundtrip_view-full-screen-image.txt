@@ -1,18 +1,15 @@
 ---
-title: Adding the option to tap and view an image in full screen to a gallery
-description: How to add an option to tap and view an image in full screen to a gallery
-taskInputHash: 39687ec0ca18f284
+title: Add Tap to View Image Fullscreen to a Gallery
+description: >-
+  How to add a tap-to-view-image-fullscreen option to a gallery
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale es,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-To add a "Tap to view image in full screen" option to a gallery, you can use JavaScript and CSS to create a layer that displays the image in full screen mode when the user taps it.
+To add a "Tap to View Image Fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen mode when the user taps on it.
 
 Here's a basic approach you can use:
-
-1. First, create a container for your gallery and add all the images that you want to display.
+1. First, create a container for your gallery and add all the images you want to display.
 
 ```html
 <div class="gallery">
@@ -23,7 +20,8 @@ Here's a basic approach you can use:
 </div>
 ```
 
-2. Then, add some CSS to style the gallery and images.
+
+2. Next, add some CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -38,7 +36,8 @@ Here's a basic approach you can use:
 }
 ```
 
-3. Now, add a click event listener for each image using JavaScript. When the user clicks on an image, JavaScript will create a layer and display the image in full screen mode.
+
+3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full-screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -46,7 +45,7 @@ const images = gallery.querySelectorAll('img');
 
 images.forEach((image) => {
   image.addEventListener('click', () => {
-    // create layer
+    // create overlay
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     
@@ -55,16 +54,17 @@ images.forEach((image) => {
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // add image element to layer
+    // add image element to overlay
     overlay.appendChild(fullScreenImage);
     
-    // add layer to page
+    // add overlay to page
     document.body.appendChild(overlay);
   });
 });
 ```
 
-4. Finally, add some CSS styles to style the layer and full screen image.
+
+4. Finally, add some CSS to style the overlay and the full-screen image.
 
 ```css
 .overlay {
@@ -86,7 +86,13 @@ images.forEach((image) => {
 }
 ```
 
-With these steps, you should now have a gallery that allows users to view images in full screen mode by tapping on them.
+
+
+With these steps, you should now have a gallery that allows users to view images in full-screen mode by tapping on them. 
+
+{{1. "Tocar" should be translated as "Tap" not "Click" since "tap" refers to touch devices. 
+2. The phrase "modo pantalla completa" translated as "full-screen mode" is correct, but depending on the technical context, a more specific term related to the platform (e.g., mobile vs. desktop) could be appropriate.
+3. There's no mention of functionality to close the overlay once opened, which could be foreseen as necessary to describe a useful implementation.}}
 =====================
 
 Content prompt used: 
@@ -99,8 +105,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Add tap to view full-screen image to a gallery
  2. How to add a tap to view full-screen image option to a gallery
 
-Metadata returned1. Agregar la opción de tocar para ver la imagen en pantalla completa a una galería
-2. Cómo agregar una opción de tocar para ver la imagen en pantalla completa en una galería 
+Metadata returned1. Añadir toque para ver la imagen a pantalla completa a una galería
+2. Cómo añadir una opción de tocar para ver la imagen a pantalla completa a una galería 
 
 
 Roundtrip (isolated) prompt used: 

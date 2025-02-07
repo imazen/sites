@@ -1,20 +1,18 @@
 ---
+taskInputHash: 21b58eb274184c9c
 title: px ≠ Pixel
-description: Geräte-Pixel ≠ Browser-Pixel ≠ Bild-Pixel
-taskInputHash: 6bf2840ae3339b2e
-lang: de
-ignore: '/* cSpell:locale de,en*/'
+description: Gerätepixel ≠ Browser-Px ≠ Bild-Px
 sidebar_sort_priority: 900
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: de
 ---
-### Gerätepixel ≠ Browser px ≠ Bild px
+### Gerätepixel ≠ Browser-Px ≠ Bild-Px
 
-Dank Apple entspricht CSS- und HTML-Pixel (`px`) **fast nie genau einem einzigen Geräte-/Druckerpixel**. Der devicePixelRatio auf meinem Handy beträgt 3,875; [wie hoch ist deiner?](https://www.mydevice.io/) 
+Dank Apple mapen CSS- und HTML-Pixel (`px`) **fast immer auf mehrere Geräte-/Druckerpixel**. Der devicePixelRatio auf meinem Handy ist 3,875; [wie ist deiner?](https://www.mydevice.io/)
 
-Mein Desktop-DevicePixelRatio ändert sich beim Vergrößern des Browsers, ist standardmäßig jedoch 1,5 (mein `System > Anzeige > Skalierung` beträgt schließlich 150%).
+Der devicePixelRatio meines Desktops ändert sich beim Zoomen des Browsers, ist jedoch standardmäßig 1,5 (mein `System > Anzeige > Skalierung` beträgt schließlich 150%).
 
-Bilddateien (mit Ausnahme von SVG) entschlüsseln zu einem Raster von Pixeln. **Es ist ärgerlicherweise schwer, Bildpixel perfekt mit Gerätepixeln im Verhältnis 1:1 anzuzeigen - aber mit `srcset` kann man *nahe genug* kommen**, und etwas Javascript kann die Größe des HTML-Elements nach dem Laden anpassen, wenn man wirklich triftige Gründe für eine perfekte Zuordnung hat, obwohl solche verbotenen Künste hier nicht enthüllt werden.
+Bilddateien (ohne SVG) werden in ein Pixelraster dekodiert. **Es ist ärgerlich schwer, Bildpixel perfekt im Verhältnis 1:1 mit Gerätepixeln anzuzeigen - aber mit `srcset` kann man sich *nahe genug* herantastet**, und ein bisschen Javascript kann die Größe des HTML-Elements nach dem Laden anpassen, wenn Sie wirklich gerechtfertigte Gründe für diese perfekte Zuordnung haben, obwohl solche verbotenen Künste hier nicht enthüllt werden.
 
-> Andere absolute [Einheiten (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/de/docs/Web/CSS/length) werden in Bezug auf die Anzahl von CSS-Pixeln definiert und tun so, als ob alles 96 dpi hat. Entwickler meiden absolute Einheiten, weil es in der Regel besser ist, Einheiten zu verwenden, die sich von der Schriftgröße oder den Abmessungen des Viewports/Containers ableiten. Nicht übereinstimmende Einheiten können ein Layout brechen, wenn der Benutzer den `Barrierefreiheit > Textgröße`-Multiplikator anpasst, den Browser zoomt oder das Gerät dreht. Selbstverständlich solltest du all diese Dinge vor dem Veröffentlichen deiner Website ausprobieren.
+> Andere absolute [Einheiten (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/de/docs/Web/CSS/length) sind in Bezug auf die Anzahl der CSS-Pixel definiert und tun so, als ob alles 96dpi wäre. Entwickler vermeiden absolute Einheiten, weil es im Allgemeinen besser ist, Einheiten zu verwenden, die sich aus der Schriftgröße oder den Ansichtsfenster-/Containerabmessungen ableiten. Nicht übereinstimmende Einheiten können ein Layout zerstören, wenn der Benutzer seinen `Barrierefreiheit > Textgröße`-Multiplikator anpasst, den Browser zoomt oder sein Gerät dreht. Selbstverständlich sollten Sie all diese Dinge tun, bevor Sie Ihre Seite veröffentlichen.

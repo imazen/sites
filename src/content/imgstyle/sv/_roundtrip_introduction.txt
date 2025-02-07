@@ -1,116 +1,48 @@
-# Styling the `<img>` element and example layouts
+---
+taskInputHash: f46b52d39337bf50
+title: New CSS Features for Images
+description: New CSS Features for Images
+sidebar_sort_priority: 1000
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
+---
+Modern CSS provides developers with efficient, concise tools for robust image management:
 
-## Styling the `<img>` element
+- **Aspect Ratio:**  
+  The `aspect-ratio` property maintains fixed proportions, stabilizing layouts by preventing unexpected changes while images load.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-The `<img>` element is used to display images on a webpage. It is a self-closing element, which means it doesn't have a closing tag. To style the `<img>` element, you can use CSS.
+- **Object Fit & Object Position:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control image scaling and alignment within their containers, eliminating unwanted cropping or distortion.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
 
-### Setting the size of an `<img>` element
+- **Image-Set for Resolution Switching:**  
+  The `image-set()` function offers resolution switching for background images, ensuring optimal clarity on high-resolution devices.  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
 
-You can set the width and height of an `<img>` element using CSS. Here's an example:
+- **Additional Enhancements:**  
+  `image-rendering` adjusts scaling algorithms for clear output (ideal for pixel art), while `filter` enables dynamic visual effects directly in CSS.
 
-```css
-img {
-  width: 200px;
-  height: 200px;
-}
-```
+These features significantly simplify image presentation, reduce reliance on JavaScript hacks and complex solutions, thus facilitating everyday development tasks.
 
-### Aligning an `<img>` element
-
-You can align an `<img>` element to the left or right of its container using CSS. Here's an example:
-
-```css
-img {
-  float: left; /* or float: right; */
-}
-```
-
-### Adding borders to an `<img>` element
-
-You can add a border to an `<img>` element using CSS. Here's an example:
-
-```css
-img {
-  border: 1px solid black;
-}
-```
-
-## Example layouts
-
-Here are some example layouts that use the `<img>` element:
-
-### Layout 1: Image with caption
-
-This layout shows an image with a caption below it.
-
-```html
-<div class="image-with-caption">
-  <img src="image.jpg" alt="Image" />
-  <p class="caption">This is the caption for the image.</p>
-</div>
-```
-
-```css
-.image-with-caption {
-  text-align: center;
-}
-
-.caption {
-  font-style: italic;
-}
-```
-
-### Layout 2: Two images side by side
-
-This layout shows two images side by side.
-
-```html
-<div class="two-images">
-  <img src="image1.jpg" alt="Image 1" />
-  <img src="image2.jpg" alt="Image 2" />
-</div>
-```
-
-```css
-.two-images {
-  display: flex;
-  justify-content: space-between;
-}
-```
-
-### Layout 3: Image gallery
-
-This layout shows an image gallery with three images in a row.
-
-```html
-<div class="image-gallery">
-  <div class="row">
-    <img src="image1.jpg" alt="Image 1" />
-    <img src="image2.jpg" alt="Image 2" />
-    <img src="image3.jpg" alt="Image 3" />
-  </div>
-  <div class="row">
-    <img src="image4.jpg" alt="Image 4" />
-    <img src="image5.jpg" alt="Image 5" />
-    <img src="image6.jpg" alt="Image 6" />
-  </div>
-</div>
-```
-
-```css
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-```
-
-{{In Layout 3: Image gallery, the CSS style ".row" could have been inside ".image-gallery" but for better organization, it was separated.}}
+{{Note that the original term "Bildförhållande" was translated as "Aspect Ratio" which is the correct technical translation.}}  
+{{The original text "effektiva, koncisa verktyg" was translated as "efficient, concise tools" without any changes as it is a straightforward translation.}}  
+{{The phrase "oväntade ändringar" was translated as "unexpected changes," maintaining the intended meaning.}}  
+{{The word "förenklar" was properly translated to "simplify," keeping the context intact.}}
 =====================
 
 Content prompt used: 
@@ -120,11 +52,11 @@ Translate the following to Swedish, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
-1. styling <img> elements and example layouts
- 2. styling <img> elements and example layouts
+1. New CSS features for images
+ 2. New CSS features for images
 
-Metadata returned1. Styla `<img>` element och exempellayouter
-2. Styla `<img>` element och exempellayouter 
+Metadata returned1. Nya CSS-funktioner för bilder  
+2. Nya CSS-funktioner för bilder 
 
 
 Roundtrip (isolated) prompt used: 

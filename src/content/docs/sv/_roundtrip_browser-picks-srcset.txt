@@ -1,45 +1,42 @@
 ---
-title: How the browser chooses
-description: How the browser chooses between images listed in the srcset attribute
-taskInputHash: 3fd2b41750391cb2
+title: How the Browser Chooses
+description: How the browser selects between images specified in the srcset attribute
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
 ---
-How does the browser choose between images listed in the `srcset` attribute? Here is a step-by-step description, with examples for both width and density specifications, and how the browser chooses based on device and viewport size.
+How does the browser choose between images specified in the `srcset` attribute? Here's a step-by-step guide, with examples for both width and density specifications, and how the browser decides based on the device and viewport.
 
-- When using the `srcset` attribute in HTML, the browser follows a set of rules to choose the most appropriate image from a list of specified sources. These rules depend on both the device's display properties (resolution, pixel density) and the viewport size. The `srcset` attribute allows you to specify different images based on width (by using the `w` descriptor) or pixel density (by using the `x` descriptor). Let's go through each case with an example.
+- When using the `srcset` attribute in HTML, the browser uses a set of rules to select the most appropriate image from a list of sources. These rules depend on both the device's display properties (resolution, pixel density) and the viewport size. The `srcset` attribute allows you to specify different images based on width (with the `w` descriptor) or pixel density (with the `x` descriptor). Let's go through each case with examples.
 
-1. Width descriptor (`w`):
+1. Width Descriptor (`w`):
 
-Assume that we have the following `srcset` attribute:
+Suppose we have the following `srcset` attribute:
 
 ```html
-
 <img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example Image">
-
 ```
 
 The browser follows these steps:
 
 a. Determine the device's DPR (Device Pixel Ratio). For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or higher.
 
-b. Calculate the effective width for each image in the sources. Multiply the width descriptor by DPR. For a device with a DPR of 1:
+b. Calculate the effective width for each image in the `srcset`. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
 
-- example-small.jpg: 400 * 1 = 400px
+- example-small.jpg: 400 \* 1 = 400px
 
-- example-medium.jpg: 800 * 1 = 800px
+- example-medium.jpg: 800 \* 1 = 800px
 
-- example-large.jpg: 1600 * 1 = 1600px
+- example-large.jpg: 1600 \* 1 = 1600px
 
-c. Compare the effective widths to the viewport width. Assume that the viewport width is 420px. The browser selects the smallest image with an effective width greater than or equal to the viewport width. In this case, it selects `example-medium.jpg`.
+c. Compare the effective widths with the viewport's width. Suppose the viewport width is 420px. The browser selects the smallest image with an effective width that is greater than or equal to the viewport's width. In this case, it will choose `example-medium.jpg`.
 
-2. Pixel density descriptor (`x`):
+2. Pixel Density Descriptor (`x`):
 
-Assume that we have the following `srcset` attribute:
+Suppose we have the following `srcset` attribute:
 
 ```html
-
 <img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example Image">
-
 ```
 
 The browser follows these steps:
@@ -54,15 +51,15 @@ b. Compare the device's DPR with the `x` descriptors in `srcset`. In this case, 
 
 - example-3x.jpg: 3x
 
-c. Select the image with the `x` descriptor closest to the device's DPR. For a device with a DPR of 1, the browser selects `example-1x.jpg`. For a device with a DPR of 2, it selects `example-2x.jpg`, and so on.
+c. Choose the image with the `x` descriptor that is closest to the device's DPR. For a device with a DPR of 1, the browser will choose `example-1x.jpg`. For a device with a DPR of 2, it will choose `example-2x.jpg`, and so on.
 
-It is important to note that you can also use the `sizes` attribute in conjunction with the `srcset` attribute to provide more information about how the image will be displayed at different viewport widths. This is particularly useful when using the width descriptor (`w`). Here is an example:
+It is important to note that you can also use the `sizes` attribute in combination with the `srcset` attribute to provide more information about how the image will be displayed at different viewport widths. This is particularly useful when using the width descriptor (`w`). Here is an example:
 
 ```html
-
-<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
-
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw, ...">
 ```
+
+{{Note: There is incomplete HTML at the end of the example, which was also present in the original document. It may require completion for full accuracy.}}
 =====================
 
 Content prompt used: 
@@ -76,7 +73,7 @@ Also carefully translate the title and description for the article; do not use &
  2. How the browser chooses between images listed in the srcset attribute
 
 Metadata returned1. Hur webbläsaren väljer
-2. Hur webbläsaren väljer mellan bilder som listas i srcset-attributet 
+2. Hur webbläsaren väljer mellan bilder som anges i srcset-attributet 
 
 
 Roundtrip (isolated) prompt used: 

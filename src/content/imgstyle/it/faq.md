@@ -1,18 +1,18 @@
 ---
+taskInputHash: 097bda1562973c42
 title: FAQ
-description: Domande frequenti riguardanti lo stile e il layout delle immagini con CSS
-taskInputHash: 33ce0e304d854d39
+description: >-
+  Domande frequenti riguardanti lo stile e la disposizione delle immagini con
+  CSS
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Alcune domande frequenti relative allo stile e al layout delle immagini con CSS includono:
+Alcune domande comuni relative allo stile e alla disposizione delle immagini con CSS includono:
 
 **1. Come si imposta la dimensione di un'immagine in CSS?**
 
-Per impostare la dimensione di un'immagine in CSS, è possibile utilizzare le proprietà `width` e `height`. Ad esempio, per impostare la larghezza di un'immagine su 300 pixel, è possibile utilizzare il seguente codice CSS:
+Per impostare la dimensione di un'immagine in CSS, puoi usare le proprietà `width` e `height`. Ad esempio, per impostare la larghezza di un'immagine a 300 pixel, puoi usare il seguente codice CSS:
 
 ```css
 img {
@@ -20,9 +20,9 @@ img {
 }
 ``` 
 
-**2. Come si centra un'immagine in modo orizzontale e verticale utilizzando CSS?**
+**2. Come si centra un'immagine orizzontalmente e verticalmente usando CSS?**
 
-Per centrare un'immagine in modo orizzontale e verticale utilizzando CSS, è possibile utilizzare le proprietà `display: flex`, `justify-content: center` e `align-items: center` su un contenitore che contenga l'immagine. Ad esempio, per centrare un'immagine all'interno di un elemento `div`, è possibile utilizzare il seguente codice CSS:
+Per centrare un'immagine orizzontalmente e verticalmente usando CSS, puoi usare le proprietà `display: flex`, `justify-content: center` e `align-items: center` su un contenitore che contiene l'immagine. Ad esempio, per centrare un'immagine all'interno di un elemento `div`, puoi usare il seguente codice CSS:
 
 ```css
 div {
@@ -32,14 +32,14 @@ div {
 }
 
 div img {
-  /* Facoltativo: impostare una larghezza massima per l'immagine */
+  /* Opzionale: imposta una larghezza massima per l'immagine */
   max-width: 100%;
 }
 ``` 
 
-**3. Come si rende un'immagine responsiva utilizzando CSS?**
+**3. Come si rende un'immagine responsiva usando CSS?**
 
-Per rendere un'immagine responsiva utilizzando CSS, è possibile utilizzare la proprietà `max-width: 100%` sull'immagine. In questo modo si garantisce che l'immagine non superi mai la larghezza del suo contenitore. Ad esempio:
+Per rendere un'immagine responsiva usando CSS, puoi usare la proprietà `max-width: 100%` sull'immagine. Questo assicurerà che l'immagine non superi mai la larghezza del suo contenitore. Ad esempio:
 
 ```css
 img {
@@ -50,7 +50,7 @@ img {
 
 **4. Come si aggiunge un bordo o un'ombra a un'immagine in CSS?**
 
-Per aggiungere un bordo o un'ombra a un'immagine in CSS, è possibile utilizzare le proprietà `border` e `box-shadow`, rispettivamente. Ad esempio:
+Per aggiungere un bordo o un'ombra a un'immagine in CSS, puoi usare rispettivamente le proprietà `border` e `box-shadow`. Ad esempio:
 
 ```css
 img {
@@ -59,21 +59,21 @@ img {
 }
 ``` 
 
-**5. Come si allineano le immagini una accanto all'altra utilizzando CSS?**
+**5. Come si allineano le immagini affiancate usando CSS?**
 
-Per allineare le immagini una accanto all'altra utilizzando CSS, è possibile utilizzare la proprietà `display: inline-block` sulle immagini. Ad esempio:
+Per allineare immagini affiancate usando CSS, puoi usare la proprietà `display: inline-block` sulle immagini. Ad esempio:
 
 ```css
 img {
   display: inline-block;
-  /* Facoltativo: impostare un margine tra le immagini */
+  /* Opzionale: imposta un margine tra le immagini */
   margin-right: 10px;
 }
 ``` 
 
 **6. Come si imposta un'immagine di sfondo in CSS?**
 
-Per impostare un'immagine di sfondo in CSS, è possibile utilizzare la proprietà `background-image`. Ad esempio:
+Per impostare un'immagine di sfondo in CSS, puoi usare la proprietà `background-image`. Ad esempio:
 
 ```css
 div {
@@ -81,9 +81,9 @@ div {
 }
 ``` 
 
-**7. Come si ritaglia un'immagine utilizzando CSS?**
+**7. Come si ritaglia un'immagine usando CSS?**
 
-Per ritagliare un'immagine utilizzando CSS, è possibile utilizzare la proprietà `clip`. Ad esempio:
+Per ritagliare un'immagine usando CSS, puoi usare la proprietà `clip`. Ad esempio:
 
 ```css
 img {
@@ -91,27 +91,27 @@ img {
 }
 ```
 
-Questo ritaglierà l'immagine su un quadrato di 100x100 pixel a partire dall'angolo in alto a sinistra. 
+Questo ritaglierà l'immagine in un quadrato di 100x100 pixel partendo dall'angolo in alto a sinistra.
 
-**8. Come si aggiunge un effetto al passaggio del mouse su un'immagine utilizzando CSS?**
+**8. Come si aggiunge un effetto hover a un'immagine usando CSS?**
 
-Per aggiungere un effetto al passaggio del mouse su un'immagine utilizzando CSS, è possibile utilizzare la pseudoclasse `:hover`. Ad esempio:
+Per aggiungere un effetto hover a un'immagine usando CSS, puoi usare la pseudo-classe `:hover`. Ad esempio:
 
 ```css
 img {
-  /* Impostare lo stato iniziale dell'immagine */
+  /* Imposta lo stato iniziale dell'immagine */
   opacity: 0.8;
 }
 
 img:hover {
-  /* Impostare lo stato dell'immagine quando ci si passa sopra con il mouse */
+  /* Imposta lo stato dell'immagine quando vi si passa sopra con il mouse */
   opacity: 1;
 }
 ``` 
 
-**9. Come si controlla lo spazio tra le immagini utilizzando CSS?**
+**9. Come si controlla lo spazio tra le immagini usando CSS?**
 
-Per controllare lo spazio tra le immagini utilizzando CSS, è possibile utilizzare la proprietà `margin`. Ad esempio:
+Per controllare lo spazio tra le immagini usando CSS, puoi usare la proprietà `margin`. Ad esempio:
 
 ```css
 img {
@@ -119,11 +119,11 @@ img {
 }
 ```
 
-Questo aggiungerà un margine di 10 pixel alla destra di ogni immagine.
+Questo aggiungerà un margine di 10 pixel a destra di ciascuna immagine.
 
-**10. Come si crea una presentazione di immagini utilizzando CSS?**
+**10. Come si crea una presentazione di immagini usando CSS?**
 
-Per creare una presentazione di immagini utilizzando CSS, è possibile utilizzare la regola `@keyframes` per definire l'animazione e la proprietà `animation` per applicarla alle immagini. Ad esempio:
+Per creare una presentazione di immagini usando CSS, puoi usare la regola `@keyframes` per definire l'animazione e la proprietà `animation` per applicarla alle immagini. Ad esempio:
 
 ```css
 @keyframes slideshow {
@@ -132,7 +132,8 @@ Per creare una presentazione di immagini utilizzando CSS, è possibile utilizzar
 }
 
 img {
-  /* Impostare lo stato iniziale delle immagini */
+  /* Imposta lo stato iniziale delle immagini */
   opacity: 0;
-  /* Impostare la durata e la funzione di temporizzazione dell'animazione */
+  /* Imposta la durata e la funzione di temporizzazione dell'animazione */
   animation: slideshow
+```

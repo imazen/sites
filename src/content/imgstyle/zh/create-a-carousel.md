@@ -1,29 +1,26 @@
 ---
-title: 创建一个轮播
-description: 如何在网站上创建轮播
-taskInputHash: e0d9c0cd3e4a8e7b
+taskInputHash: 5fe0f2957aca9e58
+title: 创建轮播图
+description: 如何在网站上创建轮播图
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: zh
-ignore: '/* cSpell:locale zh,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-以下是在网站上创建图像轮播的一般步骤： 
+以下是在网站上创建图片轮播的常规步骤：
+1. 为您的图片轮播创建一个新的HTML文件。您可以将其命名为类似“carousel.html”。
+2. 在文件中添加HTML结构。通常包括带有标题和任何必要的CSS样式表的头部部分，以及可以添加实际轮播的主体部分。
+3. 使用`<div>`标签为轮播创建一个容器。给它一个ID或类，以便可以稍后进行样式设置。
+4. 在容器内，使用`<img>`标签添加单个图像元素。可以将源属性设置为图像文件路径或URL，并根据需要添加任何替代文本或说明。
+5. 使用`<button>`或`<a>`标签为轮播添加导航按钮。您需要为左箭头和右箭头各一个按钮或链接。
+6. 添加JavaScript代码使您的轮播功能化。您需要监听导航按钮上的单击事件，并相应地更新轮播的显示。可以使用DOM API或JavaScript库如jQuery或React来实现。
 
-1. 为您的图像轮播创建一个新的 HTML 文件。您可以将其命名为 "carousel.html"。
-2. 将 HTML 结构添加到您的文件中。通常包括 head 部分带有标题和任何必要的 CSS 样式表，和您将添加实际 carousel 的 body 部分。
-3. 使用 `<div>` 标记为您的 carousel 创建一个容器。给它一个 ID 或类，以便以后进行样式设置。
-4. 在容器内，使用 `<img>` 标记添加单个图像元素。您可以将源属性设置为图像文件路径或 URL，并根据需要添加任何 Alt 文本或标题。
-5. 使用 `<button>` 或 `<a>` 标记为您的 carousel 添加导航按钮。您需要一个按钮或链接用于左箭头和另一个用于右箭头。
-6. 添加 JavaScript 代码以使您的 carousel 实现功能。您需要在导航按钮上监听单击事件，并相应地更新轮播的显示。您可以使用 DOM API 或 JavaScript 库（如 jQuery 或 React）来实现此操作。
-
-以下是使用 jQuery 创建简单图像轮播的示例代码：
+下面是一个使用jQuery创建简单图片轮播的示例代码：
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>我的图像轮播</title>
+	<title>我的图片轮播</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>
@@ -65,12 +62,12 @@ date_updated: '2023-03-31'
 </head>
 <body>
 	<div class="carousel owl-carousel owl-theme">
-		<img src="image1.jpg" alt="图像 1">
-		<img src="image2.jpg" alt="图像 2">
-		<img src="image3.jpg" alt="图像 3">
-		<img src="image4.jpg" alt="图像 4">
-		<img src="image5.jpg" alt="图像 5">
-		<img src="image6.jpg" alt="图像 6">
+		<img src="image1.jpg" alt="图片 1">
+		<img src="image2.jpg" alt="图片 2">
+		<img src="image3.jpg" alt="图片 3">
+		<img src="image4.jpg" alt="图片 4">
+		<img src="image5.jpg" alt="图片 5">
+		<img src="image6.jpg" alt="图片 6">
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

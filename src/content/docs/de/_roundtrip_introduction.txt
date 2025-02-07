@@ -1,41 +1,42 @@
 ---
-title: srcset and <img> sizes
-description: An efficient and definitive guide to responsive images until 2023
-taskInputHash: f8e7c31ccf577572
-lang: en
-ignore: '/* cSpell:locale de,en*/'
+taskInputHash: e1935034e64d2c51
+title: srcset & `<img>` sizes
+description: An efficient and opinionated guide to responsive images for 2023
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
 ---
-**An efficient and definitive guide to images until 2023**
 
-See the sidebar for the detailed analysis. This is the quick reference for updating these `<img>` tags to support modern devices of all sizes and pixel densities. You should [know that pixel ≠ pixel](/en/pixel-not-a-pixel) and `devicePixelRatio` is more likely to be 3.875 than 1:1. Modern phones pretend to be 320-428px wide to improve legibility (in CSS pixels), but have many device pixels per CSS pixel.
+**An efficient and opinionated guide to images for 2023**
 
-> If your image size never changes no matter how narrow you make the browser window, consider using a [density descriptor](/en/density-descriptors) instead. This is often suitable for logos, icons, and buttons.
+Check the sidebar for a deep dive. This is the quick reference to update `<img>` tags to support modern devices with all their various sizes and pixel densities. You should [know that pixels != pixels](/en/pixels-not-pixels) and `devicePixelRatio` is more around 3.875 than 1:1. Modern phones pretend to be 320-428px wide to improve readability (in CSS pixels), but have many device pixels per CSS pixel.
 
-Do you know what your [breakpoints](/en/breakpoints) are? You’ll need those numbers to fine-tune the solution below – and at least the viewport breakpoint where the main content area stops growing.
+> If your image size never changes, no matter how narrow you make the browser window, you should use a [density descriptor](/en/density-descriptors) instead. This is often suitable for logos, icons, and buttons.
 
-### The easy method
+Do you know your [breakpoints](/en/breakpoints)? You'll need these numbers to fine-tune the solution below - and at least the viewport width breakpoint where your main content area stops growing.
+
+### The simple method
 
 ```html
 <img src="img.jpg?w=480" 
-     srcset="img.jpg?format=webp&amp;w=480 480w, 
-             img.jpg?format=webp&amp;w=800 800w, 
-             img.jpg?format=webp&amp;w=1200 1200w, 
-             img.jpg?format=webp&amp;w=1600 1600w, 
-             img.jpg?format=webp&amp;w=2000 2000w"
-     sizes="(max-width: 700px) 100vw, 800px" 
-     alt="dog riding on a bike" />
+     srcset="img.jpg?format=webp&w=480 480w, 
+             img.jpg?format=webp&w=800 800w, 
+             img.jpg?format=webp&w=1200 1200w, 
+             img.jpg?format=webp&w=1600 1600w, 
+             img.jpg?format=webp&w=2000 2000w"
 
-<!-- We assume you have a breakpoint at 700px. 
-     And that below that viewport width, this image is 100% wide and
-     when the viewport is wider, the image is capped at 800 CSS pixels. -->
+     sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
 
-<!-- This assumes you’re using an RIAPI-compliant image server like imageflow. 
-     Dynamic variant production of images is vital for developer sanity. -->
+<!-- We have assumed that you have a breakpoint at 700px.
+     And that below this viewport width, this image occupies 100% of the width, but
+     when the viewport is larger, the image is limited to 800 CSS pixels. -->
+
+<!-- This assumes you are using an RIAPI-compatible image server like Imageflow.
+     Creating image variants on-the-fly is crucial for developer satisfaction. -->
 ```
+
+{{Note: The translation maintains technical accuracy and retains markdown and code blocks correctly. There could be German-specific terms such as "RIAPI-kompatiblen" which refers to Imageflow or similar image service, that don't have a direct English equivalent.}}
 =====================
 
 Content prompt used: 
@@ -48,8 +49,8 @@ Also carefully translate the title and description for the article; do not use &
 1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
-Metadata returned1. srcset und <img> sizes 
- 2. Ein effizienter und dezidierter Leitfaden für responsive Bilder bis 2023 
+Metadata returned1. srcset & `<img>` sizes
+2. Ein effizienter und meinungsstarker Leitfaden zu responsiven Bildern für 2023 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,47 +1,45 @@
 ---
-title: Descriptores de ancho y densidad
-description: Ejemplos de uso de descriptores de ancho y densidad en `srcset`
-taskInputHash: 74b8eb2869d948a0
+taskInputHash: 11ef828327c49f4d
+title: Descriptores de anchura y densidad
+description: Ejemplos de uso de descriptores de anchura y densidad en `srcset`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: es
-ignore: '/* cSpell:locale es,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Entendiendo los descriptores de ancho (w) y densidad (x) en `srcset`. Usa ejemplos y Markdown.
+Comprender los descriptores de anchura (w) y densidad (x) en `srcset`. Utiliza ejemplos y usa Markdown.
 
-> `srcset` es un atributo HTML que permite a los desarrolladores proporcionar múltiples fuentes de imágenes con diferentes resoluciones o densidades de píxeles, y permitir que el navegador seleccione la imagen adecuada en función de las características de visualización del dispositivo. El atributo `srcset` utiliza una combinación de la `URL` y los descriptores `w` o `x` para especificar las imágenes.
-## Descriptores de Ancho (`w`)
+> `srcset` es un atributo HTML que permite a los desarrolladores proporcionar múltiples fuentes de imágenes con diferentes resoluciones o densidades de píxeles, y dejar que el navegador seleccione la imagen apropiada según las características de la pantalla del dispositivo. El atributo `srcset` utiliza una combinación de `URL` y los descriptores `w` o `x` para especificar las imágenes.
 
-> El descriptor `w` se utiliza para especificar el ancho de una imagen en píxeles. Se utiliza cuando se desea proporcionar al navegador las dimensiones de una imagen para que pueda elegir la imagen adecuada para el espacio disponible en la pantalla.
+## Descriptor de Anchura (`w`)
 
-> La sintaxis para utilizar el descriptor `w` en `srcset` es la siguiente:
+> El descriptor `w` se utiliza para especificar la anchura de una imagen en píxeles. Se usa cuando queremos proporcionar al navegador las dimensiones de una imagen para que pueda elegir la imagen apropiada para el espacio de pantalla disponible.
+
+> La sintaxis para usar el descriptor `w` en `srcset` es la siguiente:
 
 ```html
 <img src="small.jpg"
   srcset="small.jpg 500w,
           medium.jpg 1000w,
           large.jpg 2000w"
-  alt="Ejemplo de Imagen">
+  alt="Imagen de ejemplo">
 ```
 
+> En el ejemplo anterior, hemos proporcionado al navegador tres imágenes y sus correspondientes anchuras en píxeles. El navegador seleccionará la imagen con la anchura más cercana al espacio de pantalla disponible.
 
-> En el ejemplo anterior, hemos proporcionado al navegador tres imágenes y sus anchos correspondientes en píxeles. El navegador seleccionará la imagen con el ancho más cercano al espacio disponible en la pantalla.
-## Descriptores de Densidad (`x`)
+## Descriptor de Densidad (`x`)
 
-> El descriptor `x` se utiliza para especificar la densidad de píxeles de una imagen, que es la relación de píxeles físicos a píxeles CSS. Se utiliza cuando se desea proporcionar al navegador diferentes versiones de la misma imagen con diferentes densidades de píxeles.
+> El descriptor `x` se utiliza para especificar la densidad de píxeles de una imagen, que es la relación de píxeles físicos a píxeles CSS. Se utiliza cuando queremos proporcionar al navegador diferentes versiones de la misma imagen con diferentes densidades de píxeles.
 
-> La sintaxis para utilizar el descriptor `x` en `srcset` es la siguiente:
+> La sintaxis para usar el descriptor `x` en `srcset` es la siguiente:
 
 ```html
 <img src="small.jpg"
   srcset="small.jpg 1x,
           medium.jpg 2x,
           large.jpg 3x"
-  alt="Ejemplo de Imagen">
+  alt="Imagen de ejemplo">
 ```
 
+> En el ejemplo anterior, hemos proporcionado al navegador tres imágenes y sus correspondientes densidades de píxeles. El navegador seleccionará la imagen con la densidad de píxeles más cercana a la pantalla del dispositivo.
 
-> En el ejemplo anterior, hemos proporcionado al navegador tres imágenes y sus diferentes densidades de píxeles correspondientes. El navegador seleccionará la imagen con la densidad de píxeles más cercana a la pantalla del dispositivo.
-
-> Es importante notar que los descriptores `w` y `x` se pueden usar juntos en el mismo atributo `srcset` para proporcionar al navegador más opciones para elegir.
+> Ten en cuenta que los descriptores `w` y `x` se pueden usar juntos en el mismo atributo `srcset` para ofrecer al navegador más opciones de las que elegir.

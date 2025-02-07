@@ -1,77 +1,47 @@
-# Applying styles to `<img>` elements and layout examples
+---
+taskInputHash: 70877134aec58265
+title: New CSS Features for Images
+description: New CSS Features for Images
+sidebar_sort_priority: 1000
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
+---
+Modern CSS provides developers with concise and efficient tools for robust image management:
 
-## Applying styles to `<img>` elements
+- **Fixed Ratios:**  
+  The `aspect-ratio` property sets fixed ratios, stabilizing layouts by preventing unexpected changes when images load.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-The `<img>` element is used to display images on a web page. You can apply styles to the `<img>` element using CSS to control the size, placement, and other properties of the image.
+- **Object Fit and Positioning:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control the resizing and alignment of images within their containers, eliminating awkward cropping or distortion.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
 
-### Setting the size of an image
+- **Image-Set for Resolution Adaptability:**  
+  The `image-set()` function offers a resolution switch for background images, ensuring optimal clarity on high-density pixel devices (DPI).  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
 
-You can set the size of an image using the `width` and `height` properties in CSS. For example, to set the width of an image to 200 pixels and the height to 100 pixels, you could use the following CSS:
+- **Additional Enhancements:**  
+  `image-rendering` refines resizing algorithms for sharp rendering (ideal for pixel art), while `filter` allows for the application of dynamic visual effects directly in CSS.
 
-```css
-img {
-  width: 200px;
-  height: 100px;
-}
-```
+These features greatly simplify image presentation, reducing dependency on JavaScript tricks and complex solutions, thus significantly easing everyday development tasks.
 
-### Aligning an image
+---
 
-You can align an image using the `text-align` property in CSS. For example, to center an image, you could use the following CSS:
-
-```css
-img {
-  display: block;
-  margin: auto;
-}
-```
-
-### Adding a border to an image
-
-You can add a border to an image using the `border` property in CSS. For example, to add a 1-pixel solid black border to an image, you could use the following CSS:
-
-```css
-img {
-  border: 1px solid black;
-}
-```
-
-## Layout Examples
-
-Here are some examples of how you can use images in a layout:
-
-### Example 1: Image with centered text
-
-```html
-<div>
-  <img src="image.png" alt="An example image">
-  <p style="text-align: center;">This is an example of centered text.</p>
-</div>
-```
-
-### Example 2: Side-by-side images
-
-```html
-<div>
-  <img src="image1.png" alt="An example image">
-  <img src="image2.png" alt="Another example image">
-</div>
-```
-
-### Example 3: Image with a caption
-
-```html
-<figure>
-  <img src="image.png" alt="An example image">
-  <figcaption>This is a caption for the image.</figcaption>
-</figure>
-```
-
-{{Note that the term used here is not the technical term for the `alt` attribute.}} 
-
-## Conclusion
-
-With CSS, you can style images in many different ways to help create an effective layout for your web pages.
+{{No specific mistakes or clumsy phrasing were found in the translation.}}
 =====================
 
 Content prompt used: 
@@ -81,11 +51,11 @@ Translate the following to French, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
-1. styling <img> elements and example layouts
- 2. styling <img> elements and example layouts
+1. New CSS features for images
+ 2. New CSS features for images
 
-Metadata returned1. Appliquer des styles aux éléments <img> et exemples de mises en page
-2. Appliquer des styles aux éléments <img> et exemples de mises en page 
+Metadata returned1. Nouvelles fonctionnalités CSS pour les images
+2. Nouvelles fonctionnalités CSS pour les images 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,41 +1,37 @@
 ---
+taskInputHash: 473a93ebd1a2c1d5
 title: Breakpoint e immagini
-description: Perché alcuni (ma non tutti) i breakpoint sono importanti per le tue immagini
-taskInputHash: 7714cadfe55d82ca
+description: Perché alcuni (ma non tutti) breakpoint sono importanti per le tue immagini
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-### Contesto
+### Background
 
-Schermi piccoli e monitor grandi richiedono layout diversi. Per lo scopo di `srcset` e `sizes`, dobbiamo sapere a che punto avviene il cambio di layout.
+Schermi piccoli e grandi monitor richiedono layout diversi. Per l'uso di `srcset` e `sizes`, dobbiamo sapere a quale punto il layout cambia.
 
-I web developer devono decidere cosa ridurre, nascondere o spostare su schermi più piccoli - o più comunemente, cosa espandere, rivelare o aggiungere su schermi più grandi. Inoltre hanno poche informazioni a disposizione. L'utente sta utilizzando un tablet o uno smartphone in modalità landscape - o una finestra di browser piccola?
+Gli sviluppatori web devono decidere cosa ridurre, nascondere o ricollocare sugli schermi più piccoli - o più comunemente, cosa espandere, rivelare o aggiungere sugli schermi più grandi. Hanno anche pochissime informazioni a disposizione. L'utente è su un tablet o su un telefono in modalità orizzontale - o in una finestra del browser piccola?
 
-Dobbiamo scegliere una larghezza di viewport arbitraria in cui avviene il cambio di layout. Questo viene chiamato un **breakpoint**. È un valore arbitrario in pixel CSS ([non pixel dispositivo](/it/pixels-non-pixels)). Polypane ha un [ottimo articolo](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) sui breakpoint comunemente usati.
+Dobbiamo scegliere una larghezza di viewport arbitraria dove il layout cambia. Questo si chiama **breakpoint**. È un numero arbitrario di pixel CSS ([non di pixel dispositivo](/it/pixels-not-pixels)). Polypane ha un [ottimo articolo](https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/#the-breakpoints-to-develop-on-in-2023) sui breakpoint comunemente usati.
 
-Alcune immagini (come loghi, icone o pulsanti) potrebbero essere immune ai cambiamenti di layout causati da questi breakpoint (e andranno bene con i [descrittori di densità srcset](/it/density-descriptors)).
+Alcune immagini (come loghi o icone o pulsanti) potrebbero essere immuni alle modifiche del layout causate da questi breakpoint (e andare bene con [i descrittori di densità srcset](/it/density-descriptors)). 
 
-Le immagini del contenuto principale saranno limitate dalle dimensioni del loro contenitore. In genere, l'area del contenuto principale di una pagina sarà limitata a una determinata larghezza sui più grandi schermi, una `max-width`, ma su schermi più piccoli l'area del contenuto principale riempirà l'intero viewport.
+Le immagini del contenuto principale saranno limitate dalla dimensione del loro contenitore. Tipicamente l'area del contenuto principale di una pagina sarà limitata a una certa larghezza sugli schermi più grandi, una `max-width`, ma sugli schermi piccoli, l'area del contenuto principale riempirà l'intero viewport.
 
-Se si hanno più di una colonna a determinati breakpoint, diventa più difficile calcolare le regole di dimensionamento effettive, poiché la percentuale della larghezza del viewport che l'immagine occupa cambierà.
+Se hai più di una colonna in alcuni breakpoint, sarà più difficile calcolare le regole di dimensionamento efficaci, poiché la percentuale della larghezza del viewport che l'immagine occupa cambierà.
 
 ### Il metodo facile
 
-Detto questo, non bisogna sovrapensare. Probabilmente sarete molto OK con la seguente approssimazione:
+Detto ciò, non pensarci troppo. Probabilmente sarai molto a tuo agio con la seguente approssimazione:
 
-1. A che dimensione la colonna principale (o il contenitore dell'immagine) smette di crescere? Fino a quella larghezza di viewport, possiamo utilizzare `100vw` per l'attributo `sizes` dell'immagine per indicare che l'immagine occupa il 100% della larghezza del viewport.
-2. Qual è la larghezza massima che il contenitore raggiunge? Possiamo impostare quella larghezza fissa per tutto il resto.
+1. A quale dimensione la colonna principale (o il contenitore dell'immagine) smette di crescere? Fino a quella larghezza di viewport, possiamo usare `100vw` per l'attributo `sizes` dell'immagine per dire che l'immagine occupa il 100% della larghezza del viewport.  
+2. Qual è la larghezza massima che quel contenitore raggiunge mai? Possiamo impostarla come una `larghezza` fissa per tutto il resto. 
 
-Se la vostra risposta al punto 1 è stata 700px e la risposta al punto 2 è stata 800px, potete usare il seguente attributo `sizes`:
+Se la tua risposta alla prima domanda era 700px e alla seconda era 800px, puoi usare il seguente attributo `sizes`:
 
 ```html
-<!-- Questi sono pixel CSS, non pixel del dispositivo o dell'immagine. -->
+<!-- Questi sono pixel CSS, non pixel dei dispositivi o pixel dell'immagine. -->
 <img [...] sizes="(max-width: 700px) 100vw, 800px"  />
 ```
 
-
-
-> Potreste pensare che il browser potrebbe gestire tutte queste elaborazioni per noi basandosi sul CSS. Sfortunatamente, i browser sono aggressivamente desiderosi di scegliere un URL dell'immagine *prima* che i fogli di stile vengano scaricati. Quindi dobbiamo fare i calcoli da soli, e farà loro comodo se non riusciamo a farlo perfettamente.
+> Pensavi che il browser potesse gestire bene tutti questi calcoli per noi basandosi sul CSS. Purtroppo, i browser sono molto desiderosi di scegliere un URL dell'immagine *prima* che i fogli di stile siano scaricati. Quindi dobbiamo fare i calcoli noi stessi, e se non li facciamo perfettamente, se lo meritano.

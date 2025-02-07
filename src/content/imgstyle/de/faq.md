@@ -1,28 +1,26 @@
 ---
+taskInputHash: dd040d370085627f
 title: FAQ
-description: Häufig gestellte Fragen zum Stylen und Layouten von Bildern mit CSS
-taskInputHash: 8ab7aaccc4a7a585
+description: Häufig gestellte Fragen zur Gestaltung und Anordnung von Bildern mit CSS
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Einige häufig gestellte Fragen zum Stylen und Layouten von Bildern mit CSS sind:
+Einige häufig gestellte Fragen zur Gestaltung und Anordnung von Bildern mit CSS umfassen:
 
-**1. Wie setzt man die Größe eines Bildes in CSS?**
+**1. Wie setzt man die Größe eines Bildes in CSS fest?**
 
-Um die Größe eines Bildes in CSS festzulegen, kann man die Eigenschaften `width` und `height` verwenden. Zum Beispiel kann man mit folgendem CSS-Code die Breite eines Bildes auf 300 Pixel setzen:
+Um die Größe eines Bildes in CSS festzulegen, können Sie die Eigenschaften `width` und `height` verwenden. Zum Beispiel, um die Breite eines Bildes auf 300 Pixel zu setzen, können Sie den folgenden CSS-Code verwenden:
 
 ```css
 img {
   width: 300px;
 }
-``` 
+```
 
 **2. Wie zentriert man ein Bild horizontal und vertikal mit CSS?**
 
-Um ein Bild horizontal und vertikal mit CSS zu zentrieren, kann man die Eigenschaften `display: flex`, `justify-content: center` und `align-items: center` auf einen Container anwenden, der das Bild enthält. Zum Beispiel kann man mit folgendem CSS-Code ein Bild innerhalb eines `div`-Elements zentrieren:
+Um ein Bild horizontal und vertikal mit CSS zu zentrieren, können Sie die Eigenschaften `display: flex` sowie `justify-content: center` und `align-items: center` auf einem Container verwenden, der das Bild enthält. Zum Beispiel, um ein Bild in einem `div`-Element zu zentrieren, können Sie den folgenden CSS-Code verwenden:
 
 ```css
 div {
@@ -32,58 +30,58 @@ div {
 }
 
 div img {
-  /* Optional: set a maximum width for the image */
+  /* Optional: Setze eine maximale Breite für das Bild */
   max-width: 100%;
 }
-``` 
+```
 
 **3. Wie macht man ein Bild mit CSS responsiv?**
 
-Um ein Bild mit CSS responsiv zu machen, kann man die Eigenschaft `max-width: 100%` auf das Bild anwenden. Dadurch wird sichergestellt, dass das Bild niemals breiter als sein Container wird. Zum Beispiel:
+Um ein Bild mit CSS responsiv zu machen, können Sie die Eigenschaft `max-width: 100%` auf das Bild anwenden. Dies stellt sicher, dass das Bild nie breiter als sein Container wird. Zum Beispiel:
 
 ```css
 img {
   max-width: 100%;
   height: auto;
 }
-``` 
+```
 
-**4. Wie fügt man einem Bild einen Rahmen oder Schatten mit CSS hinzu?**
+**4. Wie fügt man einen Rahmen oder Schatten zu einem Bild in CSS hinzu?**
 
-Um einem Bild mit CSS einen Rahmen oder Schatten hinzuzufügen, kann man die Eigenschaften `border` bzw. `box-shadow` verwenden. Zum Beispiel:
+Um einen Rahmen oder Schatten zu einem Bild in CSS hinzuzufügen, können Sie die Eigenschaften `border` und `box-shadow` verwenden. Zum Beispiel:
 
 ```css
 img {
   border: 1px solid black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-``` 
+```
 
-**5. Wie stellt man Bilder nebeneinander mit CSS auf?**
+**5. Wie richtet man Bilder mit CSS nebeneinander aus?**
 
-Um Bilder nebeneinander mit CSS aufzustellen, kann man die Eigenschaft `display: inline-block` auf die Bilder anwenden. Zum Beispiel:
+Um Bilder mit CSS nebeneinander auszurichten, können Sie die Eigenschaft `display: inline-block` auf die Bilder anwenden. Zum Beispiel:
 
 ```css
 img {
   display: inline-block;
-  /* Optional: set a margin between the images */
+  /* Optional: Setze einen Abstand zwischen den Bildern */
   margin-right: 10px;
 }
-``` 
+```
 
 **6. Wie setzt man ein Hintergrundbild in CSS?**
 
-Um ein Hintergrundbild in CSS zu setzen, kann man die Eigenschaft `background-image` verwenden. Zum Beispiel:
+Um ein Hintergrundbild in CSS zu setzen, können Sie die Eigenschaft `background-image` verwenden. Zum Beispiel:
 
 ```css
 div {
   background-image: url('image.jpg');
 }
-``` 
+```
 
-**7. Wie schneidet man ein Bild mit CSS zurecht?**
+**7. Wie schneidet man ein Bild mit CSS zu?**
 
-Um ein Bild mit CSS zuzuschneiden, kann man die Eigenschaft `clip` verwenden. Zum Beispiel:
+Um ein Bild mit CSS zuzuschneiden, können Sie die Eigenschaft `clip` verwenden. Zum Beispiel:
 
 ```css
 img {
@@ -91,27 +89,27 @@ img {
 }
 ```
 
-Dadurch wird das Bild auf ein 100x100 Pixel großes Quadrat zurechtgeschnitten, das oben links beginnt.
+Dies schneidet das Bild zu einem 100x100 Pixel großen Quadrat aus, beginnend an der oberen linken Ecke.
 
-**8. Wie fügt man einem Bild mit CSS einen Hover-Effekt hinzu?**
+**8. Wie fügt man einen Hover-Effekt zu einem Bild mit CSS hinzu?**
 
-Um einem Bild mit CSS einen Hover-Effekt hinzuzufügen, kann man die Pseudo-Klasse `:hover` verwenden. Zum Beispiel:
+Um einen Hover-Effekt zu einem Bild mit CSS hinzuzufügen, können Sie die Pseudo-Klasse `:hover` verwenden. Zum Beispiel:
 
 ```css
 img {
-  /* Set the initial state of the image */
+  /* Setze den Anfangszustand des Bildes */
   opacity: 0.8;
 }
 
 img:hover {
-  /* Set the state of the image when hovering over it */
+  /* Setze den Zustand des Bildes, wenn man darüber schwebt */
   opacity: 1;
 }
-``` 
+```
 
 **9. Wie kontrolliert man den Abstand zwischen Bildern mit CSS?**
 
-Um den Abstand zwischen Bildern mit CSS zu kontrollieren, kann man die Eigenschaft `margin` verwenden. Zum Beispiel:
+Um den Abstand zwischen Bildern mit CSS zu kontrollieren, können Sie die Eigenschaft `margin` verwenden. Zum Beispiel:
 
 ```css
 img {
@@ -119,11 +117,11 @@ img {
 }
 ```
 
-Dadurch wird ein 10-Pixel-Abstand rechts von jedem Bild hinzugefügt.
+Dies fügt einen 10 Pixel großen Rand rechts von jedem Bild hinzu.
 
-**10. Wie erstellt man mit CSS eine Diashow von Bildern?**
+**10. Wie erstellt man eine Diashow von Bildern mit CSS?**
 
-Um mit CSS eine Diashow von Bildern zu erstellen, kann man die Regel `@keyframes` verwenden, um die Animation zu definieren, und die Eigenschaft `animation`, um sie auf die Bilder anzuwenden. Zum Beispiel:
+Um eine Diashow von Bildern mit CSS zu erstellen, können Sie die `@keyframes` Regel verwenden, um die Animation zu definieren, und die Eigenschaft `animation` anwenden, um sie auf die Bilder anzuwenden. Zum Beispiel:
 
 ```css
 @keyframes slideshow {
@@ -132,9 +130,8 @@ Um mit CSS eine Diashow von Bildern zu erstellen, kann man die Regel `@keyframes
 }
 
 img {
-  /* Set the initial state of the images */
+  /* Setze den Anfangszustand der Bilder */
   opacity: 0;
-  /* Set the duration and timing function of the animation */
+  /* Setze Dauer und Timing-Funktion der Animation */
   animation: slideshow;
-}
 ```

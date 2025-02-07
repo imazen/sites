@@ -1,28 +1,26 @@
 ---
+taskInputHash: f639498c20bca4d9
 title: Créer un carrousel
 description: Comment créer un carrousel sur un site web
-taskInputHash: 5f088be61bc17cb7
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: fr
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
 Voici les étapes générales pour créer un carrousel d'images sur un site web :
-1. Créez un nouveau fichier HTML pour votre carrousel d'images. Vous pouvez lui donner un nom comme "carousel.html".
-2. Ajoutez la structure HTML à votre fichier. Cela comprend généralement la section head avec un titre et toutes les feuilles de style CSS nécessaires, et la section body où vous ajouterez le carrousel réel.
-3. Créez un conteneur pour votre carrousel à l'aide d'une balise `<div>`. Donnez-lui un ID ou une classe pour que vous puissiez le styliser plus tard.
-4. À l'intérieur du conteneur, ajoutez des éléments d'image individuels à l'aide de la balise `<img>`. Vous pouvez définir l'attribut source sur le chemin du fichier image ou l'URL, et ajouter du texte d'alternative ou des légendes si nécessaire.
-5. Ajoutez des boutons de navigation à votre carrousel à l'aide des balises `<button>` ou `<a>`. Vous aurez besoin d'un bouton ou d'un lien pour la flèche de gauche et un autre pour la flèche de droite.
+1. Créez un nouveau fichier HTML pour votre carrousel d'images. Vous pouvez le nommer par exemple "carousel.html".
+2. Ajoutez la structure HTML à votre fichier. Cela inclut généralement la section head avec un titre et les feuilles de style CSS nécessaires, ainsi que la section body où vous ajouterez le carrousel proprement dit.
+3. Créez un conteneur pour votre carrousel en utilisant une balise `<div>`. Donnez-lui un ID ou une classe pour pouvoir le styliser plus tard.
+4. À l'intérieur du conteneur, ajoutez des éléments d'image individuels en utilisant la balise `<img>`. Vous pouvez définir l'attribut source sur le chemin du fichier ou l'URL de l'image et ajouter un texte alternatif ou des légendes si nécessaire.
+5. Ajoutez des boutons de navigation à votre carrousel en utilisant des balises `<button>` ou `<a>`. Vous aurez besoin d'un bouton ou d'un lien pour la flèche gauche et d'un autre pour la flèche droite.
 6. Ajoutez du code JavaScript pour rendre votre carrousel fonctionnel. Vous devrez écouter les événements de clic sur les boutons de navigation et mettre à jour l'affichage du carrousel en conséquence. Vous pouvez le faire en utilisant l'API DOM ou une bibliothèque JavaScript comme jQuery ou React.
 
-Voici un exemple de code pour créer un simple carrousel d'images à l'aide de jQuery :
+Voici un exemple de code pour créer un carrousel d'images simple en utilisant jQuery :
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mon carrousel d'images</title>
+	<title>Mon Carrousel d'Images</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>
@@ -81,5 +79,5 @@ Voici un exemple de code pour créer un simple carrousel d'images à l'aide de j
 				nav:true,
 				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 				responsive:{
-					0:{ 
+					0:{
 ```

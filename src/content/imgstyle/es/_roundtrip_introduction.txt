@@ -1,60 +1,45 @@
-# Styling `<img>` elements and layout examples
+---
+taskInputHash: e947654670b1a0f3
+title: New CSS Features for Images
+description: New CSS features for images
+sidebar_sort_priority: 1000
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
+---
+Modern CSS provides developers with concise and effective tools for robust image management:
 
-## Styling `<img>` elements
+- **Aspect Ratio:**  
+  The `aspect-ratio` property enforces fixed proportions, stabilizing layouts by preventing unexpected changes while images load.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-`<img>` elements can be styled with CSS using the `img` selector. Some common styling properties include:
+- **Object Fit and Position:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control scaling and alignment of images within their containers, eliminating awkward cropping or distortion.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
 
-- `width` and `height` to specify the dimensions of the image
-- `border` to add a border around the image
-- `box-shadow` to add a shadow effect to the image
-- `margin` and `padding` to adjust the spacing around the image
+- **Image-Set for Resolution Adaptability:**  
+  The `image-set()` function offers resolution switching for background images, ensuring optimal clarity on high DPI resolution devices.  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
 
-Here’s an example of CSS code to apply some of these styles to an `<img>` element:
+- **Additional Enhancements:**  
+  `image-rendering` adjusts scaling algorithms for sharp output (ideal for pixel art), while `filter` allows dynamic visual effects directly in CSS.
 
-```css
-img {
-  width: 300px;
-  height: 200px;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px #ccc;
-  margin: 10px;
-  padding: 5px;
-}
-```
+These features significantly simplify image presentation, reducing the reliance on JavaScript tricks and complex solutions, thereby greatly facilitating daily development tasks.
 
-This will display the image with a width of 300 pixels, a height of 200 pixels, a gray border, a shadow effect, and some spacing around it.
-
-## Layout examples
-
-Here are some examples of layouts that use `<img>` elements:
-
-### Basic grid
-
-```
-[<img>][<img>][<img>]
-[<img>][<img>][<img>]
-```
-
-### Image gallery
-
-```
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-[<img>]
-```
-
-### Image with caption
-
-```
-[<img>]
-Caption text
-```
-
-
-Note that the term used here is not the technical term for the `img` selector, which is simply "image selector". Also, some additional styling properties and layout examples could be added.
+{{No mistakes or clumsy phrasing were detected in the translation.}}
 =====================
 
 Content prompt used: 
@@ -64,11 +49,11 @@ Translate the following to Spanish, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
-1. styling <img> elements and example layouts
- 2. styling <img> elements and example layouts
+1. New CSS features for images
+ 2. New CSS features for images
 
-Metadata returned1. Estilizando elementos <img> y ejemplos de diseños
-2. Estilizando elementos <img> y ejemplos de diseños 
+Metadata returned1. Nuevas características de CSS para imágenes
+2. Nuevas características de CSS para imágenes 
 
 
 Roundtrip (isolated) prompt used: 

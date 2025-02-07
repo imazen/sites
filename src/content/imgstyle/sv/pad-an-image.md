@@ -1,26 +1,24 @@
 ---
-title: Stoppa en bild
+taskInputHash: 9203469f7de56d54
+title: Lägg till padding runt en bild
 description: >-
-  Så här stoppar du en bild med hjälp av CSS och bildförhållande för att
-  centrera
-taskInputHash: aa05bec5881ea67f
+  Hur man lägger till padding runt en bild med hjälp av CSS och bildförhållande
+  för att centrera
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Så här kan du använda CSS och bildförhållande för att centrera och stoppa en bild:
-1. Först måste du omsluta din bild i en container-element, såsom en `<div>` eller `<figure>`. Detta gör det möjligt att tillämpa stilar på containern som påverkar bilden inuti.
-2. Ange containerns `position` -egenskap till `relative`. Detta gör det möjligt att positionera bilden inuti containern.
-3. Lägg till en `:: after` pseudo-element till containern. Detta används för att bibehålla bildens bildförhållande och skapa stoppning.
-4. Ange `content` -egenskapen för `:: after` pseudo-element till en tom sträng. Detta är nödvändigt för att skapa elementet.
-5. Ange `padding-bottom` -egenskapen för `:: after` pseudo-element till ett procentvärde som motsvarar bildens bildförhållande. Till exempel, om din bild har en bildförhållande på 4: 3 skulle du ställa in stoppningen till `75%` (eftersom 3/4 = 0,75). Detta skapar stoppningen nedanför bilden.
-6. Ange `position` -egenskapen för `:: after` pseudo-element till `absolute`. Detta positionerar elementet inom containern.
-7. Ange `top`, `left`, `bottom` och `right` egenskaperna för `:: after` pseudo-element till `0`. Detta kommer att göra att elementet fyller containern och skapa stoppningen.
-8. Slutligen ange positionsegenskapen för själva bilden till `absolute`. Detta gör det möjligt att centrera bilden i containern med hjälp av egenskaperna `top`, `left`, `bottom` och `right`.
+Här är hur du kan använda CSS och bildförhållande för att centrera och paddda en bild: 
+1. Först måste du omsluta din bild i ett containerelement, som en `<div>` eller `<figure>`. Detta gör att du kan tillämpa stilar på containern som kommer att påverka bilden inuti.
+2. Ställ in containerns `position`-egenskap till `relative`. Detta låter dig positionera bilden inuti containern.
+3. Lägg till ett `::after` pseudo-element till containern. Detta kommer att användas för att bibehålla bildförhållandet och skapa paddningen.
+4. Ställ in `content`-egenskapen för `::after` pseudo-elementet till en tom sträng. Detta är nödvändigt för att skapa elementet.
+5. Ställ in `padding-bottom`-egenskapen för `::after` pseudo-elementet till ett procentvärde som motsvarar bildförhållandet för bilden. Till exempel, om din bild har ett bildförhållande på 4:3, skulle du ställa in padding till `75%` (eftersom 3/4 = 0,75). Detta kommer att skapa paddningen under bilden.
+6. Ställ in `position`-egenskapen för `::after` pseudo-elementet till `absolute`. Detta kommer att positionera elementet inom containern.
+7. Ställ in `top`, `left`, `bottom`, och `right`-egenskaperna för `::after` pseudo-elementet till `0`. Detta kommer att få elementet att fylla containern och skapa paddningen.
+8. Slutligen, ställ in `position`-egenskapen för själva bilden till `absolute`. Detta gör att du kan centrera bilden inom containern med hjälp av `top`, `left`, `bottom`, och `right`-egenskaperna.
 
-Här är ett exempel på CSS-koden du skulle använda för att centrera och stoppa en bild med ett bildförhållande på 4: 3:
+Här är ett exempel på CSS-koden som du skulle använda för att centrera och paddda en bild med ett bildförhållande på 4:3:
 
 ```css
 .container {
@@ -51,6 +49,6 @@ img {
 }
 ```
 
-I detta exempel är `.container` elementet containern för bilden. `:: after` pseudo-element används för att skapa stoppningen och bibehålla bildens bildförhållande. `img` elementet är inställt på `position: absolute` så att det kan centreras i containern med hjälp av egenskaperna `top`, `left`, `bottom` och `right`.
+I detta exempel är `.container` elementet containern för bilden. `::after` pseudo-elementet används för att skapa paddningen och bibehålla bildförhållandet för bilden. `img`-elementet är inställt på `position: absolute` så att det kan centreras inom containern med hjälp av `top`, `left`, `bottom`, och `right`-egenskaperna.
 
-Genom att ställa in `max-width` och `max-height` egenskaperna för bilden till `100%`, kommer bilden att skala för att passa tillgängligt utrymme samtidigt som bildförhållandet bibehålls. Detta innebär att stoppningen som skapats av `:: after` pseudo-elementet alltid kommer att vara proportionell mot bildens storlek.
+Genom att ställa in egenskaperna `max-width` och `max-height` för bilden till `100%`, kommer bilden skalas för att passa det tillgängliga utrymmet medan dess bildförhållande bibehålls. Detta innebär att paddningen skapad av `::after` pseudo-elementet alltid kommer att vara proportionell till storleken på bilden.

@@ -1,22 +1,20 @@
 ---
-title: Aides TailwindCSS pour `<img>`
-description: Liste des aides TailwindCSS les plus couramment utilisées pour `<img>`
-taskInputHash: d74274b58054a96e
+taskInputHash: 53bcd5c18b394e1c
+title: Utilitaires TailwindCSS pour `<img>`
+description: Liste des utilitaires TailwindCSS les plus couramment utilisés pour `<img>`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: fr
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-TailwindCSS fournit plusieurs classes d'aide pour travailler avec la balise `<img>`. Voici les plus couramment utilisées :
-- `object-contain` : cette classe définit l'image pour qu'elle s'adapte au conteneur tout en conservant son ratio. Elle réduira ou agrandira l'image si nécessaire pour qu'elle s'adapte au conteneur.
-- `object-cover` : cette classe définit l'image pour qu'elle recouvre l'intégralité du conteneur tout en conservant son ratio. Elle recadrera ou réduira l'image si nécessaire pour qu'elle recouvre entièrement le conteneur.
-- `object-fill` : cette classe définit l'image pour qu'elle remplisse tout le conteneur, sans respecter son ratio. Cela peut provoquer l'étirement ou la compression de l'image pour qu'elle s'adapte au conteneur.
-- `object-none` : cette classe définit l'image dans sa taille naturelle, sans aucun redimensionnement ou recadrage.
-- `object-center` : cette classe centre l'image horizontalement et verticalement dans son conteneur.
-- `object-left` : cette classe aligne l'image à gauche dans son conteneur.
-- `object-right` : cette classe aligne l'image à droite dans son conteneur.
-- `object-top` : cette classe aligne l'image en haut de son conteneur.
-- `object-bottom` : cette classe aligne l'image en bas de son conteneur.
+TailwindCSS fournit plusieurs classes utilitaires pour travailler avec la balise `<img>`. Voici quelques-unes des plus couramment utilisées : 
+- `object-contain` : Cette classe règle l’image pour qu’elle s’adapte à son conteneur tout en conservant son rapport d’aspect. Elle réduira ou agrandira l'image si nécessaire pour s'assurer qu'elle s'insère dans le conteneur.
+- `object-cover` : Cette classe règle l’image pour qu’elle couvre l’ensemble du conteneur tout en conservant son rapport d’aspect. Elle recadrera l'image ou la réduira si nécessaire pour garantir qu'elle couvre le conteneur.
+- `object-fill` : Cette classe règle l’image pour remplir l’ensemble du conteneur, sans conserver son rapport d’aspect. Cela peut entraîner un étirement ou une compression de l'image pour qu'elle s'insère dans le conteneur.
+- `object-none` : Cette classe règle l’image à sa taille naturelle, sans redimensionnement ni recadrage.
+- `object-center` : Cette classe centre l’image horizontalement et verticalement dans son conteneur.
+- `object-left` : Cette classe aligne l’image à gauche dans son conteneur.
+- `object-right` : Cette classe aligne l’image à droite dans son conteneur.
+- `object-top` : Cette classe aligne l’image en haut de son conteneur.
+- `object-bottom` : Cette classe aligne l’image en bas de son conteneur.
 
-Ces classes peuvent être utilisées en conjonction avec d'autres classes TailwindCSS pour encore plus personnaliser les images, comme la définition d'une largeur ou hauteur spécifique, l'ajout de bordures ou d'ombres, ou encore en ajustant l'opacité.
+Ces classes peuvent être utilisées en conjonction avec d'autres classes TailwindCSS pour encore plus de style à vos images, comme définir une largeur ou hauteur spécifique, ajouter des bordures ou des ombres, ou ajuster l’opacité.

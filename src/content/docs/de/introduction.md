@@ -1,21 +1,21 @@
 ---
-title: srcset und <img> sizes
-description: Ein effizienter und dezidierter Leitfaden für responsive Bilder bis 2023
-taskInputHash: f8e7c31ccf577572
-lang: de
-ignore: '/* cSpell:locale de,en*/'
+taskInputHash: e1935034e64d2c51
+title: srcset & `<img>` sizes
+description: Ein effizienter und meinungsstarker Leitfaden zu responsiven Bildern für 2023
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: de
 ---
-**Ein effizienter und dezidierter Leitfaden für Bilder bis 2023**
 
-Sehen Sie sich die Seitenleiste für die detaillierte Analyse an. Dies ist die Kurzreferenz zum Aktualisieren dieser `<img>`-Tags, um moderne Geräte in allen Größen und Pixeldichten zu unterstützen. Sie sollten [wissen, dass Pixel ≠ Pixel](/de/pixel-nicht-pixel) und `devicePixelRatio` wahrscheinlicher bei 3,875 als bei 1:1 liegt. Moderne Handys geben vor, 320-428px breit zu sein, um die Lesbarkeit zu verbessern (in CSS-Pixeln), haben aber viele Gerätepixel pro CSS-Pixel.
+**Ein effizienter und meinungsstarker Leitfaden zu Bildern für 2023**
 
-> Wenn Ihr Bildgröße sich niemals ändert, unabhängig davon, wie eng Sie das Browserfenster machen, sollten Sie stattdessen einen [Density Descriptor](/de/density-descriptors) verwenden. Dies ist oft geeignet für Logos, Icons und Schaltflächen.
+Überprüfen Sie die Seitenleiste für einen tiefen Einblick. Dies ist die schnelle Referenz, um die `<img>`-Tags zu aktualisieren, um moderne Geräte in all ihren verschiedenen Größen und Pixeldichten zu unterstützen. Sie sollten [wissen, dass Pixel != Pixel](/de/pixels-not-pixels) und `devicePixelRatio` eher bei etwa 3,875 als 1:1 liegt. Moderne Telefone geben vor, 320-428px breit zu sein, um die Lesbarkeit zu verbessern (in CSS-Pixeln), haben aber viele Geräte-Pixel pro CSS-Pixel.
 
-Wissen Sie, was Ihre [Breakpoints](/de/breakpoints) sind? Sie benötigen diese Zahlen, um die unten stehende Lösung feinabzustimmen - und mindestens den Viewport-Brechpunkt, bei dem der Hauptinhaltbereich aufhört zu wachsen.
+> Wenn die Größe Ihres Bildes sich nie ändert, egal wie schmal Sie das Browserfenster machen, sollten Sie stattdessen einen [Dichte-Beschreiber](/de/density-descriptors) verwenden. Dies ist oft geeignet für Logos, Symbole und Buttons.
+
+Kennen Sie Ihre [Breakpoints](/de/breakpoints)? Sie benötigen diese Zahlen, um die Lösung unten fein abzustimmen - und mindestens den Viewport-Breite-Breakpoint, bei dem der Hauptinhaltsbereich aufhört, zu wachsen.
+
 
 ### Die einfache Methode
 
@@ -28,12 +28,12 @@ Wissen Sie, was Ihre [Breakpoints](/de/breakpoints) sind? Sie benötigen diese Z
                 img.jpg?format=webp&w=1600 1600w, 
                 img.jpg?format=webp&w=2000 2000w"
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Hund auf einem Fahrrad fahrend" />
+        sizes="(max-width: 700px) 100vw, 800px" alt="Hund fährt Fahrrad" />
 
-<!-- Wir nehmen an, dass Sie bei 700px einen Breakpoint haben. 
-     Und dass unterhalb dieser Viewport-Breite dieses Bild eine Breite von 100% hat und
-     wenn der Viewport breiter wird, ist das Bild auf 800 CSS-Pixel begrenzt. -->
+<!-- Wir haben angenommen, dass Sie einen Breakpoint bei 700px haben.
+      Und dass unter dieser Viewport-Breite dieses Bild 100% der Breite einnimmt, aber 
+      wenn der Viewport größer ist, das Bild auf 800 CSS-Pixel begrenzt ist. -->
 
-<!-- Dies setzt voraus, dass Sie einen RIAPI-konformen Bildserver wie Imageflow verwenden. 
-     Die dynamische Variantenproduktion von Bildern ist notwendig für die geistige Gesundheit von Entwicklern. -->
+<!-- Dies setzt voraus, dass Sie einen RIAPI-kompatiblen Bildserver wie Imageflow verwenden. 
+     Die Produktion von Bildvarianten on-the-fly ist entscheidend für die Entwicklerzufriedenheit. -->
 ```

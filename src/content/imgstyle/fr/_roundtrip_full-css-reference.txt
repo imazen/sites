@@ -1,14 +1,12 @@
 ---
+taskInputHash: 419ed45c893dec5b
 title: Complete CSS Reference
-description: 'Complete CSS Reference for effects, with examples'
-taskInputHash: af79aea14d270817
+description: 'Complete CSS reference for effects with examples'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Here's a complete reference for CSS effects and borders that can be applied to images, with examples for each:
+Here is a complete reference of CSS effects and borders you can apply to images, accompanied by examples for each:
 
 1. **Border:** Adds a border around the image.
 
@@ -74,7 +72,7 @@ img {
 }
 ```
 
-9. **Hue Rotation:** Rotates the hue of the image.
+9. **Hue Rotate:** Rotates the hue of the image.
 
 ```css
 img {
@@ -90,7 +88,7 @@ img {
 }
 ```
 
-11. **Saturation:** Adjusts the saturation of the image.
+11. **Saturate:** Adjusts the saturation of the image.
 
 ```css
 img {
@@ -98,7 +96,7 @@ img {
 }
 ```
 
-12. **Sepia:** Applies a sepia effect to the image.
+12. **Sepia:** Applies a sepia effect to the image. {{Note: The Sepia filter is listed twice.}}
 
 ```css
 img {
@@ -106,7 +104,7 @@ img {
 }
 ```
 
-13. **Drop Shadow:** Adds a drop shadow effect to the image.
+13. **Drop-Shadow:** Adds a drop shadow effect to the image.
 
 ```css
 img {
@@ -141,7 +139,11 @@ img {
 }
 ```
 
-These are just a few examples of the many CSS effects and borders that can be applied to images. Experiment with different styles to create unique and eye-catching designs!
+These are just a few examples of the many CSS effects and borders you can apply to images. Experiment with different styles to create unique and eye-catching designs!
+
+---
+
+{{Note: The Sepia filter is listed twice.}}
 =====================
 
 Content prompt used: 
@@ -155,7 +157,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Full CSS reference for effects, with examples
 
 Metadata returned1. Référence complète CSS
-2. Référence complète CSS pour les effets, avec des exemples 
+2. Référence complète CSS pour les effets, avec exemples 
 
 
 Roundtrip (isolated) prompt used: 

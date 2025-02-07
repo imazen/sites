@@ -1,15 +1,14 @@
 ---
+taskInputHash: f4e1e26bbbec9d5e
 title: Effetti e bordi CSS
 description: Come aggiungere effetti e bordi CSS a un'immagine
-taskInputHash: c1ca100749292a25
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-date_published: '2023-03-29'
-date_modified: '2024-11-15'
-date_updated: '2024-11-15'
 ---
-Per aggiungere effetti CSS e bordi a un'immagine, puoi seguire i seguenti passaggi: 
-1. Seleziona l'elemento immagine nel tuo codice HTML. Puoi farlo utilizzando un selettore ID o di classe, oppure selezionando direttamente l'elemento `<img>`.
-2. Definisci un selettore di classe CSS o ID che applichi gli stili desiderati all'immagine. Ad esempio, potresti utilizzare il seguente codice per creare un bordo semplice intorno all'immagine:
+Per aggiungere effetti CSS e bordi a un'immagine, puoi seguire i seguenti passaggi:  
+1. Seleziona l'elemento immagine nel tuo codice HTML. Puoi farlo utilizzando un selettore ID o di classe, o selezionando direttamente l'elemento `<img>`.  
+2. Definisci un selettore di classe o di ID CSS che applica gli stili desiderati all'immagine. Ad esempio, potresti utilizzare il seguente codice per creare un semplice bordo intorno all'immagine:
 
 ```css
 .my-image {
@@ -18,7 +17,7 @@ Per aggiungere effetti CSS e bordi a un'immagine, puoi seguire i seguenti passag
 ```
 
  
-3. Applica il selettore di classe CSS o ID all'elemento immagine. Ad esempio, se hai utilizzato il selettore `.my-image` nel passaggio 2, puoi aggiungere il seguente codice al tuo HTML per applicare gli stili all'immagine:
+3. Applica il selettore di classe o di ID CSS all'elemento immagine. Ad esempio, se hai usato il selettore `.my-image` nel passaggio 2, potresti aggiungere il seguente codice al tuo HTML per applicare gli stili all'immagine:
 
 ```html
 <img src="path/to/image.jpg" class="my-image">
@@ -33,12 +32,12 @@ Per aggiungere effetti CSS e bordi a un'immagine, puoi seguire i seguenti passag
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Aggiungi un effetto filtro in scala di grigi */
+/* Aggiungi un effetto filtro scala di grigi */
 .my-image {
   filter: grayscale(100%);
 }
 
-/* Aggiungi un effetto zoom con transizione al passaggio del mouse */
+/* Aggiungi un effetto di transizione zoom al passaggio del mouse */
 .my-image {
   transition: transform 0.3s ease;
 }
@@ -47,4 +46,4 @@ Per aggiungere effetti CSS e bordi a un'immagine, puoi seguire i seguenti passag
 }
 ```
 
-Questi sono solo alcuni esempi dei molti effetti CSS e bordi che puoi utilizzare per migliorare le tue immagini. Sperimenta con diversi stili per trovare quelli che funzionano meglio per il tuo design.
+Questi sono solo alcuni esempi dei numerosi effetti CSS e bordi che puoi utilizzare per migliorare le tue immagini. Sperimenta con diversi stili per trovare quelli che funzionano meglio per il tuo design.

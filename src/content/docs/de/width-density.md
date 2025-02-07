@@ -1,22 +1,20 @@
 ---
-title: Breiten- und Dichteadapter
-description: Beispiele für die Verwendung von Breiten- und Dichteadaptern in `srcset`
-taskInputHash: 2171ff4767b5d45d
+taskInputHash: c65be8f7d9bb5f50
+title: Breiten- und Dichtebeschreiber
+description: Beispiele für die Verwendung von Breiten- und Dichtebeschreibern in `srcset`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Verständnis für Breiten- (w) und Dichteadapter (x) in `srcset`. Verwenden Sie Beispiele und Markdown.
+Verstehen der Breiten- (w) und Dichtebeschreibung (x) im `srcset`. Verwenden Sie Beispiele und Markdown. 
 
-> `srcset` ist ein HTML-Attribut, das Entwicklern ermöglicht, mehrere Bildquellen mit unterschiedlichen Auflösungen oder Pixeldichten bereitzustellen, und den Browser das geeignete Bild basierend auf den Anzeigeeigenschaften des Geräts auswählen zu lassen. Das `srcset`-Attribut verwendet eine Kombination aus `URL`- und `w-` oder `x-`Adaptern, um die Bilder zu spezifizieren.
+> `srcset` ist ein HTML-Attribut, das Entwicklern ermöglicht, mehrere Bildquellen mit unterschiedlichen Auflösungen oder Pixeldichten bereitzustellen, und dem Browser erlaubt, das entsprechende Bild basierend auf den Anzeigeeigenschaften des Geräts auszuwählen. Das `srcset`-Attribute verwendet eine Kombination aus `URL` und `w` oder `x` Beschreibungen, um die Bilder anzugeben. 
 
-## Breiten- (`w`) Adapter
+## Breiten (`w`) Beschreibung
 
-> Der `w-`Adapter wird verwendet, um die Breite eines Bildes in Pixeln anzugeben. Er wird verwendet, wenn wir dem Browser die Abmessungen eines Bildes zur Verfügung stellen wollen, damit er das geeignete Bild für den verfügbaren Bildschirmplatz wählen kann.
+> Der `w`-Beschreiber wird verwendet, um die Breite eines Bildes in Pixeln anzugeben. Er wird verwendet, wenn wir dem Browser die Abmessungen eines Bildes bereitstellen möchten, sodass er das geeignete Bild für den verfügbaren Bildschirmplatz auswählen kann.
 
-> Die Syntax für die Verwendung des `w-`Adapters in `srcset` sieht wie folgt aus:
+> Die Syntax zur Verwendung des `w`-Beschreibers in `srcset` ist wie folgt:
 
 ```html
 <img src="small.jpg"
@@ -26,13 +24,13 @@ Verständnis für Breiten- (w) und Dichteadapter (x) in `srcset`. Verwenden Sie 
   alt="Beispielbild">
 ```
 
-> Im obigen Beispiel haben wir dem Browser drei Bilder und ihre entsprechenden Breiten in Pixeln zur Verfügung gestellt. Der Browser wählt das Bild mit der nächstliegenden Breite zum verfügbaren Bildschirmplatz.
+> Im obigen Beispiel haben wir dem Browser drei Bilder und deren entsprechende Breiten in Pixeln bereitgestellt. Der Browser wählt das Bild mit der nächstgelegenen Breite zum verfügbaren Bildschirmplatz aus. 
 
-## Dichteadapter (`x`)
+## Dichte (`x`) Beschreibung
 
-> Der `x-`Adapter wird verwendet, um die Pixel-Dichte eines Bildes anzugeben, was das Verhältnis von physischen Pixeln zu CSS-Pixeln ist. Er wird verwendet, wenn wir dem Browser verschiedene Versionen desselben Bildes mit unterschiedlichen Pixeldichten zur Verfügung stellen wollen.
+> Der `x`-Beschreiber wird verwendet, um die Pixeldichte eines Bildes anzugeben, das Verhältnis von physischen Pixeln zu CSS-Pixeln. Er wird verwendet, wenn wir dem Browser verschiedene Versionen desselben Bildes mit unterschiedlichen Pixeldichten bereitstellen möchten.
 
-> Die Syntax für die Verwendung des `x-`Adapters in `srcset` sieht wie folgt aus:
+> Die Syntax zur Verwendung des `x`-Beschreibers in `srcset` ist wie folgt:
 
 ```html
 <img src="small.jpg"
@@ -42,6 +40,6 @@ Verständnis für Breiten- (w) und Dichteadapter (x) in `srcset`. Verwenden Sie 
   alt="Beispielbild">
 ```
 
-> Im obigen Beispiel haben wir dem Browser drei Bilder und ihre entsprechenden Pixeldichten zur Verfügung gestellt. Der Browser wählt das Bild mit der nächstgelegenen Pixeldichte für den Gerätebildschirm aus.
+> Im obigen Beispiel haben wir dem Browser drei Bilder und deren entsprechende Pixeldichten bereitgestellt. Der Browser wird das Bild mit der nächstgelegenen Pixeldichte zum Bildschirm des Geräts auswählen.
 
-> Beachten Sie, dass die `w-` und `x-`Adapter in derselben `srcset`-Attribut verwendet werden können, um dem Browser mehr Optionen zur Auswahl zu geben.
+> Beachten Sie, dass die `w`- und `x`-Beschreibungen zusammen im gleichen `srcset`-Attribut verwendet werden können, um dem Browser mehr Auswahlmöglichkeiten zu bieten.
