@@ -1,52 +1,49 @@
 ---
+taskInputHash: 2575112a0b5a8fb1
 title: Width and Density Descriptors
-description: Examples of using width and density descriptors in `srcset`
-taskInputHash: de07e2c59a8993ce
+description: Example usage of width and density descriptors in `srcset`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Understanding width (`w`) and density (`x`) descriptors in `srcset`. Use examples and markdown.
+Understanding width (w) and density (x) descriptors in `srcset`. Use examples and employ Markdown.
 
-> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities and let the browser choose the appropriate image based on the device's display characteristics. The `srcset` attribute uses a combination of `URL` and either `w` or `x` descriptors to specify the images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities and let the browser choose the appropriate image based on the device's display characteristics. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptors to specify the images.
 ## Width (`w`) Descriptor
 
-> The `w` descriptor is used to specify the width of an image in pixels. It is used when we want to provide the browser with the dimensions of an image so that it can choose the right image for the available viewport.
+> The `w` descriptor is used to specify the width of an image in pixels. It is used when we want to provide the browser with the image's dimensions so it can choose the appropriate image for the available screen space.
 
-> The syntax for using the `w` descriptor in `srcset` looks like this:
+> The syntax for using the `w` descriptor in `srcset` is as follows:
 
-````html
+```html
 <img src="small.jpg"
   srcset="small.jpg 500w,
           medium.jpg 1000w,
           large.jpg 2000w"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-
-
->In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will choose the image that has the closest width to the available viewport.
-
+> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image that has the closest width to the available screen space.
 ## Density (`x`) Descriptor
 
-> The `x` descriptor is used to specify the pixel density of an image, which is the ratio of physical pixels to CSS pixels. It is used when we want to provide the browser with different versions of the same image with different pixel densities.
+> The `x` descriptor is used to specify the pixel density for an image, which is the ratio of physical pixels to CSS pixels. It is used when we want to supply the browser with different versions of the same image with different pixel densities.
 
-> The syntax for using the `x` descriptor in `srcset` looks like this:
+> The syntax for using the `x` descriptor in `srcset` is as follows:
 
 ```html
 <img src="small.jpg"
   srcset="small.jpg 1x,
           medium.jpg 2x,
           large.jpg 3x"
-  alt="Example Image">
+  alt="Example image">
 ```
 
+> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image that has the closest pixel density to the device's screen.
 
->In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will choose the image that has the closest pixel density to the device's display.
+> Note that `w` and `x` descriptors can be used together in the same `srcset` attribute to give the browser more options to choose from.
 
->Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options to choose from.
+[Translation Mistakes or Clumsiness]
+- {{Note that the direct translation of "Exempelbild" to "Example image" is correct, but the more common term in HTML examples in English documentation might be simply "Image" or left as descriptive text relevant to the context, e.g., "A picture of a landscape."}}
 =====================
 
 Content prompt used: 

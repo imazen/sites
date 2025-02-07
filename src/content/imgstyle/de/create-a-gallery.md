@@ -1,27 +1,30 @@
 ---
-title: Erstellen Sie eine Galerie
-description: Wie erstelle ich eine Galerie auf einer Website
-taskInputHash: 3e2d28267acb0b35
-lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
----
-Hier sind die allgemeinen Schritte zur Erstellung einer Bildergalerie auf einer Website:
-1. Erstellen Sie eine neue HTML-Datei für Ihre Bildergalerie. Sie können sie beispielsweise "gallery.html" nennen.
-2. Fügen Sie die HTML-Struktur Ihrer Datei hinzu. Dies umfasst in der Regel den Kopfbereich mit Titel und allen erforderlichen CSS-Stylesheets sowie den Body-Bereich, in dem Sie die eigentliche Galerie hinzufügen.
-3. Erstellen Sie einen Behälter für Ihre Galerie mit einem `<div>`-Tag. Geben Sie ihm eine ID oder eine Klasse, damit Sie ihn später formatieren können.
-4. Fügen Sie im Container einzelne Bild-Elemente mit dem `<img>`-Tag hinzu. Sie können das Quellattribut auf den Pfad der Bilddatei oder URL setzen und bei Bedarf Alternativtexte oder Bildunterschriften hinzufügen.
-5. Gestalten Sie Ihre Galerie mit CSS. Sie können Eigenschaften wie Anzeige, Breite, Höhe, Abstand, Polsterung und Rahmen verwenden, um das Layout und Erscheinungsbild Ihrer Galerie zu steuern.
+taskInputHash: 1ed9ba24148e4447
+title: >-
+  Übersetzen Sie auch sorgfältig den Titel und die Beschreibung des Artikels;
+  verwenden Sie nicht & oder < oder >
 
-Hier ist ein Beispielcode für die Erstellung einer einfachen Bildergalerie:
+   Eine Galerie erstellen
+description: Wie man eine Galerie auf einer Website erstellt
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: de
+---
+Hier sind die allgemeinen Schritte, um eine Bildergalerie auf einer Website zu erstellen:
+
+1. Erstellen Sie eine neue HTML-Datei für Ihre Bildergalerie. Sie können sie beispielsweise "galerie.html" benennen.
+2. Fügen Sie die HTML-Struktur zu Ihrer Datei hinzu. Diese umfasst in der Regel den Head-Bereich mit einem Titel und allen notwendigen CSS-Stylesheets sowie den Body-Bereich, in dem Sie die eigentliche Galerie hinzufügen.
+3. Erstellen Sie einen Container für Ihre Galerie mithilfe eines `<div>`-Tags. Geben Sie ihm eine ID oder eine Klasse, damit Sie ihn später stylen können.
+4. Fügen Sie innerhalb des Containers einzelne Bildelemente mit dem `<img>`-Tag hinzu. Sie können das source-Attribut auf den Bilddateipfad oder die URL setzen und bei Bedarf Alternativtexte oder Bildunterschriften hinzufügen.
+5. Stylen Sie Ihre Galerie mit CSS. Sie können Eigenschaften wie display, width, height, margin, padding und border verwenden, um das Layout und das Erscheinungsbild Ihrer Galerie zu steuern.
+
+Hier ist ein Beispielcode zur Erstellung einer einfachen Bildergalerie:
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Image Gallery</title>
+	<title>Meine Bildergalerie</title>
 	<style>
 		.gallery {
 			display: flex;
@@ -50,8 +53,6 @@ Hier ist ein Beispielcode für die Erstellung einer einfachen Bildergalerie:
 </html>
 ```
 
+In diesem Beispiel hat der Galerien-Container eine Klasse „gallery“ und wird mithilfe von Flexbox gestaltet, um die Bilder in einem Raster anzuordnen. Jedes Bild hat eine Breite von 300px, eine Höhe von 200px, einen Abstand von 10px und einen Rahmen von 2px solid black. Die Objekt-Eigenschaft object-fit wird verwendet, um sicherzustellen, dass die Bilder ihr Seitenverhältnis beibehalten, auch wenn sie nicht die gleiche Größe haben.
 
-
-In diesem Beispiel hat der Galerie-Container eine Klasse "gallery" und wird mit Flexbox formatiert, um die Bilder in einem Raster anzuordnen. Jedes Bild hat eine Breite von 300px, eine Höhe von 200px, einen Abstand von 10px und einen Rahmen von 2px solid black. Die Eigenschaft object-fit wird verwendet, um sicherzustellen, dass die Bilder ihr Seitenverhältnis beibehalten, auch wenn sie nicht dieselbe Größe haben.
-
-Sie können diesen Code an Ihre spezifischen Anforderungen und Designpräferenzen anpassen.
+Sie können diesen Code an Ihre spezifischen Bedürfnisse und Designvorlieben anpassen.

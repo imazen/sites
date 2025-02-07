@@ -1,31 +1,33 @@
 ---
-title: Densitetsdescriptors och srcset
-description: Exempel på att använda densitetsdescriptors i `srcset`
-taskInputHash: 55ea5bbfbf5779eb
+taskInputHash: 7cf18adf7cb4e9fe
+title: Densitetsbeskrivare och srcset
+description: Exempel på att använda densitetsbeskrivare i `srcset`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-26'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Srcset med densitetsdescriptors ger en enkel och effektiv metod för att leverera den mest lämpliga bilden till varje användares enhet, vilket förbättrar prestanda och användarupplevelse. Den här guiden går igenom det väsentliga i att använda srcset med densitetsdescriptors och ger exempel på markup för din bekvämlighet.
-## Vad är Srcset med densitetsdescriptors?
+Srcset med densitetsbeskrivare erbjuder en enkel och effektiv metod för att leverera den mest lämpliga bilden till varje användares enhet, vilket förbättrar prestanda och användarupplevelse. Denna guide kommer att gå igenom grunderna för att använda srcset med densitetsbeskrivare och ge markup-exempel för din bekvämlighet.
 
-Srcset är en HTML-attribut som är utformad för att låta dig ange flera bildkällor för ett enda `<img>`-element. Densitetsdescriptors (`x`) används i kombination med srcset för att tillhandahålla bilder med olika upplösning baserat på användarens skärmpixeltäthet.
-## När ska man använda Srcset med densitetsdescriptors
+## Vad är Srcset med Densitetsbeskrivare?
 
-Användning av srcset med densitetsdescriptors är särskilt användbart när du vill:
-1. Servera bilder med hög upplösning till hög-DPI-skärmar (t.ex. Retina-skärmar) samtidigt som du tillhandahåller bilder med lägre upplösning till vanliga skärmar.
-2. Förbättra sidprestanda genom att leverera den mest lämpliga bildstorleken till varje användares enhet.
-## Implementera Srcset med densitetsdescriptors
+Srcset är ett HTML-attribut som låter dig ange flera bildkällor för ett enda `<img>`-element. Densitetsbeskrivare (`x`) används tillsammans med srcset för att tillhandahålla bilder med olika upplösningar beroende på pixelupplösningen på användarens skärm.
 
-För att använda srcset med densitetsdescriptors, följ dessa steg:
+## När ska man använda Srcset med Densitetsbeskrivare
+
+Att använda srcset med densitetsbeskrivare är särskilt användbart när du vill:
+1. Servera högupplösta bilder till skärmar med hög DPI (t.ex. Retina-skärmar) samtidigt som lägre upplösta bilder serveras till standarddisplayer.
+2. Förbättra sidans prestanda genom att leverera den mest lämpliga bildstorleken till varje användares enhet.
+
+## Implementering av Srcset med Densitetsbeskrivare
+
+För att använda srcset med densitetsbeskrivare, följ dessa steg:
 1. Förbered dina bilder i olika upplösningar.
-2. Lägg till `srcset`-attributet till `<img>`-elementet, inklusive bildkällorna och motsvarande densitetsdescriptors.
-3. Lägg till `sizes`-attributet (valfritt) för att ange bildens storlek när den visas på skärmen.
-### Markupexempel
+2. Lägg till attributet `srcset` till `<img>`-elementet, inklusive bildkällorna och motsvarande densitetsbeskrivare.
+3. Lägg till attributet `sizes` (valfritt) för att specificera bildens storlek som den kommer att visas på skärmen.
 
-Här är ett exempel på hur du implementerar srcset med densitetsdescriptors i din markup:
+### Markup-exempel
+
+Här är ett exempel på hur du implementerar srcset med densitetsbeskrivare i din markup:
 
 ```html
 <img src="example-image-1x.jpg"
@@ -33,12 +35,9 @@ Här är ett exempel på hur du implementerar srcset med densitetsdescriptors i 
      alt="En exempelbild">
 ```
 
+Detta markup-exempel inkluderar:
+- **src** : Standardbildkällan som visas om webbläsaren inte stödjer srcset.
+- **srcset** : Listan över bildkällor och deras densitetsbeskrivare (1x, 2x, 3x). Webbläsaren kommer att välja den mest lämpliga bilden baserat på användarens skärm.
+- **alt** : En beskrivning av bilden för tillgänglighetsändamål.
 
-
-Detta markupexempel inkluderar:
-- **src**: Standard bildkälla som visas om webbläsaren inte stöder srcset.
-- **srcset**: Listan över bildkällor och deras densitetsdescriptors (1x, 2x, 3x). Webbläsaren väljer den mest lämpliga bilden baserat på användarens skärm.
-- **alt**: En beskrivning av bilden för tillgänglighetsändamål.
-
-
-Och det är allt! Du har framgångsrikt implementerat srcset med densitetsdescriptors, vilket förbättrar din webbplats prestanda och användarupplevelse.
+Och det är allt! Du har framgångsrikt implementerat srcset med densitetsbeskrivare, vilket förbättrar din webbplats prestanda och användarupplevelse.

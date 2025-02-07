@@ -1,8 +1,8 @@
 ---
 title: TailwindCSS helpers for `<img>`
 description: List of most commonly used TailwindCSS helpers for `<img>`
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 ---
 
 TailwindCSS provides several helper classes for working with the `<img>` tag. Here are some of the most commonly used ones: 

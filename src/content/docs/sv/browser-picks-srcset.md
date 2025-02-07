@@ -1,20 +1,18 @@
 ---
+taskInputHash: 44602845c231b598
 title: Hur webbläsaren väljer
-description: Hur webbläsaren väljer mellan bilder som listas i srcset-attributet
-taskInputHash: ca195aa8819f20d7
+description: Hur webbläsaren väljer mellan bilder som anges i srcset-attributet
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Hur väljer webbläsaren mellan bilder som listas i `srcset`-attributet? Här är en steg-för-steg-guide, med exempel för både bredd- och densitetsspecifikationer och hur webbläsaren väljer baserat på enhet och viewport.
+Hur väljer webbläsaren mellan bilder som anges i `srcset`-attributet? Här är en steg-för-steg guide, med exempel för både bredd- och täthetspecifikationer, och hur webbläsaren bestämmer baserat på enheten och viewporten.
 
-- När man använder `srcset`-attributet i HTML använder webbläsaren en uppsättning regler för att välja den mest lämpliga bilden från en lista med angivna källor. Dessa regler beror på både enhetens skärminställningar (upplösning, pixeldensitet) och viewport-storlek. `Srcset`-attributet låter dig specificera olika bilder baserat på bredd (med hjälp av `w` descriptor) eller pixeldensitet (med hjälp av `x` descriptor). Låt oss gå igenom båda fallen med exempel.
+- När man använder `srcset`-attributet i HTML, använder webbläsaren en uppsättning regler för att välja den mest lämpliga bilden från en lista med källor. Dessa regler beror på både enhetens visningsegenskaper (upplösning, pixeltäthet) och viewportens storlek. `Srcset`-attributet låter dig specificera olika bilder baserat på bredd (med `w`-deskriptor) eller pixeltäthet (med `x`-deskriptor). Låt oss gå igenom varje fall med exempel.
 
-1\. Breddspecifikation (`w`):
+1\. Breddeskriptor (`w`):
 
-Antag att vi har följande `srcset`-attribut:
+Anta att vi har följande `srcset`-attribut:
 
 ```html
 
@@ -22,11 +20,11 @@ Antag att vi har följande `srcset`-attribut:
 
 ```
 
-Webbläsaren gör följande steg:
+Webbläsaren följer dessa steg:
 
-a. Bestäm enhetens DPR (Device Pixel Ratio). Till exempel har en standarddisplay en DPR på 1, medan en högupplösningsskärm (Retina) har en DPR på 2 eller högre.
+a. Bestäm enhetens DPR (Device Pixel Ratio). Till exempel, en standarddisplay har en DPR på 1, medan en högupplöst (Retina) display har en DPR på 2 eller högre.
 
-b. Beräkna den effektiva bredden för varje bild i `srcset`. Multiplicera bredddescriptorn med DPR. För en enhet med en DPR på 1:
+b. Beräkna den effektiva bredden för varje bild i `srcset`. Multiplicera bredddesköpriptorn med DPR. För en enhet med en DPR på 1:
 
 - example-small.jpg: 400 \* 1 = 400px
 
@@ -34,11 +32,11 @@ b. Beräkna den effektiva bredden för varje bild i `srcset`. Multiplicera bredd
 
 - example-large.jpg: 1600 \* 1 = 1600px
 
-c. Jämför de effektiva bredderna med viewport-bredden. Antag att viewport-bredden är 420px. Webbläsaren väljer den minsta bilden med en effektiv bredd som är större än eller lika med viewport-bredden. I detta fall väljer den `example-medium.jpg`.
+c. Jämför de effektiva bredderna med viewportens bredd. Anta att viewportens bredd är 420px. Webbläsaren väljer den minsta bilden med en effektiv bredd som är större än eller lika med viewportens bredd. I det här fallet kommer den att välja `example-medium.jpg`.
 
-1\. Pixeldensitetsspecifikation (`x`):
+1\. Pixeltäthetseskriptor (`x`):
 
-Antag att vi har följande `srcset`-attribut:
+Anta att vi har följande `srcset`-attribut:
 
 ```html
 
@@ -46,11 +44,11 @@ Antag att vi har följande `srcset`-attribut:
 
 ```
 
-Webbläsaren gör följande steg:
+Webbläsaren följer dessa steg:
 
-a. Bestäm enhetens DPR (Device Pixel Ratio). Till exempel har en standarddisplay en DPR på 1, medan en högupplösningsskärm (Retina) har en DPR på 2 eller högre.
+a. Bestäm enhetens DPR (Device Pixel Ratio). Till exempel, en standarddisplay har en DPR på 1, medan en högupplöst (Retina) display har en DPR på 2 eller högre.
 
-b. Jämför enhetens DPR med `x`-descriptorn i `srcset`. I detta fall har vi tre bilder med följande descriptorer:
+b. Jämför enhetens DPR med `x`-deskriptorerna i `srcset`. I det här fallet har vi tre bilder med följande deskriptorer:
 
 - example-1x.jpg: 1x
 
@@ -58,9 +56,9 @@ b. Jämför enhetens DPR med `x`-descriptorn i `srcset`. I detta fall har vi tre
 
 - example-3x.jpg: 3x
 
-c. Välj bilden med `x`-descriptorn som är närmast enhetens DPR. För en enhet med en DPR på 1 väljer webbläsaren `example-1x.jpg`. För en enhet med en DPR på 2 väljer den `example-2x.jpg`, och så vidare.
+c. Välj den bild med `x`-deskriptor som är närmast enhetens DPR. För en enhet med en DPR på 1 kommer webbläsaren att välja `example-1x.jpg`. För en enhet med en DPR på 2, kommer den att välja `example-2x.jpg`, och så vidare.
 
-Det är viktigt att notera att du också kan använda `sizes`-attributet i kombination med `srcset`-attributet för att ge mer information om hur bilden visas vid olika viewport-breder. Detta är särskilt användbart när man använder bredddescriptor (`w`). Här är ett exempel:
+Det är viktigt att notera att du också kan använda `sizes`-attributet i kombination med `srcset`-attributet för att ge mer information om hur bilden kommer att visas vid olika viewportbredder. Detta är särskilt användbart när du använder bredddeskriptor (`w`). Här är ett exempel:
 
 ```html
 

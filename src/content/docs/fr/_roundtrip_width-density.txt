@@ -1,16 +1,14 @@
 ---
+taskInputHash: 0522a82d32e6afba
 title: Width and Density Descriptors
 description: Examples of using width and density descriptors in `srcset`
-taskInputHash: 569fd1065931e1e0
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale fr,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use examples and Markdown.
+Understanding width (`w`) and density (`x`) descriptors in `srcset`. Use examples and use Markdown.
 
->`srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser select the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of the `URL` and `w` or `x` descriptors to specify the images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, and let the browser select the appropriate image based on the device's display characteristics. The `srcset` attribute uses a combination of `URL` and the `w` or `x` descriptors to specify images.
 
 ## Width Descriptor (`w`)
 
@@ -23,10 +21,10 @@ Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use exa
   srcset="small.jpg 500w,
           medium.jpg 1000w,
           large.jpg 2000w"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image with the closest width to the available screen space.
+> In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will choose the image with the width nearest to the available screen space.
 
 ## Density Descriptor (`x`)
 
@@ -39,12 +37,18 @@ Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use exa
   srcset="small.jpg 1x,
           medium.jpg 2x,
           large.jpg 3x"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the closest pixel density to the device's screen.
+> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will choose the image with the pixel density closest to that of the device's screen.
 
-> Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options for selection.
+> Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to give the browser more options to choose from.
+
+---
+
+### Mistakes or Clumsy Phrasing or Grammar
+
+- None found.
 =====================
 
 Content prompt used: 

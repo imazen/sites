@@ -1,129 +1,45 @@
-# Styling of `<img>` Elements and Example Layouts
+---
+taskInputHash: 791983b972d18c2a
+title: New CSS Features for Images
+description: New CSS Features for Images
+sidebar_sort_priority: 1000
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
+---
+Modern CSS provides developers with precise, effective tools for robust image processing:
 
-## Styling of `<img>` Elements
+- **Aspect Ratio:**  
+  The `aspect-ratio` property enforces fixed proportions, stabilizes layouts, and prevents unexpected shifts while images are loading.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-An `<img>` element is used to embed an image in a web page. It is a self-closing tag, which means it does not require a separate closing tag. Here's an example:
+- **Object Fit & Object Position:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control the scaling and alignment of images within their containers, thus avoiding awkward cropping or distortions.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
 
-```html
-<img src="path/to/image.jpg" alt="Description of image">
-```
+- **Image-Set for Resolution Adaptation:**  
+  The `image-set()` function provides a resolution switch for background images to ensure optimal clarity on high-resolution devices.  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
 
-To style an `<img>` element, you can use CSS. Here are some commonly used CSS properties:
+- **Additional Enhancements:**  
+  `image-rendering` refines scaling algorithms for sharp outputs (ideal for pixel art), while `filter` enables dynamic visual effects directly in CSS.
 
-- `width`: sets the width of the image
-- `height`: sets the height of the image
-- `object-fit`: specifies how the image should be resized to fit its container
-- `border`: adds a border around the image
-- `border-radius`: sets the border radius of the image, creating rounded corners
+These features significantly optimize image presentation and reduce reliance on JavaScript tricks and complex workarounds, making everyday development tasks much easier.
 
-```css
-/* Example CSS */
-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-```
-
-You can also use CSS to style other aspects of the `<img>` element, such as its `alt` attribute or the container in which it is placed.
-
-## Example Layouts
-
-Here are some example layouts that use `<img>` elements:
-
-### Basic Image Grid
-
-```html
-<div class="image-grid">
-  <img src="path/to/image1.jpg" alt="Description of image 1">
-  <img src="path/to/image2.jpg" alt="Description of image 2">
-  <img src="path/to/image3.jpg" alt="Description of image 3">
-  <img src="path/to/image4.jpg" alt="Description of image 4">
-  <img src="path/to/image5.jpg" alt="Description of image 5">
-  <img src="path/to/image6.jpg" alt="Description of image 6">
-</div>
-```
-
-```css
-/* Example CSS */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: auto;
-}
-```
-
-### Image with Caption
-
-```html
-<div class="image-with-caption">
-  <img src="path/to/image.jpg" alt="Description of image">
-  <div class="caption">Caption text</div>
-</div>
-```
-
-```css
-/* Example CSS */
-.image-with-caption {
-  position: relative;
-}
-
-.image-with-caption img {
-  width: 100%;
-  height: auto;
-}
-
-.image-with-caption .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-```
-
-### Image with Overlay
-
-```html
-<div class="image-with-overlay">
-  <img src="path/to/image.jpg" alt="Description of image">
-  <div class="overlay"></div>
-</div>
-```
-
-```css
-/* Example CSS */
-.image-with-overlay {
-  position: relative;
-}
-
-.image-with-overlay img {
-  width: 100%;
-  height: auto;
-}
-
-.image-with-overlay .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-```
-
-These are just a few examples of how you can layout and style `<img>` elements in your web design. Remember, the possibilities are endless!
+[No mistakes or clumsy phrasing identified.]
 =====================
 
 Content prompt used: 
@@ -133,11 +49,11 @@ Translate the following to German, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
-1. styling <img> elements and example layouts
- 2. styling <img> elements and example layouts
+1. New CSS features for images
+ 2. New CSS features for images
 
-Metadata returned1. Styling von `<img>`-Elementen und Beispiel-Layouts
-2. Styling von `<img>`-Elementen und Beispiel-Layouts 
+Metadata returned1. Neue CSS-Funktionen für Bilder
+2. Neue CSS-Funktionen für Bilder 
 
 
 Roundtrip (isolated) prompt used: 

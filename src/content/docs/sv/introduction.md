@@ -1,21 +1,20 @@
 ---
-title: srcset och <img> sizes
-description: En effektiv och tydlig guide till responsiva bilder för 2023
-taskInputHash: 87881becd1c9192b
-lang: sv
-ignore: '/* cSpell:locale sv,en*/'
+taskInputHash: 051aeebd1dd87aca
+title: srcset & <img> storlekar
+description: En effektiv och uppfattande guide till responsiva bilder för 2023
 sidebar_sort_priority: 1000
-date_published: '2023-03-23'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: sv
 ---
-**En effektiv och bestämd guide till bilder för 2023**
 
-Kontrollera sidofältet för en mer ingående beskrivning. Detta är snabbreferensen för att uppgradera `<img>`-taggarna så att de kan hantera moderna enheter i alla sina olika storlekar och pixeldensiteter. Du bör veta att pixels != pixels och `devicePixelRatio` är mer troligt att vara runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixels), men har många enhetspixlar per CSS-pixel.
+**En effektiv och uppfattande guide till bilder för 2023**
 
-> Om din bild aldrig ändrar storlek, oavsett hur smalt du gör webbläsarfönstret bör du istället använda en densitetsbeskrivning. Detta är ofta lämpligt för logotyper, ikoner och knappar.
+Kolla sidofältet för en djupdykning. Detta är den snabba referensen för att uppgradera de där `<img>`-taggarna för att hantera moderna enheter i alla deras olika storlekar och pixeltätheter. Du bör [veta att pixlar != pixlar](/sv/pixels-not-pixels) och `devicePixelRatio` är mer sannolikt att vara runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixlar), men har många enhetspixlar per CSS-pixel.
 
-Vet du vad dina breakpoints är? Du kommer att behöva dessa nummer för att finslipa lösningen nedan - och som minimum viewport width breakpoint där huvudinnehållsytan slutar växa in i bredd.
+> Om din bild aldrig ändrar storlek, oavsett hur smalt du gör webbläsarfönstret, bör du använda en [densitetsdeskriptor istället](/sv/density-descriptors). Detta är ofta lämpligt för logotyper, ikoner och knappar.
+
+Vet du vad dina [brytpunkter](/sv/breakpoints) är? Du behöver dessa siffror för att finjustera lösningen nedan - och minst breddbrytpunkten för vyfönstret där det huvudsakliga innehållsområdet slutar växa.
 
 ### Den enkla metoden
 
@@ -30,10 +29,10 @@ Vet du vad dina breakpoints är? Du kommer att behöva dessa nummer för att fin
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Hund som cyklar" />
 
-<!-- Vi antar att du har en breakpoint vid 700px. 
-      Och att under den viewport bredden tar bilden 100% av bredden, men
-      när viewporten är större är bilden begränsad till 800 CSS-pixels -->
+<!-- Vi har antagit att du har en brytpunkt vid 700px.
+      Och att under den bredden av vyfönstret, tar den här bilden 100% av bredden, men
+      när vyfönstret är större, är bilden begränsad till 800 CSS-pixlar -->
 
-<!-- Detta förutsätter att du använder en RIAPI-kompatibel bildserver som Imageflow. 
-     Bildvariantproduktion på begäran är avgörande för utvecklarhälsan. -->
+<!-- Detta förutsätter att du använder en RIAPI-kompatibel bildserver som Imageflow.
+     Produktion av bildvarianter på plats är avgörande för utvecklarens sinneslugn. -->
 ```

@@ -1,22 +1,21 @@
 ---
+taskInputHash: 3ffa61f4b689b072
 title: Fullständig CSS-referens
 description: 'Fullständig CSS-referens för effekter, med exempel'
-taskInputHash: c87820ce726b617c
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Här är en omfattande referens för CSS-effekter och ramar som du kan tillämpa på bilder, tillsammans med exempel för varje:
+Här är en omfattande referens av CSS-effekter och ramar som du kan använda på bilder, tillsammans med exempel för varje:
 
-1. **Border:** Lägger till en ram runt bilden.
+1. **Ram:** Lägger till en ram runt bilden.
 
 ```css
 img {
   border: 2px solid black;
 }
 ```
+
 
 2. **Box Shadow:** Lägger till en skugga runt bilden.
 
@@ -26,7 +25,8 @@ img {
 }
 ```
 
-3. **Opacity:** Justerar transparensen för bilden.
+
+3. **Opacitet:** Justerar bildens genomskinlighet.
 
 ```css
 img {
@@ -34,7 +34,8 @@ img {
 }
 ```
 
-4. **Grayscale:** Konverterar bilden till gråskala.
+
+4. **Gråskala:** Konverterar bilden till gråskala.
 
 ```css
 img {
@@ -42,7 +43,8 @@ img {
 }
 ```
 
-5. **Sepia:** Tillämpar en sepiaeffekt på bilden.
+
+5. **Sepia:** Applicerar en sepiatoning på bilden.
 
 ```css
 img {
@@ -50,7 +52,8 @@ img {
 }
 ```
 
-6. **Blur:** Luddar bilden.
+
+6. **Sudda ut:** Suddar ut bilden.
 
 ```css
 img {
@@ -58,7 +61,8 @@ img {
 }
 ```
 
-7. **Brightness:** Justera bildens ljusstyrka.
+
+7. **Ljusstyrka:** Justerar bildens ljusstyrka.
 
 ```css
 img {
@@ -66,7 +70,8 @@ img {
 }
 ```
 
-8. **Contrast:** Justerar bildens kontrast.
+
+8. **Kontrast:** Justerar bildens kontrast.
 
 ```css
 img {
@@ -74,7 +79,8 @@ img {
 }
 ```
 
-9. **Hue Rotate:** Rotera bilden.
+
+9. **Färgrotation:** Roterar bildens färgnyans.
 
 ```css
 img {
@@ -82,7 +88,8 @@ img {
 }
 ```
 
-10. **Invert:** Vänder bildens färger.
+
+10. **Invertera:** Inverterar färgerna på bilden.
 
 ```css
 img {
@@ -90,7 +97,8 @@ img {
 }
 ```
 
-11. **Saturate:** Justerar bildens mättnad.
+
+11. **Mättnad:** Justerar bildens mättnad.
 
 ```css
 img {
@@ -98,7 +106,8 @@ img {
 }
 ```
 
-12. **Sepia:** Tillämpar en sepiaeffekt på bilden.
+
+12. **Sepia:** Applicerar en sepiatoning på bilden.
 
 ```css
 img {
@@ -106,7 +115,8 @@ img {
 }
 ```
 
-13. **Drop-Shadow:** Lägger till en droppeffekt på bilden.
+
+13. **Släppskugga:** Lägger till en släppskugga på bilden.
 
 ```css
 img {
@@ -114,7 +124,8 @@ img {
 }
 ```
 
-14. **Transition:** Lägger till en transitions effekt på bilden.
+
+14. **Övergång:** Lägger till en övergångseffekt på bilden.
 
 ```css
 img {
@@ -125,7 +136,8 @@ img:hover {
 }
 ```
 
-15. **Animation:** Lägger till en animations effekt på bilden.
+
+15. **Animation:** Lägger till en animationseffekt på bilden.
 
 ```css
 @keyframes slidein {
@@ -141,4 +153,6 @@ img {
 }
 ```
 
-Detta är bara några exempel på de många CSS-effekter och ramar som du kan tillämpa på bilder. Testa olika stilar för att skapa unika och ögonfallande designer!
+
+
+Detta är bara några exempel på de många CSS-effekter och ramar du kan använda på bilder. Experimentera med olika stilar för att skapa unika och iögonfallande designer!

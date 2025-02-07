@@ -1,18 +1,16 @@
 ---
-title: Exempel med <picture>-elementet
+taskInputHash: 498d9448ee769f19
+title: Exempel på användning av <picture>-elementet
 description: >-
-  Ger exempel på användning av <picture>-elementet för responsiva bilder,
-  konstnärlig riktning och olika bildformat
-taskInputHash: d2042ff600a5ac1a
+  Tillhandahåller exempel på användning av <picture>-elementet för responsiva
+  bilder, konstnärlig riktning och olika bildformat
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: sv
-ignore: '/* cSpell:locale sv,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
 Här är några exempel på hur man använder `<picture>`-elementet och deras förklaringar:
 
-1\. Exempel på responsiva bilder:
+1\. Exempel för responsiva bilder:
 
 ```html
 <picture>
@@ -22,9 +20,9 @@ Här är några exempel på hur man använder `<picture>`-elementet och deras f�
 </picture>
 ```
 
-Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar. `<source>`-elementen specifierar de olika bildkällorna genom att använda attributet "srcset" och "media" för att specificera villkoren under vilka varje källa ska användas. `<img>`-elementet används som en fallback för äldre webbläsare eller när villkoren som specificerats i `<source>`-elementen inte uppfylls.
+Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar. `<source>`-elementen specificerar de olika bildkällorna med hjälp av "srcset"-attributet och "media"-attributet för att specificera villkoren under vilka varje källa ska användas. `<img>`-elementet används som en reserv för äldre webbläsare eller när villkoren som anges i `<source>`-elementen inte är uppfyllda.
 
-2\. Exempel på konstnärlig riktning:
+2\. Exempel för konstnärlig riktning:
 
 ```html
 <picture>
@@ -34,7 +32,7 @@ Förklaring: I det här exemplet används `<picture>`-elementet för att tillhan
 </picture>
 ```
 
-Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor beroende på enhetens orientering. `<source>`-elementet med attributet "media" satt till "(orientation: landscape)" specifierar en bildkälla för breda skärmar, medan `<img>`-elementet specifierar en bildkälla för porträttskärmar.
+Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor beroende på enhetens orientering. `<source>`-elementet med "media"-attributet inställt på "(orientation: landscape)" specificerar en bildkälla för breda skärmar, medan `<img>`-elementet specificerar en bildkälla för porträttskärmar.
 
 3\. Exempel för olika bildformat:
 
@@ -48,12 +46,12 @@ Förklaring: I det här exemplet används `<picture>`-elementet för att tillhan
 </picture>
 ```
 
-Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor för olika bildformat. `<source>`-elementen specifierar olika bildkällor genom att använda attributen "srcset" och "type" för att specificera bildformatet. `<img>`-elementet används som en fallback för äldre webbläsare som inte stödjer `<picture>`-elementet.
+Förklaring: I det här exemplet används `<picture>`-elementet för att tillhandahålla olika bildkällor för olika bildformat. `<source>`-elementen specificerar olika bildkällor med hjälp av "srcset"-attributet och "type"-attributet för att specificera bildformatet. `<img>`-elementet används som en reserv för äldre webbläsare som inte stöder `<picture>`-elementet.
 
 ## Brytpunkter
 
-I responsiv design används brytpunkter för att definiera när layouten på en webbplats eller applikation ska ändras baserat på storleken på viewporten. Brytpunkter definieras vanligtvis med hjälp av media queries i CSS, som tillämpar olika stilar beroende på skärmens bredd. Dessa brytpunkter kan användas i kombination med `<picture>`-elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar.
+I responsiv design används brytpunkter för att definiera när utformningen av en webbplats eller applikation ska ändras beroende på storleken på vyfönstret. Brytpunkter definieras vanligtvis med hjälp av mediefrågor i CSS, som tillämpar olika stilar beroende på skärmbredden. Dessa brytpunkter kan användas tillsammans med `<picture>`-elementet för att tillhandahålla olika bildkällor för olika skärmstorlekar.
 
-Till exempel använde vi i det första exemplet ovan `media`-attributet för att specificera skärmens bredd under vilken varje källa ska användas. När skärmbredden är större än eller lika med 768 pixlar, används källan `image-large.jpg`; när skärmbredden är större än eller lika med 480 pixlar men mindre än 768 pixlar, används källan `image-medium.jpg`; och när skärmbredden är mindre än 480 pixlar, används källan `image-small.jpg`. Detta gör det möjligt för oss att servera lämpligt storleksanpassade bilder för varje enhet, vilket minskar sidladdningstider och förbättrar användarupplevelsen.
+Till exempel, i det första exemplet ovan, använde vi `media`-attributet för att specificera skärmbredden under vilken varje källa ska användas. När skärmbredden är större än eller lika med 768 pixlar, används `image-large.jpg`-källan; när skärmbredden är större än eller lika med 480 pixlar men mindre än 768 pixlar, används `image-medium.jpg`-källan; och när skärmbredden är mindre än 480 pixlar, används `image-small.jpg`-källan. Detta tillåter oss att leverera lämpligt storleksanpassade bilder för varje enhet, vilket minskar sidladdningstider och förbättrar användarupplevelsen.
 
-Brytpunkter kan definieras vid vilken skärmstorlek som helst, och flera brytpunkter kan användas för att skapa layouter som svarar på ett brett utbud av enheter. Genom att kombinera brytpunkter med `<picture>`-elementet kan du skapa flexibla och responsiva design som ser bra ut på alla enheter.
+Brytpunkter kan definieras vid vilken skärmstorlek som helst, och flera brytpunkter kan användas för att skapa layouter som svarar på ett brett spektrum av enheter. Genom att kombinera brytpunkter med `<picture>`-elementet kan du skapa flexibla och responsiva designer som ser bra ut på vilken enhet som helst.

@@ -1,20 +1,19 @@
 ---
-title: Erstelle ein Karussell
-description: Wie man ein Karussell auf einer Website erstellt
-taskInputHash: 230c6ecf771bf3cb
+taskInputHash: b1799fe448f2173c
+title: Erstellen Sie ein Karussell
+description: So erstellen Sie ein Karussell auf einer Website
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
 Hier sind die allgemeinen Schritte zur Erstellung eines Bildkarussells auf einer Website:
-1. Erstellen Sie eine neue HTML-Datei für Ihr Bildkarussell. Sie können es beispielsweise "carousel.html" nennen.
-2. Fügen Sie die HTML-Struktur zu Ihrer Datei hinzu. Dazu gehört in der Regel der Head-Bereich mit einem Titel und eventuell notwendigen CSS-Stylesheets und der Body-Bereich, in dem Sie das eigentliche Karussell hinzufügen.
+
+1. Erstellen Sie eine neue HTML-Datei für Ihr Bildkarussell. Sie können sie beispielsweise "carousel.html" nennen.
+2. Fügen Sie die HTML-Struktur in Ihre Datei ein. Dies umfasst typischerweise den Kopfbereich mit einem Titel und allen notwendigen CSS-Stylesheets sowie den Körperbereich, in dem Sie das eigentliche Karussell hinzufügen.
 3. Erstellen Sie einen Container für Ihr Karussell mit einem `<div>`-Tag. Geben Sie ihm eine ID oder eine Klasse, damit Sie es später stylen können.
-4. Fügen Sie innerhalb des Containers einzelne Bilddateien mit dem `<img>`-Tag hinzu. Sie können den Quelltext auf den Bilddateipfad oder URL setzen und bei Bedarf Alt-Texte oder Bildunterschriften hinzufügen.
-5. Fügen Sie Ihrem Karussell Navigationsbuttons mit `<button>`- oder `<a>`-Tags hinzu. Sie benötigen einen Button oder Link für den linken Pfeil und einen weiteren Button oder Link für den rechten Pfeil.
-6. Fügen Sie JavaScript-Code hinzu, um Ihr Karussell funktionsfähig zu machen. Sie müssen auf Klick-Ereignisse auf den Navigationsbuttons hören und die Anzeige des Karussells entsprechend aktualisieren. Das können Sie mit Hilfe der DOM-API oder einer JavaScript-Bibliothek wie jQuery oder React tun.
+4. Fügen Sie innerhalb des Containers einzelne Bildelemente mit dem `<img>`-Tag hinzu. Sie können das Quelle-Attribut auf den Pfad der Bilddatei oder die URL setzen und nach Bedarf Alt-Text oder Bildunterschriften hinzufügen.
+5. Fügen Sie Navigationsschaltflächen zu Ihrem Karussell mit `<button>`- oder `<a>`-Tags hinzu. Sie benötigen eine Schaltfläche oder einen Link für den linken Pfeil und einen weiteren für den rechten Pfeil.
+6. Fügen Sie JavaScript-Code hinzu, um Ihr Karussell funktionsfähig zu machen. Sie müssen auf Klickereignisse auf den Navigationsschaltflächen hören und die Anzeige des Karussells entsprechend aktualisieren. Sie können dies mit der DOM-API oder einer JavaScript-Bibliothek wie jQuery oder React machen.
 
 Hier ist ein Beispielcode zur Erstellung eines einfachen Bildkarussells mit jQuery:
 
@@ -22,7 +21,7 @@ Hier ist ein Beispielcode zur Erstellung eines einfachen Bildkarussells mit jQue
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Image Carousel</title>
+	<title>Mein Bildkarussell</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>

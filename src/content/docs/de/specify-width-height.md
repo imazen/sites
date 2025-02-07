@@ -1,17 +1,18 @@
 ---
-title: Verwendung von Breite und Höhe
-description: Vorteile der Verwendung von Breite und Höhe Attributen im HTML-Code
-taskInputHash: fd9dcf8cf97a201b
+taskInputHash: 9f37c720a8f89955
+title: >-
+  Übersetzen Sie auch sorgfältig den Titel und die Beschreibung des Artikels;
+  verwenden Sie nicht & oder < oder >
+   Verwenden Sie Breite und Höhe
+description: Vorteile der Verwendung von Breite- und Höhenattributen im HTML-Code
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Warum sollten Sie Breite und Höhe in HTML einfügen?
+Warum sollten Sie Breite und Höhe im HTML angeben?
 
-> Es wird empfohlen, Breite- und Höhenattribute im HTML-Code für Bilder einzufügen, da sie dem Webbrowser helfen, die Größe des Bildes zu kennen, bevor es vollständig geladen wird. Dies ermöglicht es dem Browser, den entsprechenden Platz auf der Webseite für das Bild zu reservieren, was verhindert, dass der Inhalt beim Laden des Bildes springt.
+> Es wird empfohlen, die Attribute Breite und Höhe im HTML-Code für Bilder anzugeben, da dies dem Webbrowser hilft, die Größe des Bildes zu kennen, bevor es vollständig geladen ist. Dies ermöglicht dem Browser, den entsprechenden Platz auf der Webseite für das Bild zu reservieren, was verhindert, dass sich der Inhalt verschiebt, während das Bild geladen wird.
 > 
-> Darüber hinaus können die Angabe von Breite- und Höhenattributen für Bilder dazu beitragen, die Gesamtleistung der Webseite zu verbessern. Wenn ein Browser die Größe eines Bildes im Voraus kennt, kann er genauer berechnen, wie viel Platz benötigt wird, um das Bild anzuzeigen, und unnötige Reflows oder Repaints des Inhalts beim Laden vermeiden.
+> Darüber hinaus kann die Angabe der Breite- und Höhenattribute für Bilder dazu beitragen, die Gesamtleistung der Webseite zu verbessern. Wenn ein Browser die Größe eines Bildes im Voraus kennt, kann er den benötigten Platz zur Darstellung des Bildes genauer berechnen und unnötige Neuanordnungen oder Neuzeichnungen des Inhalts während des Ladens vermeiden.
 > 
-> Insgesamt kann die Verwendung von Breite- und Höhenattributen im HTML-Code für Bilder das Benutzererlebnis verbessern, indem der Inhalt schneller geladen wird und visuelle Fehler reduziert werden.
+> Insgesamt kann die Verwendung der Breite- und Höhenattribute im HTML-Code für Bilder die Benutzererfahrung verbessern, indem die Inhalte schneller geladen werden und visuelle Störungen reduziert werden.

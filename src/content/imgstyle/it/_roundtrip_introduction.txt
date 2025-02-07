@@ -1,19 +1,45 @@
 ---
-title: Styling `<img>` elements and example layout
-description: Styling `<img>` elements and example layout
-taskInputHash: 8af13d8006fd2214
-lang: en
-ignore: '/* cSpell:locale it,en*/'
+taskInputHash: 3557776b7d07d02c
+title: New CSS Features for Images
+description: New CSS Features for Images
 sidebar_sort_priority: 1000
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
+lang: en
 ---
-# Styling `<img>` elements and example layout
+Modern CSS offers developers concise and effective tools for robust image management:
 
-## Styling `<img>` elements
+- **Aspect Ratio:**  
+  The `aspect-ratio` property enforces fixed proportions, stabilizing layouts by preventing unexpected shifts during image loading.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-TODO:
+- **Object Fit & Object Position:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control the scaling and alignment of images within their containers, eliminating awkward cuts or distortions.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
+
+- **Image-Set for Resolution Adaptability:**  
+  The `image-set()` function offers resolution switching for background images, ensuring optimal clarity on high DPI devices.  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
+
+- **Additional Enhancements:**  
+  `image-rendering` optimizes scaling algorithms for sharp output (ideal for pixel art), while `filter` enables dynamic visual effects directly in CSS.
+
+These features significantly simplify the presentation of images, reducing reliance on JavaScript hacks and complex solutions, thus greatly facilitating everyday development tasks.
+
+{{The translated document is error-free and well-structured, with no awkward phrasing. The original terms are used correctly in the context of CSS.}}
 =====================
 
 Content prompt used: 
@@ -23,11 +49,11 @@ Translate the following to Italian, preserving all markdown formatting.
 
 Metadata prompt used: 
 Also carefully translate the title and description for the article; do not use &amp; or &lt; or &gt;
-1. styling <img> elements and example layouts
- 2. styling <img> elements and example layouts
+1. New CSS features for images
+ 2. New CSS features for images
 
-Metadata returned1. Stilizzare gli elementi `<img>` e layout di esempio
-2. Stilizzare gli elementi `<img>` e layout di esempio 
+Metadata returned1. Nuove funzionalità CSS per le immagini
+2. Nuove funzionalità CSS per le immagini 
 
 
 Roundtrip (isolated) prompt used: 

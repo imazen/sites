@@ -1,21 +1,22 @@
 ---
-title: Use Width and Height Attributes
+taskInputHash: b82d6c266d485e86
+title: Translate the title and article description carefully; do not use & or < or >
+
+   Use width and height
 description: Benefits of using width and height attributes in HTML code
-taskInputHash: c1840d188c21b829
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: en
-ignore: '/* cSpell:locale es,en*/'
-date_published: '2023-03-24'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
+Why should you include width and height in HTML?
 
-Why should you use width and height in HTML?
+> It is recommended to use width and height attributes in HTML code for images because it helps the web browser to know the size of the image before it is fully loaded. This allows the browser to reserve the appropriate amount of space on the web page for the image, preventing content from jumping while the image loads.
+> 
+> Furthermore, specifying width and height attributes for images can also help improve the overall performance of the web page. When a browser knows the size of an image in advance, it can more accurately calculate the amount of space needed to display the image and avoid unnecessary reflows or repaints of the content while it loads.
+> 
+> In general, using width and height attributes in HTML code for images can enhance the user experience by making the content load faster and reducing visual glitches.
 
-> It's recommended to use width and height attributes in HTML code for images because it helps the web browser know the size of the image before it fully loads. This allows the browser to reserve the appropriate amount of space on the webpage for the image, which prevents content from jumping around while the image loads.
->
-> Additionally, specifying the width and height attributes for images can also help improve overall webpage performance. When a browser knows the size of an image in advance, it can more accurately calculate the amount of space needed to display the image and prevent unnecessary reflows or repaints of content as it loads.
->
-> Overall, using width and height attributes in HTML code for images can improve the user experience by making content load faster and reducing visual glitches.
+{{Note: The original title and description could be more concise before translation.}}
 =====================
 
 Content prompt used: 
@@ -28,8 +29,10 @@ Also carefully translate the title and description for the article; do not use &
 1. Use width and height
  2. Benefits of using width and height attributes in HTML code
 
-Metadata returned1. Usa ancho y altura
-2. Beneficios de usar los atributos de ancho y altura en el código HTML 
+Metadata returnedTambién traduce cuidadosamente el título y la descripción del artículo; no uses & o < o >
+
+1. Usa ancho y alto
+2. Beneficios de usar atributos de ancho y alto en el código HTML 
 
 
 Roundtrip (isolated) prompt used: 

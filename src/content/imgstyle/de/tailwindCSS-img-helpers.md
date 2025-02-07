@@ -1,22 +1,21 @@
 ---
-title: Helfer von TailwindCSS für `<img>`
-description: Liste der am häufigsten verwendeten Helfer von TailwindCSS für `<img>`
-taskInputHash: 64efd2c697fc9820
+taskInputHash: 1a789c6bd2e4aa28
+title: TailwindCSS-Hilfsklassen für `<img>`
+description: Liste der am häufigsten verwendeten TailwindCSS-Hilfsklassen für `<img>`
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-TailwindCSS bietet mehrere Hilfsklassen für die Arbeit mit dem `<img>`-Tag an. Hier sind einige der am häufigsten verwendeten: 
-- `object-contain`: Diese Klasse passt das Bild innerhalb seines Containers an und erhält dabei das Seitenverhältnis. Das Bild wird entweder verkleinert oder vergrößert, um sicherzustellen, dass es in den Container passt. 
-- `object-cover`: Diese Klasse passt das Bild so an, dass es den gesamten Container ausfüllt und dabei das Seitenverhältnis beibehält. Das Bild wird entweder beschnitten oder verkleinert, um sicherzustellen, dass es den Container ausfüllt. 
-- `object-fill`: Diese Klasse passt das Bild so an, dass es den gesamten Container ausfüllt, ohne das Seitenverhältnis beizubehalten. Dies kann dazu führen, dass das Bild gestreckt oder komprimiert wird, um in den Container zu passen. 
-- `object-none`: Diese Klasse verwendet die natürliche Größe des Bildes, ohne es zu verkleinern oder zu beschränken. 
-- `object-center`: Diese Klasse zentriert das Bild horizontal und vertikal in seinem Container. 
-- `object-left`: Diese Klasse richtet das Bild links in seinem Container aus. 
-- `object-right`: Diese Klasse richtet das Bild rechts in seinem Container aus. 
-- `object-top`: Diese Klasse richtet das Bild oben in seinem Container aus. 
-- `object-bottom`: Diese Klasse richtet das Bild unten in seinem Container aus.
+TailwindCSS bietet mehrere Hilfsklassen zum Arbeiten mit dem `<img>`-Tag. Hier sind einige der am häufigsten verwendeten:
 
-Diese Klassen können in Verbindung mit anderen TailwindCSS-Klassen verwendet werden, um Ihre Bilder weiter zu gestalten, wie zum Beispiel eine bestimmte Breite oder Höhe festzulegen, Rahmen oder Schatten hinzuzufügen oder die Opazität anzupassen.
+- `object-contain`: Diese Klasse setzt das Bild so, dass es in seinen Container passt, während das Seitenverhältnis beibehalten wird. Es wird entweder das Bild verkleinern oder vergrößern, um sicherzustellen, dass es in den Container passt.
+- `object-cover`: Diese Klasse setzt das Bild so, dass es den gesamten Container abdeckt, während das Seitenverhältnis beibehalten wird. Es wird entweder das Bild zuschneiden oder verkleinern, um sicherzustellen, dass es den Container abdeckt.
+- `object-fill`: Diese Klasse setzt das Bild so, dass es den gesamten Container ausfüllt, ohne das Seitenverhältnis beizubehalten. Dies kann dazu führen, dass das Bild gedehnt oder komprimiert wird, um in den Container zu passen.
+- `object-none`: Diese Klasse setzt das Bild auf seine natürliche Größe, ohne jegliche Größenänderung oder Zuschneiden.
+- `object-center`: Diese Klasse zentriert das Bild horizontal und vertikal innerhalb seines Containers.
+- `object-left`: Diese Klasse richtet das Bild innerhalb seines Containers links aus.
+- `object-right`: Diese Klasse richtet das Bild innerhalb seines Containers rechts aus.
+- `object-top`: Diese Klasse richtet das Bild am oberen Rand seines Containers aus.
+- `object-bottom`: Diese Klasse richtet das Bild am unteren Rand seines Containers aus.
+
+Diese Klassen können in Verbindung mit anderen TailwindCSS-Klassen verwendet werden, um Ihre Bilder weiter zu gestalten, z.B. durch Festlegen einer bestimmten Breite oder Höhe, Hinzufügen von Rändern oder Schatten oder Anpassen der Deckkraft.

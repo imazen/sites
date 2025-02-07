@@ -1,15 +1,12 @@
 ---
+taskInputHash: 8730696d1ed3fe29
 title: Riferimento completo CSS
-description: 'Riferimento completo CSS per gli effetti, con esempi'
-taskInputHash: 4c1f6c0906532679
+description: 'Riferimento completo CSS per effetti, con esempi'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Ecco un riferimento completo di effetti CSS e bordi che puoi applicare alle immagini, insieme a esempi per ognuno:
-
+Ecco un riferimento completo sugli effetti e bordi CSS che puoi applicare alle immagini, insieme a esempi per ciascuno:
 1. **Bordo:** Aggiunge un bordo intorno all'immagine.
 
 ```css
@@ -19,7 +16,7 @@ img {
 ```
 
 
-2. **Ombra Box:** Aggiunge un'ombra intorno all'immagine.
+2. **Ombra:** Aggiunge un'ombra intorno all'immagine.
 
 ```css
 img {
@@ -37,7 +34,7 @@ img {
 ```
 
 
-4. **Grigio:** Converte l'immagine in scala di grigi.
+4. **Scala di Grigi:** Converte l'immagine in scala di grigi.
 
 ```css
 img {
@@ -46,7 +43,7 @@ img {
 ```
 
 
-5. **Sepia:** Applica un effetto seppia all'immagine.
+5. **Seppia:** Applica un effetto seppia all'immagine.
 
 ```css
 img {
@@ -82,7 +79,7 @@ img {
 ```
 
 
-9. **Rotazione dell'Umore:** Ruota il colore dell'immagine.
+9. **Rotazione Tinta:** Ruota la tinta dell'immagine.
 
 ```css
 img {
@@ -109,7 +106,7 @@ img {
 ```
 
 
-12. **Sepia:** Applica un effetto seppia all'immagine.
+12. **Seppia:** Applica un effetto seppia all'immagine.
 
 ```css
 img {
@@ -118,7 +115,7 @@ img {
 ```
 
 
-13. **Drop-Shadow:** Aggiunge un effetto di ombreggiatura all'immagine.
+13. **Ombra Drop:** Aggiunge un effetto ombra drop all'immagine.
 
 ```css
 img {
@@ -139,7 +136,7 @@ img:hover {
 ```
 
 
-15. **Animazione:** Aggiunge un effetto di animazione all'immagine.
+15. **Animazione:** Aggiunge un effetto animazione all'immagine.
 
 ```css
 @keyframes slidein {
@@ -157,4 +154,4 @@ img {
 
 
 
-Questi sono solo alcuni esempi dei molti effetti CSS e bordi che puoi applicare alle immagini. Sperimenta con stili diversi per creare design unici e accattivanti!
+Questi sono solo alcuni esempi dei molti effetti e bordi CSS che puoi applicare alle immagini. Sperimenta con diversi stili per creare design unici e accattivanti!

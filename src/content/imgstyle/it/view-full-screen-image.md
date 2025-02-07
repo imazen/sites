@@ -1,20 +1,17 @@
 ---
-title: Aggiungi il tocco per visualizzare l'immagine a schermo intero ad una galleria
+taskInputHash: 6d3e8f9444a7cbe6
+title: Aggiungi "tocca per visualizzare l'immagine a schermo intero" a una galleria
 description: >-
-  Come aggiungere un'opzione di tocco per visualizzare l'immagine a schermo
-  intero ad una galleria
-taskInputHash: eda45ecf7dcc987d
+  Come aggiungere un'opzione "tocca per visualizzare l'immagine a schermo
+  intero" a una galleria
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: it
-ignore: '/* cSpell:locale it,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Per aggiungere un'opzione "Tocca per visualizzare l'immagine a schermo intero" a una galleria, è possibile utilizzare JavaScript e CSS per creare un overlay che mostri l'immagine a schermo intero quando l'utente ci clicca sopra.
+Per aggiungere un'opzione "Tocca per visualizzare l'immagine a schermo intero" in una galleria, puoi usare JavaScript e CSS per creare un overlay che visualizzi l'immagine in modalità schermo intero quando l'utente tocca su di essa.
 
 Ecco un approccio di base che puoi utilizzare:
-
-1. Prima di tutto, crea un contenitore per la tua galleria e aggiungi tutte le immagini che desideri visualizzare.
+1. Per prima cosa, crea un contenitore per la tua galleria e aggiungi tutte le immagini che desideri visualizzare.
 
 ```html
 <div class="gallery">
@@ -25,7 +22,8 @@ Ecco un approccio di base che puoi utilizzare:
 </div>
 ```
 
-2. Successivamente, aggiungi del CSS per stilizzare la galleria e le immagini.
+
+2. Successivamente, aggiungi un po' di CSS per stilizzare la galleria e le immagini.
 
 ```css
 .gallery {
@@ -40,7 +38,8 @@ Ecco un approccio di base che puoi utilizzare:
 }
 ```
 
-3. Ora, aggiungi un listener per l'evento di click ad ogni immagine utilizzando JavaScript. Quando l'utente clicca su un'immagine, il JavaScript creerà un overlay e mostrerà l'immagine a schermo intero.
+
+3. Ora, aggiungi un event listener click a ciascuna immagine usando JavaScript. Quando l'utente clicca su un'immagine, il JavaScript creerà un overlay e visualizzerà l'immagine in modalità schermo intero.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -48,25 +47,26 @@ const images = gallery.querySelectorAll('img');
 
 images.forEach((image) => {
   image.addEventListener('click', () => {
-    // crea l'overlay
+    // crea overlay
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     
-    // crea l'elemento immagine
+    // crea elemento immagine
     const fullScreenImage = document.createElement('img');
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // aggiungi l'elemento immagine all'overlay
+    // aggiungi elemento immagine all'overlay
     overlay.appendChild(fullScreenImage);
     
-    // aggiungi l'overlay alla pagina
+    // aggiungi overlay alla pagina
     document.body.appendChild(overlay);
   });
 });
 ```
 
-4. Infine, aggiungi del CSS per stilizzare l'overlay e l'immagine a schermo intero.
+
+4. Infine, aggiungi un po' di CSS per stilizzare l'overlay e l'immagine a schermo intero.
 
 ```css
 .overlay {
@@ -87,5 +87,7 @@ images.forEach((image) => {
   object-fit: contain;
 }
 ```
+
+
 
 Con questi passaggi, dovresti ora avere una galleria che consente agli utenti di visualizzare le immagini a schermo intero toccandole.

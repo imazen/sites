@@ -1,16 +1,14 @@
 ---
+taskInputHash: f15723ded82fd07d
 title: Vollständige CSS-Referenz
-description: Vollständige CSS-Referenz für Effekte mit Beispielen
-taskInputHash: 14c2d1e815930d7b
+description: 'Vollständige CSS-Referenz für Effekte, mit Beispielen'
+date_published: '2025-02-07'
+date_modified: '2025-02-07'
 lang: de
-ignore: '/* cSpell:locale de,en*/'
-date_published: '2023-03-29'
-date_modified: '2023-03-31'
-date_updated: '2023-03-31'
 ---
-Hier ist eine umfassende Referenz von CSS-Effekten und -Rahmen, die Sie auf Bilder anwenden können, zusammen mit Beispielen für jeden Effekt:
+Hier ist eine umfassende Referenz von CSS-Effekten und Rahmen, die Sie auf Bilder anwenden können, zusammen mit Beispielen für jedes:
 
-1. **Rahmen:** Fügt ein Rahmen um das Bild hinzu.
+1. **Rand:** Fügt einen Rahmen um das Bild hinzu.
 
 ```css
 img {
@@ -18,8 +16,7 @@ img {
 }
 ```
 
-
-2. **Boxschatten:** Fügt einen Schatten um das Bild hinzu.
+2. **Schatten:** Fügt einen Schatten um das Bild hinzu.
 
 ```css
 img {
@@ -27,15 +24,13 @@ img {
 }
 ```
 
-
-3. **Deckkraft:** Passt die Transparenz des Bildes an.
+3. **Transparenz:** Passt die Transparenz des Bildes an.
 
 ```css
 img {
   opacity: 0.5;
 }
 ```
-
 
 4. **Graustufen:** Konvertiert das Bild in Graustufen.
 
@@ -45,7 +40,6 @@ img {
 }
 ```
 
-
 5. **Sepia:** Wendet einen Sepia-Effekt auf das Bild an.
 
 ```css
@@ -53,7 +47,6 @@ img {
   filter: sepia(100%);
 }
 ```
-
 
 6. **Unschärfe:** Macht das Bild unscharf.
 
@@ -63,7 +56,6 @@ img {
 }
 ```
 
-
 7. **Helligkeit:** Passt die Helligkeit des Bildes an.
 
 ```css
@@ -71,7 +63,6 @@ img {
   filter: brightness(50%);
 }
 ```
-
 
 8. **Kontrast:** Passt den Kontrast des Bildes an.
 
@@ -81,8 +72,7 @@ img {
 }
 ```
 
-
-9. **Hue Rotate:** Dreht die Farbton des Bildes.
+9. **Farbton-Rotation:** Dreht den Farbton des Bildes.
 
 ```css
 img {
@@ -90,15 +80,13 @@ img {
 }
 ```
 
-
-10. **Invertieren:** Invertiert die Farben des Bildes.
+10. **Umkehrung:** Kehrt die Farben des Bildes um.
 
 ```css
 img {
   filter: invert(100%);
 }
 ```
-
 
 11. **Sättigung:** Passt die Sättigung des Bildes an.
 
@@ -108,7 +96,6 @@ img {
 }
 ```
 
-
 12. **Sepia:** Wendet einen Sepia-Effekt auf das Bild an.
 
 ```css
@@ -117,8 +104,7 @@ img {
 }
 ```
 
-
-13. **Drop-Shadow:** Fügt dem Bild einen Schlagschatten-Effekt hinzu.
+13. **Drop-Schatten:** Fügt einen Drop-Schatten-Effekt auf das Bild hinzu.
 
 ```css
 img {
@@ -126,8 +112,7 @@ img {
 }
 ```
 
-
-14. **Übergang:** Fügt dem Bild einen Übergangseffekt hinzu.
+14. **Übergang:** Fügt einen Übergangseffekt auf das Bild hinzu.
 
 ```css
 img {
@@ -138,8 +123,7 @@ img:hover {
 }
 ```
 
-
-15. **Animation:** Fügt dem Bild einen Animations-Effekt hinzu.
+15. **Animation:** Fügt einen Animationseffekt auf das Bild hinzu.
 
 ```css
 @keyframes slidein {
@@ -155,6 +139,4 @@ img {
 }
 ```
 
-
-
-Dies sind nur einige Beispiele der vielen CSS-Effekte und -Rahmen, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und auffällige Designs zu schaffen!
+Dies sind nur ein paar Beispiele für die vielen CSS-Effekte und -Rahmen, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und auffällige Designs zu erstellen!
