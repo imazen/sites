@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": " - srcset.tips",
- "siteTitleName": "Reference and tips for srcset",
+ "siteTitleSuffix": "- Tips for srcset",
+ "siteTitleName": "Reference and Tips for srcset",
  "skipToContentText": "Skip to content",
  "editPage": "Edit this page",
- "joinCommunity": "Join our community",
- "footerLicense": "This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License",
- "translatedContentDisclaimer": "If you encounter any issues, please let us know. Our translation tool is not yet fully autonomous, but we welcome feedback and advice!",
+ "joinCommunity": "Join the community",
+ "footerLicense": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License",
+ "translatedContentDisclaimer": "If you encounter any issues, please let us know. Our translation tool is still a work in progress, but it is being improved based on feedback, so please feel free to provide advice!",
  "reportIssue": "Contact us on Github",
- "sidebarTitle": "Topics",
+ "sidebarTitle": "Topic",
  "communitySidebarTitle": "Community"
 }

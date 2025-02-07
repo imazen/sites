@@ -1,12 +1,12 @@
 {
- "siteTitleSuffix": " - srcset.tips",
+ "siteTitleSuffix": " - srcsetのヒント",
  "siteTitleName": "srcsetのリファレンスとヒント",
- "skipToContentText": "コンテンツへスキップ",
+ "skipToContentText": "コンテンツにスキップ",
  "editPage": "このページを編集",
- "joinCommunity": "私たちのコミュニティに参加",
- "footerLicense": "この作品はCreative Commons Attribution-NonCommercial 4.0 International Licenseの下でライセンスされています",
- "translatedContentDisclaimer": "何か問題がありましたらお知らせください。私たちの翻訳ツールはまだ完全には自律していませんが、フィードバックを取り入れていますので、ぜひアドバイスをお願いします！",
- "reportIssue": "Githubでお問い合わせ",
+ "joinCommunity": "コミュニティに参加",
+ "footerLicense": "この作品は、クリエイティブ・コモンズ 表示 - 非営利 4.0 国際 ライセンスの下で提供されています",
+ "translatedContentDisclaimer": "何か問題があればお知らせください。当社の翻訳ツールはまだ完全ではありませんが、フィードバックを基に改善されていますので、アドバイスを是非お寄せください！",
+ "reportIssue": "Githubでご連絡ください",
  "sidebarTitle": "トピック",
  "communitySidebarTitle": "コミュニティ"
 }
