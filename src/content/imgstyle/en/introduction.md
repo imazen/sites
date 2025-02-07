@@ -1,13 +1,39 @@
 ---
-title: styling <img> elements and example layouts
-description: styling <img> elements and example layouts
+title: New CSS features for images
+description: New CSS features for images
 sidebar_sort_priority: 1000
 date_published: '2023-03-29'
-date_modified: '2023-03-31'
+date_modified: '2024-02-07'
 ---
 
-# Styling `<img>` elements and example layouts
+Modern CSS empowers developers with concise, effective tools for robust image handling:
 
-## Styling `<img>` elements
+- **Aspect Ratio:**  
+  The `aspect-ratio` property enforces fixed proportions, stabilizing layouts by preventing unexpected shifts while images load.  
+  ```css  
+  .container {  
+    aspect-ratio: 16/9;  
+  }  
+  ```
 
-TODO:
+- **Object Fit & Object Position:**  
+  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control image scaling and alignment within their containers, eliminating awkward cropping or distortion.  
+  ```css  
+  img {  
+    object-fit: cover;  
+    object-position: center;  
+  }  
+  ```
+
+- **Image-Set for Resolution Adaptability:**  
+  The `image-set()` function offers resolution switching for background images, ensuring optimal clarity on high-DPI devices.  
+  ```css  
+  .hero {  
+    background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
+  }  
+  ```
+
+- **Additional Enhancements:**  
+  `image-rendering` fine-tunes scaling algorithms for crisp output (ideal for pixel art), while `filter` enables dynamic visual effects directly in CSS.
+
+These features significantly streamline image presentation, reducing reliance on JavaScript hacks and complex workarounds, thus markedly easing everyday development tasks.
