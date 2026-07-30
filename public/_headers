@@ -1,0 +1,7 @@
+# Cloudflare Pages header rules.
+#
+# Reproduces the immutable cache-control that @astrojs/vercel applies to
+# /_astro/* in .vercel/output/config.json. These filenames are content-hashed,
+# so a one-year immutable cache is safe and matches current production.
+/_astro/*
+  cache-control: public, max-age=31536000, immutable
