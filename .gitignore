@@ -1,5 +1,6 @@
 # build output
 dist/
+dist-imgstyle/
 # generated types
 .astro/
 
@@ -29,3 +30,5 @@ pnpm-lock.yaml
 
 
 astrodocs/
+# agent coordination marker (never committed)
+.workongoing

@@ -1,0 +1,9 @@
+# Cloudflare Pages redirect rules. Mirrors the `redirects` block in vercel.json
+# so srcset.tips and img.style behave identically on both hosts during migration.
+#
+# Vercel's `redirects` default to permanent (308); matched here so the status
+# code does not change under visitors or search engines at cutover.
+#
+# Note: on Pages, redirects are always followed even when a static asset exists
+# at the same path, which matches Vercel's behaviour for `/` today.
+/    /en/introduction/    308
