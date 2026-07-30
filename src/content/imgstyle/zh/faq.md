@@ -1,16 +1,16 @@
 ---
-taskInputHash: f36bdcc56b11b172
-title: 常见问题解答
-description: 有关使用CSS样式化和布局图像的常见问题解答
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: 96bbe68c41c1d229
+title: 常见问题
+description: 关于使用CSS对图像进行样式和布局的常见问题解答
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: zh
 ---
-一些有关使用CSS样式化和布局图像的常见问题包括：
+与使用CSS对图像进行样式和布局相关的一些常见问题包括：
 
 **1. 如何在CSS中设置图像的大小？**
 
-要在CSS中设置图像的大小，可以使用 `width` 和 `height` 属性。例如，要将图像的宽度设置为300像素，可以使用以下CSS代码：
+要在CSS中设置图像的大小，可以使用`width`和`height`属性。例如，要将图像的宽度设置为300像素，可以使用如下CSS代码：
 
 ```css
 img {
@@ -20,7 +20,7 @@ img {
 
 **2. 如何使用CSS水平和垂直居中图像？**
 
-要使用CSS水平和垂直居中图像，可以在包含图像的容器上使用 `display: flex` 和 `justify-content: center` 与 `align-items: center` 属性。例如，要在一个 `div` 元素中居中图像，可以使用以下CSS代码：
+要使用CSS水平和垂直居中图像，可以在包含图像的容器上使用`display: flex`以及`justify-content: center`和`align-items: center`属性。例如，要在`div`元素中居中图像，可以使用如下CSS代码：
 
 ```css
 div {
@@ -30,14 +30,14 @@ div {
 }
 
 div img {
-  /* 可选：为图像设置最大宽度 */
+  /* 可选：为图像设置一个最大宽度 */
   max-width: 100%;
 }
 ``` 
 
 **3. 如何使用CSS使图像响应式？**
 
-要使用CSS使图像响应式，可以在图像上使用 `max-width: 100%` 属性。这将确保图像的宽度不超过其容器。例如：
+要使用CSS使图像响应式，可以在图像上使用`max-width: 100%`属性。这将确保图像永远不会超过其容器的宽度。例如：
 
 ```css
 img {
@@ -48,7 +48,7 @@ img {
 
 **4. 如何在CSS中为图像添加边框或阴影？**
 
-要在CSS中为图像添加边框或阴影，可以分别使用 `border` 和 `box-shadow` 属性。例如：
+要在CSS中为图像添加边框或阴影，可以分别使用`border`和`box-shadow`属性。例如：
 
 ```css
 img {
@@ -57,9 +57,9 @@ img {
 }
 ``` 
 
-**5. 如何使用CSS将图像并排对齐？**
+**5. 如何使用CSS排列图像并排显示？**
 
-要使用CSS将图像并排对齐，可以在图像上使用 `display: inline-block` 属性。例如：
+要使用CSS排列图像并排显示，可以在图像上使用`display: inline-block`属性。例如：
 
 ```css
 img {
@@ -71,7 +71,7 @@ img {
 
 **6. 如何在CSS中设置背景图像？**
 
-要在CSS中设置背景图像，可以使用 `background-image` 属性。例如：
+要在CSS中设置背景图像，可以使用`background-image`属性。例如：
 
 ```css
 div {
@@ -81,7 +81,7 @@ div {
 
 **7. 如何使用CSS裁剪图像？**
 
-要使用CSS裁剪图像，可以使用 `clip` 属性。例如：
+要使用CSS裁剪图像，可以使用`clip`属性。例如：
 
 ```css
 img {
@@ -89,11 +89,11 @@ img {
 }
 ```
 
-这将从左上角开始裁剪100x100像素的正方形图像。
+这将从左上角开始将图像裁剪为100x100像素的正方形。
 
 **8. 如何使用CSS为图像添加悬停效果？**
 
-要使用CSS为图像添加悬停效果，可以使用 `:hover` 伪类。例如：
+要使用CSS为图像添加悬停效果，可以使用`:hover`伪类。例如：
 
 ```css
 img {
@@ -102,14 +102,14 @@ img {
 }
 
 img:hover {
-  /* 设置图像悬停时的状态 */
+  /* 设置鼠标悬停时图像的状态 */
   opacity: 1;
 }
 ``` 
 
 **9. 如何使用CSS控制图像之间的间距？**
 
-要使用CSS控制图像之间的间距，可以使用 `margin` 属性。例如：
+要使用CSS控制图像之间的间距，可以使用`margin`属性。例如：
 
 ```css
 img {
@@ -117,11 +117,11 @@ img {
 }
 ```
 
-这将在每个图像的右侧添加10像素的边距。
+这将在每个图像的右侧添加10像素的间距。
 
-**10. 如何使用CSS创建图像幻灯片？**
+**10. 如何使用CSS创建图像的幻灯片？**
 
-要使用CSS创建图像幻灯片，可以使用 `@keyframes` 规则定义动画，并使用 `animation` 属性将其应用于图像。例如：
+要使用CSS创建图像的幻灯片，可以使用`@keyframes`规则定义动画，并使用`animation`属性将其应用于图像。例如：
 
 ```css
 @keyframes slideshow {
@@ -132,6 +132,6 @@ img {
 img {
   /* 设置图像的初始状态 */
   opacity: 0;
-  /* 设置动画的持续时间和时间函数 */
+  /* 设置动画的持续时间和计时功能 */
   animation: slideshow
 ```

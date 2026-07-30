@@ -1,14 +1,13 @@
 ---
-taskInputHash: 6e320066a2196d78
+taskInputHash: a967c80b2c69368e
 title: Referencia completa de CSS
 description: 'Referencia completa de CSS para efectos, con ejemplos'
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: es
 ---
-Aquí tienes una referencia completa de efectos y bordes CSS que puedes aplicar a imágenes, junto con ejemplos para cada uno:
-
-1. **Borde:** Añade un borde alrededor de la imagen.
+Aquí tienes una referencia completa de efectos CSS y bordes que puedes aplicar a imágenes, junto con ejemplos para cada uno:
+1. **Border:** Añade un borde alrededor de la imagen.
 
 ```css
 img {
@@ -16,7 +15,8 @@ img {
 }
 ```
 
-2. **Sombra de Caja:** Añade una sombra alrededor de la imagen.
+
+2. **Box Shadow:** Añade una sombra alrededor de la imagen.
 
 ```css
 img {
@@ -24,7 +24,8 @@ img {
 }
 ```
 
-3. **Opacidad:** Ajusta la transparencia de la imagen.
+
+3. **Opacity:** Ajusta la transparencia de la imagen.
 
 ```css
 img {
@@ -32,13 +33,15 @@ img {
 }
 ```
 
-4. **Escala de Grises:** Convierte la imagen a escala de grises.
+
+4. **Grayscale:** Convierte la imagen a escala de grises.
 
 ```css
 img {
   filter: grayscale(100%);
 }
 ```
+
 
 5. **Sepia:** Aplica un efecto sepia a la imagen.
 
@@ -48,7 +51,8 @@ img {
 }
 ```
 
-6. **Desenfoque:** Desenfoca la imagen.
+
+6. **Blur:** Desenfoca la imagen.
 
 ```css
 img {
@@ -56,7 +60,8 @@ img {
 }
 ```
 
-7. **Brillo:** Ajusta el brillo de la imagen.
+
+7. **Brightness:** Ajusta el brillo de la imagen.
 
 ```css
 img {
@@ -64,7 +69,8 @@ img {
 }
 ```
 
-8. **Contraste:** Ajusta el contraste de la imagen.
+
+8. **Contrast:** Ajusta el contraste de la imagen.
 
 ```css
 img {
@@ -72,7 +78,8 @@ img {
 }
 ```
 
-9. **Rotar Matiz:** Rota el matiz de la imagen.
+
+9. **Hue Rotate:** Rota el matiz de la imagen.
 
 ```css
 img {
@@ -80,7 +87,8 @@ img {
 }
 ```
 
-10. **Invertir:** Invierte los colores de la imagen.
+
+10. **Invert:** Invierte los colores de la imagen.
 
 ```css
 img {
@@ -88,13 +96,15 @@ img {
 }
 ```
 
-11. **Saturar:** Ajusta la saturación de la imagen.
+
+11. **Saturate:** Ajusta la saturación de la imagen.
 
 ```css
 img {
   filter: saturate(200%);
 }
 ```
+
 
 12. **Sepia:** Aplica un efecto sepia a la imagen.
 
@@ -104,7 +114,8 @@ img {
 }
 ```
 
-13. **Sombra Proyectada:** Añade un efecto de sombra proyectada a la imagen.
+
+13. **Drop-Shadow:** Añade un efecto de sombra alargada a la imagen.
 
 ```css
 img {
@@ -112,7 +123,8 @@ img {
 }
 ```
 
-14. **Transición:** Añade un efecto de transición a la imagen.
+
+14. **Transition:** Añade un efecto de transición a la imagen.
 
 ```css
 img {
@@ -123,7 +135,8 @@ img:hover {
 }
 ```
 
-15. **Animación:** Añade un efecto de animación a la imagen.
+
+15. **Animation:** Añade un efecto de animación a la imagen.
 
 ```css
 @keyframes slidein {
@@ -139,4 +152,6 @@ img {
 }
 ```
 
-Estos son solo algunos ejemplos de los muchos efectos y bordes CSS que puedes aplicar a las imágenes. ¡Experimenta con diferentes estilos para crear diseños únicos y llamativos!
+
+
+¡Estos son solo algunos ejemplos de los muchos efectos CSS y bordes que puedes aplicar a imágenes! Experimenta con diferentes estilos para crear diseños únicos y llamativos.

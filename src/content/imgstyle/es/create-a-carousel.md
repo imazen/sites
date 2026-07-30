@@ -1,23 +1,23 @@
 ---
-taskInputHash: dbaba1ec783f3a67
+taskInputHash: 725628d083d2b14b
 title: >-
-  También traduce cuidadosamente el título y la descripción del artículo; no
-  uses & o < o >
-   Crear un carrusel
+  Además, traduce cuidadosamente el título y la descripción del artículo; no
+  utilices & o < o >
+   Crea un carrusel
 description: Cómo crear un carrusel en un sitio web
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: es
 ---
 Aquí están los pasos generales para crear un carrusel de imágenes en un sitio web:
-1. Crea un nuevo archivo HTML para tu carrusel de imágenes. Puedes llamarlo algo como "carousel.html".
-2. Añade la estructura HTML a tu archivo. Esto normalmente incluye la sección head con un título y cualquier hoja de estilos CSS necesaria, y la sección body donde agregarás el carrusel actual.
-3. Crea un contenedor para tu carrusel usando una etiqueta `<div>`. Dale un ID o una clase para que puedas estilizarlo después.
-4. Dentro del contenedor, añade elementos de imagen individuales usando la etiqueta `<img>`. Puedes establecer el atributo src a la ruta del archivo de imagen o URL, y agregar cualquier texto alternativo o leyendas según sea necesario.
+1. Crea un nuevo archivo HTML para tu carrusel de imágenes. Puedes nombrarlo algo así como "carousel.html".
+2. Añade la estructura HTML a tu archivo. Esto típicamente incluye la sección de encabezado con un título y cualquier hoja de estilo CSS necesaria, y la sección del cuerpo donde agregarás el carrusel real.
+3. Crea un contenedor para tu carrusel usando una etiqueta `<div>`. Dale un ID o una clase para que puedas estilizarlo más tarde.
+4. Dentro del contenedor, añade elementos de imagen individuales usando la etiqueta `<img>`. Puedes establecer el atributo de fuente a la ruta o URL del archivo de imagen, y agregar cualquier texto alternativo o leyenda según sea necesario.
 5. Añade botones de navegación a tu carrusel usando etiquetas `<button>` o `<a>`. Necesitarás un botón o enlace para la flecha izquierda y otro para la flecha derecha.
-6. Añade código JavaScript para hacer que tu carrusel sea funcional. Necesitarás escuchar eventos de clic en los botones de navegación y actualizar la visualización del carrusel en consecuencia. Puedes hacer esto usando la API DOM o una biblioteca de JavaScript como jQuery o React.
+6. Añade código JavaScript para hacer que tu carrusel sea funcional. Necesitarás escuchar eventos de clic en los botones de navegación y actualizar la visualización del carrusel en consecuencia. Puedes hacerlo utilizando la API DOM o una biblioteca de JavaScript como jQuery o React.
 
-Aquí hay un ejemplo de código para crear un simple carrusel de imágenes usando jQuery:
+Aquí tienes un ejemplo de código para crear un carrusel de imágenes simple usando jQuery:
 
 ```html
 <!DOCTYPE html>

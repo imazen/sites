@@ -1,28 +1,30 @@
 ---
-taskInputHash: 11d69e37a6905390
+taskInputHash: 190f900bcb01824b
 title: How Browsers Select Images
-description: How the browser chooses an image listed in the srcset attribute
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+description: How a browser selects images listed in the `srcset` attribute
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-How does a browser choose an image listed in the `srcset` attribute? Here, we provide a step-by-step example of specifying width and density to explain how the browser makes decisions based on the device and viewport.
+How does a browser choose from the images listed in the `srcset` attribute? Here is a step-by-step explanation. We will introduce examples of width and density specifications, and how browsers make selections based on the device and viewport.
 
-- When using the `srcset` attribute in HTML, the browser employs a set of rules to select the most optimal image from the provided source list. These rules depend on both the display characteristics of the device (resolution, pixel density) and the viewport size. The `srcset` attribute can specify different images based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). Let's examine each case with examples.
+- When using the HTML `srcset` attribute, browsers employ a series of rules to choose the most appropriate image from the provided list of sources. These rules depend on both the display characteristics of the device (resolution, pixel density) and the viewport size. By using the `srcset` attribute, different images can be specified based on width (using the `w` descriptor) or pixel density (using the `x` descriptor). We will explain each case with examples.
 
-1\. Width Descriptor (`w`):
+1\. Width descriptor (`w`):
 
-Assume the following `srcset` attribute:
+Consider the following `srcset` attribute:
 
 ```html
+
 <img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" alt="Example Image">
+
 ```
 
 The browser follows these steps:
 
-a. Determine the device's DPR (Device Pixel Ratio). For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or more.
+a. Determine the device's DPR (Device Pixel Ratio). For example, the DPR of a standard display is 1, but high-resolution (Retina) displays have a DPR of 2 or more.
 
-b. Calculate the effective width for each image in the `srcset`. Multiply the width descriptor by the DPR. For a device with a DPR of 1:
+b. Calculate the effective width of each image in the `srcset`. Multiply the width descriptor by the DPR. For devices with a DPR of 1:
 
 - example-small.jpg: 400 \* 1 = 400px
 
@@ -30,19 +32,21 @@ b. Calculate the effective width for each image in the `srcset`. Multiply the wi
 
 - example-large.jpg: 1600 \* 1 = 1600px
 
-c. Compare the effective widths with the viewport width. Assuming the viewport width is 420px, the browser selects the smallest image with an effective width greater than or equal to the viewport width. In this case, it selects `example-medium.jpg`.
+c. Compare the viewport width to the effective widths. Assume the viewport width is 420px. The browser chooses the smallest image with an effective width that is greater than or equal to the viewport width. In this case, `example-medium.jpg` is selected.
 
-1\. Pixel Density Descriptor (`x`):
+2\. Pixel density descriptor (`x`):
 
-Assume the following `srcset` attribute:
+Consider the following `srcset` attribute:
 
 ```html
+
 <img src="example-1x.jpg" srcset="example-1x.jpg 1x, example-2x.jpg 2x, example-3x.jpg 3x" alt="Example Image">
+
 ```
 
 The browser follows these steps:
 
-a. Determine the device's DPR (Device Pixel Ratio). For example, a standard display has a DPR of 1, while a high-resolution (Retina) display has a DPR of 2 or more.
+a. Determine the device's DPR (Device Pixel Ratio). For example, the DPR of a standard display is 1, but high-resolution (Retina) displays have a DPR of 2 or more.
 
 b. Compare the `x` descriptors in the `srcset` with the device's DPR. In this case, there are three images with the following descriptors:
 
@@ -52,15 +56,17 @@ b. Compare the `x` descriptors in the `srcset` with the device's DPR. In this ca
 
 - example-3x.jpg: 3x
 
-c. Select the image with the `x` descriptor closest to the device's DPR. If the DPR is 1, the browser selects `example-1x.jpg`. If the DPR is 2, it selects `example-2x.jpg`, and so on.
+c. Choose the image with the `x` descriptor closest to the device's DPR. For a device with a DPR of 1, the browser selects `example-1x.jpg`. If the DPR is 2, it selects `example-2x.jpg`, and so on.
 
-It is also important to combine the `sizes` attribute with the `srcset` attribute to provide information on how the image should be displayed at different viewport widths. This is particularly effective when using the width descriptor (`w`). Here's an example:
+When using the width descriptor (`w`), combining the `srcset` attribute with the `sizes` attribute offers additional information on how images should be displayed at different viewport widths. This is particularly useful, as shown below:
 
 ```html
-<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw,
+
+<img src="example-small.jpg" srcset="example-small.jpg 400w, example-medium.jpg 800w, example-large.jpg 1600w" sizes="(max-width: 480px) 100vw, (max-width: 960px) 50vw, 
+
 ```
 
-{{No mistakes or clumsy phrasing detected in the translation.}}
+{{No mistakes or clumsy phrasing noted.}}
 =====================
 
 Content prompt used: 
@@ -73,8 +79,8 @@ Also carefully translate the title and description for the article; do not use &
 1. How the browser chooses
  2. How the browser chooses between images listed in the srcset attribute
 
-Metadata returned1. ブラウザの選択方法  
-2. ブラウザがsrcset属性に記載された画像の中から選ぶ方法 
+Metadata returned1. ブラウザが選択する方法  
+2. ブラウザが`srcset`属性にリストされた画像から選択する方法 
 
 
 Roundtrip (isolated) prompt used: 

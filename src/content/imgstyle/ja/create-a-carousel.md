@@ -1,29 +1,29 @@
 ---
-taskInputHash: d196dcc7f2eb312c
+taskInputHash: 1b458dd78df8d537
 title: |-
-  記事のタイトルと説明も注意深く翻訳してください。ただし、&、<、>を使用しないでください。
+  記事のタイトルと説明も注意深く翻訳してください。& や < または > は使用しないでください。
 
    カルーセルを作成する
 description: ウェブサイトでカルーセルを作成する方法
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: ja
 ---
-ウェブサイトで画像カルーセルを作成する一般的な手順は以下の通りです：
-1. 新しいHTMLファイルを作成し、画像カルーセル用に名前を付けます。例えば「carousel.html」など。
-2. ファイルにHTML構造を追加します。通常は、タイトルや必要なCSSスタイルシートが含まれるヘッドセクションと、実際のカルーセルを追加するボディセクションが含まれます。
-3. `<div>`タグを使ってカルーセル用のコンテナを作成します。このコンテナにIDやクラスを付けて後でスタイルを設定できるようにします。
-4. コンテナの中に、`<img>`タグを使って個々の画像要素を追加します。ソース属性を画像ファイルのパスやURLに設定し、必要に応じて代替テキストやキャプションを追加します。
-5. `<button>`または`<a>`タグを使ってカルーセルにナビゲーションボタンを追加します。左矢印と右矢印用にボタンやリンクが必要です。
-6. JavaScriptコードを追加してカルーセルを機能的にします。ナビゲーションボタンのクリックイベントをリッスンし、カルーセルの表示をそれに応じて更新する必要があります。これを行うには、DOM APIまたはjQueryやReactのようなJavaScriptライブラリを使用することができます。
+ウェブサイトで画像カルーセルを作成するための一般的な手順は以下の通りです：
+1. 新しいHTMLファイルを作成して、画像カルーセル用に名前を付けます。例えば「carousel.html」などにします。
+2. ファイルにHTMLの構造を追加します。これには通常、タイトルや必要なCSSスタイルシートを含むヘッドセクションと、実際のカルーセルを追加するボディセクションが含まれます。
+3. `<div>`タグを使用してカルーセルのコンテナを作成します。後でスタイリングできるようにIDまたはクラスを付けてください。
+4. コンテナの中に`<img>`タグを使用して個々の画像エレメントを追加します。ソース属性を画像ファイルのパスまたはURLに設定し、必要に応じてaltテキストやキャプションを追加できます。
+5. `<button>`や`<a>`タグを使用してカルーセルにナビゲーションボタンを追加します。左矢印用のボタンまたはリンクと、右矢印用のボタンまたはリンクが必要です。
+6. カルーセルを機能的にするためにJavaScriptコードを追加します。ナビゲーションボタンのクリックイベントをリッスンし、それに応じてカルーセルの表示を更新する必要があります。DOM APIまたはjQueryやReactのようなJavaScriptライブラリを使用してこれを行うことができます。
 
-以下は、jQueryを使用してシンプルな画像カルーセルを作成する例のコードです：
+以下は、jQueryを使用して簡単な画像カルーセルを作成するためのサンプルコードです：
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>マイ画像カルーセル</title>
+	<title>私の画像カルーセル</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>
@@ -65,12 +65,12 @@ lang: ja
 </head>
 <body>
 	<div class="carousel owl-carousel owl-theme">
-		<img src="image1.jpg" alt="画像 1">
-		<img src="image2.jpg" alt="画像 2">
-		<img src="image3.jpg" alt="画像 3">
-		<img src="image4.jpg" alt="画像 4">
-		<img src="image5.jpg" alt="画像 5">
-		<img src="image6.jpg" alt="画像 6">
+		<img src="image1.jpg" alt="Image 1">
+		<img src="image2.jpg" alt="Image 2">
+		<img src="image3.jpg" alt="Image 3">
+		<img src="image4.jpg" alt="Image 4">
+		<img src="image5.jpg" alt="Image 5">
+		<img src="image6.jpg" alt="Image 6">
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

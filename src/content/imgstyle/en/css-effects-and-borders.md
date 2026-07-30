@@ -1,8 +1,8 @@
 ---
 title: CSS effects and borders
 description: How to add CSS effects and borders to an image
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 ---
 
 To add CSS effects and borders to an image, you can use the following steps: 

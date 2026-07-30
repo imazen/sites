@@ -1,25 +1,26 @@
 ---
-taskInputHash: fa005e5f0d4944f4
+taskInputHash: 9743119905baf830
 title: |-
-  Carefully translate the article title and description. Do not use & or < or >.
+  Pay careful attention to translating the article title and description as well.
 
-Adding Padding to Images
-description: How to center images and add padding using CSS and aspect ratio
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  Setting Padding on an Image
+description: How to center images and set padding using CSS and aspect ratio
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-The method for centering images and adding padding using CSS and aspect ratio is as follows:
-1. First, you need to wrap the image in a container element such as a `<div>` or `<figure>`. This allows the styles applied to the container to affect the image inside.
-2. Set the `position` property of the container to `relative`. This enables positioning of the image within the container.
-3. Add the `::after` pseudo-element to the container. This is used to maintain the image's aspect ratio and create the padding.
-4. Set the `content` property of the `::after` pseudo-element to an empty string. This is necessary to create the element.
-5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value corresponding to the image's aspect ratio. For example, if the image's aspect ratio is 4:3, set the padding to `75%` (since 3/4 = 0.75). This creates padding below the image.
-6. Set the `position` property of the `::after` pseudo-element to `absolute`. This enables positioning within the container.
-7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This ensures that the element fills the entire container, creating the padding.
-8. Finally, set the `position` property of the image itself to `absolute`. This allows the image to be centered within the container using the `top`, `left`, `bottom`, and `right` properties.
+The following is how to center images and set padding using CSS and aspect ratio:
 
-Below is an example of the CSS code to center an image with a 4:3 aspect ratio and set the padding:
+1. First, you need to wrap the image in a container element such as `<div>` or `<figure>`. This allows you to apply styles to the container that affect the image within.
+2. Set the `position` property of the container to `relative`. This allows the image to be positioned within the container.
+3. Add a `::after` pseudo-element to the container. This helps maintain the image's aspect ratio and create padding.
+4. Set the `content` property of the `::after` pseudo-element to an empty string. This effectively creates the element.
+5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value corresponding to the image's aspect ratio. For example, if the image's aspect ratio is 4:3, set the padding to `75%` (3/4 = 0.75). This creates padding below the image.
+6. Set the `position` property of the `::after` pseudo-element to `absolute`. This positions the element within the container.
+7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This ensures the element fills the container, creating padding.
+8. Finally, set the `position` property of the image itself to `absolute`. This allows you to use the `top`, `left`, `bottom`, and `right` properties to center the image within the container.
+
+Below is an example of CSS code to center an image with a 4:3 aspect ratio and set padding:
 
 ```css
 .container {
@@ -30,7 +31,7 @@ Below is an example of the CSS code to center an image with a 4:3 aspect ratio a
 .container::after {
   content: "";
   display: block;
-  padding-bottom: 75%; /* Aspect ratio of 4:3 */
+  padding-bottom: 75%; /* 4:3 aspect ratio */
   position: absolute;
   top: 0;
   left: 0;
@@ -50,11 +51,13 @@ img {
 }
 ```
 
-In this example, the `.container` element is the container for the image. The `::after` pseudo-element is used to create padding and maintain the image's aspect ratio. The `img` element is set to `position: absolute` and is centered within the container using the `top`, `left`, `bottom`, and `right` properties.
+In this example, the `.container` element is the image's container. The `::after` pseudo-element creates padding and maintains the image's aspect ratio. The `img` element is set to `position: absolute`, allowing it to be centered within the container using the `top`, `left`, `bottom`, `right` properties.
 
-By setting the `max-width` and `max-height` properties of the image to `100%`, the image scales to fit the available space while maintaining its aspect ratio. This ensures that the padding created by the `::after` pseudo-element is always proportional to the size of the image.
+By setting the `max-width` and `max-height` properties of the image to `100%`, the image scales to fit the available space while maintaining its aspect ratio. This means the padding created by the `::after` pseudo-element is always proportional to the image's size.
 
-{{Note that the instructions are correctly translated, though the Japanese phrasing relies heavily on implication and may not be explicit for all English readers. The phrase "element" is consistently used for HTML elements, which is technically accurate.}}
+[Mistakes or clumsy phrasing:]
+- {{No major grammatical issues detected in the translation. The technical terms and phrases are appropriate in the target language.}}
+- {{The task input note about translating the article title and description could be more explicit, but it does not affect the actual content.}}
 =====================
 
 Content prompt used: 
@@ -67,10 +70,10 @@ Also carefully translate the title and description for the article; do not use &
 1. Pad an image
  2. How to pad an image using css and aspect ratio to center
 
-Metadata returned記事のタイトルと説明も注意深く翻訳してください。& や < または > は使用しないでください。
+Metadata returned記事のタイトルと説明も注意深く翻訳してください。
 
-1. 画像にパディングを追加する
-2. CSSとアスペクト比を使用して画像をセンタリングし、パディングを追加する方法 
+1. 画像にパディングを設定する
+2. CSSとアスペクト比を使用して画像をセンタリングし、パディングを設定する方法 
 
 
 Roundtrip (isolated) prompt used: 

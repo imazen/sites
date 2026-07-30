@@ -2,8 +2,8 @@
 title: New CSS features for images
 description: New CSS features for images
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 ---
 
 Modern CSS empowers developers with concise, effective tools for robust image handling:

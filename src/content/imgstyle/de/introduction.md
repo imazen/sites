@@ -1,16 +1,16 @@
 ---
-taskInputHash: 791983b972d18c2a
-title: Neue CSS-Funktionen für Bilder
-description: Neue CSS-Funktionen für Bilder
+taskInputHash: b2f860b13783fb3d
+title: Neue CSS-Features für Bilder
+description: Neue CSS-Features für Bilder
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: de
 ---
-Modernes CSS bietet Entwicklern präzise, effektive Werkzeuge für eine robuste Bildverarbeitung:
+Moderne CSS bietet Entwicklern prägnante, effektive Werkzeuge für eine robuste Bildverarbeitung:
 
 - **Seitenverhältnis:**  
-  Die Eigenschaft `aspect-ratio` erzwingt feste Proportionen, stabilisiert Layouts und verhindert unerwartete Verschiebungen, während Bilder geladen werden.  
+  Die Eigenschaft `aspect-ratio` erzwingt feste Proportionen und stabilisiert Layouts, indem sie unerwartete Verschiebungen während des Ladens von Bildern verhindert.  
   ```css  
   .container {  
     aspect-ratio: 16/9;  
@@ -18,7 +18,7 @@ Modernes CSS bietet Entwicklern präzise, effektive Werkzeuge für eine robuste 
   ```
 
 - **Object Fit & Object Position:**  
-  Verwenden Sie `object-fit` (z. B. `cover`, `contain`) und `object-position`, um die Bildskalierung und -ausrichtung innerhalb ihrer Container präzise zu steuern und so ungeschicktes Zuschneiden oder Verzerrungen zu vermeiden.  
+  Verwenden Sie `object-fit` (z.B. `cover`, `contain`) und `object-position`, um das Bildskalieren und die Ausrichtung innerhalb ihrer Container präzise zu steuern, und damit unhandliches Zuschneiden oder Verzerrungen zu vermeiden.  
   ```css  
   img {  
     object-fit: cover;  
@@ -27,7 +27,7 @@ Modernes CSS bietet Entwicklern präzise, effektive Werkzeuge für eine robuste 
   ```
 
 - **Image-Set für Auflösungsanpassung:**  
-  Die Funktion `image-set()` bietet einen Auflösungswechsel für Hintergrundbilder, um auf hochauflösenden Geräten optimale Klarheit zu gewährleisten.  
+  Die Funktion `image-set()` bietet Auflösungswechsel für Hintergrundbilder und sorgt für optimale Klarheit auf High-DPI-Geräten.  
   ```css  
   .hero {  
     background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
@@ -35,6 +35,6 @@ Modernes CSS bietet Entwicklern präzise, effektive Werkzeuge für eine robuste 
   ```
 
 - **Zusätzliche Verbesserungen:**  
-  `image-rendering` verfeinert Skalierungsalgorithmen für scharfe Ausgaben (ideal für Pixelkunst), während `filter` dynamische visuelle Effekte direkt in CSS ermöglicht.
+  `image-rendering` verfeinert Skalierungsalgorithmen für kristallklare Ausgabe (ideal für Pixelkunst), während `filter` dynamische visuelle Effekte direkt in CSS ermöglicht.
 
-Diese Funktionen optimieren die Bildpräsentation erheblich und reduzieren die Abhängigkeit von JavaScript-Tricks und komplexen Workarounds, was die alltäglichen Entwicklungsaufgaben deutlich erleichtert.
+Diese Funktionen vereinfachen die Bildpräsentation erheblich, reduzieren die Abhängigkeit von JavaScript-Tricks und komplexen Workarounds und erleichtern dadurch merklich die alltäglichen Entwicklungsaufgaben.

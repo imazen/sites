@@ -1,16 +1,15 @@
 ---
-taskInputHash: 930830be3ee9319f
-title: >-
-  Add an Option to View the Image in Fullscreen by Tapping in a Gallery
+taskInputHash: c870f31c5bd428b8
+title: Add a "click to view image in full screen" option to a gallery
 description: >-
-  How to add an option to view an image in fullscreen by tapping in a gallery
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  How to add a "click to view image in full screen" option to a gallery
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-To add a "Tap to view the image in fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen when the user taps on it.
+To add a "click to view image in full screen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen mode when the user clicks on it.
 
-Here's a basic approach you can use:
+Here is a basic approach you can use:
 1. First, create a container for your gallery and add all the images you want to display.
 
 ```html
@@ -22,8 +21,7 @@ Here's a basic approach you can use:
 </div>
 ```
 
-
-2. Then, add some CSS styles for the gallery and the images.
+2. Next, add some CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -38,8 +36,7 @@ Here's a basic approach you can use:
 }
 ```
 
-
-3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in fullscreen mode.
+3. Now, add a click event listener for each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full-screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -65,8 +62,7 @@ images.forEach((image) => {
 });
 ```
 
-
-4. Finally, add some CSS styles for the overlay and the fullscreen image.
+4. Finally, add some CSS to style the overlay and the full-screen image.
 
 ```css
 .overlay {
@@ -88,15 +84,9 @@ images.forEach((image) => {
 }
 ```
 
+With these steps, you should now have a gallery that allows users to view images in full-screen mode by clicking on them.
 
-
-With these steps, you should now have a gallery that allows users to view images in fullscreen by tapping on them.
-
-Mistakes or Clumsy Phrasing:
-
-{{The original text uses "appuyer" (to press) whereas "tapping" corresponds better in English for interactions in a digital interface.}}
-
-{{The original French "en plein écran" was translated to "in fullscreen," which is generally correct in technical English usage.}}
+{{There are no notable mistakes or clumsy phrasing in the translation.}}
 =====================
 
 Content prompt used: 
@@ -109,8 +99,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Add tap to view full-screen image to a gallery
  2. How to add a tap to view full-screen image option to a gallery
 
-Metadata returned1. Ajouter une option pour voir l'image en plein écran en appuyant dans une galerie
-2. Comment ajouter une option pour voir l'image en plein écran en appuyant dans une galerie 
+Metadata returned1. Ajouter une option "appuyer pour voir l'image en plein écran" à une galerie  
+2. Comment ajouter une option "appuyer pour voir l'image en plein écran" à une galerie 
 
 
 Roundtrip (isolated) prompt used: 

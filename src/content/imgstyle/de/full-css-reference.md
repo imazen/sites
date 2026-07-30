@@ -1,14 +1,14 @@
 ---
-taskInputHash: f15723ded82fd07d
-title: Vollständige CSS-Referenz
-description: 'Vollständige CSS-Referenz für Effekte, mit Beispielen'
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: 5f21f5216aad8b3e
+title: Umfassende CSS-Referenz
+description: 'Umfassende CSS-Referenz für Effekte, mit Beispielen'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: de
 ---
 Hier ist eine umfassende Referenz von CSS-Effekten und Rahmen, die Sie auf Bilder anwenden können, zusammen mit Beispielen für jedes:
 
-1. **Rand:** Fügt einen Rahmen um das Bild hinzu.
+1. **Rahmen:** Fügt einen Rahmen um das Bild hinzu.
 
 ```css
 img {
@@ -16,7 +16,7 @@ img {
 }
 ```
 
-2. **Schatten:** Fügt einen Schatten um das Bild hinzu.
+2. **Box-Shadow:** Fügt einen Schatten um das Bild hinzu.
 
 ```css
 img {
@@ -48,7 +48,7 @@ img {
 }
 ```
 
-6. **Unschärfe:** Macht das Bild unscharf.
+6. **Weichzeichnen:** Weichzeichnet das Bild.
 
 ```css
 img {
@@ -72,7 +72,7 @@ img {
 }
 ```
 
-9. **Farbton-Rotation:** Dreht den Farbton des Bildes.
+9. **Farbton-Drehen:** Dreht den Farbton des Bildes.
 
 ```css
 img {
@@ -80,7 +80,7 @@ img {
 }
 ```
 
-10. **Umkehrung:** Kehrt die Farben des Bildes um.
+10. **Invertieren:** Kehrt die Farben des Bildes um.
 
 ```css
 img {
@@ -104,7 +104,7 @@ img {
 }
 ```
 
-13. **Drop-Schatten:** Fügt einen Drop-Schatten-Effekt auf das Bild hinzu.
+13. **Schattenwurf:** Fügt einen Schattenwerf-Effekt auf das Bild hinzu.
 
 ```css
 img {
@@ -112,7 +112,7 @@ img {
 }
 ```
 
-14. **Übergang:** Fügt einen Übergangseffekt auf das Bild hinzu.
+14. **Übergang:** Fügt einen Übergangseffekt zum Bild hinzu.
 
 ```css
 img {
@@ -123,7 +123,7 @@ img:hover {
 }
 ```
 
-15. **Animation:** Fügt einen Animationseffekt auf das Bild hinzu.
+15. **Animation:** Fügt einen Animationseffekt zum Bild hinzu.
 
 ```css
 @keyframes slidein {
@@ -139,4 +139,4 @@ img {
 }
 ```
 
-Dies sind nur ein paar Beispiele für die vielen CSS-Effekte und -Rahmen, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und auffällige Designs zu erstellen!
+Dies sind nur einige Beispiele der vielen CSS-Effekte und Rahmen, die Sie auf Bilder anwenden können. Experimentieren Sie mit verschiedenen Stilen, um einzigartige und auffällige Designs zu erstellen!

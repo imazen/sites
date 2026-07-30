@@ -1,16 +1,16 @@
 ---
-taskInputHash: f46b52d39337bf50
+taskInputHash: 1d327e5efba00ae6
 title: Nya CSS-funktioner för bilder
 description: Nya CSS-funktioner för bilder
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-Modern CSS ger utvecklare effektiva, koncisa verktyg för robust bildhantering:
+Modern CSS ger utvecklare kraftfulla och effektiva verktyg för robust hantering av bilder:
 
-- **Bildförhållande (Aspect Ratio):**  
-  `aspect-ratio`-egenskapen upprätthåller fasta proportioner, vilket stabiliserar layouter genom att förhindra oväntade ändringar medan bilder laddas.  
+- **Aspect Ratio:**  
+  Egenskapen `aspect-ratio` upprätthåller fasta proportioner, vilket stabiliserar layouten genom att förhindra oväntade skiftningar när bilder laddas.  
   ```css  
   .container {  
     aspect-ratio: 16/9;  
@@ -18,7 +18,7 @@ Modern CSS ger utvecklare effektiva, koncisa verktyg för robust bildhantering:
   ```
 
 - **Object Fit & Object Position:**  
-  Använd `object-fit` (t.ex. `cover`, `contain`) och `object-position` för att exakt styra bildens skalning och justering inom sina behållare, vilket eliminerar oönskade beskärningar eller förvrängningar.  
+  Använd `object-fit` (t.ex., `cover`, `contain`) och `object-position` för att exakt kontrollera bildskalning och inpassning inom deras container, vilket eliminerar otymplig beskärning eller förvrängning.  
   ```css  
   img {  
     object-fit: cover;  
@@ -26,8 +26,8 @@ Modern CSS ger utvecklare effektiva, koncisa verktyg för robust bildhantering:
   }  
   ```
 
-- **Image-Set för Upplösningsanpassning:**  
-  `image-set()`-funktionen erbjuder upplösningsväxling för bakgrundsbilder, vilket säkerställer optimal klarhet på högupplösta enheter.  
+- **Image-Set för Anpassning till Upplösning:**  
+  Funktionen `image-set()` erbjuder upplösningsväxling för bakgrundsbilder, vilket säkerställer optimal klarhet på enheter med hög DPI.  
   ```css  
   .hero {  
     background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
@@ -35,6 +35,6 @@ Modern CSS ger utvecklare effektiva, koncisa verktyg för robust bildhantering:
   ```
 
 - **Ytterligare Förbättringar:**  
-  `image-rendering` finjusterar skalningsalgoritmer för tydlig utmatning (idealiskt för pixelkonst), medan `filter` möjliggör dynamiska visuella effekter direkt i CSS.
+  `image-rendering` finjusterar skalningsalgoritmer för tydlig utskrift (idealiskt för pixelkonst), medan `filter` möjliggör dynamiska visuella effekter direkt i CSS.
 
-Dessa funktioner avsevärt förenklar bildpresentationen, minskar beroendet av JavaScript-hack och komplexa lösningar, vilket därmed underlättar vardagliga utvecklingsuppgifter.
+Dessa funktioner förenklar bildpresentationen avsevärt, minskar beroendet av JavaScript-hack och komplexa lösningar, och underlättar därmed de dagliga utvecklingsuppgifterna markant.

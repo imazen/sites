@@ -1,21 +1,22 @@
 ---
-title: Add Padding to Images
-description: How to use CSS and aspect ratio to center and pad an image
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: f3af166c0535717d
+title: Filling Images
+description: How to fill and center images using CSS and aspect ratio
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Here is how to use CSS and aspect ratio to center and pad an image:
-1. First, wrap the image in a container element, such as `<div>` or `<figure>`. This will allow you to style the container, thereby affecting the image inside.
-2. Set the `position` property of the container to `relative`. This will allow you to position the image within the container.
-3. Add an `::after` pseudo-element to the container. This will be used to maintain the aspect ratio of the image and create padding.
-4. Set the `content` property of the `::after` pseudo-element to an empty string. This is required to create the element.
-5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value corresponding to the aspect ratio of the image. For example, if your image has an aspect ratio of 4:3, you should set the padding to `75%` (because 3/4 = 0.75). This will create padding below the image.
+Here is how you can center and fill an image using CSS and aspect ratio:
+1. First, you need to wrap the image in a container element such as `<div>` or `<figure>`. This allows you to apply styles to the container, thereby influencing the image inside.
+2. Set the container's `position` property to `relative`. This will allow you to position the image inside the container.
+3. Add a `::after` pseudo-element to the container. This will be used to maintain the image's aspect ratio and create padding.
+4. Set the `content` property of the `::after` pseudo-element to an empty string. This is necessary for creating the element.
+5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value corresponding to the image's aspect ratio. For example, if your image has a 4:3 aspect ratio, you should set the padding to `75%` (because 3/4 = 0.75). This will create padding below the image.
 6. Set the `position` property of the `::after` pseudo-element to `absolute`. This will position the element within the container.
 7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This will make the element fill the container, creating the padding.
 8. Finally, set the `position` property of the image itself to `absolute`. This will allow you to use the `top`, `left`, `bottom`, and `right` properties to center the image within the container.
 
-Below is an example using CSS code to center and pad an image with an aspect ratio of 4:3:
+Below is a CSS code example for centering and filling an image with a 4:3 aspect ratio:
 
 ```css
 .container {
@@ -46,11 +47,11 @@ img {
 }
 ```
 
-In this example, the `.container` element is the container for the image. The `::after` pseudo-element is used to create padding and maintain the aspect ratio of the image. The `img` element is set to `position: absolute`, allowing the use of `top`, `left`, `bottom`, and `right` properties to center it within the container.
+In this example, the `.container` element is the container for the image. The `::after` pseudo-element is used to create padding and maintain the image's aspect ratio. The `img` element is set to `position: absolute`, so you can use the `top`, `left`, `bottom`, and `right` properties to center it within the container.
 
-By setting the `max-width` and `max-height` properties of the image to `100%`, the image will scale proportionally to fit the available space while maintaining its aspect ratio. This means that the padding created by the `::after` pseudo-element will always be proportional to the size of the image.
+By setting the image's `max-width` and `max-height` properties to `100%`, the image will scale proportionally to fit the available space, while maintaining its aspect ratio. This means that the padding created by the `::after` pseudo-element will always be proportional to the size of the image.
 
-{{No mistakes or clumsy phrasing were found in the translation.}}
+{{No mistakes or clumsy phrasings were found in the translation.}}
 =====================
 
 Content prompt used: 
@@ -63,8 +64,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Pad an image
  2. How to pad an image using css and aspect ratio to center
 
-Metadata returned1. 给图像添加填充
-2. 如何使用CSS和宽高比来居中填充图像 
+Metadata returned1. 填充图像  
+2. 如何使用 CSS 和纵横比来填充并居中图像 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,16 +1,16 @@
 ---
-taskInputHash: 9168224e1dd44c4a
-title: Frequently Asked Questions (FAQ)
-description: Frequently Asked Questions about styling and layout of images in CSS
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: d7477b982357312e
+title: FAQ
+description: Frequently Asked Questions about Styling and Laying Out Images with CSS
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Here are some frequently asked questions when styling and positioning images using CSS:
+Frequently asked questions about setting styles for images and their layout with CSS include the following:
 
-**1. How can I set the size of an image in CSS?**
+**1. How do you set the size of an image with CSS?**
 
-To set the size of an image in CSS, you can use the `width` and `height` properties. For example, to set the width of an image to 300 pixels, use the following CSS code:
+To set the size of an image using CSS, you can use the `width` and `height` properties. For example, to set the width of an image to 300 pixels, use the following CSS code:
 
 ```css
 img {
@@ -18,9 +18,9 @@ img {
 }
 ``` 
 
-**2. How can I center an image both horizontally and vertically using CSS?**
+**2. How do you center an image horizontally and vertically using CSS?**
 
-To center an image both horizontally and vertically using CSS, use `display: flex` and the properties `justify-content: center` and `align-items: center` on the container holding the image. For example, use the following CSS code to center an image inside a `div` element:
+To center an image horizontally and vertically using CSS, use the `display: flex` property along with the `justify-content: center` and `align-items: center` properties on the container that holds the image. For example, to center an image within a `div` element, use the following CSS code:
 
 ```css
 div {
@@ -30,14 +30,14 @@ div {
 }
 
 div img {
-  /* Optional: Set the maximum width of the image */
+  /* Optional: Set a maximum width for the image */
   max-width: 100%;
 }
 ``` 
 
-**3. How can I make an image responsive using CSS?**
+**3. How do you make an image responsive in CSS?**
 
-To make an image responsive using CSS, use the `max-width: 100%` property on the image. This ensures that the image does not exceed the width of its container. For example:
+To make an image responsive in CSS, use the `max-width: 100%` property on the image. This ensures that the image will not exceed the width of its container. Example:
 
 ```css
 img {
@@ -46,9 +46,9 @@ img {
 }
 ``` 
 
-**4. How can I add a border or shadow to an image using CSS?**
+**4. How do you add borders or shadows to an image with CSS?**
 
-To add a border or shadow to an image using CSS, you can use the `border` and `box-shadow` properties. For example:
+To add borders or shadows to an image with CSS, use the `border` and `box-shadow` properties, respectively. Example:
 
 ```css
 img {
@@ -57,21 +57,21 @@ img {
 }
 ``` 
 
-**5. How can I arrange images side by side using CSS?**
+**5. How do you arrange images side by side with CSS?**
 
-To arrange images side by side using CSS, use the `display: inline-block` property on the images. For example:
+To arrange images side by side with CSS, use the `display: inline-block` property on the images. Example:
 
 ```css
 img {
   display: inline-block;
-  /* Optional: Set a margin between images */
+  /* Optional: Set space between images */
   margin-right: 10px;
 }
 ``` 
 
-**6. How can I set a background image using CSS?**
+**6. How do you set a background image with CSS?**
 
-To set a background image using CSS, use the `background-image` property. For example:
+To set a background image with CSS, use the `background-image` property. Example:
 
 ```css
 div {
@@ -79,9 +79,9 @@ div {
 }
 ``` 
 
-**7. How can I crop an image using CSS?**
+**7. How do you crop an image using CSS?**
 
-To crop an image using CSS, you can use the `clip` property. For example:
+To crop an image using CSS, use the `clip` property. Example:
 
 ```css
 img {
@@ -89,11 +89,11 @@ img {
 }
 ```
 
-This clips the image to a 100x100 pixel rectangle starting from the top left corner.
+This will crop the image into a 100x100 pixel rectangle starting from the top-left corner.
 
-**8. How can I add a hover effect to an image using CSS?**
+**8. How do you add a hover effect to an image with CSS?**
 
-To add a hover effect to an image using CSS, use the `:hover` pseudo-class. For example:
+To add a hover effect to an image with CSS, use the `:hover` pseudo-class. Example:
 
 ```css
 img {
@@ -102,14 +102,14 @@ img {
 }
 
 img:hover {
-  /* Set the state of the image when hovered */
+  /* Set the state of the image on hover */
   opacity: 1;
 }
 ``` 
 
-**9. How can I control the space between images using CSS?**
+**9. How do you control the space between images with CSS?**
 
-To control the space between images using CSS, use the `margin` property. For example:
+To control the space between images with CSS, use the `margin` property. Example:
 
 ```css
 img {
@@ -119,9 +119,9 @@ img {
 
 This adds a 10-pixel margin to the right of each image.
 
-**10. How can I create an image slideshow using CSS?**
+**10. How do you create an image slideshow with CSS?**
 
-To create an image slideshow using CSS, define the animation using the `@keyframes` rule and apply the `animation` property to the images. For example:
+To create an image slideshow with CSS, define an animation using the `@keyframes` rule and apply it to the images using the `animation` property. Example:
 
 ```css
 @keyframes slideshow {
@@ -130,13 +130,14 @@ To create an image slideshow using CSS, define the animation using the `@keyfram
 }
 
 img {
-  /* Set the initial state of the images */
+  /* Set the initial state of the image */
   opacity: 0;
   /* Set the duration and timing function of the animation */
-  animation: slideshow
+  animation: slideshow;
+  /* (Continuation is needed) */
 ```
 
-{{Note that the document seems incomplete due to the missing closing brackets or sections under the last FAQ item.}}
+[No noticeable mistakes or clumsy phrasing were detected in the translation.]
 =====================
 
 Content prompt used: 
@@ -149,8 +150,8 @@ Also carefully translate the title and description for the article; do not use &
 1. FAQ
  2. Frequently asked questions regarding styling and laying out images with CSS
 
-Metadata returned1. よくある質問 (FAQ)
-2. CSSでの画像のスタイリングとレイアウトに関するよくある質問 
+Metadata returned1. FAQ
+2. CSSで画像のスタイル設定やレイアウトに関するよくある質問 
 
 
 Roundtrip (isolated) prompt used: 

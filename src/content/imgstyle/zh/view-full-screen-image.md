@@ -1,23 +1,23 @@
 ---
-taskInputHash: 6d1a32fd5c98ec52
-title: 为图库添加点击查看全屏图像功能
+taskInputHash: 57e54e044c71414d
+title: 为图库添加点击查看全屏图像
 description: 如何为图库添加点击查看全屏图像选项
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: zh
 ---
-要为图库添加 "点击查看全屏图像" 选项，可以使用JavaScript和CSS创建一个覆盖层，当用户点击时显示全屏图像。
+要为图库添加“点击查看全屏图像”选项，可以使用JavaScript和CSS创建一个覆盖层，当用户点击图像时，它会在全屏模式下显示图像。
 
-以下是实现此功能的基本步骤：
+以下是一个基本的方法：
 
-1. 首先，创建一个用于展示图片的容器并添加所有想要展示的图像。
+1. 首先，创建一个容器来放置您的图库，并添加您想展示的所有图像。
 
 ```html
 <div class="gallery">
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- 在这里添加更多图像 -->
+  <!-- 在这里添加更多的图像 -->
 </div>
 ```
 
@@ -58,7 +58,7 @@ images.forEach((image) => {
     // 将图像元素添加到覆盖层
     overlay.appendChild(fullScreenImage);
     
-    // 将覆盖层添加到页面上
+    // 将覆盖层添加到页面
     document.body.appendChild(overlay);
   });
 });
@@ -89,4 +89,4 @@ images.forEach((image) => {
 
 
 
-通过这些步骤，您的图库现在应该可以让用户通过点击图像来查看全屏模式的图像。
+通过这些步骤，您现在应该有一个允许用户通过点击查看全屏模式的图库。

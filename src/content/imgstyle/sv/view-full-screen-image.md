@@ -1,29 +1,29 @@
 ---
-taskInputHash: 2b7961010cc65edd
-title: Lägg till tryck för att visa bild i helskärm i ett galleri
+taskInputHash: 4302661138b656d7
+title: Lägg till tryck för att visa bild i fullskärm i ett galleri
 description: >-
-  Hur man lägger till ett alternativ för att trycka för att visa bild i helskärm
-  i ett galleri
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  Hur man lägger till ett alternativ för tryck för att visa bild i fullskärm i
+  ett galleri
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-För att lägga till ett alternativ "Tryck för att visa bild i helskärm" i ett galleri kan du använda JavaScript och CSS för att skapa ett överlägg som visar bilden i helskärmsläge när användaren trycker på den.
+För att lägga till ett alternativ "Tryck för att visa bild i fullskärm" till ett galleri, kan du använda JavaScript och CSS för att skapa ett överlägg som visar bilden i fullskärmsläge när användaren trycker på den.
 
-Här är en grundläggande metod du kan använda:
-1. Skapa först en behållare för ditt galleri och lägg till alla bilder du vill visa.
+Här är ett grundläggande tillvägagångssätt du kan använda:
+1. Först skapar du en behållare för ditt galleri och lägger till alla bilder du vill visa.
 
 ```html
 <div class="gallery">
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- lägg till fler bilder här -->
+  <!-- fler bilder här -->
 </div>
 ```
 
 
-2. Lägg sedan till lite CSS för att styla galleriet och bilderna.
+2. Nästa steg är att lägga till lite CSS för att styla galleriet och bilderna.
 
 ```css
 .gallery {
@@ -39,7 +39,7 @@ Här är en grundläggande metod du kan använda:
 ```
 
 
-3. Lägg nu till en klick-händelsehanterare till varje bild med JavaScript. När användaren klickar på en bild, kommer JavaScript att skapa ett överlägg och visa bilden i helskärmsläge.
+3. Nu, lägg till en klickhändelse på varje bild med JavaScript. När användaren klickar på en bild, kommer JavaScript skapa ett överlägg och visa bilden i fullskärmsläge.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -56,17 +56,17 @@ images.forEach((image) => {
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // lägg till bildelement till överlägg
+    // lägg till bildelement till överlägget
     overlay.appendChild(fullScreenImage);
     
-    // lägg till överlägg på sidan
+    // lägg till överlägget på sidan
     document.body.appendChild(overlay);
   });
 });
 ```
 
 
-4. Slutligen, lägg till lite CSS för att styla överlägget och bilden i helskärmsläge.
+4. Slutligen, lägg till lite CSS för att styla överlägget och fullskärmsbilden.
 
 ```css
 .overlay {
@@ -90,4 +90,4 @@ images.forEach((image) => {
 
 
 
-Med dessa steg, bör du nu ha ett galleri som tillåter användare att visa bilder i helskärmsläge genom att trycka på dem.
+Med dessa steg bör du nu ha ett galleri som tillåter användare att visa bilder i fullskärmsläge genom att trycka på dem.

@@ -1,13 +1,13 @@
 ---
-taskInputHash: ab5d0d98be556d82
+taskInputHash: a1a916ad58c7f312
 title: Frequently Asked Questions
 description: >-
-  Frequently asked questions about styling and arranging images with CSS
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  Frequently asked questions related to styling and laying out images with CSS
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Some common questions related to styling and arranging images with CSS include:
+Some common questions related to styling and laying out images with CSS include:
 
 **1. How do you set the size of an image in CSS?**
 
@@ -21,7 +21,7 @@ img {
 
 **2. How do you center an image horizontally and vertically using CSS?**
 
-To center an image horizontally and vertically using CSS, you can use the properties `display: flex`, `justify-content: center`, and `align-items: center` in a container that holds the image. For example, to center an image within a `div` element, you can use the following CSS code:
+To center an image horizontally and vertically using CSS, you can use the `display: flex`, `justify-content: center`, and `align-items: center` properties on a container that holds the image. For example, to center an image inside a `div` element, you can use the following CSS code:
 
 ```css
 div {
@@ -90,7 +90,7 @@ img {
 }
 ```
 
-This will crop the image to a 100x100-pixel square starting from the top left corner. 
+This will crop the image to a square of 100x100 pixels starting from the top left corner.
 
 **8. How do you add a hover effect to an image using CSS?**
 
@@ -103,7 +103,7 @@ img {
 }
 
 img:hover {
-  /* Set the state of the image when hovering over it */
+  /* Set the state of the image when hovered over */
   opacity: 1;
 }
 ``` 
@@ -120,9 +120,9 @@ img {
 
 This will add a 10-pixel margin to the right of each image.
 
-**10. How do you create an image slideshow using CSS?**
+**10. How do you create an image carousel using CSS?**
 
-To create an image slideshow using CSS, you can use the `@keyframes` rule to define the animation and the `animation` property to apply it to the images. For example:
+To create an image carousel using CSS, you can use the `@keyframes` rule to define the animation and the `animation` property to apply it to the images. For example:
 
 ```css
 @keyframes slideshow {
@@ -133,13 +133,14 @@ To create an image slideshow using CSS, you can use the `@keyframes` rule to def
 img {
   /* Set the initial state of the images */
   opacity: 0;
-  /* Set the duration and timing function of the animation */
+  /* Set the animation duration and timing function */
   animation: slideshow
 ```
 
-Mistakes or clumsy phrasing:
-
-{{Note that the translation was straightforward; no mistakes or awkward phrasing were found in the text.}}
+[Translation review notes: 
+1. The translated content appears accurate and consistent with the original text.
+2. No significant mistakes are detected. However, ensure technical terms match up-to-date standards if newer methods or best practices have been established since the completion of my training.
+]
 =====================
 
 Content prompt used: 
@@ -153,7 +154,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Frequently asked questions regarding styling and laying out images with CSS
 
 Metadata returned1. Preguntas Frecuentes
-2. Preguntas frecuentemente hechas sobre el estilo y la disposición de imágenes con CSS 
+2. Preguntas frecuentes relacionadas con el estilo y la disposición de imágenes con CSS 
 
 
 Roundtrip (isolated) prompt used: 

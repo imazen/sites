@@ -1,15 +1,16 @@
 ---
-title: Add Tap to View Image Fullscreen to a Gallery
+taskInputHash: d5da3e7e050a0eab
+title: Add Tap to View Image in Full Screen Function to a Gallery
 description: >-
-  How to add a tap-to-view-image-fullscreen option to a gallery
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  How to add a tap to view image in full screen option to a gallery
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-To add a "Tap to View Image Fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen mode when the user taps on it.
+To add a "Tap to view image in full screen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full-screen mode when the user taps on it.
 
 Here's a basic approach you can use:
-1. First, create a container for your gallery and add all the images you want to display.
+1. First, create a container for your gallery and add all the images you wish to display.
 
 ```html
 <div class="gallery">
@@ -37,7 +38,7 @@ Here's a basic approach you can use:
 ```
 
 
-3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, the JavaScript will create an overlay and display the image in full-screen mode.
+3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in full-screen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -57,7 +58,7 @@ images.forEach((image) => {
     // add image element to overlay
     overlay.appendChild(fullScreenImage);
     
-    // add overlay to page
+    // add overlay to the page
     document.body.appendChild(overlay);
   });
 });
@@ -88,11 +89,14 @@ images.forEach((image) => {
 
 
 
-With these steps, you should now have a gallery that allows users to view images in full-screen mode by tapping on them. 
+With these steps, you should now have a gallery that allows users to view images in full-screen mode by tapping on them.
 
-{{1. "Tocar" should be translated as "Tap" not "Click" since "tap" refers to touch devices. 
-2. The phrase "modo pantalla completa" translated as "full-screen mode" is correct, but depending on the technical context, a more specific term related to the platform (e.g., mobile vs. desktop) could be appropriate.
-3. There's no mention of functionality to close the overlay once opened, which could be foreseen as necessary to describe a useful implementation.}}
+---
+
+Mistakes or Clumsy Phrasing:
+
+- {{Note that the original Spanish version mentioned "tocar" (tap) for viewing the image, while in the translation, it mentions "click," which could imply using a mouse. For mobile devices, "tap" would be more suitable. If the purpose is to accommodate both mouse and touch interactions, mentioning both would be clearer.}}
+- {{The original Spanish guide doesn't mention how to close the overlay. Adding a feature to close the full-screen view would create a more complete solution. Adding something like: "To close the full-screen view, add an event listener for the 'click' or 'tap' event on the overlay itself," could be beneficial.}}
 =====================
 
 Content prompt used: 
@@ -105,8 +109,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Add tap to view full-screen image to a gallery
  2. How to add a tap to view full-screen image option to a gallery
 
-Metadata returned1. Añadir toque para ver la imagen a pantalla completa a una galería
-2. Cómo añadir una opción de tocar para ver la imagen a pantalla completa a una galería 
+Metadata returned1. Añadir función de tocar para ver imagen en pantalla completa a una galería  
+2. Cómo añadir una opción de tocar para ver imagen en pantalla completa a una galería 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,15 +1,15 @@
 ---
-taskInputHash: 2b7961010cc65edd
-title: Add Tap to View Image in Full Screen in a Gallery
+taskInputHash: 4302661138b656d7
+title: Add Tap to Show Image in Fullscreen in a Gallery
 description: >-
-  How to add an option to tap to view image in full screen in a gallery
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  How to add an option to tap to display an image in fullscreen in a gallery
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-To add an option "Tap to view image in full screen" in a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen mode when the user taps on it.
+To add a "Tap to Show Image in Fullscreen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image in fullscreen mode when the user taps on it.
 
-Here is a basic method you can use:
+Here is a basic approach you can use:
 1. First, create a container for your gallery and add all the images you want to display.
 
 ```html
@@ -17,12 +17,11 @@ Here is a basic method you can use:
   <img src="image1.jpg">
   <img src="image2.jpg">
   <img src="image3.jpg">
-  <!-- add more images here -->
+  <!-- more images here -->
 </div>
 ```
 
-
-2. Then add some CSS to style the gallery and the images.
+2. The next step is to add some CSS to style the gallery and the images.
 
 ```css
 .gallery {
@@ -37,8 +36,7 @@ Here is a basic method you can use:
 }
 ```
 
-
-3. Now add a click event handler to each image with JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in fullscreen mode.
+3. Now, add a click event to each image with JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in fullscreen mode.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -55,7 +53,7 @@ images.forEach((image) => {
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // add image element to overlay
+    // add image element to the overlay
     overlay.appendChild(fullScreenImage);
     
     // add overlay to the page
@@ -64,8 +62,7 @@ images.forEach((image) => {
 });
 ```
 
-
-4. Finally, add some CSS to style the overlay and the image in fullscreen mode.
+4. Finally, add some CSS to style the overlay and the fullscreen image.
 
 ```css
 .overlay {
@@ -87,11 +84,9 @@ images.forEach((image) => {
 }
 ```
 
+With these steps, you should now have a gallery that allows users to display images in fullscreen mode by tapping on them.
 
-
-With these steps, you should now have a gallery that allows users to view images in fullscreen mode by tapping on them.
-
-{{No mistakes were found in the translation.}}
+{{No significant mistakes or clumsy phrasing detected.}}
 =====================
 
 Content prompt used: 
@@ -104,8 +99,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Add tap to view full-screen image to a gallery
  2. How to add a tap to view full-screen image option to a gallery
 
-Metadata returned1. Lägg till tryck för att visa bild i helskärm i ett galleri
-2. Hur man lägger till ett alternativ för att trycka för att visa bild i helskärm i ett galleri 
+Metadata returned1. Lägg till tryck för att visa bild i fullskärm i ett galleri
+2. Hur man lägger till ett alternativ för tryck för att visa bild i fullskärm i ett galleri 
 
 
 Roundtrip (isolated) prompt used: 

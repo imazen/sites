@@ -1,14 +1,14 @@
 ---
-taskInputHash: 712d4da47f0990b3
+taskInputHash: 7e665787bf8eefff
 title: FAQ
 description: >-
-  Questions fréquemment posées concernant le style et la mise en page des images
+  Questions fréquemment posées concernant le style et la disposition des images
   avec CSS
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: fr
 ---
-Voici quelques questions fréquemment posées concernant le style et la mise en page des images avec CSS :
+Quelques questions fréquemment posées concernant le style et la disposition des images avec CSS incluent :
 
 **1. Comment définir la taille d'une image en CSS ?**
 
@@ -20,9 +20,9 @@ img {
 }
 ``` 
 
-**2. Comment centrer une image horizontalement et verticalement en CSS ?**
+**2. Comment centrer une image horizontalement et verticalement avec CSS ?**
 
-Pour centrer une image horizontalement et verticalement en CSS, vous pouvez utiliser les propriétés `display: flex`, `justify-content: center` et `align-items: center` sur un conteneur qui contient l'image. Par exemple, pour centrer une image à l'intérieur d'un élément `div`, vous pouvez utiliser le code CSS suivant :
+Pour centrer une image horizontalement et verticalement avec CSS, vous pouvez utiliser les propriétés `display: flex`, `justify-content: center` et `align-items: center` sur un conteneur qui contient l'image. Par exemple, pour centrer une image à l'intérieur d'un élément `div`, vous pouvez utiliser le code CSS suivant :
 
 ```css
 div {
@@ -32,14 +32,14 @@ div {
 }
 
 div img {
-  /* Optionnel : définir une largeur maximale pour l'image */
+  /* Facultatif : définir une largeur maximale pour l'image */
   max-width: 100%;
 }
 ``` 
 
-**3. Comment rendre une image responsive en CSS ?**
+**3. Comment rendre une image responsive avec CSS ?**
 
-Pour rendre une image responsive en CSS, vous pouvez utiliser la propriété `max-width: 100%` sur l'image. Cela garantira que l'image ne dépasse jamais la largeur de son conteneur. Par exemple :
+Pour rendre une image responsive avec CSS, vous pouvez utiliser la propriété `max-width: 100%` sur l'image. Cela garantit que l'image ne dépasse jamais la largeur de son conteneur. Par exemple :
 
 ```css
 img {
@@ -50,7 +50,7 @@ img {
 
 **4. Comment ajouter une bordure ou une ombre à une image en CSS ?**
 
-Pour ajouter une bordure ou une ombre à une image en CSS, vous pouvez utiliser les propriétés `border` et `box-shadow`, respectivement. Par exemple :
+Pour ajouter une bordure ou une ombre à une image en CSS, vous pouvez utiliser respectivement les propriétés `border` et `box-shadow`. Par exemple :
 
 ```css
 img {
@@ -59,14 +59,14 @@ img {
 }
 ``` 
 
-**5. Comment aligner les images côte à côte en CSS ?**
+**5. Comment aligner des images côte à côte avec CSS ?**
 
-Pour aligner les images côte à côte en CSS, vous pouvez utiliser la propriété `display: inline-block` sur les images. Par exemple :
+Pour aligner des images côte à côte avec CSS, vous pouvez utiliser la propriété `display: inline-block` sur les images. Par exemple :
 
 ```css
 img {
   display: inline-block;
-  /* Optionnel : définir une marge entre les images */
+  /* Facultatif : définir une marge entre les images */
   margin-right: 10px;
 }
 ``` 
@@ -81,9 +81,9 @@ div {
 }
 ``` 
 
-**7. Comment recadrer une image en CSS ?**
+**7. Comment découper une image avec CSS ?**
 
-Pour recadrer une image en CSS, vous pouvez utiliser la propriété `clip`. Par exemple :
+Pour découper une image avec CSS, vous pouvez utiliser la propriété `clip`. Par exemple :
 
 ```css
 img {
@@ -91,7 +91,7 @@ img {
 }
 ```
 
-Cela recadre l'image en un carré de 100x100 pixels à partir du coin supérieur gauche.
+Cela va découper l'image en un carré de 100x100 pixels à partir du coin supérieur gauche. 
 
 **8. Comment ajouter un effet hover à une image en CSS ?**
 
@@ -104,14 +104,14 @@ img {
 }
 
 img:hover {
-  /* Définir l'état de l'image lors du survol */
+  /* Définir l'état de l'image lorsque survolée */
   opacity: 1;
 }
 ``` 
 
-**9. Comment contrôler l'espacement entre les images en CSS ?**
+**9. Comment contrôler l'espacement entre les images avec CSS ?**
 
-Pour contrôler l'espacement entre les images en CSS, vous pouvez utiliser la propriété `margin`. Par exemple :
+Pour contrôler l'espacement entre les images avec CSS, vous pouvez utiliser la propriété `margin`. Par exemple :
 
 ```css
 img {
@@ -121,9 +121,9 @@ img {
 
 Cela ajoutera une marge de 10 pixels à droite de chaque image.
 
-**10. Comment créer un diaporama d'images en CSS ?**
+**10. Comment créer un diaporama d'images avec CSS ?**
 
-Pour créer un diaporama d'images en CSS, vous pouvez utiliser la règle `@keyframes` pour définir l'animation et la propriété `animation` pour l'appliquer aux images. Par exemple :
+Pour créer un diaporama d'images avec CSS, vous pouvez utiliser la règle `@keyframes` pour définir l'animation et la propriété `animation` pour l'appliquer aux images. Par exemple :
 
 ```css
 @keyframes slideshow {
@@ -134,6 +134,6 @@ Pour créer un diaporama d'images en CSS, vous pouvez utiliser la règle `@keyfr
 img {
   /* Définir l'état initial des images */
   opacity: 0;
-  /* Définir la durée et la fonction de timing de l'animation */
+  /* Définir la durée et la fonction de synchronisation de l'animation */
   animation: slideshow
 ```

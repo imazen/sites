@@ -1,26 +1,26 @@
 ---
-taskInputHash: dd040d370085627f
+taskInputHash: ce81170132c40cc8
 title: FAQ
 description: Häufig gestellte Fragen zur Gestaltung und Anordnung von Bildern mit CSS
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: de
 ---
 Einige häufig gestellte Fragen zur Gestaltung und Anordnung von Bildern mit CSS umfassen:
 
-**1. Wie setzt man die Größe eines Bildes in CSS fest?**
+**1. Wie legt man die Größe eines Bildes in CSS fest?**
 
-Um die Größe eines Bildes in CSS festzulegen, können Sie die Eigenschaften `width` und `height` verwenden. Zum Beispiel, um die Breite eines Bildes auf 300 Pixel zu setzen, können Sie den folgenden CSS-Code verwenden:
+Um die Größe eines Bildes in CSS festzulegen, können Sie die Eigenschaften `width` und `height` verwenden. Um beispielsweise die Breite eines Bildes auf 300 Pixel festzulegen, können Sie folgenden CSS-Code verwenden:
 
 ```css
 img {
   width: 300px;
 }
-```
+``` 
 
 **2. Wie zentriert man ein Bild horizontal und vertikal mit CSS?**
 
-Um ein Bild horizontal und vertikal mit CSS zu zentrieren, können Sie die Eigenschaften `display: flex` sowie `justify-content: center` und `align-items: center` auf einem Container verwenden, der das Bild enthält. Zum Beispiel, um ein Bild in einem `div`-Element zu zentrieren, können Sie den folgenden CSS-Code verwenden:
+Um ein Bild horizontal und vertikal mit CSS zu zentrieren, können Sie die Eigenschaften `display: flex`, `justify-content: center` und `align-items: center` auf einem Container verwenden, der das Bild enthält. Um beispielsweise ein Bild innerhalb eines `div` Elements zu zentrieren, können Sie folgenden CSS-Code verwenden:
 
 ```css
 div {
@@ -30,21 +30,21 @@ div {
 }
 
 div img {
-  /* Optional: Setze eine maximale Breite für das Bild */
+  /* Optional: maximale Breite für das Bild festlegen */
   max-width: 100%;
 }
-```
+``` 
 
-**3. Wie macht man ein Bild mit CSS responsiv?**
+**3. Wie macht man ein Bild mit CSS responsive?**
 
-Um ein Bild mit CSS responsiv zu machen, können Sie die Eigenschaft `max-width: 100%` auf das Bild anwenden. Dies stellt sicher, dass das Bild nie breiter als sein Container wird. Zum Beispiel:
+Um ein Bild mit CSS responsive zu machen, können Sie die Eigenschaft `max-width: 100%` auf das Bild anwenden. Dies stellt sicher, dass das Bild niemals breiter als sein Container wird. Zum Beispiel:
 
 ```css
 img {
   max-width: 100%;
   height: auto;
 }
-```
+``` 
 
 **4. Wie fügt man einen Rahmen oder Schatten zu einem Bild in CSS hinzu?**
 
@@ -55,19 +55,19 @@ img {
   border: 1px solid black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-```
+``` 
 
-**5. Wie richtet man Bilder mit CSS nebeneinander aus?**
+**5. Wie richtet man Bilder nebeneinander mit CSS aus?**
 
-Um Bilder mit CSS nebeneinander auszurichten, können Sie die Eigenschaft `display: inline-block` auf die Bilder anwenden. Zum Beispiel:
+Um Bilder nebeneinander mit CSS auszurichten, können Sie die Eigenschaft `display: inline-block` auf die Bilder anwenden. Zum Beispiel:
 
 ```css
 img {
   display: inline-block;
-  /* Optional: Setze einen Abstand zwischen den Bildern */
+  /* Optional: Abstand zwischen den Bildern einstellen */
   margin-right: 10px;
 }
-```
+``` 
 
 **6. Wie setzt man ein Hintergrundbild in CSS?**
 
@@ -77,7 +77,7 @@ Um ein Hintergrundbild in CSS zu setzen, können Sie die Eigenschaft `background
 div {
   background-image: url('image.jpg');
 }
-```
+``` 
 
 **7. Wie schneidet man ein Bild mit CSS zu?**
 
@@ -89,27 +89,27 @@ img {
 }
 ```
 
-Dies schneidet das Bild zu einem 100x100 Pixel großen Quadrat aus, beginnend an der oberen linken Ecke.
+Dies schneidet das Bild zu einem 100x100 Pixel großen Quadrat ab, beginnend von der oberen linken Ecke. 
 
-**8. Wie fügt man einen Hover-Effekt zu einem Bild mit CSS hinzu?**
+**8. Wie fügt man einen Hover-Effekt zu einem Bild in CSS hinzu?**
 
-Um einen Hover-Effekt zu einem Bild mit CSS hinzuzufügen, können Sie die Pseudo-Klasse `:hover` verwenden. Zum Beispiel:
+Um einen Hover-Effekt zu einem Bild in CSS hinzuzufügen, können Sie die Pseudo-Klasse `:hover` verwenden. Zum Beispiel:
 
 ```css
 img {
-  /* Setze den Anfangszustand des Bildes */
+  /* Den anfänglichen Zustand des Bildes einstellen */
   opacity: 0.8;
 }
 
 img:hover {
-  /* Setze den Zustand des Bildes, wenn man darüber schwebt */
+  /* Den Zustand des Bildes bei Hover einstellen */
   opacity: 1;
 }
-```
+``` 
 
-**9. Wie kontrolliert man den Abstand zwischen Bildern mit CSS?**
+**9. Wie steuert man den Abstand zwischen Bildern mit CSS?**
 
-Um den Abstand zwischen Bildern mit CSS zu kontrollieren, können Sie die Eigenschaft `margin` verwenden. Zum Beispiel:
+Um den Abstand zwischen Bildern mit CSS zu steuern, können Sie die Eigenschaft `margin` verwenden. Zum Beispiel:
 
 ```css
 img {
@@ -117,11 +117,11 @@ img {
 }
 ```
 
-Dies fügt einen 10 Pixel großen Rand rechts von jedem Bild hinzu.
+Dies fügt jedem Bild einen 10 Pixel breiten Abstand rechts hinzu.
 
 **10. Wie erstellt man eine Diashow von Bildern mit CSS?**
 
-Um eine Diashow von Bildern mit CSS zu erstellen, können Sie die `@keyframes` Regel verwenden, um die Animation zu definieren, und die Eigenschaft `animation` anwenden, um sie auf die Bilder anzuwenden. Zum Beispiel:
+Um eine Diashow von Bildern mit CSS zu erstellen, können Sie die Regel `@keyframes` nutzen, um die Animation zu definieren, und die Eigenschaft `animation`, um sie auf die Bilder anzuwenden. Zum Beispiel:
 
 ```css
 @keyframes slideshow {
@@ -130,8 +130,8 @@ Um eine Diashow von Bildern mit CSS zu erstellen, können Sie die `@keyframes` R
 }
 
 img {
-  /* Setze den Anfangszustand der Bilder */
+  /* Den anfänglichen Zustand der Bilder einstellen */
   opacity: 0;
-  /* Setze Dauer und Timing-Funktion der Animation */
-  animation: slideshow;
+  /* Dauer und Timing-Funktion der Animation festlegen */
+  animation: slideshow
 ```

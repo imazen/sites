@@ -1,9 +1,9 @@
 ---
-taskInputHash: 27c37d219018dff4
+taskInputHash: 8ede5fbc265153aa
 title: CSS Effects and Borders
-description: How to Add CSS Effects and Borders to Images
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+description: How to Add CSS Effects and Borders to an Image
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
 To add CSS effects and borders to an image, you can follow these steps:
@@ -13,41 +13,41 @@ To add CSS effects and borders to an image, you can follow these steps:
 
 ```css
 .my-image {
-  border: 2px solid black; /* Add a 2-pixel solid black border */
+  border: 2px solid black; /* Add a 2-pixel black border */
 }
 ```
 
-3. Apply the CSS class or ID selector to the image element. For example, if you used the `.my-image` selector in step 2, you can add the following code to your HTML to apply the style to the image:
+3. Apply the CSS class or ID selector to the image element. For instance, if you used `.my-image` as the selector in step 2, you can add the following code to your HTML to apply the style to the image:
 
 ```html
 <img src="path/to/image.jpg" class="my-image">
 ```
 
-4. Customize the styles as needed. In addition to borders, you can apply a wide range of CSS effects to images, such as filters, opacity, transitions, and animations. Here are some examples of CSS code that can be used to add effects to an image:
+4. Customize styles as needed. In addition to borders, you can apply various CSS effects to the image such as filters, opacity, transitions, and animations. Here are some CSS code examples that can be used to add effects to the image:
 
 ```css
-/* Add shadow effect */
+/* Add a shadow effect */
 .my-image {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a 0,0,10-pixel shadow */
 }
 
-/* Add grayscale filter effect */
+/* Add a grayscale filter effect */
 .my-image {
-  filter: grayscale(100%); /* Turn image to grayscale */
+  filter: grayscale(100%); /* Apply 100% grayscale */
 }
 
-/* Add zoom transition effect on hover */
+/* Add a zoom transition effect on hover */
 .my-image {
-  transition: transform 0.3s ease; /* Smooth transition effect */
+  transition: transform 0.3s ease; /* Add a 0.3-second zoom transition effect */
 }
 .my-image:hover {
-  transform: scale(1.1); /* Enlarge image on hover */
+  transform: scale(1.1); /* Scale to 1.1 times on hover */
 }
 ```
 
-These are just a few examples of the many CSS effects and borders you can use to enhance images. Try different styles to find the effect that best suits your design.
+These are just a few of the many CSS effects and borders you can use to enhance your images. Try different styles to find the one that best fits your design. 
 
-{{There are no noticeable mistakes or clumsy phrasing in this translation.}}
+{{No mistakes or clumsy phrasing were found in this translation.}}
 =====================
 
 Content prompt used: 

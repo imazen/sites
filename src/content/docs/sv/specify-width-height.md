@@ -1,18 +1,18 @@
 ---
-taskInputHash: 0fd2e033f6b026d2
-title: >-
-  Översätt också noggrant rubriken och beskrivningen för artikeln; använd inte &
-  eller < eller >
+taskInputHash: baa24b93a5247e72
+title: |-
+  Översätt noggrant titeln och beskrivningen för artikeln:
+
    Använd bredd och höjd
 description: Fördelar med att använda bredd- och höjdattribut i HTML-kod
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-Varför bör du ange bredd och höjd i HTML?
+Varför ska du ange bredd och höjd i HTML?
 
-> Det rekommenderas att sätta bredd- och höjdattributen i HTML-koden för bilder eftersom det hjälper webbläsaren att känna till bildens storlek innan den är helt laddad. Detta gör att webbläsaren kan reservera rätt mängd utrymme på webbsidan för bilden, vilket förhindrar att innehållet hoppar runt när bilden laddas.
->
-> Dessutom kan specificering av bredd och höjd attribut för bilder också bidra till att förbättra webbplatsens övergripande prestanda. När en webbläsare känner till storleken på en bild i förväg kan den mer exakt beräkna mängden utrymme som behövs för att visa bilden och undvika onödiga omflyttningar eller ommålningar av innehållet när det laddas.
->
-> Sammantaget kan användningen av bredd- och höjdattributen i HTML-koden för bilder förbättra användarupplevelsen genom att få innehållet att ladda snabbare och minska visuella störningar.
+> Det rekommenderas att ange bredd- och höjdattribut i HTML-koden för bilder eftersom det hjälper webbläsaren att veta bildens storlek innan den är helt laddad. Detta gör det möjligt för webbläsaren att reservera rätt mängd utrymme på webbsidan för bilden, vilket förhindrar att innehållet hoppar runt när bilden laddas.
+> 
+> Dessutom kan specificeringen av bredd- och höjdattribut för bilder också bidra till att förbättra den övergripande prestandan på webbsidan. När en webbläsare känner till en bilds storlek i förväg kan den mer exakt beräkna hur mycket utrymme som behövs för att visa bilden och undvika onödiga omflöden eller ommålningar av innehållet när det laddas.
+> 
+> Sammanfattningsvis kan användningen av bredd- och höjdattribut i HTML-koden för bilder förbättra användarupplevelsen genom att göra innehållet snabbare att ladda och minska visuella störningar.

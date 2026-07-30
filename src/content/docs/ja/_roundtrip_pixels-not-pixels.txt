@@ -1,14 +1,23 @@
+---
+taskInputHash: 1bc214ca4e1513f6
+title: px ≠ Pixel
+description: Device px ≠ Browser px ≠ Image px
+sidebar_sort_priority: 900
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
+lang: en
+---
 ### Device Pixels ≠ Browser px ≠ Image px
 
-Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/printer pixels**. The devicePixelRatio of my phone is 3.875. [What about yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to multiple device/printer pixels**. The devicePixelRatio on my phone is 3.875. What is yours? [Find out here.](https://www.mydevice.io/)
 
-The devicePixelRatio of my desktop changes with browser zoom, but it's 1.5 by default (since `System > Display > Scale` is at 150%).
+On desktops, the devicePixelRatio changes with browser zoom but defaults to 1.5 (since `System > Display > Scale` is set to 150%).
 
-Image files (except SVGs) are decoded into a grid of pixels. **Perfectly displaying image pixels in a 1:1 ratio with device pixels is annoyingly difficult, but with `srcset` you can get *pretty close***. If you need that perfect mapping for a legitimate reason, you can adjust the size of HTML elements after loading with a bit of JavaScript, but such forbidden techniques won't be revealed here.
+Image files (excluding SVGs) are decoded into a pixel grid. **Perfectly displaying the image's pixels as a 1:1 ratio with device pixels is tricky—but you can get quite close using `srcset`**. If there is a truly justified need for perfect mapping, you can adjust the sizes of HTML elements after loading with a bit of JavaScript, although such forbidden techniques will not be revealed here.
 
-> Other absolute [units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en/docs/Web/CSS/length) are defined by the number of CSS pixels, all pretending to be at 96dpi. Developers generally avoid absolute units and prefer using units derived from font size or viewport/container dimensions. If units don't match, layouts might break when users adjust magnification in `Accessibility > Text Size`, zoom the browser, or rotate the device. Needless to say, all these should be checked before shipping the site.
+> Other absolute [units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en/docs/Web/CSS/length) are defined by a constant number of CSS pixels and behave as if everything is 96dpi. Developers tend to avoid absolute units because using those deriving from font sizes or viewport/container dimensions is usually better. If a user adjusts `Accessibility > Text Size` scaling, zooms in on a browser, or rotates their device, mismatched units can break a layout. Needless to say, you should test all of these before publishing your site.
 
-{{Note that the italicized phrase *pretty close* might be seen as informal.}}
+{{No major mistakes or clumsy phrasing detected.}}
 =====================
 
 Content prompt used: 
@@ -22,8 +31,7 @@ Also carefully translate the title and description for the article; do not use &
  2. Device px ≠ browser px ≠ image px
 
 Metadata returned1. px ≠ ピクセル
-
-2. デバイスpx ≠ ブラウザpx ≠ 画像px 
+2. デバイスのpx ≠ ブラウザのpx ≠ 画像のpx 
 
 
 Roundtrip (isolated) prompt used: 

@@ -1,43 +1,43 @@
 ---
-taskInputHash: 7cf18adf7cb4e9fe
+taskInputHash: e62e60b7a7c85d34
 title: Densitetsbeskrivare och srcset
-description: Exempel på att använda densitetsbeskrivare i `srcset`
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+description: Exempel på användning av densitetsbeskrivare i `srcset`
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-Srcset med densitetsbeskrivare erbjuder en enkel och effektiv metod för att leverera den mest lämpliga bilden till varje användares enhet, vilket förbättrar prestanda och användarupplevelse. Denna guide kommer att gå igenom grunderna för att använda srcset med densitetsbeskrivare och ge markup-exempel för din bekvämlighet.
+Srcset med densitetsbeskrivare erbjuder en enkel och effektiv metod för att leverera den mest lämpliga bilden till varje användares enhet, vilket förbättrar prestanda och användarupplevelse. Denna guide kommer att leda dig genom grunderna i att använda srcset med densitetsbeskrivare och ge märknadsexempel för din bekvämlighet.
 
 ## Vad är Srcset med Densitetsbeskrivare?
 
-Srcset är ett HTML-attribut som låter dig ange flera bildkällor för ett enda `<img>`-element. Densitetsbeskrivare (`x`) används tillsammans med srcset för att tillhandahålla bilder med olika upplösningar beroende på pixelupplösningen på användarens skärm.
+Srcset är ett HTML-attribut som är utformat för att låta dig specificera flera bildkällor för ett enda `<img>`-element. Densitetsbeskrivare (`x`) används tillsammans med srcset för att tillhandahålla bilder av olika upplösningar baserat på pixeltätheten på användarens display.
 
-## När ska man använda Srcset med Densitetsbeskrivare
+## När ska du Använda Srcset med Densitetsbeskrivare
 
 Att använda srcset med densitetsbeskrivare är särskilt användbart när du vill:
-1. Servera högupplösta bilder till skärmar med hög DPI (t.ex. Retina-skärmar) samtidigt som lägre upplösta bilder serveras till standarddisplayer.
+1. Leverera högupplösta bilder till hög-DPI-skärmar (t.ex. Retina-skärmar) samtidigt som du tillhandahåller bilder med lägre upplösning till standarddisplayer.
 2. Förbättra sidans prestanda genom att leverera den mest lämpliga bildstorleken till varje användares enhet.
 
 ## Implementering av Srcset med Densitetsbeskrivare
 
 För att använda srcset med densitetsbeskrivare, följ dessa steg:
 1. Förbered dina bilder i olika upplösningar.
-2. Lägg till attributet `srcset` till `<img>`-elementet, inklusive bildkällorna och motsvarande densitetsbeskrivare.
-3. Lägg till attributet `sizes` (valfritt) för att specificera bildens storlek som den kommer att visas på skärmen.
+2. Lägg till `srcset`-attributet till `<img>`-elementet, inklusive bildkällorna och motsvarande densitetsbeskrivare. 
+3. Lägg till `sizes`-attributet (valfritt) för att specificera bildens storlek som den kommer att visas på skärmen.
 
-### Markup-exempel
+### Märknadsexempel
 
-Här är ett exempel på hur du implementerar srcset med densitetsbeskrivare i din markup:
+Här är ett exempel på hur man implementerar srcset med densitetsbeskrivare i din märknad:
 
 ```html
 <img src="example-image-1x.jpg"
      srcset="example-image-1x.jpg 1x, example-image-2x.jpg 2x, example-image-3x.jpg 3x"
-     alt="En exempelbild">
+     alt="En exempletbild">
 ```
 
-Detta markup-exempel inkluderar:
-- **src** : Standardbildkällan som visas om webbläsaren inte stödjer srcset.
-- **srcset** : Listan över bildkällor och deras densitetsbeskrivare (1x, 2x, 3x). Webbläsaren kommer att välja den mest lämpliga bilden baserat på användarens skärm.
-- **alt** : En beskrivning av bilden för tillgänglighetsändamål.
+Detta märknadsexempel inkluderar:
+- **src** : Standardbildkällan, visas om webbläsaren inte stöder srcset.
+- **srcset** : Listan över bildkällor och deras densitetsbeskrivare (1x, 2x, 3x). Webbläsaren kommer att välja den mest lämpliga bilden baserat på användarens display.
+- **alt** : En beskrivning av bilden för tillgänglighetssyften.
 
-Och det är allt! Du har framgångsrikt implementerat srcset med densitetsbeskrivare, vilket förbättrar din webbplats prestanda och användarupplevelse.
+Och där har du det! Du har framgångsrikt implementerat srcset med densitetsbeskrivare, vilket förbättrar din webbplats prestanda och användarupplevelse.

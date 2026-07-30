@@ -1,22 +1,14 @@
 ---
-taskInputHash: 53c35053b40447fb
-title: srcset and <img> sizes
-description: An efficient and opinionated guide on responsive images for 2023
-sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
-lang: en
----
 
-**An efficient and opinionated guide on images for 2023**
+**An Efficient and Confident Guide for Images in 2023**
 
-Check the sidebar for an in-depth examination. This is the quick reference to update these `<img>` tags to handle modern devices in all their different sizes and pixel densities. You should [know that pixels != pixels](/en/pixels-not-pixels) and `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones claim to be between 320 to 428px wide for readability (in CSS pixels), but have many device pixels per CSS pixel.
+Check the sidebar for an in-depth examination. Here is a quick reference for updating these `<img>` tags to handle modern devices in all their varied sizes and pixel densities. You should [know that pixels != pixels](/en/pixels-not-pixels) and that `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones claim to be 320-428px wide for better readability (in CSS pixels), but have many device pixels per CSS pixel.
 
-> If the image never changes size, no matter how much you shrink the browser window, you should use a [density descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
+> If your image never changes size, no matter how wide the browser window is, you should use a [density descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
 
-Do you know your [breakpoints](/en/breakpoints)? You will need these figures to refine the solution below – and at least the breakpoint of the window width where the main content area stops growing.
+Do you know your [breakpoints](/en/breakpoints)? You will need these numbers to fine-tune the solution below - and at a minimum the viewport width breakpoint where the main content area stops growing.
 
-### The easy method
+### The Easy Method
 
 ```html
 
@@ -27,21 +19,22 @@ Do you know your [breakpoints](/en/breakpoints)? You will need these figures to 
                 img.jpg?format=webp&w=1600 1600w, 
                 img.jpg?format=webp&w=2000 2000w"
 
-        sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bicycle" />
+        sizes="(max-width: 700px) 100vw, 800px" alt="Dog riding a bike" />
 
-<!-- We assumed you have a breakpoint at 700px. 
-      And that under this window width, this image takes 100% of the width, but
-      when the window is wider, the image is limited to 800 CSS pixels -->
+<!-- We have assumed you have a breakpoint at 700px. 
+      And that below this window width, this image takes 100% of the width, but 
+      when the window is larger, the image is limited to 800 CSS pixels -->
 
-<!-- This assumes you are using an image server compliant with RIAPI such as Imageflow.
-     Rendering image variants on the fly is essential for developers' peace of mind. -->
+<!-- This assumes you are using an RIAPI-capable image server such as Imageflow. 
+     Producing image variants on the fly is essential for developer peace of mind. -->
 ```
 
-Mistakes or clumsy phrasing:
+---
 
-- {{Note that "Responsive Images API" is abbreviated as "RIAPI" without any prior explanation within the text. It might be beneficial to clarify this abbreviation for readers unfamiliar with it.}}
-- {{The original French phrasing "Un guide efficace et opinionné" translates accurately, but the term "opinionated" may feel slightly negative or subjective to some readers. Consider rephrasing if clarity and tone moderation is important.}}
-- {{The term "tranquillité d'esprit" was translated as "peace of mind," which is a common phrase in English and considered a proper equivalent, despite slight variations in literal translation.}}
+### Mistakes or Clumsy Phrasing:
+
+- {{None}}
+
 =====================
 
 Content prompt used: 
@@ -54,8 +47,8 @@ Also carefully translate the title and description for the article; do not use &
 1. srcset & <img> sizes 
  2. An Efficient and Opinionated Guide to Responsive Images for 2023
 
-Metadata returned1. srcset et tailles <img> 
-2. Un guide efficace et opinionné sur les images réactives pour 2023 
+Metadata returned1. srcset et tailles <img>
+2. Un guide efficace et assumé pour les images réactives en 2023 
 
 
 Roundtrip (isolated) prompt used: 
