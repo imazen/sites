@@ -2,8 +2,8 @@
 title: px ≠ pixels
 description: Device px ≠ browser px ≠ image px
 sidebar_sort_priority: 900
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 ---
 
 ### Device pixels ≠ browser px ≠ image px

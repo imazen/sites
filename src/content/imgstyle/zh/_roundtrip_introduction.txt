@@ -1,16 +1,16 @@
 ---
-taskInputHash: e155b31cec32fa3f
-title: New Image CSS Features
+taskInputHash: 63ecdc2ce51802c6
+title: New CSS Features for Images
 description: New CSS Features for Images
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Modern CSS provides developers with streamlined, efficient tools for powerful image handling:
+Modern CSS provides developers with concise and efficient tools for powerful image processing:
 
 - **Aspect Ratio:**  
-  The `aspect-ratio` property enforces a fixed aspect ratio, stabilizing layouts by preventing unexpected shifts when images load.  
+  The `aspect-ratio` property enforces a fixed ratio, stabilizing the layout by preventing unexpected layout shifts when images load.  
   ```css  
   .container {  
     aspect-ratio: 16/9;  
@@ -18,7 +18,7 @@ Modern CSS provides developers with streamlined, efficient tools for powerful im
   ```
 
 - **Object Fit and Object Position:**  
-  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control image scaling and alignment within containers, eliminating awkward cropping or distortion.  
+  Use `object-fit` (such as `cover`, `contain`) and `object-position` to precisely control the scaling and alignment of images within their containers, eliminating awkward cropping or distortion.  
   ```css  
   img {  
     object-fit: cover;  
@@ -26,7 +26,7 @@ Modern CSS provides developers with streamlined, efficient tools for powerful im
   }  
   ```
 
-- **Resolution-Adaptive Image Sets:**  
+- **Image Sets for Resolution Adaptivity:**  
   The `image-set()` function provides resolution switching for background images, ensuring optimal clarity on high DPI devices.  
   ```css  
   .hero {  
@@ -34,12 +34,12 @@ Modern CSS provides developers with streamlined, efficient tools for powerful im
   }  
   ```
 
-- **Other Enhancements:**  
-  `image-rendering` fine-tunes scaling algorithms for sharp output (ideal for pixel art), while `filter` allows implementing dynamic visual effects directly in CSS.
+- **Additional Enhancements:**  
+  `image-rendering` fine-tunes scaling algorithms for crisp output (suitable for pixel art), while `filter` enables dynamic visual effects directly within CSS.
 
-These features significantly simplify image presentation, reducing the reliance on JavaScript tricks and complex solutions, thereby greatly easing daily development tasks.
+These features greatly simplify image rendering, reducing the need for JavaScript tricks and complex solutions, thereby notably simplifying everyday development tasks.
 
-{{No notable mistakes or clumsy phrasing were found in the original text.}}
+{{No mistakes or clumsy phrasing detected in the translation.}}
 =====================
 
 Content prompt used: 
@@ -52,8 +52,8 @@ Also carefully translate the title and description for the article; do not use &
 1. New CSS features for images
  2. New CSS features for images
 
-Metadata returned1. 新的图像CSS特性
-2. 图像的CSS新特性 
+Metadata returned1. 图像的新CSS特性
+2. 图像的新CSS特性 
 
 
 Roundtrip (isolated) prompt used: 

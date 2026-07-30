@@ -1,18 +1,18 @@
 ---
-taskInputHash: ab5d0d98be556d82
+taskInputHash: a1a916ad58c7f312
 title: Preguntas Frecuentes
 description: >-
-  Preguntas frecuentemente hechas sobre el estilo y la disposición de imágenes
+  Preguntas frecuentes relacionadas con el estilo y la disposición de imágenes
   con CSS
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: es
 ---
 Algunas preguntas comunes relacionadas con el estilo y la disposición de imágenes con CSS incluyen:
 
-**1. ¿Cómo estableces el tamaño de una imagen en CSS?**
+**1. ¿Cómo se establece el tamaño de una imagen en CSS?**
 
-Para establecer el tamaño de una imagen en CSS, puedes usar las propiedades `width` y `height`. Por ejemplo, para establecer el ancho de una imagen a 300 píxeles, puedes usar el siguiente código CSS:
+Para establecer el tamaño de una imagen en CSS, puedes utilizar las propiedades `width` y `height`. Por ejemplo, para establecer el ancho de una imagen a 300 píxeles, puedes usar el siguiente código CSS:
 
 ```css
 img {
@@ -20,9 +20,9 @@ img {
 }
 ``` 
 
-**2. ¿Cómo centras una imagen horizontal y verticalmente usando CSS?**
+**2. ¿Cómo se centra una imagen horizontal y verticalmente usando CSS?**
 
-Para centrar una imagen horizontal y verticalmente usando CSS, puedes usar las propiedades `display: flex`, `justify-content: center` y `align-items: center` en un contenedor que contenga la imagen. Por ejemplo, para centrar una imagen dentro de un elemento `div`, puedes usar el siguiente código CSS:
+Para centrar una imagen horizontal y verticalmente usando CSS, puedes utilizar las propiedades `display: flex`, `justify-content: center` y `align-items: center` en un contenedor que contenga la imagen. Por ejemplo, para centrar una imagen dentro de un elemento `div`, puedes usar el siguiente código CSS:
 
 ```css
 div {
@@ -32,12 +32,12 @@ div {
 }
 
 div img {
-  /* Opcional: establece un ancho máximo para la imagen */
+  /* Opcional: establecer un ancho máximo para la imagen */
   max-width: 100%;
 }
 ``` 
 
-**3. ¿Cómo haces una imagen responsiva usando CSS?**
+**3. ¿Cómo se hace una imagen responsiva usando CSS?**
 
 Para hacer una imagen responsiva usando CSS, puedes usar la propiedad `max-width: 100%` en la imagen. Esto asegurará que la imagen nunca exceda el ancho de su contenedor. Por ejemplo:
 
@@ -48,9 +48,9 @@ img {
 }
 ``` 
 
-**4. ¿Cómo agregas un borde o sombra a una imagen en CSS?**
+**4. ¿Cómo se añade un borde o sombra a una imagen en CSS?**
 
-Para agregar un borde o sombra a una imagen en CSS, puedes usar las propiedades `border` y `box-shadow`, respectivamente. Por ejemplo:
+Para añadir un borde o sombra a una imagen en CSS, puedes usar las propiedades `border` y `box-shadow`, respectivamente. Por ejemplo:
 
 ```css
 img {
@@ -59,19 +59,19 @@ img {
 }
 ``` 
 
-**5. ¿Cómo alineas imágenes una al lado de la otra usando CSS?**
+**5. ¿Cómo se alinean imágenes una al lado de la otra usando CSS?**
 
 Para alinear imágenes una al lado de la otra usando CSS, puedes usar la propiedad `display: inline-block` en las imágenes. Por ejemplo:
 
 ```css
 img {
   display: inline-block;
-  /* Opcional: establece un margen entre las imágenes */
+  /* Opcional: establecer un margen entre las imágenes */
   margin-right: 10px;
 }
 ``` 
 
-**6. ¿Cómo estableces una imagen de fondo en CSS?**
+**6. ¿Cómo se establece una imagen de fondo en CSS?**
 
 Para establecer una imagen de fondo en CSS, puedes usar la propiedad `background-image`. Por ejemplo:
 
@@ -81,7 +81,7 @@ div {
 }
 ``` 
 
-**7. ¿Cómo recortas una imagen usando CSS?**
+**7. ¿Cómo se recorta una imagen usando CSS?**
 
 Para recortar una imagen usando CSS, puedes usar la propiedad `clip`. Por ejemplo:
 
@@ -91,25 +91,25 @@ img {
 }
 ```
 
-Esto recortará la imagen a un cuadrado de 100x100 píxeles comenzando desde la esquina superior izquierda. 
+Esto recortará la imagen a un cuadrado de 100x100 píxeles comenzando desde la esquina superior izquierda.
 
-**8. ¿Cómo agregas un efecto hover a una imagen usando CSS?**
+**8. ¿Cómo se añade un efecto hover a una imagen usando CSS?**
 
-Para agregar un efecto hover a una imagen usando CSS, puedes usar la pseudo-clase `:hover`. Por ejemplo:
+Para añadir un efecto hover a una imagen usando CSS, puedes usar la pseudo-clase `:hover`. Por ejemplo:
 
 ```css
 img {
-  /* Establece el estado inicial de la imagen */
+  /* Establecer el estado inicial de la imagen */
   opacity: 0.8;
 }
 
 img:hover {
-  /* Establece el estado de la imagen al pasar el cursor sobre ella */
+  /* Establecer el estado de la imagen al pasar el ratón sobre ella */
   opacity: 1;
 }
 ``` 
 
-**9. ¿Cómo controlas el espaciado entre imágenes usando CSS?**
+**9. ¿Cómo se controla el espaciado entre imágenes usando CSS?**
 
 Para controlar el espaciado entre imágenes usando CSS, puedes usar la propiedad `margin`. Por ejemplo:
 
@@ -121,9 +121,9 @@ img {
 
 Esto añadirá un margen de 10 píxeles a la derecha de cada imagen.
 
-**10. ¿Cómo creas una presentación de diapositivas de imágenes usando CSS?**
+**10. ¿Cómo se crea un carrusel de imágenes usando CSS?**
 
-Para crear una presentación de diapositivas de imágenes usando CSS, puedes usar la regla `@keyframes` para definir la animación y la propiedad `animation` para aplicarla a las imágenes. Por ejemplo:
+Para crear un carrusel de imágenes usando CSS, puedes utilizar la regla `@keyframes` para definir la animación y la propiedad `animation` para aplicarla a las imágenes. Por ejemplo:
 
 ```css
 @keyframes slideshow {
@@ -132,8 +132,8 @@ Para crear una presentación de diapositivas de imágenes usando CSS, puedes usa
 }
 
 img {
-  /* Establece el estado inicial de las imágenes */
+  /* Establecer el estado inicial de las imágenes */
   opacity: 0;
-  /* Establece la duración y función de temporización de la animación */
+  /* Establecer la duración y función de tiempo de la animación */
   animation: slideshow
 ```

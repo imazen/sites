@@ -1,21 +1,23 @@
 ---
-title: Padding an Image
-description: How to Center and Pad an Image with CSS and Aspect Ratio
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: f6db5a545d8761aa
+title: Add Spacing to an Image
+description: >-
+  How to add spacing to an image using CSS and aspect ratio centering
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Here's how you can use CSS and the aspect ratio to center and pad an image:
-1. First, you need to embed your image in a container element like a `<div>` or `<figure>`. This allows you to apply styles to the container that affect the image within it.
-2. Set the `position` property of the container to `relative`. This allows you to position the image within the container.
-3. Add an `::after` pseudo-element to the container. This will be used to maintain the aspect ratio of the image and create the padding.
-4. Set the `content` property of the `::after` pseudo-element to an empty string. This is necessary to create the element.
-5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value that corresponds to the aspect ratio of the image. For example, if your image has an aspect ratio of 4:3, you would set the padding to `75%` (since 3/4 = 0.75). This will create the padding beneath the image.
-6. Set the `position` property of the `::after` pseudo-element to `absolute`. This positions the element within the container.
-7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This will let the element fill the entire container, thus creating the padding.
-8. Finally, set the `position` property of the image itself to `absolute`. This allows you to center the image within the container using the `top`, `left`, `bottom`, and `right` properties.
+Here's how you can use CSS and aspect ratio to center and add spacing to an image: 
+1. First, you need to embed your image within a container element, such as a `<div>` or `<figure>`. This allows you to apply styles to the container that affect the image within it. 
+2. Set the `position` property of the container to `relative`. This makes it possible to position the image within the container. 
+3. Add an `::after` pseudo-element to the container. This is used to maintain the image's aspect ratio and create the spacing. 
+4. Set the `content` property of the `::after` pseudo-element to an empty string. This is necessary to create the element. 
+5. Set the `padding-bottom` property of the `::after` pseudo-element to a percentage value that corresponds to the aspect ratio of the image. If your image has an aspect ratio of 4:3, for example, you would set the padding to `75%` (since 3/4 = 0.75). This creates the padding below the image. 
+6. Set the `position` property of the `::after` pseudo-element to `absolute`. This positions the element within the container. 
+7. Set the `top`, `left`, `bottom`, and `right` properties of the `::after` pseudo-element to `0`. This makes the element fill the container and create the padding. 
+8. Finally, set the `position` property of the image itself to `absolute`. This enables you to center the image within the container using the `top`, `left`, `bottom`, and `right` properties.
 
-Here is an example of the CSS code you would use to center and pad an image with an aspect ratio of 4:3:
+Here is an example of the CSS code you would use to center and add spacing to an image with a 4:3 aspect ratio:
 
 ```css
 .container {
@@ -46,11 +48,11 @@ img {
 }
 ```
 
-In this example, the `.container` element is the container for the image. The `::after` pseudo-element is used to create the padding and maintain the aspect ratio of the image. The `img` element is set to `position: absolute` so it can be centered within the container using the `top`, `left`, `bottom`, and `right` properties.
+In this example, the `.container` element is the container for the image. The `::after` pseudo-element is used to create the padding and maintain the image's aspect ratio. The `img` element is set to `position: absolute` so that it can be centered within the container using the `top`, `left`, `bottom`, and `right` properties.
 
-By setting the `max-width` and `max-height` properties of the image to `100%`, the image will scale to fit the available space while maintaining its aspect ratio. This means that the padding created by the `::after` pseudo-element is always proportional to the size of the image.
+By setting the image's `max-width` and `max-height` properties to `100%`, the image will scale to fit the available space while maintaining its aspect ratio. This means that the padding created by the `::after` pseudo-element remains proportional to the size of the image.
 
-{{Note that there was no need for corrections in the translation as the original phrasing was clear and aligned with technical documentation standards.}}
+{{No mistakes or clumsy phrasing were found in the translation.}}
 =====================
 
 Content prompt used: 
@@ -63,8 +65,8 @@ Also carefully translate the title and description for the article; do not use &
 1. Pad an image
  2. How to pad an image using css and aspect ratio to center
 
-Metadata returned1. Ein Bild polstern  
-2. Wie man ein Bild mit CSS und Seitenverhältnis zentriert und polstert 
+Metadata returned1. Ein Bild mit Abstand versehen
+2. Wie man ein Bild mithilfe von CSS und Seitenverhältnis zentriert mit Abstand versieht 
 
 
 Roundtrip (isolated) prompt used: 

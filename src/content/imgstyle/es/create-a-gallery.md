@@ -1,20 +1,21 @@
 ---
-taskInputHash: abb7ce862c0771d5
+taskInputHash: 97c70951b5b30465
 title: >-
   También traduce cuidadosamente el título y la descripción del artículo; no
   uses & ni < ni >
+
    Crear una galería
 description: Cómo crear una galería en un sitio web
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: es
 ---
 Aquí están los pasos generales para crear una galería de imágenes en un sitio web:
-1. Crea un nuevo archivo HTML para tu galería de imágenes. Puedes nombrarlo algo como "gallery.html".
-2. Añade la estructura HTML a tu archivo. Esto generalmente incluye la sección head con un título y cualquier hoja de estilos CSS necesaria, y la sección body donde añadirás la galería real.
-3. Crea un contenedor para tu galería usando una etiqueta `<div>`. Dale un ID o una clase para que puedas estilizarlo después.
-4. Dentro del contenedor, añade elementos de imagen individuales usando la etiqueta `<img>`. Puedes establecer el atributo source a la ruta o URL del archivo de imagen, y añadir cualquier texto alternativo o leyendas según sea necesario.
-5. Estiliza tu galería con CSS. Puedes usar propiedades como display, width, height, margin, padding y border para controlar el diseño y la apariencia de tu galería.
+1. Crea un nuevo archivo HTML para tu galería de imágenes. Puedes nombrarlo algo como "galeria.html".
+2. Agrega la estructura HTML a tu archivo. Esto generalmente incluye la sección de encabezado con un título y cualquier hoja de estilo CSS necesaria, y la sección del cuerpo donde agregarás la galería en sí.
+3. Crea un contenedor para tu galería usando una etiqueta `<div>`. Asígnale un ID o una clase para que puedas estilizarlo posteriormente.
+4. Dentro del contenedor, agrega elementos de imagen individuales usando la etiqueta `<img>`. Puedes configurar el atributo de la fuente a la ruta del archivo de imagen o URL, y agregar cualquier texto alternativo o leyenda según sea necesario.
+5. Estiliza tu galería con CSS. Puedes usar propiedades como display, width, height, margin, padding y border para controlar el diseño y apariencia de tu galería.
 
 Aquí tienes un ejemplo de código para crear una galería de imágenes simple:
 
@@ -33,7 +34,7 @@ Aquí tienes un ejemplo de código para crear una galería de imágenes simple:
 			width: 300px;
 			height: 200px;
 			margin: 10px;
-			object-fit: cover;
+			object-fit: cover; /* Asegura que las imágenes mantengan su relación de aspecto */
 			border: 2px solid black;
 		}
 	</style>
@@ -51,6 +52,6 @@ Aquí tienes un ejemplo de código para crear una galería de imágenes simple:
 </html>
 ```
 
-En este ejemplo, el contenedor de la galería tiene una clase "gallery" y está estilizado usando flexbox para organizar las imágenes en una cuadrícula. Cada imagen tiene un ancho de 300px, una altura de 200px, un margen de 10px, y un borde de 2px sólido negro. La propiedad object-fit se usa para asegurarse de que las imágenes mantengan su relación de aspecto incluso si no son del mismo tamaño.
+En este ejemplo, el contenedor de la galería tiene una clase de "gallery" y está estilizado usando flexbox para organizar las imágenes en una cuadrícula. Cada imagen tiene un ancho de 300px, una altura de 200px, un margen de 10px, y un borde de 2px sólido negro. La propiedad object-fit se utiliza para asegurarse de que las imágenes mantengan su relación de aspecto incluso si no son del mismo tamaño.
 
 Puedes personalizar este código para adaptarlo a tus necesidades específicas y preferencias de diseño.

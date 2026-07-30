@@ -1,13 +1,14 @@
 ---
-taskInputHash: 8730696d1ed3fe29
+taskInputHash: bbb3bbd1a7908edd
 title: Riferimento completo CSS
 description: 'Riferimento completo CSS per effetti, con esempi'
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: it
 ---
-Ecco un riferimento completo sugli effetti e bordi CSS che puoi applicare alle immagini, insieme a esempi per ciascuno:
-1. **Bordo:** Aggiunge un bordo intorno all'immagine.
+Ecco un riferimento completo degli effetti CSS e bordi che puoi applicare alle immagini, con esempi per ciascuno:
+
+1. **Bordo:** Aggiunge un bordo attorno all'immagine.
 
 ```css
 img {
@@ -16,7 +17,7 @@ img {
 ```
 
 
-2. **Ombra:** Aggiunge un'ombra intorno all'immagine.
+2. **Ombra esterna:** Aggiunge un'ombra attorno all'immagine.
 
 ```css
 img {
@@ -34,7 +35,7 @@ img {
 ```
 
 
-4. **Scala di Grigi:** Converte l'immagine in scala di grigi.
+4. **Scala di grigi:** Converte l'immagine in scala di grigi.
 
 ```css
 img {
@@ -79,7 +80,7 @@ img {
 ```
 
 
-9. **Rotazione Tinta:** Ruota la tinta dell'immagine.
+9. **Rotazione tono:** Ruota il tono dell'immagine.
 
 ```css
 img {
@@ -88,7 +89,7 @@ img {
 ```
 
 
-10. **Inverti:** Inverte i colori dell'immagine.
+10. **Inversione:** Inverte i colori dell'immagine.
 
 ```css
 img {
@@ -115,7 +116,7 @@ img {
 ```
 
 
-13. **Ombra Drop:** Aggiunge un effetto ombra drop all'immagine.
+13. **Ombra discendente:** Aggiunge un effetto ombra discendente all'immagine.
 
 ```css
 img {
@@ -136,7 +137,7 @@ img:hover {
 ```
 
 
-15. **Animazione:** Aggiunge un effetto animazione all'immagine.
+15. **Animazione:** Aggiunge un effetto di animazione all'immagine.
 
 ```css
 @keyframes slidein {
@@ -154,4 +155,4 @@ img {
 
 
 
-Questi sono solo alcuni esempi dei molti effetti e bordi CSS che puoi applicare alle immagini. Sperimenta con diversi stili per creare design unici e accattivanti!
+Questi sono solo alcuni esempi dei molti effetti CSS e bordi che puoi applicare alle immagini. Sperimenta con stili diversi per creare disegni unici e accattivanti!

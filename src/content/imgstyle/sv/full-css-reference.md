@@ -1,14 +1,13 @@
 ---
-taskInputHash: 3ffa61f4b689b072
+taskInputHash: 0e4e98dd6cedc8fe
 title: Fullständig CSS-referens
 description: 'Fullständig CSS-referens för effekter, med exempel'
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-Här är en omfattande referens av CSS-effekter och ramar som du kan använda på bilder, tillsammans med exempel för varje:
-
-1. **Ram:** Lägger till en ram runt bilden.
+Här är en omfattande referens av CSS-effekter och ramar som du kan applicera på bilder, tillsammans med exempel för varje:
+1. **Border:** Lägger till en ram runt bilden.
 
 ```css
 img {
@@ -26,7 +25,7 @@ img {
 ```
 
 
-3. **Opacitet:** Justerar bildens genomskinlighet.
+3. **Opacity:** Justerar transparensen på bilden.
 
 ```css
 img {
@@ -35,7 +34,7 @@ img {
 ```
 
 
-4. **Gråskala:** Konverterar bilden till gråskala.
+4. **Grayscale:** Konverterar bilden till gråskalor.
 
 ```css
 img {
@@ -44,7 +43,7 @@ img {
 ```
 
 
-5. **Sepia:** Applicerar en sepiatoning på bilden.
+5. **Sepia:** Applicerar en sepiaeffekt på bilden.
 
 ```css
 img {
@@ -53,7 +52,7 @@ img {
 ```
 
 
-6. **Sudda ut:** Suddar ut bilden.
+6. **Blur:** Gör bilden suddig.
 
 ```css
 img {
@@ -62,7 +61,7 @@ img {
 ```
 
 
-7. **Ljusstyrka:** Justerar bildens ljusstyrka.
+7. **Brightness:** Justerar ljusstyrkan på bilden.
 
 ```css
 img {
@@ -71,7 +70,7 @@ img {
 ```
 
 
-8. **Kontrast:** Justerar bildens kontrast.
+8. **Contrast:** Justerar kontrasten på bilden.
 
 ```css
 img {
@@ -80,7 +79,7 @@ img {
 ```
 
 
-9. **Färgrotation:** Roterar bildens färgnyans.
+9. **Hue Rotate:** Roterar nyansen på bilden.
 
 ```css
 img {
@@ -89,7 +88,7 @@ img {
 ```
 
 
-10. **Invertera:** Inverterar färgerna på bilden.
+10. **Invert:** Inverterar färgerna på bilden.
 
 ```css
 img {
@@ -98,7 +97,7 @@ img {
 ```
 
 
-11. **Mättnad:** Justerar bildens mättnad.
+11. **Saturate:** Justerar mättnaden på bilden.
 
 ```css
 img {
@@ -107,7 +106,7 @@ img {
 ```
 
 
-12. **Sepia:** Applicerar en sepiatoning på bilden.
+12. **Sepia:** Applicerar en sepiaeffekt på bilden.
 
 ```css
 img {
@@ -116,7 +115,7 @@ img {
 ```
 
 
-13. **Släppskugga:** Lägger till en släppskugga på bilden.
+13. **Drop-Shadow:** Lägger till en drop-shadow effekt på bilden.
 
 ```css
 img {
@@ -125,7 +124,7 @@ img {
 ```
 
 
-14. **Övergång:** Lägger till en övergångseffekt på bilden.
+14. **Transition:** Lägger till en övergångseffekt på bilden.
 
 ```css
 img {

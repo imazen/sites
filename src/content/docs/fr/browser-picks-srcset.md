@@ -1,18 +1,16 @@
 ---
-taskInputHash: 8f124ff2b0c7860e
+taskInputHash: 12409305231fe3d6
 title: Comment le navigateur choisit
-description: >-
-  Comment le navigateur choisit entre les images répertoriées dans l'attribut
-  srcset
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+description: Comment le navigateur choisit entre les images listées dans l'attribut srcset
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: fr
 ---
-Comment le navigateur choisit-il entre les images répertoriées dans l'attribut srcset ? Voici un guide étape par étape, avec des exemples pour les spécifications de largeur et de densité, et comment le navigateur décide en fonction du dispositif et de la fenêtre d'affichage.
+Comment le navigateur choisit-il entre les images listées dans l'attribut srcset ? Voici un guide étape par étape, avec des exemples pour les spécifications de largeur et de densité, et comment le navigateur décide en fonction de l'appareil et de la fenêtre d'affichage.
 
 - Lors de l'utilisation de l'attribut `srcset` en HTML, le navigateur utilise un ensemble de règles pour choisir l'image la plus appropriée à partir d'une liste de sources fournies. Ces règles dépendent à la fois des caractéristiques d'affichage de l'appareil (résolution, densité de pixels) et de la taille de la fenêtre d'affichage. L'attribut `srcset` vous permet de spécifier différentes images en fonction de la largeur (en utilisant le descripteur `w`) ou de la densité de pixels (en utilisant le descripteur `x`). Passons en revue chaque cas avec des exemples.
 
-1\. Descripteur de largeur (`w`):
+1\. Descripteur de largeur (`w`) :
 
 Supposons que nous ayons l'attribut `srcset` suivant :
 
@@ -24,9 +22,9 @@ Supposons que nous ayons l'attribut `srcset` suivant :
 
 Le navigateur suivra ces étapes :
 
-a. Déterminez le DPR (Ratio Pixel de l'Appareil) de l'appareil. Par exemple, un affichage standard a un DPR de 1, tandis qu'un affichage haute résolution (Retina) a un DPR de 2 ou plus.
+a. Déterminer le DPR (Device Pixel Ratio) de l'appareil. Par exemple, un affichage standard a un DPR de 1, tandis qu'un affichage haute résolution (Retina) a un DPR de 2 ou plus.
 
-b. Calculez la largeur effective pour chaque image dans le `srcset`. Multipliez le descripteur de largeur par le DPR. Pour un appareil avec un DPR de 1 :
+b. Calculer la largeur effective pour chaque image dans le `srcset`. Multipliez le descripteur de largeur par le DPR. Pour un appareil avec un DPR de 1 :
 
 - example-small.jpg : 400 \* 1 = 400px
 
@@ -36,7 +34,7 @@ b. Calculez la largeur effective pour chaque image dans le `srcset`. Multipliez 
 
 c. Comparez les largeurs effectives avec la largeur de la fenêtre d'affichage. Supposons que la largeur de la fenêtre d'affichage soit de 420px. Le navigateur choisira la plus petite image avec une largeur effective supérieure ou égale à la largeur de la fenêtre d'affichage. Dans ce cas, il sélectionnera `example-medium.jpg`.
 
-1\. Descripteur de densité de pixels (`x`):
+1\. Descripteur de densité de pixels (`x`) :
 
 Supposons que nous ayons l'attribut `srcset` suivant :
 
@@ -48,7 +46,7 @@ Supposons que nous ayons l'attribut `srcset` suivant :
 
 Le navigateur suivra ces étapes :
 
-a. Déterminez le DPR (Ratio Pixel de l'Appareil) de l'appareil. Par exemple, un affichage standard a un DPR de 1, tandis qu'un affichage haute résolution (Retina) a un DPR de 2 ou plus.
+a. Déterminer le DPR (Device Pixel Ratio) de l'appareil. Par exemple, un affichage standard a un DPR de 1, tandis qu'un affichage haute résolution (Retina) a un DPR de 2 ou plus.
 
 b. Comparez le DPR de l'appareil avec les descripteurs `x` dans le `srcset`. Dans ce cas, nous avons trois images avec les descripteurs suivants :
 

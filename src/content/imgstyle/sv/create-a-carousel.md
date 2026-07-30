@@ -1,21 +1,21 @@
 ---
-taskInputHash: bc02dca4f6f8bd4e
+taskInputHash: 09aefca462f5795f
 title: >-
-  Översätt också noggrant titeln och beskrivningen för artikeln; använd inte &
-  eller < eller >
+  Översätt titeln och beskrivningen för artikeln noggrant; använd inte & eller <
+  eller >
    Skapa en karusell
 description: Hur man skapar en karusell på en webbplats
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
 Här är de allmänna stegen för att skapa en bildkarusell på en webbplats:
 1. Skapa en ny HTML-fil för din bildkarusell. Du kan namnge den något i stil med "carousel.html".
-2. Lägg till HTML-strukturen i din fil. Detta innehåller vanligtvis head-sektionen med en titel och eventuella nödvändiga CSS-stilmallar, samt body-sektionen där du lägger till själva karusellen.
+2. Lägg till HTML-strukturen i din fil. Detta inkluderar vanligtvis huvudsektionen med en titel och eventuella nödvändiga CSS-stilmallar, samt kroppsdelen där du lägger till själva karusellen.
 3. Skapa en behållare för din karusell med hjälp av en `<div>`-tagg. Ge den ett ID eller en klass så att du kan styla den senare.
-4. Inne i behållaren, lägg till individuella bildelement med `<img>`-taggen. Du kan ställa in source-attributet till bildfilens sökväg eller URL och lägga till eventuella alt-texter eller bildtexter vid behov.
-5. Lägg till navigeringsknappar i din karusell med `<button>`- eller `<a>`-taggar. Du behöver en knapp eller länk för vänsterpil och en annan för högerpil.
-6. Lägg till JavaScript-kod för att göra din karusell funktionell. Du behöver lyssna på klickhändelser på navigeringsknapparna och uppdatera karusellens visning i enlighet därmed. Du kan göra detta med DOM API eller ett JavaScript-bibliotek som jQuery eller React.
+4. Inuti behållaren, lägg till enskilda bildelement med hjälp av `<img>`-taggen. Du kan ställa in källattributet till bildens filsökväg eller URL, och lägga till eventuell alternativ text eller bildtexter vid behov.
+5. Lägg till navigeringsknappar till din karusell med hjälp av `<button>` eller `<a>`-taggar. Du behöver en knapp eller länk för vänsterpilen och en annan för högerpilen.
+6. Lägg till JavaScript-kod för att göra din karusell funktionell. Du behöver lyssna på klickhändelser på navigeringsknapparna och uppdatera karusellens visning i enlighet med detta. Du kan göra detta med hjälp av DOM API eller ett JavaScript-bibliotek som jQuery eller React.
 
 Här är ett exempel på kod för att skapa en enkel bildkarusell med jQuery:
 
@@ -23,7 +23,7 @@ Här är ett exempel på kod för att skapa en enkel bildkarusell med jQuery:
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Min bildkarusell</title>
+	<title>Min Bildkarusell</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<style>

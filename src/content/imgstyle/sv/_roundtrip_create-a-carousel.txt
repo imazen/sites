@@ -1,20 +1,20 @@
----
-taskInputHash: bc02dca4f6f8bd4e
-title: Create a Carousel
-description: How to create a carousel on a website
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
-lang: en
----
+--- 
+taskInputHash: 09aefca462f5795f 
+title: **Create a Carousel** 
+description: How to create a carousel on a website 
+date_published: '2026-07-30' 
+date_modified: '2026-07-30' 
+lang: en 
+--- 
 Here are the general steps to create an image carousel on a website:
-1. Create a new HTML file for your image carousel. You can name it something like "carousel.html".
-2. Add the HTML structure to your file. This usually includes the head section with a title and any necessary CSS stylesheets, as well as the body section where you add the carousel itself.
-3. Create a container for your carousel using a `<div>` tag. Give it an ID or a class so that you can style it later.
-4. Inside the container, add individual image elements using the `<img>` tag. You can set the source attribute to the image file path or URL and add any alt text or captions if needed.
-5. Add navigation buttons to your carousel with `<button>` or `<a>` tags. You need a button or link for the left arrow and another for the right arrow.
+1. Create a new HTML file for your image carousel. You can name it something like "carousel.html."
+2. Add the HTML structure to your file. This usually includes the head section with a title and any necessary CSS stylesheets, as well as the body part where you add the carousel itself.
+3. Create a container for your carousel using a `<div>` tag. Give it an ID or a class so you can style it later.
+4. Inside the container, add individual image elements using the `<img>` tag. You can set the source attribute to the image's file path or URL and add any alternative text or captions if needed.
+5. Add navigation buttons to your carousel using `<button>` or `<a>` tags. You need a button or link for the left arrow and another for the right arrow.
 6. Add JavaScript code to make your carousel functional. You need to listen for click events on the navigation buttons and update the carousel's display accordingly. You can do this using the DOM API or a JavaScript library like jQuery or React.
 
-Here's an example of code to create a simple image carousel with jQuery:
+Here is an example of code to create a simple image carousel with jQuery:
 
 ```html
 <!DOCTYPE html>
@@ -74,17 +74,15 @@ Here's an example of code to create a simple image carousel with jQuery:
 	<script>
 		$(document).ready(function(){
 			$('.carousel').owlCarousel({
-				loop:true,
-				margin:10,
-				nav:true,
+				loop: true,
+				margin: 10,
+				nav: true,
 				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 				responsive:{
 					0:{
-```
+					``` 
 
-[Mistakes or Clumsy Phrasing]
-- The instructions are generally clear; however, there's a potential confusion in step 4 where "source attribute" might be more explicitly aligned with HTML language conventions by using "`src` attribute".
-- The phrase "You can do this with DOM API or a JavaScript library like jQuery or React." could potentially be misinterpreted. A slightly clearer phrase could be: "You can achieve this by using the DOM API or employing a JavaScript library like jQuery or React."
+{{No mistakes or clumsy phrasing noted.}}
 =====================
 
 Content prompt used: 
@@ -97,7 +95,7 @@ Also carefully translate the title and description for the article; do not use &
 1. Create a carousel
  2. How to create a carousel on a website
 
-Metadata returnedÖversätt också noggrant titeln och beskrivningen för artikeln; använd inte & eller < eller >
+Metadata returnedÖversätt titeln och beskrivningen för artikeln noggrant; använd inte & eller < eller >
 1. Skapa en karusell
 2. Hur man skapar en karusell på en webbplats 
 

@@ -1,23 +1,22 @@
 ---
-taskInputHash: 1229b9ebbf7809f4
 title: px ≠ pixels
-description: Device pixels ≠ browser pixels ≠ image pixels
+description: Device px ≠ browser px ≠ image px
 sidebar_sort_priority: 900
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-### Device pixels ≠ browser pixels ≠ image pixels
+### Device Pixels ≠ Browser px ≠ Image px
 
-Thanks to Apple, CSS and HTML pixels (`px`) **almost always correspond to multiple device/printer pixels**. The devicePixelRatio on my phone is 3.875; [what's yours?](https://www.mydevice.io/)
+Thanks to Apple, CSS and HTML pixels (`px`) **almost always map to several device/printer pixels**. The device pixel ratio on my phone is 3.875; [and yours?](https://www.mydevice.io/)
 
-The devicePixelRatio on my desktop changes with browser zoom, but by default, it is 1.5 (my `System > Display > Scale` is 150%, after all).
+The device pixel ratio on my desktop changes when zooming in the browser, but by default, it's 1.5 (my `System > Display > Scaling` is 150%, after all).
 
-Image files (excluding SVGs) decode into a pixel grid. **It is extremely difficult to achieve a perfect match at a 1:1 ratio with device pixels - but with `srcset` you can get close enough***, and a bit of JavaScript can adjust the size of the HTML element after loading if you have genuinely justified reasons for needing that perfect match, although these forbidden arts will not be revealed here.
+Image files (except for SVGs) decode into a grid of pixels. **It is incredibly difficult to make an image's pixels display perfectly at a 1:1 ratio with device pixels - but with `srcset`, you can get close enough**, and a bit of Javascript can adjust the HTML element size after loading if you have really justified reasons for needing that perfect match, although such forbidden arts are not revealed here.
 
-> Other [absolute units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en-US/docs/Web/CSS/length) are defined in terms of the number of CSS pixels and claim that everything is at 96dpi. Developers avoid absolute units as it is generally preferable to use units derived from font size or viewport/container dimensions. Incompatible units can break a layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device. Needless to say, you should do all these things before delivering your site.
+> The other [absolute units (in, pc, pt, mm, cm, Q)](https://developer.mozilla.org/en/docs/Web/CSS/length) are defined in terms of the number of CSS pixels and pretend everything is at 96dpi. Developers avoid absolute units because it's generally better to use units derived from font size or the dimensions of the viewport/container. Unmatched units can break a layout if the user adjusts their `Accessibility > Text Size` multiplier, zooms the browser, or rotates their device. Needless to say, you should do all these things before publishing your site.
 
-{{Note: There are no significant errors in the translation, but terms like "forbidden arts" may sound a bit whimsical or informal given the technical nature of the content.}}
+{{There are no mistakes or clumsy phrases identified in the translation.}}
 =====================
 
 Content prompt used: 
@@ -30,8 +29,8 @@ Also carefully translate the title and description for the article; do not use &
 1. px ≠ pixels
  2. Device px ≠ browser px ≠ image px
 
-Metadata returned1. px ≠ pixels  
-2. Pixels de l'appareil ≠ pixels du navigateur ≠ pixels de l'image 
+Metadata returned1. px ≠ pixels
+2. px de l'appareil ≠ px du navigateur ≠ px de l'image 
 
 
 Roundtrip (isolated) prompt used: 

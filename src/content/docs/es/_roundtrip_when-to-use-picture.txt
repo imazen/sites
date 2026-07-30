@@ -1,25 +1,27 @@
 ---
-
+taskInputHash: b796ea7fa9c7528d
 title: When to Use the <picture> Element
-description: Explains in which situations you should use the <picture> element
+description: Explain in which situations you should use the <picture> element
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
+lang: en
+---
+The `picture` element is used to provide multiple versions of an image and determines which version of the image to display based on certain conditions. It is especially useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design. 
+Here are some specific scenarios where you might want to use the `picture` element:
+
+* **Retina Screens:** High-density screens like Apple's Retina displays have a higher pixel density, which means that images can look blurry or pixelated if they are not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice as many pixels as the normal version, so it appears sharp and clear on Retina screens.
+
+* **Different Aspect Ratios:** If you are designing a site that needs to display images with different aspect ratios (such as panoramics vs. portraits), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
+
+* **Bandwidth Limitations:** Images can be large files that consume a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page load times.
+
+* **Art-Directed Designs:** Sometimes you may want to present an image in a certain way depending on the design of the rest of the page. For example, you might want to show a close-up of a person's face on mobile devices, but a wider shot on desktop devices. The `picture` element allows you to provide different versions of the image that are optimized for different designs.
+
+In general, the `picture` element is a powerful tool that can help you optimize your images for a variety of use cases and ensure they look good regardless of which device or screen size they are being viewed on.
 
 ---
 
-The `picture` element is used to provide multiple versions of an image and determines which version of the image to display based on certain conditions. It is particularly useful for optimizing images for different screen sizes and resolutions, and is commonly used in responsive web design. Here are some specific scenarios where you might want to use the `picture` element:
-
-* **Retina Screens:** High-density screens like Apple's Retina displays have a higher pixel density, meaning images can appear blurry or pixelated if they are not optimized for high resolution. With the `picture` element, you can provide a version of the image that has twice the pixels of the normal version, so it appears sharp and clear on Retina screens.
-
-* **Different Aspect Ratios:** If you're designing a site that needs to display images with different aspect ratios (such as landscape vs. portrait), you can use the `picture` element to provide different versions of the image that are optimized for each aspect ratio.
-
-* **Bandwidth Constraints:** Images can be large files that take up a lot of bandwidth, especially on mobile devices. With the `picture` element, you can provide smaller versions of the image for devices with smaller screens or slower internet connections, which can help reduce page loading times.
-
-* **Art Directed Designs:** Sometimes you may want to present an image in a certain way depending on the design of the rest of the page. For example, you might want to show a close-up of a person's face on mobile devices, but a wider shot on desktop devices. The `picture` element allows you to provide different versions of the image that are optimized for different designs.
-
-Overall, the `picture` element is a powerful tool that can help you optimize your images for a variety of use cases and ensure that they look great no matter what device or screen size they are viewed on.
-
----
-
-{{Note that the phrase "explains in which situations you should use" might be more commonly phrased as "explains when you should use" in a technical context.}}
+{{There were no noticeable mistakes or awkward phrasing in the translation. The term "panoramics" may not be technically precise, as the more commonly used term is "panoramas."}}
 =====================
 
 Content prompt used: 
@@ -32,8 +34,7 @@ Also carefully translate the title and description for the article; do not use &
 1. When to use <picture> element
  2. Explains in which situations you should use the <picture> element
 
-Metadata returnedTambién traduzca cuidadosamente el título y la descripción del artículo; no use & o < o >
-1. Cuándo usar el elemento <picture>
+Metadata returned1. Cuándo usar el elemento <picture>
 2. Explica en qué situaciones deberías usar el elemento <picture> 
 
 

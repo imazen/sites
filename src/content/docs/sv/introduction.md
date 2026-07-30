@@ -1,20 +1,20 @@
 ---
-taskInputHash: 051aeebd1dd87aca
-title: srcset & <img> storlekar
-description: En effektiv och uppfattande guide till responsiva bilder för 2023
+taskInputHash: 1b5900bdd7d7a9d6
+title: srcset och <img> storlekar
+description: En effektiv och åsiktsdriven guide till responsiva bilder för 2023
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
 
-**En effektiv och uppfattande guide till bilder för 2023**
+**En effektiv och åsiktsdriven guide till bilder för 2023**
 
-Kolla sidofältet för en djupdykning. Detta är den snabba referensen för att uppgradera de där `<img>`-taggarna för att hantera moderna enheter i alla deras olika storlekar och pixeltätheter. Du bör [veta att pixlar != pixlar](/sv/pixels-not-pixels) och `devicePixelRatio` är mer sannolikt att vara runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixlar), men har många enhetspixlar per CSS-pixel.
+Kolla in sidofältet för att få en djupare förståelse. Detta är en snabb referens för att uppgradera `<img>`-taggar för att hantera moderna enheter i alla deras olika storlekar och pixeltätheter. Du bör [veta att pixlar != pixlar](/sv/pixels-not-pixels) och `devicePixelRatio` är mer sannolikt runt 3.875 än 1:1. Moderna telefoner låtsas vara 320-428px breda för läsbarhet (i CSS-pixlar), men har många enhetspixlar per CSS-pixel.
 
-> Om din bild aldrig ändrar storlek, oavsett hur smalt du gör webbläsarfönstret, bör du använda en [densitetsdeskriptor istället](/sv/density-descriptors). Detta är ofta lämpligt för logotyper, ikoner och knappar.
+> Om din bild aldrig ändrar storlek, oavsett hur smal du gör webbläsarfönstret, bör du istället använda en [densitetsbeskrivare](/sv/density-descriptors). Detta är ofta lämpligt för logotyper, ikoner och knappar.
 
-Vet du vad dina [brytpunkter](/sv/breakpoints) är? Du behöver dessa siffror för att finjustera lösningen nedan - och minst breddbrytpunkten för vyfönstret där det huvudsakliga innehållsområdet slutar växa.
+Vet du vad dina [ramverk](/sv/breakpoints) är? Du kommer att behöva dessa siffror för att finjustera lösningen nedan - och åtminstone den brytpunkten för vyportens bredd där huvudområdet slutar att växa.
 
 ### Den enkla metoden
 
@@ -29,10 +29,10 @@ Vet du vad dina [brytpunkter](/sv/breakpoints) är? Du behöver dessa siffror f�
 
         sizes="(max-width: 700px) 100vw, 800px" alt="Hund som cyklar" />
 
-<!-- Vi har antagit att du har en brytpunkt vid 700px.
-      Och att under den bredden av vyfönstret, tar den här bilden 100% av bredden, men
-      när vyfönstret är större, är bilden begränsad till 800 CSS-pixlar -->
+<!-- Vi har antagit att du har en brytpunkt vid 700px. 
+      Och att under den vyportens bredd tar den här bilden 100% av bredden, men
+      när vyporten är större, begränsas bilden till 800 CSS-pixlar -->
 
-<!-- Detta förutsätter att du använder en RIAPI-kompatibel bildserver som Imageflow.
-     Produktion av bildvarianter på plats är avgörande för utvecklarens sinneslugn. -->
+<!-- Detta förutsätter att du använder en RIAPI-kompatibel bildserver såsom Imageflow. 
+     Produktion av bildvarianter i realtid är avgörande för utvecklarens mentala hälsa. -->
 ```

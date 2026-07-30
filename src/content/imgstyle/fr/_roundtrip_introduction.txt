@@ -1,24 +1,24 @@
 ---
-taskInputHash: 70877134aec58265
+taskInputHash: e0214eca38ae1015
 title: New CSS Features for Images
 description: New CSS Features for Images
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Modern CSS provides developers with concise and efficient tools for robust image management:
+Modern CSS endows developers with concise and effective tools for robust image management:
 
-- **Fixed Ratios:**  
-  The `aspect-ratio` property sets fixed ratios, stabilizing layouts by preventing unexpected changes when images load.  
+- **Aspect Ratio:**  
+  The `aspect-ratio` property imposes fixed proportions, stabilizing layouts by preventing unexpected shifts during image loading.  
   ```css  
   .container {  
     aspect-ratio: 16/9;  
   }  
   ```
 
-- **Object Fit and Positioning:**  
-  Use `object-fit` (e.g., `cover`, `contain`) and `object-position` to precisely control the resizing and alignment of images within their containers, eliminating awkward cropping or distortion.  
+- **Object Fit and Object Position:**  
+  Use `object-fit` (for example, `cover`, `contain`) and `object-position` to precisely control the resizing and alignment of images within their containers, thus eliminating awkward cropping or distortions.  
   ```css  
   img {  
     object-fit: cover;  
@@ -27,7 +27,7 @@ Modern CSS provides developers with concise and efficient tools for robust image
   ```
 
 - **Image-Set for Resolution Adaptability:**  
-  The `image-set()` function offers a resolution switch for background images, ensuring optimal clarity on high-density pixel devices (DPI).  
+  The `image-set()` function offers resolution switching for background images, ensuring optimal clarity on high-DPI devices.  
   ```css  
   .hero {  
     background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
@@ -35,13 +35,13 @@ Modern CSS provides developers with concise and efficient tools for robust image
   ```
 
 - **Additional Enhancements:**  
-  `image-rendering` refines resizing algorithms for sharp rendering (ideal for pixel art), while `filter` allows for the application of dynamic visual effects directly in CSS.
+  `image-rendering` refines resizing algorithms for sharp rendering (ideal for pixelated art), while `filter` enables dynamic visual effects directly in CSS.
 
-These features greatly simplify image presentation, reducing dependency on JavaScript tricks and complex solutions, thus significantly easing everyday development tasks.
+These features significantly streamline the presentation of images, reducing dependency on JavaScript tricks and complex workarounds, thereby greatly facilitating daily development tasks.
 
 ---
 
-{{No specific mistakes or clumsy phrasing were found in the translation.}}
+{{No noticeable mistakes or clumsy phrasing were detected in the translation.}}
 =====================
 
 Content prompt used: 

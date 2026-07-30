@@ -1,24 +1,24 @@
 ---
-taskInputHash: 9203469f7de56d54
-title: Lägg till padding runt en bild
+taskInputHash: 26458f7e21632f92
+title: Fyll ut en bild
 description: >-
-  Hur man lägger till padding runt en bild med hjälp av CSS och bildförhållande
-  för att centrera
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  Hur man fyller ut en bild med hjälp av CSS och bildförhållande för att
+  centrera
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: sv
 ---
-Här är hur du kan använda CSS och bildförhållande för att centrera och paddda en bild: 
-1. Först måste du omsluta din bild i ett containerelement, som en `<div>` eller `<figure>`. Detta gör att du kan tillämpa stilar på containern som kommer att påverka bilden inuti.
-2. Ställ in containerns `position`-egenskap till `relative`. Detta låter dig positionera bilden inuti containern.
-3. Lägg till ett `::after` pseudo-element till containern. Detta kommer att användas för att bibehålla bildförhållandet och skapa paddningen.
-4. Ställ in `content`-egenskapen för `::after` pseudo-elementet till en tom sträng. Detta är nödvändigt för att skapa elementet.
-5. Ställ in `padding-bottom`-egenskapen för `::after` pseudo-elementet till ett procentvärde som motsvarar bildförhållandet för bilden. Till exempel, om din bild har ett bildförhållande på 4:3, skulle du ställa in padding till `75%` (eftersom 3/4 = 0,75). Detta kommer att skapa paddningen under bilden.
-6. Ställ in `position`-egenskapen för `::after` pseudo-elementet till `absolute`. Detta kommer att positionera elementet inom containern.
-7. Ställ in `top`, `left`, `bottom`, och `right`-egenskaperna för `::after` pseudo-elementet till `0`. Detta kommer att få elementet att fylla containern och skapa paddningen.
-8. Slutligen, ställ in `position`-egenskapen för själva bilden till `absolute`. Detta gör att du kan centrera bilden inom containern med hjälp av `top`, `left`, `bottom`, och `right`-egenskaperna.
+Så här kan du använda CSS och bildförhållande för att centrera och fylla ut en bild:
+1. Först behöver du omsluta din bild i ett konteiner-element, såsom en `<div>` eller `<figure>`. Detta möjliggör att applicera stilar på containern som påverkar bilden inuti.
+2. Sätt konteinerns `position`-egenskap till `relative`. Detta låter dig positionera bilden inuti containern.
+3. Lägg till ett `::after` pseudo-element till containern. Detta används för att bibehålla bildförhållandet och skapa utfyllnaden.
+4. Sätt `content`-egenskapen på `::after` pseudo-elementet till en tom sträng. Detta är nödvändigt för att skapa elementet.
+5. Sätt `padding-bottom`-egenskapen på `::after` pseudo-elementet till ett procentvärde som motsvarar bildförhållandet. Till exempel, om din bild har ett bildförhållande på 4:3, skulle du sätta utfyllnaden till `75%` (eftersom 3/4 = 0.75). Detta skapar utfyllnaden under bilden.
+6. Sätt `position`-egenskapen på `::after` pseudo-elementet till `absolute`. Detta positionerar elementet inom containern.
+7. Sätt `top`, `left`, `bottom`, och `right` egenskaperna på `::after` pseudo-elementet till `0`. Detta gör att elementet fyller containern och skapar utfyllnaden.
+8. Slutligen, sätt `position`-egenskapen på själva bilden till `absolute`. Detta låter dig centrera bilden i containern med hjälp av `top`, `left`, `bottom`, och `right` egenskaperna.
 
-Här är ett exempel på CSS-koden som du skulle använda för att centrera och paddda en bild med ett bildförhållande på 4:3:
+Här är ett exempel på CSS-koden du skulle använda för att centrera och fylla ut en bild med bildförhållandet 4:3:
 
 ```css
 .container {
@@ -49,6 +49,6 @@ img {
 }
 ```
 
-I detta exempel är `.container` elementet containern för bilden. `::after` pseudo-elementet används för att skapa paddningen och bibehålla bildförhållandet för bilden. `img`-elementet är inställt på `position: absolute` så att det kan centreras inom containern med hjälp av `top`, `left`, `bottom`, och `right`-egenskaperna.
+I detta exempel är `.container` elementet konteinern för bilden. `::after` pseudo-elementet skapar utfyllnaden och bibehåller bildförhållandet på bilden. `img` elementet är satt till `position: absolute` så att det kan centreras inom containern med hjälp av `top`, `left`, `bottom`, och `right` egenskaperna.
 
-Genom att ställa in egenskaperna `max-width` och `max-height` för bilden till `100%`, kommer bilden skalas för att passa det tillgängliga utrymmet medan dess bildförhållande bibehålls. Detta innebär att paddningen skapad av `::after` pseudo-elementet alltid kommer att vara proportionell till storleken på bilden.
+Genom att sätta `max-width` och `max-height` egenskaperna på bilden till `100%`, kommer bilden skala för att passa tillgängligt utrymme samtidigt som det bibehåller sitt bildförhållande. Detta innebär att utfyllnaden som skapats av `::after` pseudo-elementet alltid kommer att vara proportionellt med bildens storlek.

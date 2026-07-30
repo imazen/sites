@@ -1,16 +1,16 @@
 ---
-taskInputHash: 3557776b7d07d02c
+taskInputHash: d3a96c16ab918c34
 title: Nuove funzionalità CSS per le immagini
 description: Nuove funzionalità CSS per le immagini
 sidebar_sort_priority: 1000
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: it
 ---
 Il CSS moderno offre agli sviluppatori strumenti concisi ed efficaci per una gestione robusta delle immagini:
 
 - **Aspect Ratio:**  
-  La proprietà `aspect-ratio` impone proporzioni fisse, stabilizzando i layout prevenendo spostamenti inaspettati durante il caricamento delle immagini.  
+  La proprietà `aspect-ratio` impone proporzioni fisse, stabilizzando i layout e prevenendo spostamenti imprevisti durante il caricamento delle immagini.  
   ```css  
   .container {  
     aspect-ratio: 16/9;  
@@ -18,7 +18,7 @@ Il CSS moderno offre agli sviluppatori strumenti concisi ed efficaci per una ges
   ```
 
 - **Object Fit & Object Position:**  
-  Usa `object-fit` (es. `cover`, `contain`) e `object-position` per controllare precisamente la scalatura e l'allineamento delle immagini all'interno dei loro contenitori, eliminando tagli o distorsioni scomode.  
+  Utilizza `object-fit` (ad es., `cover`, `contain`) e `object-position` per controllare con precisione il ridimensionamento e l'allineamento delle immagini all'interno dei loro contenitori, eliminando ritagli goffi o distorsioni.  
   ```css  
   img {  
     object-fit: cover;  
@@ -26,15 +26,15 @@ Il CSS moderno offre agli sviluppatori strumenti concisi ed efficaci per una ges
   }  
   ```
 
-- **Image-Set per la Adattabilità alla Risoluzione:**  
-  La funzione `image-set()` offre lo switch di risoluzione per le immagini di sfondo, garantendo chiarezza ottimale su dispositivi con DPI elevato.  
+- **Image-Set per Adattabilità alla Risoluzione:**  
+  La funzione `image-set()` offre la commutazione della risoluzione per le immagini di sfondo, garantendo una chiarezza ottimale sui dispositivi ad alta densità di pixel.  
   ```css  
   .hero {  
     background-image: image-set(url("hero.png") 1x, url("hero@2x.png") 2x);  
   }  
   ```
 
-- **Miglioramenti Aggiuntivi:**  
-  `image-rendering` ottimizza gli algoritmi di scalatura per un output nitido (ideale per la pixel art), mentre `filter` abilita effetti visivi dinamici direttamente nel CSS.
+- **Ulteriori Miglioramenti:**  
+  `image-rendering` affina gli algoritmi di ridimensionamento per un output nitido (ideale per la pixel art), mentre `filter` consente di applicare effetti visivi dinamici direttamente in CSS.
 
-Queste funzionalità semplificano notevolmente la presentazione delle immagini, riducendo la dipendenza da hack JavaScript e soluzioni complesse, facilitando così notevolmente le attività di sviluppo quotidiane.
+Queste funzionalità semplificano significativamente la presentazione delle immagini, riducendo la dipendenza da hack di JavaScript e complessi workaround, facilitando così notevolmente le attività di sviluppo quotidiane.

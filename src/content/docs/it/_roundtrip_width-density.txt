@@ -1,18 +1,18 @@
 ---
-taskInputHash: 6b5b260f20345465
+taskInputHash: 055896dfb045f33f
 title: Width and Density Descriptors
 description: Examples of using width and density descriptors in `srcset`
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Understanding width (w) and density (x) descriptors in `srcset`. Use examples and use Markdown.
+Understanding the width (`w`) and density (`x`) descriptors in `srcset`. Use examples and use Markdown.
 
-> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, enabling the browser to select the appropriate image based on the characteristics of the device display. The `srcset` attribute uses a combination of `URL` and `w` or `x` descriptors to specify images.
+> `srcset` is an HTML attribute that allows developers to provide multiple image sources with different resolutions or pixel densities, letting the browser select the appropriate image based on the display characteristics of the device. The `srcset` attribute uses a combination of `URL` identifiers and `w` or `x` to specify the images.
 
 ## Width Descriptor (`w`)
 
-> The `w` descriptor is used to specify the width of an image in pixels. It is used when you want to provide the browser with the dimensions of an image so that it can choose the appropriate image for the available screen space.
+> The `w` descriptor is used to specify the width of an image in pixels. It is used when we want to provide the browser with the dimensions of an image so that it can choose the appropriate image for the available screen space.
 
 > The syntax for using the `w` descriptor in `srcset` is as follows:
 
@@ -21,14 +21,15 @@ Understanding width (w) and density (x) descriptors in `srcset`. Use examples an
   srcset="small.jpg 500w,
           medium.jpg 1000w,
           large.jpg 2000w"
-  alt="Example Image">
+  alt="Example image">
 ```
+
 
 > In the example above, we have provided the browser with three images and their corresponding widths in pixels. The browser will select the image with the width closest to the available screen space.
 
 ## Density Descriptor (`x`)
 
-> The `x` descriptor is used to specify the pixel density of an image, which is the ratio between physical pixels and CSS pixels. It is used when you want to provide the browser with different versions of the same image with different pixel densities.
+> The `x` descriptor is used to specify the pixel density of an image, which is the ratio between physical pixels and CSS pixels. It is used when we want to provide the browser with different versions of the same image with different pixel densities.
 
 > The syntax for using the `x` descriptor in `srcset` is as follows:
 
@@ -37,16 +38,19 @@ Understanding width (w) and density (x) descriptors in `srcset`. Use examples an
   srcset="small.jpg 1x,
           medium.jpg 2x,
           large.jpg 3x"
-  alt="Example Image">
+  alt="Example image">
 ```
 
-> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the pixel density closest to that of the device's screen.
 
-> Note that `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options to choose from.
+> In the example above, we have provided the browser with three images and their corresponding pixel densities. The browser will select the image with the pixel density closest to the device's screen.
+
+> Note that the `w` and `x` descriptors can be used together in the same `srcset` attribute to provide the browser with more options to choose from.
 
 ---
 
-{{There are no mistakes or clumsy phrases in the translation. All terminology appears correct and appropriately used.}}
+1. {{The phrase "we have provided the browser with" is a bit redundant when used twice in both examples in close succession. An alternative could be "we provided the browser with".}}
+2. {{The phrase "closest to the available screen space" could be replaced with "best suited for the available screen space" for clarity.}}
+3. {{The translation seems accurate; however, ensure that technical terms are consistent with widely accepted coding and web development terminology.}}
 =====================
 
 Content prompt used: 

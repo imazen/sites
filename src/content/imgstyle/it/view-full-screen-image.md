@@ -1,17 +1,17 @@
 ---
-taskInputHash: 6d3e8f9444a7cbe6
+taskInputHash: 8b6ce48af5720321
 title: Aggiungi "tocca per visualizzare l'immagine a schermo intero" a una galleria
 description: >-
   Come aggiungere un'opzione "tocca per visualizzare l'immagine a schermo
   intero" a una galleria
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: it
 ---
-Per aggiungere un'opzione "Tocca per visualizzare l'immagine a schermo intero" in una galleria, puoi usare JavaScript e CSS per creare un overlay che visualizzi l'immagine in modalità schermo intero quando l'utente tocca su di essa.
+Per aggiungere un'opzione "Tocca per visualizzare l'immagine a schermo intero" a una galleria, puoi utilizzare JavaScript e CSS per creare un overlay che visualizza l'immagine a schermo intero quando l'utente ci clicca sopra.
 
 Ecco un approccio di base che puoi utilizzare:
-1. Per prima cosa, crea un contenitore per la tua galleria e aggiungi tutte le immagini che desideri visualizzare.
+1. Per prima cosa, crea un contenitore per la tua galleria e aggiungi tutte le immagini che vuoi mostrare.
 
 ```html
 <div class="gallery">
@@ -39,7 +39,7 @@ Ecco un approccio di base che puoi utilizzare:
 ```
 
 
-3. Ora, aggiungi un event listener click a ciascuna immagine usando JavaScript. Quando l'utente clicca su un'immagine, il JavaScript creerà un overlay e visualizzerà l'immagine in modalità schermo intero.
+3. Ora, aggiungi un event listener di click a ciascuna immagine usando JavaScript. Quando l'utente clicca su un'immagine, JavaScript creerà un overlay e visualizzerà l'immagine a schermo intero.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -90,4 +90,4 @@ images.forEach((image) => {
 
 
 
-Con questi passaggi, dovresti ora avere una galleria che consente agli utenti di visualizzare le immagini a schermo intero toccandole.
+Con questi passaggi, dovresti ora avere una galleria che consente agli utenti di visualizzare le immagini a schermo intero cliccando su di esse.

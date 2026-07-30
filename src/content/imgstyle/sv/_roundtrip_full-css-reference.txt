@@ -1,13 +1,12 @@
 ---
-taskInputHash: 3ffa61f4b689b072
-title: Comprehensive CSS Reference
-description: 'Comprehensive CSS reference for effects, with examples'
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+taskInputHash: 0e4e98dd6cedc8fe
+title: Complete CSS Reference
+description: 'Complete CSS reference for effects, with examples'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-Here is a comprehensive reference of CSS effects and frames that you can use on images, along with examples for each:
-
+Here is a comprehensive reference of CSS effects and borders that you can apply to images, along with examples for each:
 1. **Border:** Adds a border around the image.
 
 ```css
@@ -26,7 +25,7 @@ img {
 ```
 
 
-3. **Opacity:** Adjusts the image's transparency.
+3. **Opacity:** Adjusts the transparency of the image.
 
 ```css
 img {
@@ -44,7 +43,7 @@ img {
 ```
 
 
-5. **Sepia:** Applies a sepia tone to the image.
+5. **Sepia:** Applies a sepia effect to the image.
 
 ```css
 img {
@@ -62,7 +61,7 @@ img {
 ```
 
 
-7. **Brightness:** Adjusts the image's brightness.
+7. **Brightness:** Adjusts the brightness of the image.
 
 ```css
 img {
@@ -71,7 +70,7 @@ img {
 ```
 
 
-8. **Contrast:** Adjusts the image's contrast.
+8. **Contrast:** Adjusts the contrast of the image.
 
 ```css
 img {
@@ -80,7 +79,7 @@ img {
 ```
 
 
-9. **Hue Rotation:** Rotates the hue of the image's color.
+9. **Hue Rotate:** Rotates the hue of the image.
 
 ```css
 img {
@@ -98,7 +97,7 @@ img {
 ```
 
 
-11. **Saturation:** Adjusts the image's saturation.
+11. **Saturate:** Adjusts the saturation of the image.
 
 ```css
 img {
@@ -107,7 +106,7 @@ img {
 ```
 
 
-12. **Sepia:** Applies a sepia tone to the image.
+12. **Sepia:** Applies a sepia effect to the image.
 
 ```css
 img {
@@ -116,7 +115,7 @@ img {
 ```
 
 
-13. **Drop Shadow:** Adds a drop shadow to the image.
+13. **Drop-Shadow:** Adds a drop-shadow effect to the image.
 
 ```css
 img {
@@ -155,15 +154,11 @@ img {
 
 
 
-These are just a few examples of the many CSS effects and frames you can use on images. Experiment with different styles to create unique and eye-catching designs!
+These are just a few examples of the many CSS effects and borders you can use on images. Experiment with different styles to create unique and eye-catching designs!
 
 ---
 
-{{Mistakes or Clumsy Phrasing}}
-
-1. There seems to be a duplicate entry for "Sepia" (point #5 and #12). This could be an error in listing or perhaps one was meant to be a different effect.
-
-2. While the phrasing throughout is clear and technical, consistently using terms like "image's brightness" or "image's contrast" might be slightly clumsy. A suggestion could be more simplified phrasing, like "adjusts brightness" or "adjusts contrast."
+{{Note: Item 12 (Sepia effect) is repeated. This might not be intentional unless used purposely to demonstrate multiple times.}}
 =====================
 
 Content prompt used: 
@@ -177,7 +172,6 @@ Also carefully translate the title and description for the article; do not use &
  2. Full CSS reference for effects, with examples
 
 Metadata returned1. Fullständig CSS-referens
-
 2. Fullständig CSS-referens för effekter, med exempel 
 
 

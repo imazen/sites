@@ -1,17 +1,17 @@
 ---
-taskInputHash: 7428b43f7b7c12aa
-title: Añadir toque para ver la imagen a pantalla completa a una galería
+taskInputHash: d5da3e7e050a0eab
+title: Añadir función de tocar para ver imagen en pantalla completa a una galería
 description: >-
-  Cómo añadir una opción de tocar para ver la imagen a pantalla completa a una
+  Cómo añadir una opción de tocar para ver imagen en pantalla completa a una
   galería
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: es
 ---
-Para añadir una opción de "Tocar para ver la imagen a pantalla completa" a una galería, puedes usar JavaScript y CSS para crear una superposición que muestre la imagen en modo pantalla completa cuando el usuario toque en ella.
+Para añadir una opción de "Tocar para ver imagen en pantalla completa" a una galería, puedes usar JavaScript y CSS para crear una superposición que muestre la imagen en modo de pantalla completa cuando el usuario la toque.
 
 Aquí tienes un enfoque básico que puedes usar:
-1. Primero, crea un contenedor para tu galería y añade todas las imágenes que quieres mostrar.
+1. Primero, crea un contenedor para tu galería y añade todas las imágenes que deseas mostrar.
 
 ```html
 <div class="gallery">
@@ -39,7 +39,7 @@ Aquí tienes un enfoque básico que puedes usar:
 ```
 
 
-3. Ahora, añade un listener de eventos de clic a cada imagen usando JavaScript. Cuando el usuario haga clic en una imagen, el JavaScript creará una superposición y mostrará la imagen en modo pantalla completa.
+3. Ahora, añade un detector de eventos de clic a cada imagen usando JavaScript. Cuando el usuario haga clic en una imagen, el JavaScript creará una superposición y mostrará la imagen en modo de pantalla completa.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -56,7 +56,7 @@ images.forEach((image) => {
     fullScreenImage.src = image.src;
     fullScreenImage.classList.add('full-screen-image');
     
-    // añadir elemento de imagen a superposición
+    // agregar elemento de imagen a la superposición
     overlay.appendChild(fullScreenImage);
     
     // añadir superposición a la página
@@ -66,7 +66,7 @@ images.forEach((image) => {
 ```
 
 
-4. Finalmente, añade un poco de CSS para dar estilo a la superposición y la imagen a pantalla completa.
+4. Finalmente, añade un poco de CSS para dar estilo a la superposición y a la imagen en pantalla completa.
 
 ```css
 .overlay {
@@ -90,4 +90,4 @@ images.forEach((image) => {
 
 
 
-Con estos pasos, ahora deberías tener una galería que permite a los usuarios ver imágenes en modo pantalla completa al tocarlas.
+Con estos pasos, ahora deberías tener una galería que permita a los usuarios ver las imágenes en modo de pantalla completa al tocarlas.

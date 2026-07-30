@@ -1,13 +1,13 @@
 ---
-taskInputHash: 6d3e8f9444a7cbe6
-title: Add "tap to view the image in full screen" to a gallery
+taskInputHash: 8b6ce48af5720321
+title: Add "tap to view image full screen" to a gallery
 description: >-
-  How to add a "tap to view the image in full screen" option to a gallery
-date_published: '2025-02-07'
-date_modified: '2025-02-07'
+  How to add a "tap to view image full screen" option to a gallery
+date_published: '2026-07-30'
+date_modified: '2026-07-30'
 lang: en
 ---
-To add a "Tap to view the image in full screen" option in a gallery, you can use JavaScript and CSS to create an overlay that displays the image in full screen mode when the user taps on it.
+To add a "Tap to view image full screen" option to a gallery, you can use JavaScript and CSS to create an overlay that displays the image full-screen when the user clicks on it.
 
 Here's a basic approach you can use:
 1. First, create a container for your gallery and add all the images you want to display.
@@ -20,7 +20,6 @@ Here's a basic approach you can use:
   <!-- add more images here -->
 </div>
 ```
-
 
 2. Next, add some CSS to style the gallery and the images.
 
@@ -37,8 +36,7 @@ Here's a basic approach you can use:
 }
 ```
 
-
-3. Now, add a click event listener to each image using JavaScript. When the user clicks on an image, JavaScript will create an overlay and display the image in full screen mode.
+3. Now, add a click event listener to each image using JavaScript. When the user clicks an image, JavaScript will create an overlay and display the image full-screen.
 
 ```javascript
 const gallery = document.querySelector('.gallery');
@@ -58,14 +56,13 @@ images.forEach((image) => {
     // add image element to overlay
     overlay.appendChild(fullScreenImage);
     
-    // add overlay to the page
+    // add overlay to page
     document.body.appendChild(overlay);
   });
 });
 ```
 
-
-4. Finally, add some CSS to style the overlay and the full screen image.
+4. Finally, add some CSS to style the overlay and the full-screen image.
 
 ```css
 .overlay {
@@ -87,13 +84,9 @@ images.forEach((image) => {
 }
 ```
 
+With these steps, you should now have a gallery that allows users to view images full-screen by clicking on them. 
 
-
-With these steps, you should now have a gallery that allows users to view images in full screen by tapping on them.
-
-[Mistakes or Clumsy Phrasing]
-- {{The use of "tap" and "click" is mixed; for consistency, the guide should use one term based on the expected user interaction device. If it's for touch devices, "tap" should be used throughout. If for desktops, "click" is appropriate.}}
-- {{The phrase "add a click event listener" should match the term used for the action, i.e., replace "click" with "tap" if targeting mobile/touch devices.}}
+{{No mistakes or clumsy phrasing are present.}}
 =====================
 
 Content prompt used: 
