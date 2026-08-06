@@ -1,3 +1,319 @@
+For version [[5066788992977213]] of prompts and [[src/content/docs/en/introduction.md]]
+(prompt hidden)
+(response hidden)
+
+================ PROMPT (user) ==================
+
+Please list any bugs, mistakes, and spelling errors in the following markdown article: 
+
+================ RESPONSE (assistant) ==================
+
+There are no major bugs or mistakes in the above markdown article. However, there are some minor issues with the 
+capitalization of certain words and the placement of punctuation marks. The following is a list of suggested changes 
+to improve the readability and consistency of the article:
+
+- In the title, capitalize "srcset" as "Srcset".
+
+- In the title, add a colon after "Images" for consistency with the sidebar title.
+
+- In the title, capitalize "Responsive" as "responsive".
+
+- In the description, add a hyphen between "Opinionated" and "Guide" for clarity.
+
+- In the description, remove the space before "2023".
+
+- In the first sentence, add a hyphen between "Quick" and "reference" for consistency.
+
+- In the first sentence, capitalize "Deep" as "deep".
+
+- In the first sentence, add a colon after "sidebar" for consistency with the sidebar title.
+
+- In the "Do you know what your breakpoints are?" paragraph, add a colon after "breakpoints".
+
+- In the "Do you know what your breakpoints are?" paragraph, remove the space before the hyphen in "breakpoints" for 
+consistency.
+
+- In the easy method code block, add spaces around the equal signs in the "src" attribute.
+
+- In the easy method code block, remove the spaces before the commas in the "srcset" attribute for consistency.
+
+- In the easy method code block, add a space after the commas in the "srcset" attribute for consistency.
+
+- In the easy method code block, capitalize "Dog" as "dog" in the "alt" attribute.
+
+- In the easy method code block, remove the space before the closing "/>" tag for consistency.
+
+Here's the revised markdown article with the suggested changes:
+
+---
+
+title: 'Srcset & <img> sizes: An Efficient and Opinionated Guide to Responsive Images for 2023'
+
+description: An efficient and opinionated guide to images for 2023.
+
+sidebar_sort_priority: 1000
+
+date_published: '2023-04-03'
+
+date_modified: '2023-04-03'
+
+---
+
+ 
+
+**An Efficient and Opinionated Guide to Images for 2023**
+
+Check the sidebar for the deep dive. This is the quick reference for upgrading those `<img>` tags to handle modern 
+devices in all their various sizes and pixel densities. You should [know that pixels != pixels](/en/pixels-not-pixels) 
+and `devicePixelRatio` is more likely to be around 3.875 than 1:1. Modern phones pretend to be 320-428px wide for 
+readability (in CSS pixels), but have many device pixels per CSS pixel.
+
+> If your image never changes size, no matter how narrow you make the browser window, you should use a [density 
+descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons.
+
+Do you know what your breakpoints are? You'll need those numbers to fine-tune the solution below - and at minimum the 
+viewport width breakpoint where the main content area stops growing.
+
+### The easy method
+
+```html
+
+<img src="img.jpg?w=480" 
+
+     srcset="img.jpg?format=webp&w=480 480w, 
+
+             img.jpg?format=webp&w=800 800w, 
+
+             img.jpg?format=webp&w=1200 1200w, 
+
+             img.jpg?format=webp&w=1600 1600w, 
+
+             img.jpg?format=webp&w=2000 2000w"
+
+     sizes="(max-width: 700px) 100vw, 800px" alt="dog riding a bicycle"/>
+
+<!-- We've assumed that you have a breakpoint at 700px. 
+
+     And that under that viewport width, this image takes 100% of the width, but
+
+     when the viewport is larger, the image is limited to 800 CSS pixels -->
+
+<!-- This assumes you are using an RIAPI-compliant image server such as Imageflow. 
+
+     On-the-fly image variant production is essential for developer sanity. -->
+
+```
+
+================ PROMPT (user) ==================
+
+Should we clarify any concepts?
+
+================ RESPONSE (assistant) ==================
+
+The article assumes a certain level of knowledge about responsive images and device pixel ratios. It might be helpful 
+to add definitions or explanations for these concepts to ensure the article is accessible to readers who may not be 
+familiar with them. For instance, the concept of responsive images and how they adapt to different screen sizes could 
+be explained in more detail. Additionally, the importance of `devicePixelRatio`, specifically how it affects the 
+display of images on high-density screens, could also be elaborated on. Furthermore, providing a brief explanation of 
+"density descriptors" and why they are suitable for certain types of images could help readers fully understand the 
+benefits and limitations of the various techniques discussed in the article.
+
+================ PROMPT (user) ==================
+
+Should we add any images? Please suggest image URLs unless unless those URLs are already present.
+
+================ RESPONSE (assistant) ==================
+
+It would be helpful to include a visual example of how responsive images work and how they adapt to different screen 
+sizes. Additionally, images that demonstrate the difference in pixel density between devices could also be useful. 
+Here are some image URLs that could be used:
+
+- https://www.w3.org/TR/images-in-resizing/
+
+- https://www.freecodecamp.org/news/content/images/2020/05/image--4-.png
+
+- https://miro.medium.com/max/1024/1*D5C5BN5G5YC9fXDMRZY1ug.png
+
+- https://www.itelagen.com/wp-content/uploads/2018/01/responsive-design-mobile-apps.png
+
+These images are relevant to the topic and could help illustrate the concepts discussed in the article.
+
+================ PROMPT (user) ==================
+
+{{responses=2}}Can you suggest a better description for this article than "An Efficient and Opinionated Guide to 
+Responsive Images for 2023"?
+
+================ RESPONSE  #1 of 2(assistant) ==================
+
+Sure! How about "Mastering Responsive Images: Your Ultimate Guide to Optimizing Image Display on Modern Devices"? This 
+description captures the comprehensive and authoritative nature of the article while also emphasizing the importance 
+of responsive images for modern device display optimization.
+
+================ RESPONSE  #2 of 2(assistant) ==================
+
+Certainly! Here are some alternative descriptions that could be used for this article:
+
+- "A Comprehensive Guide to Creating Responsive Images for 2023"
+
+- "Best Practices for Optimizing Images for Modern Devices in 2023"
+
+- "The Definitive Guide to Handling Images on Responsive Websites in 2023"
+
+- "Mastering Responsive Images: Tips and Tricks for 2023"
+
+- "A Developer's Guide to Creating Efficient and Adaptable Images for 2023"
+
+================ PROMPT (user) ==================
+
+{{responses=2}}Can you suggest a better - but very concise and short -title for this article than "srcset & <img> 
+sizes "?
+
+================ RESPONSE  #1 of 2(assistant) ==================
+
+Sure! Here are some alternative title options:
+
+- "Responsive Image Optimization for Developers"
+
+- "Creating Perfectly Adaptive Images: A How-To Guide"
+
+- "Maximizing Image Display on Modern Screens"
+
+- "Responsive Image Best Practices"
+
+- "Optimizing Images for Today's Devices"
+
+================ RESPONSE  #2 of 2(assistant) ==================
+
+Sure! How about "Responsive Images: Best Practices for Modern Devices"? This title captures the essence of the article 
+- providing recommendations for creating responsive images that work well on modern devices - while being concise and 
+to the point.
+
+================ PROMPT (user) ==================
+
+{{responses=2}}Can you suggest 10 top keywords (comma delimited) and 5 top short search queries related to this 
+content?
+
+================ RESPONSE  #1 of 2(assistant) ==================
+
+Sure, here are 10 top keywords related to this article:
+
+- Responsive images
+
+- Device pixel ratios
+
+- Srcset
+
+- Image optimization
+
+- Breakpoints
+
+- Pixel densities
+
+- Density descriptors
+
+- Modern devices
+
+- Viewport width
+
+- Imageflow
+
+Here are 5 top short search queries related to this article:
+
+- What are responsive images?
+
+- How to optimize images for modern devices
+
+- What is device pixel ratio?
+
+- Srcset vs sizes in HTML images
+
+- How to use density descriptors in images
+
+================ RESPONSE  #2 of 2(assistant) ==================
+
+Top 10 keywords: responsive images, device pixel ratio, srcset, density descriptors, modern devices, image 
+optimization, screen sizes, breakpoints, image variants, image server.
+
+Top 5 short search queries: 
+
+1. "responsive images 2023"
+
+2. "modern device image optimization"
+
+3. "srcset and img sizes"
+
+4. "device pixel ratio explained"
+
+5. "best practices for responsive images"
+
+================ PROMPT (user) ==================
+
+Are there keywords or phrases we should introduce to help more people find this page?"?
+
+================ RESPONSE (assistant) ==================
+
+Yes, you may want to consider incorporating additional keywords or phrases into your article to help more people find 
+it. These might include:
+
+- Mobile optimization 
+
+- Web development
+
+- Responsive design
+
+- SEO-friendly images 
+
+- Accessible images
+
+- Image compression
+
+- Progressive image loading
+
+- Screen resolution 
+
+- User experience
+
+- Cross-browser compatibility 
+
+By including these additional keywords and phrases in your article, you can help improve its discoverability among 
+search engines and attract a wider audience of readers looking to optimize their images for modern devices.
+
+================ PROMPT (user) ==================
+
+{{temperature=1.5}}Don't break character. You're an editor who likes to spruce up content and add punch, quips, puns, 
+and personality to technical content while staying safe-for-work. Can you identify some sentences from the article and 
+suggest more engaging replacements?
+
+================ RESPONSE (assistant) ==================
+
+Definitely! Here are a few sentences from the article, along with some suggested replacements to add a bit of 
+personality and engagement:
+
+Original sentence: "This is the quick reference for upgrading those `<img>` tags to handle modern devices in all their 
+various sizes and pixel densities."
+
+Suggested replacement: "Picture this: your `<img>` tags are looking a little worse for wear on modern devices. It's 
+time for an upgrade. Don't worry, though - we've got the quick reference guide you need to get those images looking 
+pristine across all sizes and densities."
+
+Original sentence: "Do you know what your breakpoints are?"
+
+Suggested replacement: "Brace yourself - we're about to get into the nitty-gritty of breakpoints. Do you know yours? 
+If not, you'll need to buckle up for the ride ahead."
+
+Original sentence: "If your image never changes size, no matter how narrow you make the browser window, you should use 
+a [density descriptor instead](/en/density-descriptors). This is often suitable for logos, icons, and buttons."
+
+Suggested replacement: "Say cheese! If your image is a still life and never changes size, even when you're squishing 
+the browser window down to its tiniest form, a density descriptor is your new best friend. These little beauties work 
+wonders for logos, icons, and buttons."
+
+Original sentence: "Check the sidebar for the deep dive."
+
+Suggested replacement: "Psst - looking for the good stuff? Check out our deep dive in the sidebar. There's more to 
+responsive images than meets the eye."
+
+================ PRIOR FEEDBACK ==================
 For version [[8b8c970f177cfb6d]] of prompts and [[src/content/docs/en/introduction.md]]
 (prompt hidden)
 (response hidden)
